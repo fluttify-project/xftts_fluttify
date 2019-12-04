@@ -983,25 +983,6 @@ extern BOOL enableLog;
           // 无返回值
           methodResult(@"success");
       },
-      @"IFlyContact::contact": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-      
-      
-          // ref
-          IFlyContact* ref = (IFlyContact*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyContact@%@::contact(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          NSString* result = [ref contact];
-      
-          // result
-          // 返回值: jsonable
-          methodResult(result);
-      },
       @"IFlyVoiceWakeuper::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
       
@@ -3673,26 +3654,6 @@ extern BOOL enableLog;
           // 无返回值
           methodResult(@"success");
       },
-      @"IFlySpeechRecognizerDelegate::getAudioKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* key = (NSString*) args[@"key"];
-      
-          // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlySpeechRecognizerDelegate@%@::getAudioKey(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-//          [ref getAudioKey : key];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
       @"IFlySpeechRecognizerDelegate::onEventArg0arg1data": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // jsonable arg
@@ -3714,177 +3675,6 @@ extern BOOL enableLog;
       
           // invoke native method
           [ref onEvent : eventType arg0: arg0 arg1: arg1 data: eventData];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-      
-      
-          // ref
-      
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier::sharedInstance(暂未实现参数打印)");
-          }
-      
-          // invoke native method
-          IFlyIdentityVerifier* result = [IFlyIdentityVerifier sharedInstance];
-      
-          // result
-          // return a ref
-          HEAP[@((result).hash)] = result;
-          methodResult(@((result).hash));
-      },
-      @"IFlyIdentityVerifier::purgeSharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-      
-      
-          // ref
-      
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier::purgeSharedInstance(暂未实现参数打印)");
-          }
-      
-          // invoke native method
-          [IFlyIdentityVerifier purgeSharedInstance];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* value = (NSString*) args[@"value"];
-          // jsonable arg
-          NSString* key = (NSString*) args[@"key"];
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::setParameter(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          BOOL result = [ref setParameter: value forKey: key];
-      
-          // result
-          // 返回值: Value
-          methodResult(@(result));
-      },
-      @"IFlyIdentityVerifier::startWorking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-      
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::startWorking(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref startWorking ];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::writeDataoffsetlengthwithParams": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* ssub = (NSString*) args[@"ssub"];
-          // ref arg
-          NSData* data = (NSData*) HEAP[@([args[@"data"] integerValue])];
-          // jsonable arg
-          int offset = [args[@"offset"] intValue];
-          // jsonable arg
-          int length = [args[@"length"] intValue];
-          // jsonable arg
-          NSString* params = (NSString*) args[@"params"];
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::write(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref write : ssub data: data offset: offset length: length withParams: params];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::stopWrite": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* ssub = (NSString*) args[@"ssub"];
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::stopWrite(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref stopWrite : ssub];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::executeCmdparams": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* ssub = (NSString*) args[@"ssub"];
-          // jsonable arg
-          NSString* cmd = (NSString*) args[@"cmd"];
-          // jsonable arg
-          NSString* params = (NSString*) args[@"params"];
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::execute(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref execute : ssub cmd: cmd params: params];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifier::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-      
-      
-          // ref
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifier@%@::cancel(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref cancel ];
       
           // result
           // 无返回值
@@ -4061,28 +3851,6 @@ extern BOOL enableLog;
       
           // invoke native method
           [ref onCompleted : error];
-      
-          // result
-          // 无返回值
-          methodResult(@"success");
-      },
-      @"IFlyIdentityVerifierDelegate::onResultsIsLast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // ref arg
-          IFlyIdentityResult* results = (IFlyIdentityResult*) HEAP[@([args[@"results"] integerValue])];
-          // jsonable arg
-          BOOL isLast = [args[@"isLast"] boolValue];
-      
-          // ref
-          id<IFlyIdentityVerifierDelegate> ref = (id<IFlyIdentityVerifierDelegate>) HEAP[args[@"refId"]];
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityVerifierDelegate@%@::onResults(暂未实现参数打印)", args[@"refId"]);
-          }
-      
-          // invoke native method
-          [ref onResults : results isLast: isLast];
       
           // result
           // 无返回值
@@ -4626,27 +4394,6 @@ extern BOOL enableLog;
           // 返回值: Value
           methodResult(@(result));
       },
-      @"IFlyIdentityResult::identityResultWithString": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // args
-          // jsonable arg
-          NSString* jsonString = (NSString*) args[@"jsonString"];
-      
-          // ref
-      
-      
-          // print log
-          if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyIdentityResult::identityResultWithString(暂未实现参数打印)");
-          }
-      
-          // invoke native method
-          IFlyIdentityResult* result = [IFlyIdentityResult identityResultWithString: jsonString];
-      
-          // result
-          // return a ref
-          HEAP[@((result).hash)] = result;
-          methodResult(@((result).hash));
-      },
       @"IFlySpeechEvaluator::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
       
@@ -4993,36 +4740,6 @@ extern BOOL enableLog;
           // result
           // 返回值: Value
           methodResult(@(result));
-      },
-      @"IFlyISVRecognizer::sendRequestAuthidpwdtptxtviderr": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-//          // args
-//          // jsonable arg
-//          NSString* cmd = (NSString*) args[@"cmd"];
-//          // jsonable arg
-//          NSString* auth_id = (NSString*) args[@"auth_id"];
-//          // jsonable arg
-//          int pwdt = [args[@"pwdt"] intValue];
-//          // jsonable arg
-//          NSString* ptxt = (NSString*) args[@"ptxt"];
-//          // jsonable arg
-//          NSString* vid = (NSString*) args[@"vid"];
-//          // jsonable arg
-//          int* err = (int*) args[@"err"];
-//
-//          // ref
-//          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
-//
-//          // print log
-//          if (enableLog) {
-//              NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::sendRequest(暂未实现参数打印)", args[@"refId"]);
-//          }
-//
-//          // invoke native method
-//          BOOL result = [ref sendRequest: cmd authid: auth_id pwdt: pwdt ptxt: ptxt vid: vid err: err];
-//
-//          // result
-//          // 返回值: Value
-//          methodResult(@(result));
       },
       @"IFlyISVRecognizer::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
@@ -5587,23 +5304,6 @@ extern BOOL enableLog;
           methodResult(@(result));
       },
       
-      @"IFlyIdentityResult::get_result": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"IFlyIdentityResult::get_result");
-          }
-      
-          // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyIdentityResult* ref = (IFlyIdentityResult*) HEAP[@(refId)];
-      
-          // invoke native method
-          NSString* result = ref.result;
-      
-          // 返回值: jsonable
-          methodResult(result);
-      },
-      
       @"IFlySpeechEvaluator::get_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -5772,22 +5472,6 @@ extern BOOL enableLog;
           methodResult(@"success");
       },
       
-      @"IFlyIdentityVerifier::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"IFlyIdentityVerifier::set_delegate");
-          }
-      
-          // args
-      
-      
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyIdentityVerifier* ref = (IFlyIdentityVerifier*) HEAP[@(refId)];
-      
-          ref.delegate = self;
-          methodResult(@"success");
-      },
-      
       @"IFlySpeechError::set_errorCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -5852,23 +5536,6 @@ extern BOOL enableLog;
           IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[@(refId)];
       
           ref.delegate = self;
-          methodResult(@"success");
-      },
-      
-      @"IFlyIdentityResult::set_result": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"IFlyIdentityResult::set_result");
-          }
-      
-          // args
-          // jsonable arg
-          NSString* result = (NSString*) args[@"result"];
-      
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyIdentityResult* ref = (IFlyIdentityResult*) HEAP[@(refId)];
-      
-          ref.result = result;
           methodResult(@"success");
       },
       
@@ -5957,15 +5624,6 @@ extern BOOL enableLog;
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfIFlyContact": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          BOOL isTargetType = [ref isKindOfClass:[IFlyContact class]];
-          methodResult(@(isTargetType));
-      },
-      
       @"RefClass::isKindOfIFlyVoiceWakeuper": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
@@ -6008,15 +5666,6 @@ extern BOOL enableLog;
           id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[IFlyDataUploader class]];
-          methodResult(@(isTargetType));
-      },
-      
-      @"RefClass::isKindOfIFlyIdentityVerifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          BOOL isTargetType = [ref isKindOfClass:[IFlyIdentityVerifier class]];
           methodResult(@(isTargetType));
       },
       
@@ -6071,15 +5720,6 @@ extern BOOL enableLog;
           id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[IFlySpeechUtility class]];
-          methodResult(@(isTargetType));
-      },
-      
-      @"RefClass::isKindOfIFlyIdentityResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          BOOL isTargetType = [ref isKindOfClass:[IFlyIdentityResult class]];
           methodResult(@(isTargetType));
       },
       
@@ -6171,19 +5811,6 @@ extern BOOL enableLog;
           methodResult(@(refId));
       },
       
-      @"RefClass::asIFlyContact": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          // 转型
-          ref = (IFlyContact *) ref;
-          // 放回HEAP
-          HEAP[@(refId)] = ref;
-      
-          methodResult(@(refId));
-      },
-      
       @"RefClass::asIFlyVoiceWakeuper": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
@@ -6243,19 +5870,6 @@ extern BOOL enableLog;
       
           // 转型
           ref = (IFlyDataUploader *) ref;
-          // 放回HEAP
-          HEAP[@(refId)] = ref;
-      
-          methodResult(@(refId));
-      },
-      
-      @"RefClass::asIFlyIdentityVerifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          // 转型
-          ref = (IFlyIdentityVerifier *) ref;
           // 放回HEAP
           HEAP[@(refId)] = ref;
       
@@ -6334,19 +5948,6 @@ extern BOOL enableLog;
       
           // 转型
           ref = (IFlySpeechUtility *) ref;
-          // 放回HEAP
-          HEAP[@(refId)] = ref;
-      
-          methodResult(@(refId));
-      },
-      
-      @"RefClass::asIFlyIdentityResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
-      
-          // 转型
-          ref = (IFlyIdentityResult *) ref;
           // 放回HEAP
           HEAP[@(refId)] = ref;
       
@@ -6461,20 +6062,6 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createIFlyContact": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"ObjectFactory::createIFlyContact");
-          }
-      
-          IFlyContact* ref = [[IFlyContact alloc] init];
-          HEAP[@(ref.hash)] = ref;
-      
-          methodResult(@(ref.hash));
-      
-          if (enableLog) NSLog(@"HEAP: %@", HEAP);
-      },
-      
       @"ObjectFactory::createIFlyVoiceWakeuper": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -6538,20 +6125,6 @@ extern BOOL enableLog;
           }
       
           IFlyDataUploader* ref = [[IFlyDataUploader alloc] init];
-          HEAP[@(ref.hash)] = ref;
-      
-          methodResult(@(ref.hash));
-      
-          if (enableLog) NSLog(@"HEAP: %@", HEAP);
-      },
-      
-      @"ObjectFactory::createIFlyIdentityVerifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"ObjectFactory::createIFlyIdentityVerifier");
-          }
-      
-          IFlyIdentityVerifier* ref = [[IFlyIdentityVerifier alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
@@ -6636,20 +6209,6 @@ extern BOOL enableLog;
           }
       
           IFlySpeechUtility* ref = [[IFlySpeechUtility alloc] init];
-          HEAP[@(ref.hash)] = ref;
-      
-          methodResult(@(ref.hash));
-      
-          if (enableLog) NSLog(@"HEAP: %@", HEAP);
-      },
-      
-      @"ObjectFactory::createIFlyIdentityResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // print log
-          if (enableLog) {
-              NSLog(@"ObjectFactory::createIFlyIdentityResult");
-          }
-      
-          IFlyIdentityResult* ref = [[IFlyIdentityResult alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));

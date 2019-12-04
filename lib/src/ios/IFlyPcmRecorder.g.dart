@@ -32,7 +32,7 @@ class IFlyPcmRecorder extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::IFlyPcmRecorderDelegate::onIFlyRecorderErrorTheError':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onIFlyRecorderErrorTheError([\'error\':$args[error]])');
             }
         
@@ -41,7 +41,7 @@ class IFlyPcmRecorder extends NSObject  {
             break;
           case 'Callback::IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onIFlyRecorderVolumeChanged([\'power\':$args[power]])');
             }
         

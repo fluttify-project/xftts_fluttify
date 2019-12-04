@@ -38,7 +38,7 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
           switch (methodCall.method) {
             case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onStart':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onStart([\'var1\':$args[var1], \'var3\':$args[var3], \'var4\':$args[var4], \'var5\':$args[var5]])');
               }
         
@@ -47,7 +47,7 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
               break;
             case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onProgress':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onProgress([\'var1\':$args[var1], \'var3\':$args[var3]])');
               }
         
@@ -56,7 +56,7 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
               break;
             case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onFinish':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onFinish([\'var1\':$args[var1]])');
               }
         
@@ -65,7 +65,7 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
               break;
             case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onError':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onError([\'var1\':$args[var1]])');
               }
         

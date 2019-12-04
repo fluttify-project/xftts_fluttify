@@ -19,7 +19,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onSpeakBegin() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakBegin::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onSpeakPaused() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakPaused::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onSpeakResumed() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakResumed::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onCompleted(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onSpeakProgress(int var1, int var2, int var3) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakProgress::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onBufferProgress(int var1, int var2, int var3, String var4) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBufferProgress::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_iflytek_speech_SynthesizerListener on java_lang_Object {
   Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
     }
   }

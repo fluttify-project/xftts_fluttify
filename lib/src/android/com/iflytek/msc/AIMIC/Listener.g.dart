@@ -19,7 +19,7 @@ mixin com_iflytek_msc_AIMIC_Listener on java_lang_Object {
   Future<void> onWakeupMsg(int var1, int var2, int var3, Uint8List var4, int var5, Uint8List var6, int var7, Uint8List var8, int var9) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onWakeupMsg::kNativeObjectPool: $kNativeObjectPool');
     }
   }

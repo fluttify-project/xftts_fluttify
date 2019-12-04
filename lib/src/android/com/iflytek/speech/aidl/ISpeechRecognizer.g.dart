@@ -19,7 +19,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> startListening(android_content_Intent var1, com_iflytek_speech_RecognizerListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('startListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> stopListening(com_iflytek_speech_RecognizerListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> cancel(com_iflytek_speech_RecognizerListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('cancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<bool> isListening() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('isListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> buildGrammar(android_content_Intent var1, com_iflytek_speech_GrammarListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('buildGrammar::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> updateLexicon(android_content_Intent var1, com_iflytek_speech_LexiconListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('updateLexicon::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_iflytek_speech_aidl_ISpeechRecognizer on java_lang_Object {
   Future<void> writeAudio(android_content_Intent var1, Uint8List var2, int var3, int var4) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('writeAudio::kNativeObjectPool: $kNativeObjectPool');
     }
   }

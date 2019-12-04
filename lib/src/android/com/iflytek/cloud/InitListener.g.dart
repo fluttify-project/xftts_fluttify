@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_InitListener on java_lang_Object {
   Future<void> onInit(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onInit::kNativeObjectPool: $kNativeObjectPool');
     }
   }

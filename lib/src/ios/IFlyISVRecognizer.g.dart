@@ -27,7 +27,7 @@ class IFlyISVRecognizer extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::IFlyISVDelegate::onCompleted':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCompleted([])');
             }
         
@@ -36,7 +36,7 @@ class IFlyISVRecognizer extends NSObject  {
             break;
           case 'Callback::IFlyISVDelegate::onRecognition':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onRecognition([])');
             }
         
@@ -45,7 +45,7 @@ class IFlyISVRecognizer extends NSObject  {
             break;
           case 'Callback::IFlyISVDelegate::onVolumeChanged':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onVolumeChanged([\'volume\':$args[volume]])');
             }
         
@@ -134,28 +134,6 @@ class IFlyISVRecognizer extends NSObject  {
   
     // invoke native method
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::isListening', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  Future<bool> sendRequestAuthidpwdtptxtviderr(String cmd, String auth_id, int pwdt, String ptxt, String vid, int err) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::sendRequest([\'cmd\':$cmd, \'auth_id\':$auth_id, \'pwdt\':$pwdt, \'ptxt\':$ptxt, \'vid\':$vid, \'err\':$err])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequestAuthidpwdtptxtviderr', {"cmd": cmd, "auth_id": auth_id, "pwdt": pwdt, "ptxt": ptxt, "vid": vid, "err": err, "refId": refId});
   
   
     // handle native call

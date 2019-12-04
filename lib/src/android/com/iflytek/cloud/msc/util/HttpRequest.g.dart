@@ -104,7 +104,7 @@ class com_iflytek_cloud_msc_util_HttpRequest extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.iflytek.cloud.msc.util.HttpRequest.HttpRequestListener::onResult':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onResult([\'var2\':$args[var2]])');
               }
         
@@ -113,7 +113,7 @@ class com_iflytek_cloud_msc_util_HttpRequest extends java_lang_Object  {
               break;
             case 'Callback::com.iflytek.cloud.msc.util.HttpRequest.HttpRequestListener::onError':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onError([])');
               }
         

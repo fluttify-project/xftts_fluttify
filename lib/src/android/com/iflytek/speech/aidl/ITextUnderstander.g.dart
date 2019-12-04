@@ -19,7 +19,7 @@ mixin com_iflytek_speech_aidl_ITextUnderstander on java_lang_Object {
   Future<void> understandText(android_content_Intent var1, com_iflytek_speech_TextUnderstanderListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('understandText::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_aidl_ITextUnderstander on java_lang_Object {
   Future<void> cancel(com_iflytek_speech_TextUnderstanderListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('cancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_aidl_ITextUnderstander on java_lang_Object {
   Future<bool> isUnderstanding() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('isUnderstanding::kNativeObjectPool: $kNativeObjectPool');
     }
   }

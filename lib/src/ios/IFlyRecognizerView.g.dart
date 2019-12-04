@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class IFlyRecognizerView extends UIView with  {
+class IFlyRecognizerView extends UIView  {
   // generate getters
   
 
@@ -27,7 +27,7 @@ class IFlyRecognizerView extends UIView with  {
         switch (methodCall.method) {
           case 'Callback::IFlyRecognizerViewDelegate::onResultIsLast':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onResultIsLast([\'isLast\':$args[isLast]])');
             }
         
@@ -36,7 +36,7 @@ class IFlyRecognizerView extends UIView with  {
             break;
           case 'Callback::IFlyRecognizerViewDelegate::onCompleted':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCompleted([])');
             }
         

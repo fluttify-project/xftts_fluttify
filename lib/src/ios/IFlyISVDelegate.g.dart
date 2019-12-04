@@ -19,7 +19,7 @@ mixin IFlyISVDelegate on java_lang_Object {
   Future<void> onCompleted(IFlySpeechError errorCode) {
     kNativeObjectPool.add(errorCode);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlyISVDelegate on java_lang_Object {
   Future<void> onRecognition() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRecognition::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin IFlyISVDelegate on java_lang_Object {
   Future<void> onVolumeChanged(int volume) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }

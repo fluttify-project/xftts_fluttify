@@ -44,14 +44,6 @@ Future<IFlyPcmRecorder> createIFlyPcmRecorder() async {
   return object;
 }
 
-Future<IFlyContact> createIFlyContact() async {
-  final int refId = await _channel.invokeMethod('ObjectFactory::createIFlyContact');
-  final object = IFlyContact()..refId = refId..tag = 'xftts_fluttify';
-
-  kNativeObjectPool.add(object);
-  return object;
-}
-
 Future<IFlyVoiceWakeuper> createIFlyVoiceWakeuper() async {
   final int refId = await _channel.invokeMethod('ObjectFactory::createIFlyVoiceWakeuper');
   final object = IFlyVoiceWakeuper()..refId = refId..tag = 'xftts_fluttify';
@@ -87,14 +79,6 @@ Future<IFlyDebugLog> createIFlyDebugLog() async {
 Future<IFlyDataUploader> createIFlyDataUploader() async {
   final int refId = await _channel.invokeMethod('ObjectFactory::createIFlyDataUploader');
   final object = IFlyDataUploader()..refId = refId..tag = 'xftts_fluttify';
-
-  kNativeObjectPool.add(object);
-  return object;
-}
-
-Future<IFlyIdentityVerifier> createIFlyIdentityVerifier() async {
-  final int refId = await _channel.invokeMethod('ObjectFactory::createIFlyIdentityVerifier');
-  final object = IFlyIdentityVerifier()..refId = refId..tag = 'xftts_fluttify';
 
   kNativeObjectPool.add(object);
   return object;
@@ -143,14 +127,6 @@ Future<IFlyResourceUtil> createIFlyResourceUtil() async {
 Future<IFlySpeechUtility> createIFlySpeechUtility() async {
   final int refId = await _channel.invokeMethod('ObjectFactory::createIFlySpeechUtility');
   final object = IFlySpeechUtility()..refId = refId..tag = 'xftts_fluttify';
-
-  kNativeObjectPool.add(object);
-  return object;
-}
-
-Future<IFlyIdentityResult> createIFlyIdentityResult() async {
-  final int refId = await _channel.invokeMethod('ObjectFactory::createIFlyIdentityResult');
-  final object = IFlyIdentityResult()..refId = refId..tag = 'xftts_fluttify';
 
   kNativeObjectPool.add(object);
   return object;

@@ -1836,7 +1836,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onData(ArrayList<com.iflytek.speech.SpeakerVerifierAidl.PassWord> var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onData(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onData(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // list arg
@@ -1861,7 +1863,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onError(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -5703,7 +5707,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onRecordBuffer(byte[] var1, int var2, int var3) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRecordBuffer(" + var1 + var2 + var3 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRecordBuffer(" + var1 + var2 + var3 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -5730,7 +5736,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onError(com.iflytek.cloud.SpeechError var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -5752,7 +5760,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onRecordStarted(boolean var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRecordStarted(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRecordStarted(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -5773,7 +5783,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onRecordReleased() {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRecordReleased(" + "" + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRecordReleased(" + "" + ")");
+                    }
         
                     // convert to jsonable data
         
@@ -7128,7 +7140,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onVolumeChanged(int var1, byte[] var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onVolumeChanged(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onVolumeChanged(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -7152,7 +7166,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onBeginOfSpeech() {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBeginOfSpeech(" + "" + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBeginOfSpeech(" + "" + ")");
+                    }
         
                     // convert to jsonable data
         
@@ -7172,7 +7188,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onEndOfSpeech() {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onEndOfSpeech(" + "" + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onEndOfSpeech(" + "" + ")");
+                    }
         
                     // convert to jsonable data
         
@@ -7192,7 +7210,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onResult(com.iflytek.cloud.UnderstanderResult var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7214,7 +7234,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onError(com.iflytek.cloud.SpeechError var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7236,7 +7258,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onEvent(int var1, int var2, int var3, android.os.Bundle var4) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -8335,48 +8359,6 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
             methodResult.success(result);
         });
         // method
-        put("com.iflytek.cloud.msc.util.DataUtil::splitBuffer", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            byte[] var0 = (byte[]) args.get("var0");
-            // jsonable arg
-            int var1 = (int) args.get("var1");
-            // jsonable arg
-            int var2 = (int) args.get("var2");
-            // jsonable arg
-            int var3 = (int) args.get("var3");
-        
-            // ref
-        
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::splitBuffer(" + var0 + var1 + var2 + var3 + ")");
-            }
-        
-            // invoke native method
-            List<byte[]> result;
-            try {
-                result = com.iflytek.cloud.msc.util.DataUtil.splitBuffer(var0, var1, var2, var3);
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            if (result != null) {
-                List<Integer> resultRefIdList = new ArrayList<>();
-                for (byte[] item : result) {
-                    getHEAP().put(item.hashCode(), item);
-                    resultRefIdList.add(item.hashCode());
-                }
-                methodResult.success(resultRefIdList);
-            } else {
-                methodResult.success(null);
-            }
-        });
-        // method
         put("com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9464,7 +9446,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onStart(long var1, String var3, String var4, String var5, com.iflytek.cloud.msc.util.http.HttpDownloadImpl var6) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onStart(" + var1 + var3 + var4 + var5 + var6 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onStart(" + var1 + var3 + var4 + var5 + var6 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -9498,7 +9482,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onProgress(long var1, int var3, com.iflytek.cloud.msc.util.http.HttpDownloadImpl var4) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onProgress(" + var1 + var3 + var4 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onProgress(" + var1 + var3 + var4 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -9526,7 +9512,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onFinish(String var1, com.iflytek.cloud.msc.util.http.HttpDownloadImpl var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onFinish(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onFinish(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -9551,7 +9539,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onError(int var1, com.iflytek.cloud.msc.util.http.HttpDownloadImpl var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -11252,7 +11242,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onResult(com.iflytek.cloud.msc.util.HttpRequest var1, byte[] var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -11277,7 +11269,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onError(com.iflytek.cloud.SpeechError var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -13885,7 +13879,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onWakeupAudio(byte[] var1, int var2, int var3, Object var4) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWakeupAudio(" + var1 + var2 + var3 + var4 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWakeupAudio(" + var1 + var2 + var3 + var4 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -13916,7 +13912,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onRecogAudio(byte[] var1, int var2, int var3, Object var4) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRecogAudio(" + var1 + var2 + var3 + var4 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRecogAudio(" + var1 + var2 + var3 + var4 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -13947,7 +13945,9 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
                 @Override
                 public void onWakeupMsg(int var1, int var2, int var3, byte[] var4, int var5, byte[] var6, int var7, byte[] var8, int var9) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWakeupMsg(" + var1 + var2 + var3 + var4 + var5 + var6 + var7 + var8 + var9 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWakeupMsg(" + var1 + var2 + var3 + var4 + var5 + var6 + var7 + var8 + var9 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg

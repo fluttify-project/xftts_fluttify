@@ -19,7 +19,7 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   Future<int> setParameter(String var1, String var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('setParameter::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   Future<String> getParameter(String var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('getParameter::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   Future<android_content_Intent> getIntent() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('getIntent::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   Future<bool> destory() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('destory::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   Future<bool> isAvailable() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('isAvailable::kNativeObjectPool: $kNativeObjectPool');
     }
   }

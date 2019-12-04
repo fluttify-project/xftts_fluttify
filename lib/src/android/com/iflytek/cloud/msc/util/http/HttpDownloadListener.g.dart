@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
   Future<void> onStart(int var1, String var3, String var4, String var5, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var6) {
     kNativeObjectPool.add(var6);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onStart::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
   Future<void> onProgress(int var1, int var3, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var4) {
     kNativeObjectPool.add(var4);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onProgress::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
   Future<void> onFinish(String var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {
     kNativeObjectPool.add(var2);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onFinish::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
   Future<void> onError(int var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {
     kNativeObjectPool.add(var2);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }

@@ -19,7 +19,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError error) {
     kNativeObjectPool.add(error);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onSpeakBegin() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakBegin::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onBufferProgressMessage(int progress, String msg) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBufferProgressMessage::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onSpeakProgressBeginPosendPos(int progress, int beginPos, int endPos) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakProgressBeginPosendPos::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onSpeakPaused() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakPaused::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onSpeakResumed() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakResumed::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onSpeakCancel() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSpeakCancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -82,7 +82,7 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   Future<void> onEventArg0arg1data(int eventType, int arg0, int arg1, NSData eventData) {
     kNativeObjectPool.add(eventData);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEventArg0arg1data::kNativeObjectPool: $kNativeObjectPool');
     }
   }

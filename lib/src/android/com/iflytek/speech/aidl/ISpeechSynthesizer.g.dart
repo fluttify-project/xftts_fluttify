@@ -19,7 +19,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<int> synthesizeToUrl(android_content_Intent var1, com_iflytek_speech_SynthesizerListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('synthesizeToUrl::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<int> startSpeaking(android_content_Intent var1, com_iflytek_speech_SynthesizerListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('startSpeaking::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<int> pauseSpeaking(com_iflytek_speech_SynthesizerListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('pauseSpeaking::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<int> resumeSpeaking(com_iflytek_speech_SynthesizerListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('resumeSpeaking::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<int> stopSpeaking(com_iflytek_speech_SynthesizerListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopSpeaking::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<bool> isSpeaking() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('isSpeaking::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_iflytek_speech_aidl_ISpeechSynthesizer on java_lang_Object {
   Future<String> getLocalSpeakerList() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('getLocalSpeakerList::kNativeObjectPool: $kNativeObjectPool');
     }
   }

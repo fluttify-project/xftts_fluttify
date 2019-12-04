@@ -60,7 +60,7 @@ class IFlyDataUploader extends NSObject  {
           switch (methodCall.method) {
             case 'Callback::IFlyUploadDataCompletionHandler::IFlyUploadDataCompletionHandler':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
         
               }
         

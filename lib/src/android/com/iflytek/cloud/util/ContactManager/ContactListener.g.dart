@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_util_ContactManager_ContactListener on java_lang_Object 
   Future<void> onContactQueryFinish(String var1, bool var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onContactQueryFinish::kNativeObjectPool: $kNativeObjectPool');
     }
   }

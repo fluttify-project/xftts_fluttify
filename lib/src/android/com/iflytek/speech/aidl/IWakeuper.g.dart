@@ -19,7 +19,7 @@ mixin com_iflytek_speech_aidl_IWakeuper on java_lang_Object {
   Future<void> startListening(android_content_Intent var1, com_iflytek_speech_WakeuperListener var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('startListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_aidl_IWakeuper on java_lang_Object {
   Future<void> stopListening(com_iflytek_speech_WakeuperListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_aidl_IWakeuper on java_lang_Object {
   Future<void> cancel(com_iflytek_speech_WakeuperListener var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('cancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_aidl_IWakeuper on java_lang_Object {
   Future<bool> isListening() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('isListening::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_aidl_IWakeuper on java_lang_Object {
   Future<void> destroy() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('destroy::kNativeObjectPool: $kNativeObjectPool');
     }
   }

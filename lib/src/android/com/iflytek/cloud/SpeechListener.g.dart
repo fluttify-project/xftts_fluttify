@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_SpeechListener on java_lang_Object {
   Future<void> onEvent(int var1, android_os_Bundle var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_SpeechListener on java_lang_Object {
   Future<void> onBufferReceived(Uint8List var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBufferReceived::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_SpeechListener on java_lang_Object {
   Future<void> onCompleted(com_iflytek_cloud_SpeechError var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }

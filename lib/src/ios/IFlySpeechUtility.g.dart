@@ -32,7 +32,7 @@ class IFlySpeechUtility extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::IFlySpeechplusDelegate::onCompleted':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCompleted([\'errorCode\':$args[errorCode]])');
             }
         

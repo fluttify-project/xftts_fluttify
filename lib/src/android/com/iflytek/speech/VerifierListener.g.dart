@@ -19,7 +19,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onVolumeChanged(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onBeginOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onEndOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onRegister(com_iflytek_speech_VerifierResult var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRegister::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onEnd(com_iflytek_speech_VerifierResult var1, int var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEnd::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onCancel() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_iflytek_speech_VerifierListener on java_lang_Object {
   Future<void> onError(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }

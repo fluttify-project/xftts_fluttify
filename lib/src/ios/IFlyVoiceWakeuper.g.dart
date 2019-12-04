@@ -32,7 +32,7 @@ class IFlyVoiceWakeuper extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::IFlyVoiceWakeuperDelegate::onBeginOfSpeech':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onBeginOfSpeech([])');
             }
         
@@ -41,7 +41,7 @@ class IFlyVoiceWakeuper extends NSObject  {
             break;
           case 'Callback::IFlyVoiceWakeuperDelegate::onEndOfSpeech':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onEndOfSpeech([])');
             }
         
@@ -50,7 +50,7 @@ class IFlyVoiceWakeuper extends NSObject  {
             break;
           case 'Callback::IFlyVoiceWakeuperDelegate::onCompleted':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCompleted([])');
             }
         
@@ -59,7 +59,7 @@ class IFlyVoiceWakeuper extends NSObject  {
             break;
           case 'Callback::IFlyVoiceWakeuperDelegate::onVolumeChanged':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onVolumeChanged([\'volume\':$args[volume]])');
             }
         

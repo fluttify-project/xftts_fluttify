@@ -19,7 +19,7 @@ mixin com_iflytek_speech_GrammarListener on java_lang_Object {
   Future<void> onBuildFinish(String var1, int var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBuildFinish::kNativeObjectPool: $kNativeObjectPool');
     }
   }

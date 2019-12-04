@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onVolumeChanged(int var1, Uint8List var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onBeginOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onEndOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onResult(com_iflytek_cloud_UnderstanderResult var1) {
     kNativeObjectPool.add(var1);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onError(com_iflytek_cloud_SpeechError var1) {
     kNativeObjectPool.add(var1);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_cloud_SpeechUnderstanderListener on java_lang_Object {
   Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {
     kNativeObjectPool.add(var4);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
     }
   }

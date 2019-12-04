@@ -19,7 +19,7 @@ mixin com_iflytek_speech_LexiconListener on java_lang_Object {
   Future<void> onLexiconUpdated(String var1, int var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onLexiconUpdated::kNativeObjectPool: $kNativeObjectPool');
     }
   }

@@ -19,7 +19,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<int> verify(String var1, String var2, com_iflytek_speech_VerifierListener var3) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('verify::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<int> register(String var1, String var2, com_iflytek_speech_VerifierListener var3) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('register::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<void> endSpeak() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('endSpeak::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<void> stopSpeak() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopSpeak::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<int> setParameter(String var1, String var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('setParameter::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_iflytek_speech_aidl_ISpeakerVerifier on java_lang_Object {
   Future<String> getParameter(String var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('getParameter::kNativeObjectPool: $kNativeObjectPool');
     }
   }

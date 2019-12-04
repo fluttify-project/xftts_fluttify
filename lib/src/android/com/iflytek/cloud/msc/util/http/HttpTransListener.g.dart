@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<int> onStart(int var1, String var3, String var4, String var5, String var6, String var7) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onStart::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<int> onBuffer(Uint8List var1, int var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBuffer::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onFinish() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onFinish::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onError(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onCancel() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }

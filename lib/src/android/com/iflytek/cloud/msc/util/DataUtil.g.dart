@@ -238,28 +238,6 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
     }
   }
   
-  static Future<List<byte[]>> splitBuffer(Uint8List var0, int var1, int var2, int var3) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.DataUtil::splitBuffer([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::splitBuffer', {"var0": var0, "var1": var1, "var2": var2, "var3": var3});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => java_lang_Object()..refId = it..tag = 'xftts_fluttify').toList());
-      return (result as List).cast<int>().map((it) => java_lang_Object()..refId = it..tag = 'xftts_fluttify').toList();
-    }
-  }
-  
   static Future<Uint8List> getUTF8Bom(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {

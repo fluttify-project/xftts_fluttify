@@ -19,17 +19,8 @@ mixin IFlyIdentityVerifierDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError error) {
     kNativeObjectPool.add(error);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
-  
-  @mustCallSuper
-  Future<void> onResultsIsLast(IFlyIdentityResult results, bool isLast) {
-    kNativeObjectPool.add(results);
-  
-    if (!fluttifyLogEnabled) {
-      debugPrint('onResultsIsLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -37,7 +28,7 @@ mixin IFlyIdentityVerifierDelegate on NSObject {
   Future<void> onEventArg1arg2extra(int eventType, int arg1, int arg2, NSObject obj) {
     kNativeObjectPool.add(obj);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEventArg1arg2extra::kNativeObjectPool: $kNativeObjectPool');
     }
   }

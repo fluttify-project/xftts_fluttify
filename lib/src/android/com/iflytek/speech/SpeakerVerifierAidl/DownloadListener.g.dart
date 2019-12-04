@@ -19,7 +19,7 @@ mixin com_iflytek_speech_SpeakerVerifierAidl_DownloadListener on java_lang_Objec
   Future<void> onError(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }

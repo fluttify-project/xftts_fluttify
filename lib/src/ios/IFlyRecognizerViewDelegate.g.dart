@@ -19,7 +19,7 @@ mixin IFlyRecognizerViewDelegate on NSObject {
   Future<void> onResultIsLast(List<NSObject> resultArray, bool isLast) {
     kNativeObjectPool.addAll(resultArray);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResultIsLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlyRecognizerViewDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError error) {
     kNativeObjectPool.add(error);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }

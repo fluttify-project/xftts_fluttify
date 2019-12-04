@@ -82,7 +82,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
           switch (methodCall.method) {
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onVolumeChanged':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onVolumeChanged([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -91,7 +91,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
               break;
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onBeginOfSpeech':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onBeginOfSpeech([])');
               }
         
@@ -100,7 +100,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
               break;
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onEndOfSpeech':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onEndOfSpeech([])');
               }
         
@@ -109,7 +109,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
               break;
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onResult':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onResult([])');
               }
         
@@ -118,7 +118,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
               break;
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onError':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onError([])');
               }
         
@@ -127,7 +127,7 @@ class com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl extends java_lang_Obj
               break;
             case 'Callback::com.iflytek.cloud.SpeechUnderstanderListener::onEvent':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onEvent([\'var1\':$args[var1], \'var2\':$args[var2], \'var3\':$args[var3]])');
               }
         

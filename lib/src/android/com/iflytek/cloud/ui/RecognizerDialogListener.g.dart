@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_ui_RecognizerDialogListener on java_lang_Object {
   Future<void> onResult(com_iflytek_cloud_RecognizerResult var1, bool var2) {
     kNativeObjectPool.add(var1);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_ui_RecognizerDialogListener on java_lang_Object {
   Future<void> onError(com_iflytek_cloud_SpeechError var1) {
     kNativeObjectPool.add(var1);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }

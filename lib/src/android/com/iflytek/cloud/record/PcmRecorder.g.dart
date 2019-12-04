@@ -60,7 +60,7 @@ class com_iflytek_cloud_record_PcmRecorder extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordBuffer':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRecordBuffer([\'var1\':$args[var1], \'var2\':$args[var2], \'var3\':$args[var3]])');
               }
         
@@ -69,7 +69,7 @@ class com_iflytek_cloud_record_PcmRecorder extends java_lang_Object  {
               break;
             case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onError':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onError([])');
               }
         
@@ -78,7 +78,7 @@ class com_iflytek_cloud_record_PcmRecorder extends java_lang_Object  {
               break;
             case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordStarted':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRecordStarted([\'var1\':$args[var1]])');
               }
         
@@ -87,7 +87,7 @@ class com_iflytek_cloud_record_PcmRecorder extends java_lang_Object  {
               break;
             case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordReleased':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRecordReleased([])');
               }
         

@@ -38,7 +38,7 @@ class IFlyTextUnderstander extends NSObject  {
           switch (methodCall.method) {
             case 'Callback::IFlyUnderstandTextCompletionHandler::IFlyUnderstandTextCompletionHandler':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
         
               }
         

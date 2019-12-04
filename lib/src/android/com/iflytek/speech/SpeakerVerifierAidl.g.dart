@@ -104,7 +104,7 @@ class com_iflytek_speech_SpeakerVerifierAidl extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.iflytek.speech.SpeakerVerifierAidl.DownloadListener::onError':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onError([\'var1\':$args[var1]])');
               }
         

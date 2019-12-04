@@ -19,7 +19,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onVolumeChangedBuffer(int volume, NSData buffer) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChangedBuffer::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onBeginOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onEndOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onCancel() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCancel::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError errorCode) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onResultsIsLast(NSData results, bool isLast) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResultsIsLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }

@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_record_PcmRecorder_PcmRecordListener on java_lang_Object
   Future<void> onRecordBuffer(Uint8List var1, int var2, int var3) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRecordBuffer::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_record_PcmRecorder_PcmRecordListener on java_lang_Object
   Future<void> onError(com_iflytek_cloud_SpeechError var1) {
     kNativeObjectPool.add(var1);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_record_PcmRecorder_PcmRecordListener on java_lang_Object
   Future<void> onRecordStarted(bool var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRecordStarted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_iflytek_cloud_record_PcmRecorder_PcmRecordListener on java_lang_Object
   Future<void> onRecordReleased() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRecordReleased::kNativeObjectPool: $kNativeObjectPool');
     }
   }

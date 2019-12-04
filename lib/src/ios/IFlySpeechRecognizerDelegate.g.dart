@@ -19,7 +19,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError errorCode) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onResultsIsLast(List<NSObject> results, bool isLast) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResultsIsLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onVolumeChanged(int volume) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onBeginOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onEndOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,17 +64,8 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onCancel() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCancel::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
-  
-  @mustCallSuper
-  Future<void> getAudioKey(String key) {
-  
-  
-    if (!fluttifyLogEnabled) {
-      debugPrint('getAudioKey::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -82,7 +73,7 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onEventArg0arg1data(int eventType, int arg0, int arg1, NSData eventData) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEventArg0arg1data::kNativeObjectPool: $kNativeObjectPool');
     }
   }

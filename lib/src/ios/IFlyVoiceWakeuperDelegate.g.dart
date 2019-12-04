@@ -19,7 +19,7 @@ mixin IFlyVoiceWakeuperDelegate on NSObject {
   Future<void> onBeginOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlyVoiceWakeuperDelegate on NSObject {
   Future<void> onEndOfSpeech() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin IFlyVoiceWakeuperDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError error) {
     kNativeObjectPool.add(error);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin IFlyVoiceWakeuperDelegate on NSObject {
   Future<void> onVolumeChanged(int volume) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }

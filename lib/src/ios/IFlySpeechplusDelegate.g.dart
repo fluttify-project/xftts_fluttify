@@ -19,7 +19,7 @@ mixin IFlySpeechplusDelegate on NSObject {
   Future<void> onCompleted(int errorCode) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }

@@ -19,7 +19,7 @@ mixin com_iflytek_speech_SynthesizeToUrlListener on java_lang_Object {
   Future<void> onSynthesizeCompleted(String var1, int var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onSynthesizeCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }

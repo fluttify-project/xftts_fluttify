@@ -19,7 +19,7 @@ mixin IFlyPcmRecorderDelegate on NSObject {
   Future<void> onIFlyRecorderErrorTheError(IFlyPcmRecorder recoder, int error) {
     kNativeObjectPool.add(recoder);
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onIFlyRecorderErrorTheError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin IFlyPcmRecorderDelegate on NSObject {
   Future<void> onIFlyRecorderVolumeChanged(int power) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onIFlyRecorderVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
     }
   }

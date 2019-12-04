@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_IdentityListener on java_lang_Object {
   Future<void> onResult(com_iflytek_cloud_IdentityResult var1, bool var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_IdentityListener on java_lang_Object {
   Future<void> onError(com_iflytek_cloud_SpeechError var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_IdentityListener on java_lang_Object {
   Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
     }
   }

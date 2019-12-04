@@ -32,7 +32,7 @@ class IFlySpeechSynthesizer extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::IFlySpeechSynthesizerDelegate::onCompleted':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCompleted([])');
             }
         
@@ -41,7 +41,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakBegin':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onSpeakBegin([])');
             }
         
@@ -50,7 +50,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onBufferProgressMessage':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onBufferProgressMessage([\'progress\':$args[progress], \'msg\':$args[msg]])');
             }
         
@@ -59,7 +59,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onSpeakProgressBeginPosendPos([\'progress\':$args[progress], \'beginPos\':$args[beginPos], \'endPos\':$args[endPos]])');
             }
         
@@ -68,7 +68,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakPaused':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onSpeakPaused([])');
             }
         
@@ -77,7 +77,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakResumed':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onSpeakResumed([])');
             }
         
@@ -86,7 +86,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakCancel':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onSpeakCancel([])');
             }
         
@@ -95,7 +95,7 @@ class IFlySpeechSynthesizer extends NSObject  {
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onEventArg0arg1data':
             // print log
-            if (!fluttifyLogEnabled) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onEventArg0arg1data([\'eventType\':$args[eventType], \'arg0\':$args[arg0], \'arg1\':$args[arg1]])');
             }
         

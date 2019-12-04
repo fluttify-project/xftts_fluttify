@@ -126,7 +126,7 @@ class com_iflytek_msc_AIMIC extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.iflytek.msc.AIMIC.Listener::onWakeupMsg':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onWakeupMsg([\'var1\':$args[var1], \'var2\':$args[var2], \'var3\':$args[var3], \'var4\':$args[var4], \'var5\':$args[var5], \'var6\':$args[var6], \'var7\':$args[var7], \'var8\':$args[var8], \'var9\':$args[var9]])');
               }
         

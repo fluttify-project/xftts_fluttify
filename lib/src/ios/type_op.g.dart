@@ -30,11 +30,6 @@ Future<bool> isKindOfIFlyPcmRecorder(Ref ref) async {
   return result;
 }
 
-Future<bool> isKindOfIFlyContact(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyContact', {'refId': ref.refId});
-  return result;
-}
-
 Future<bool> isKindOfIFlyVoiceWakeuper(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyVoiceWakeuper', {'refId': ref.refId});
   return result;
@@ -57,11 +52,6 @@ Future<bool> isKindOfIFlyDebugLog(Ref ref) async {
 
 Future<bool> isKindOfIFlyDataUploader(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyDataUploader', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfIFlyIdentityVerifier(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyIdentityVerifier', {'refId': ref.refId});
   return result;
 }
 
@@ -92,11 +82,6 @@ Future<bool> isKindOfIFlyResourceUtil(Ref ref) async {
 
 Future<bool> isKindOfIFlySpeechUtility(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlySpeechUtility', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfIFlyIdentityResult(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyIdentityResult', {'refId': ref.refId});
   return result;
 }
 
@@ -141,11 +126,6 @@ Future<IFlyPcmRecorder> asIFlyPcmRecorder(Ref ref) async {
   return IFlyPcmRecorder()..refId = result;
 }
 
-Future<IFlyContact> asIFlyContact(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyContact', {'refId': ref.refId});
-  return IFlyContact()..refId = result;
-}
-
 Future<IFlyVoiceWakeuper> asIFlyVoiceWakeuper(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyVoiceWakeuper', {'refId': ref.refId});
   return IFlyVoiceWakeuper()..refId = result;
@@ -169,11 +149,6 @@ Future<IFlyDebugLog> asIFlyDebugLog(Ref ref) async {
 Future<IFlyDataUploader> asIFlyDataUploader(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyDataUploader', {'refId': ref.refId});
   return IFlyDataUploader()..refId = result;
-}
-
-Future<IFlyIdentityVerifier> asIFlyIdentityVerifier(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyIdentityVerifier', {'refId': ref.refId});
-  return IFlyIdentityVerifier()..refId = result;
 }
 
 Future<IFlyAudioSession> asIFlyAudioSession(Ref ref) async {
@@ -204,11 +179,6 @@ Future<IFlyResourceUtil> asIFlyResourceUtil(Ref ref) async {
 Future<IFlySpeechUtility> asIFlySpeechUtility(Ref ref) async {
   final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlySpeechUtility', {'refId': ref.refId});
   return IFlySpeechUtility()..refId = result;
-}
-
-Future<IFlyIdentityResult> asIFlyIdentityResult(Ref ref) async {
-  final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyIdentityResult', {'refId': ref.refId});
-  return IFlyIdentityResult()..refId = result;
 }
 
 Future<IFlySpeechEvaluator> asIFlySpeechEvaluator(Ref ref) async {

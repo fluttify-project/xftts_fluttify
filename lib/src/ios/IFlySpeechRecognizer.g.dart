@@ -208,7 +208,7 @@ class IFlySpeechRecognizer extends NSObject with IFlySpeechRecognizerDelegate {
           switch (methodCall.method) {
             case 'Callback::IFlyOnBuildFinishCompletionHandler::IFlyOnBuildFinishCompletionHandler':
               // print log
-              if (!fluttifyLogEnabled) {
+              if (fluttifyLogEnabled) {
         
               }
         

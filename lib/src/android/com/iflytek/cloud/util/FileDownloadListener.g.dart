@@ -19,7 +19,7 @@ mixin com_iflytek_cloud_util_FileDownloadListener on java_lang_Object {
   Future<void> onStart() {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onStart::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_cloud_util_FileDownloadListener on java_lang_Object {
   Future<void> onProgress(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onProgress::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_iflytek_cloud_util_FileDownloadListener on java_lang_Object {
   Future<void> onCompleted(String var1, com_iflytek_cloud_SpeechError var2) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
     }
   }

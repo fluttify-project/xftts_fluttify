@@ -19,7 +19,7 @@ mixin com_iflytek_speech_TextUnderstanderListener on java_lang_Object {
   Future<void> onResult(com_iflytek_speech_UnderstanderResult var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_iflytek_speech_TextUnderstanderListener on java_lang_Object {
   Future<void> onError(int var1) {
   
   
-    if (!fluttifyLogEnabled) {
+    if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
