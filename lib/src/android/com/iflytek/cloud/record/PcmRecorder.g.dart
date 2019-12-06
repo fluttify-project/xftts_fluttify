@@ -47,57 +47,11 @@ class com_iflytek_cloud_record_PcmRecorder extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.record.PcmRecorder::startRecording', {"refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.record.PcmRecorder::startRecording', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.record.PcmRecorder::startRecording::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
   
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordBuffer':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRecordBuffer([\'var1\':$args[var1], \'var2\':$args[var2], \'var3\':$args[var3]])');
-              }
-        
-              // handle the native call
-              var1?.onRecordBuffer(args['var1'], args['var2'], args['var3']);
-              break;
-            case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([])');
-              }
-        
-              // handle the native call
-              var1?.onError(com_iflytek_cloud_SpeechError()..refId = (args['var1'])..tag = 'xftts_fluttify');
-              break;
-            case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordStarted':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRecordStarted([\'var1\':$args[var1]])');
-              }
-        
-              // handle the native call
-              var1?.onRecordStarted(args['var1']);
-              break;
-            case 'Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordReleased':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRecordReleased([])');
-              }
-        
-              // handle the native call
-              var1?.onRecordReleased();
-              break;
-            default:
-              break;
-          }
-        });
   
     // convert native result to dart side object
     if (result == null) {

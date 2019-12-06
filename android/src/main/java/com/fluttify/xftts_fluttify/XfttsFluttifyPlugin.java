@@ -5686,7 +5686,8 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
         // method
         put("com.iflytek.cloud.record.PcmRecorder::startRecording", (args, methodResult) -> {
             // args
-        
+            // ref arg
+            com.iflytek.cloud.record.PcmRecorder.PcmRecordListener var1 = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) getHEAP().get((int) args.get("var1"));
         
             // ref
             int refId = (int) args.get("refId");
@@ -5694,115 +5695,12 @@ public class XfttsFluttifyPlugin implements MethodChannel.MethodCallHandler {
         
             // print log
             if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.record.PcmRecorder@" + refId + "::startRecording(" + "" + ")");
+                Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.record.PcmRecorder@" + refId + "::startRecording(" + var1 + ")");
             }
         
             // invoke native method
             try {
-                ref.startRecording(new com.iflytek.cloud.record.PcmRecorder.PcmRecordListener() {
-                // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.iflytek.cloud.record.PcmRecorder::startRecording::Callback");
-        
-                // call dart method
-                @Override
-                public void onRecordBuffer(byte[] var1, int var2, int var3) {
-                    // print log
-                    if (getEnableLog()) {
-                        Log.d("java-callback", "fluttify-java-callback: onRecordBuffer(" + var1 + var2 + var3 + ")");
-                    }
-        
-                    // convert to jsonable data
-                    // jsonable arg
-                    byte[] argvar1 = var1;
-                    // jsonable arg
-                    int argvar2 = var2;
-                    // jsonable arg
-                    int argvar3 = var3;
-        
-                    // call dart method
-                    callbackChannel.invokeMethod(
-                            "Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordBuffer",
-                            new HashMap<String, Object>() {{
-                                put("var1", argvar1);
-                                put("var2", argvar2);
-                                put("var3", argvar3);
-                            }}
-                    );
-        
-                    // method result
-        
-                }
-        
-                @Override
-                public void onError(com.iflytek.cloud.SpeechError var1) {
-                    // print log
-                    if (getEnableLog()) {
-                        Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
-                    }
-        
-                    // convert to jsonable data
-                    // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
-        
-                    // call dart method
-                    callbackChannel.invokeMethod(
-                            "Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onError",
-                            new HashMap<String, Object>() {{
-                                put("var1", argvar1);
-                            }}
-                    );
-        
-                    // method result
-        
-                }
-        
-                @Override
-                public void onRecordStarted(boolean var1) {
-                    // print log
-                    if (getEnableLog()) {
-                        Log.d("java-callback", "fluttify-java-callback: onRecordStarted(" + var1 + ")");
-                    }
-        
-                    // convert to jsonable data
-                    // jsonable arg
-                    boolean argvar1 = var1;
-        
-                    // call dart method
-                    callbackChannel.invokeMethod(
-                            "Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordStarted",
-                            new HashMap<String, Object>() {{
-                                put("var1", argvar1);
-                            }}
-                    );
-        
-                    // method result
-        
-                }
-        
-                @Override
-                public void onRecordReleased() {
-                    // print log
-                    if (getEnableLog()) {
-                        Log.d("java-callback", "fluttify-java-callback: onRecordReleased(" + "" + ")");
-                    }
-        
-                    // convert to jsonable data
-        
-        
-                    // call dart method
-                    callbackChannel.invokeMethod(
-                            "Callback::com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordReleased",
-                            new HashMap<String, Object>() {{
-                
-                            }}
-                    );
-        
-                    // method result
-        
-                }
-        
-            });
+                ref.startRecording(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
                 methodResult.error(throwable.getMessage(), null, null);

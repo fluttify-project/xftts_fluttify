@@ -64,7 +64,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [originValue getValue:&origin];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -87,7 +87,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [centerValue getValue:&center];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -108,7 +108,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           BOOL autoRotate = [args[@"autoRotate"] boolValue];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -130,7 +130,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -150,7 +150,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -169,7 +169,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -188,7 +188,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -211,8 +211,8 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[@(refId)];
+          // ref
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");

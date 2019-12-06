@@ -26,7 +26,7 @@ mixin com_iflytek_cloud_record_PcmRecorder_PcmRecordListener on java_lang_Object
   
   @mustCallSuper
   Future<void> onError(com_iflytek_cloud_SpeechError var1) {
-    kNativeObjectPool.add(var1);
+  
   
     if (fluttifyLogEnabled) {
       debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');

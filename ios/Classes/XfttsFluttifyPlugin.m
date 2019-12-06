@@ -30,7 +30,7 @@ extern BOOL enableLog;
           IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -49,7 +49,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -71,7 +71,7 @@ extern BOOL enableLog;
           NSString* msg = (NSString*) args[@"msg"];
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -95,7 +95,7 @@ extern BOOL enableLog;
           int endPos = [args[@"endPos"] intValue];
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -114,7 +114,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -133,7 +133,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -152,7 +152,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -178,7 +178,7 @@ extern BOOL enableLog;
           NSData* eventData = (NSData*) HEAP[@([args[@"eventData"] integerValue])];
       
           // ref
-          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -205,7 +205,7 @@ extern BOOL enableLog;
           BOOL isLast = [args[@"isLast"] boolValue];
       
           // ref
-          id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[args[@"refId"]];
+          id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -225,7 +225,7 @@ extern BOOL enableLog;
           IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[args[@"refId"]];
+          id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -264,7 +264,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -286,7 +286,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -306,7 +306,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -325,7 +325,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -344,7 +344,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -363,7 +363,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -386,7 +386,7 @@ extern BOOL enableLog;
           NSString* grammarContent = (NSString*) args[@"grammarContent"];
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -425,7 +425,7 @@ extern BOOL enableLog;
           NSData* audioData = (NSData*) HEAP[@([args[@"audioData"] integerValue])];
       
           // ref
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[args[@"refId"]];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -545,7 +545,7 @@ extern BOOL enableLog;
           [originValue getValue:&origin];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -568,7 +568,7 @@ extern BOOL enableLog;
           [centerValue getValue:&center];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -589,7 +589,7 @@ extern BOOL enableLog;
           BOOL autoRotate = [args[@"autoRotate"] boolValue];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -611,7 +611,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -631,7 +631,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -650,7 +650,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -669,7 +669,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -691,7 +691,7 @@ extern BOOL enableLog;
           int error = [args[@"error"] intValue];
       
           // ref
-          id<IFlyPcmRecorderDelegate> ref = (id<IFlyPcmRecorderDelegate>) HEAP[args[@"refId"]];
+          id<IFlyPcmRecorderDelegate> ref = (id<IFlyPcmRecorderDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -711,7 +711,7 @@ extern BOOL enableLog;
           int power = [args[@"power"] intValue];
       
           // ref
-          id<IFlyPcmRecorderDelegate> ref = (id<IFlyPcmRecorderDelegate>) HEAP[args[@"refId"]];
+          id<IFlyPcmRecorderDelegate> ref = (id<IFlyPcmRecorderDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -750,7 +750,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -769,7 +769,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -789,7 +789,7 @@ extern BOOL enableLog;
           NSString* rate = (NSString*) args[@"rate"];
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -809,7 +809,7 @@ extern BOOL enableLog;
           float cycle = [args[@"cycle"] floatValue];
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -829,7 +829,7 @@ extern BOOL enableLog;
           NSString* savePath = (NSString*) args[@"savePath"];
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -848,7 +848,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[args[@"refId"]];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -870,7 +870,7 @@ extern BOOL enableLog;
           NSData* buffer = (NSData*) HEAP[@([args[@"buffer"] integerValue])];
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -889,7 +889,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -908,7 +908,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -927,7 +927,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -947,7 +947,7 @@ extern BOOL enableLog;
           IFlySpeechError* errorCode = (IFlySpeechError*) HEAP[@([args[@"errorCode"] integerValue])];
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -969,7 +969,7 @@ extern BOOL enableLog;
           BOOL isLast = [args[@"isLast"] boolValue];
       
           // ref
-          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechEvaluatorDelegate> ref = (id<IFlySpeechEvaluatorDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1008,7 +1008,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1027,7 +1027,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1046,7 +1046,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1066,7 +1066,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1088,7 +1088,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -1108,7 +1108,7 @@ extern BOOL enableLog;
           NSData* audioData = (NSData*) HEAP[@([args[@"audioData"] integerValue])];
       
           // ref
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[args[@"refId"]];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3294,7 +3294,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3313,7 +3313,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3332,7 +3332,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3354,7 +3354,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3374,7 +3374,7 @@ extern BOOL enableLog;
           NSData* audioData = (NSData*) HEAP[@([args[@"audioData"] integerValue])];
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3393,7 +3393,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[args[@"refId"]];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3475,7 +3475,7 @@ extern BOOL enableLog;
           NSString* data = (NSString*) args[@"data"];
       
           // ref
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[args[@"refId"]];
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3516,7 +3516,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[args[@"refId"]];
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3536,7 +3536,7 @@ extern BOOL enableLog;
           IFlySpeechError* errorCode = (IFlySpeechError*) HEAP[@([args[@"errorCode"] integerValue])];
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3563,7 +3563,7 @@ extern BOOL enableLog;
           BOOL isLast = [args[@"isLast"] boolValue];
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3583,7 +3583,7 @@ extern BOOL enableLog;
           int volume = [args[@"volume"] intValue];
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3602,7 +3602,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3621,7 +3621,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3640,7 +3640,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3666,7 +3666,7 @@ extern BOOL enableLog;
           NSData* eventData = (NSData*) HEAP[@([args[@"eventData"] integerValue])];
       
           // ref
-          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3725,7 +3725,7 @@ extern BOOL enableLog;
           NSString* json = (NSString*) args[@"json"];
       
           // ref
-          IFlyUserWords* ref = (IFlyUserWords*) HEAP[args[@"refId"]];
+          IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3746,7 +3746,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyUserWords* ref = (IFlyUserWords*) HEAP[args[@"refId"]];
+          IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3775,7 +3775,7 @@ extern BOOL enableLog;
           NSString* value = (NSString*) args[@"value"];
       
           // ref
-          IFlyUserWords* ref = (IFlyUserWords*) HEAP[args[@"refId"]];
+          IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3802,7 +3802,7 @@ extern BOOL enableLog;
           }
       
           // ref
-          IFlyUserWords* ref = (IFlyUserWords*) HEAP[args[@"refId"]];
+          IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3822,7 +3822,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyUserWords* ref = (IFlyUserWords*) HEAP[args[@"refId"]];
+          IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3842,7 +3842,7 @@ extern BOOL enableLog;
           IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          id<IFlyIdentityVerifierDelegate> ref = (id<IFlyIdentityVerifierDelegate>) HEAP[args[@"refId"]];
+          id<IFlyIdentityVerifierDelegate> ref = (id<IFlyIdentityVerifierDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3868,7 +3868,7 @@ extern BOOL enableLog;
           id obj = (id) HEAP[@([args[@"obj"] integerValue])];
       
           // ref
-          id<IFlyIdentityVerifierDelegate> ref = (id<IFlyIdentityVerifierDelegate>) HEAP[args[@"refId"]];
+          id<IFlyIdentityVerifierDelegate> ref = (id<IFlyIdentityVerifierDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3889,7 +3889,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[args[@"refId"]];
+          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3930,7 +3930,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[args[@"refId"]];
+          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3949,7 +3949,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[args[@"refId"]];
+          IFlyTextUnderstander* ref = (IFlyTextUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -3989,7 +3989,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[args[@"refId"]];
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4008,7 +4008,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[args[@"refId"]];
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4220,7 +4220,7 @@ extern BOOL enableLog;
           int errorCode = [args[@"errorCode"] intValue];
       
           // ref
-          id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[args[@"refId"]];
+          id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4302,7 +4302,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[args[@"refId"]];
+          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4322,7 +4322,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[args[@"refId"]];
+          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4380,7 +4380,7 @@ extern BOOL enableLog;
           IFlySpeechPlusServiceType serviceType = (IFlySpeechPlusServiceType) [args[@"serviceType"] integerValue];
       
           // ref
-          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[args[@"refId"]];
+          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4419,7 +4419,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4441,7 +4441,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4461,7 +4461,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4483,7 +4483,7 @@ extern BOOL enableLog;
           NSString* params = (NSString*) args[@"params"];
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4502,7 +4502,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4521,7 +4521,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4541,7 +4541,7 @@ extern BOOL enableLog;
           NSData* audioData = (NSData*) HEAP[@([args[@"audioData"] integerValue])];
       
           // ref
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[args[@"refId"]];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4561,7 +4561,7 @@ extern BOOL enableLog;
           IFlySpeechError* errorCode = (IFlySpeechError*) HEAP[@([args[@"errorCode"] integerValue])];
       
           // ref
-          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[args[@"refId"]];
+          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4580,7 +4580,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[args[@"refId"]];
+          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4600,7 +4600,7 @@ extern BOOL enableLog;
           int volume = [args[@"volume"] intValue];
       
           // ref
-          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[args[@"refId"]];
+          id<IFlyISVDelegate> ref = (id<IFlyISVDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4681,7 +4681,7 @@ extern BOOL enableLog;
           int length = [args[@"length"] intValue];
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4701,7 +4701,7 @@ extern BOOL enableLog;
           int pwdt = [args[@"pwdt"] intValue];
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4727,7 +4727,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4749,7 +4749,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4769,7 +4769,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4788,7 +4788,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4807,7 +4807,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4826,7 +4826,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[args[@"refId"]];
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4845,7 +4845,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[args[@"refId"]];
+          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4864,7 +4864,7 @@ extern BOOL enableLog;
       
       
           // ref
-          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[args[@"refId"]];
+          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4884,7 +4884,7 @@ extern BOOL enableLog;
           IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[args[@"refId"]];
+          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4904,7 +4904,7 @@ extern BOOL enableLog;
           int volume = [args[@"volume"] intValue];
       
           // ref
-          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[args[@"refId"]];
+          id<IFlyVoiceWakeuperDelegate> ref = (id<IFlyVoiceWakeuperDelegate>) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4965,7 +4965,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -4985,7 +4985,7 @@ extern BOOL enableLog;
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5005,7 +5005,7 @@ extern BOOL enableLog;
           NSString* text = (NSString*) args[@"text"];
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5027,7 +5027,7 @@ extern BOOL enableLog;
           NSString* uri = (NSString*) args[@"uri"];
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5046,7 +5046,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5065,7 +5065,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5084,7 +5084,7 @@ extern BOOL enableLog;
       
       
           // ref
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[args[@"refId"]];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // print log
           if (enableLog) {
@@ -5105,8 +5105,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[@(refId)];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           id<IFlySpeechRecognizerDelegate> result = ref.delegate;
@@ -5123,8 +5122,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[@(refId)];
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           BOOL result = ref.isListening;
@@ -5140,8 +5138,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[@(refId)];
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           BOOL result = ref.isNeedDeActive;
@@ -5157,8 +5154,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[@(refId)];
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           BOOL result = ref.isListening;
@@ -5174,8 +5170,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[@(refId)];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           BOOL result = ref.isUnderstanding;
@@ -5191,8 +5186,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[@(refId)];
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           id<IFlySpeechRecognizerDelegate> result = ref.delegate;
@@ -5209,8 +5203,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[@(refId)];
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           NSString* result = ref.dataName;
@@ -5226,8 +5219,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[@(refId)];
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           NSString* result = ref.data;
@@ -5243,8 +5235,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           int result = ref.errorCode;
@@ -5260,8 +5251,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           int result = ref.errorType;
@@ -5277,8 +5267,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           NSString* result = ref.errorDesc;
@@ -5294,8 +5283,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[@(refId)];
+          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           IFlyEngineMode result = ref.engineMode;
@@ -5311,8 +5299,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[@(refId)];
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           id<IFlySpeechEvaluatorDelegate> result = ref.delegate;
@@ -5329,8 +5316,7 @@ extern BOOL enableLog;
           }
       
           // ref object
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[@(refId)];
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           // invoke native method
           BOOL result = ref.isSpeaking;
@@ -5349,8 +5335,8 @@ extern BOOL enableLog;
           // ref arg
           id<IFlySpeechRecognizerDelegate> delegate = (id<IFlySpeechRecognizerDelegate>) HEAP[@([args[@"delegate"] integerValue])];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[@(refId)];
+          // ref
+          IFlySpeechRecognizer* ref = (IFlySpeechRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = delegate;
           methodResult(@"success");
@@ -5365,8 +5351,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[@(refId)];
+          // ref
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -5381,8 +5367,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[@(refId)];
+          // ref
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -5398,8 +5384,8 @@ extern BOOL enableLog;
           // jsonable arg
           BOOL isNeedDeActive = [args[@"isNeedDeActive"] boolValue];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[@(refId)];
+          // ref
+          IFlyPcmRecorder* ref = (IFlyPcmRecorder*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.isNeedDeActive = isNeedDeActive;
           methodResult(@"success");
@@ -5414,8 +5400,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[@(refId)];
+          // ref
+          IFlyVoiceWakeuper* ref = (IFlyVoiceWakeuper*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -5431,8 +5417,8 @@ extern BOOL enableLog;
           // ref arg
           id<IFlySpeechRecognizerDelegate> delegate = (id<IFlySpeechRecognizerDelegate>) HEAP[@([args[@"delegate"] integerValue])];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[@(refId)];
+          // ref
+          IFlySpeechUnderstander* ref = (IFlySpeechUnderstander*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = delegate;
           methodResult(@"success");
@@ -5448,8 +5434,8 @@ extern BOOL enableLog;
           // jsonable arg
           NSString* dataName = (NSString*) args[@"dataName"];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[@(refId)];
+          // ref
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.dataName = dataName;
           methodResult(@"success");
@@ -5465,8 +5451,8 @@ extern BOOL enableLog;
           // jsonable arg
           NSString* data = (NSString*) args[@"data"];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[@(refId)];
+          // ref
+          IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.data = data;
           methodResult(@"success");
@@ -5482,8 +5468,8 @@ extern BOOL enableLog;
           // jsonable arg
           int errorCode = [args[@"errorCode"] intValue];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          // ref
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.errorCode = errorCode;
           methodResult(@"success");
@@ -5499,8 +5485,8 @@ extern BOOL enableLog;
           // jsonable arg
           int errorType = [args[@"errorType"] intValue];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          // ref
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.errorType = errorType;
           methodResult(@"success");
@@ -5516,8 +5502,8 @@ extern BOOL enableLog;
           // jsonable arg
           NSString* errorDesc = (NSString*) args[@"errorDesc"];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechError* ref = (IFlySpeechError*) HEAP[@(refId)];
+          // ref
+          IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.errorDesc = errorDesc;
           methodResult(@"success");
@@ -5532,8 +5518,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[@(refId)];
+          // ref
+          IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -5549,8 +5535,8 @@ extern BOOL enableLog;
           // ref arg
           id<IFlySpeechEvaluatorDelegate> delegate = (id<IFlySpeechEvaluatorDelegate>) HEAP[@([args[@"delegate"] integerValue])];
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[@(refId)];
+          // ref
+          IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = delegate;
           methodResult(@"success");
@@ -5565,8 +5551,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[@(refId)];
+          // ref
+          IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -5581,8 +5567,8 @@ extern BOOL enableLog;
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[@(refId)];
+          // ref
+          IFlySpeechSynthesizer* ref = (IFlySpeechSynthesizer*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
