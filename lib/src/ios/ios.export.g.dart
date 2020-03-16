@@ -1,4 +1,3 @@
-export 'IFlyPcmRecorder.g.dart';
 export 'IFlySpeechUnderstander.g.dart';
 export 'IFlySpeechError.g.dart';
 export 'IFlyVoiceWakeuperDelegate.g.dart';
@@ -14,7 +13,6 @@ export 'IFlyUserWords.g.dart';
 export 'IFlySpeechEvaluator.g.dart';
 export 'type_op.g.dart';
 export 'IFlySpeechUtility.g.dart';
-export 'object_factory.g.dart';
 export 'LOG_LEVEL.g.dart';
 export 'IFlySpeechSynthesizerDelegate.g.dart';
 export 'IFlySpeechEventType.g.dart';
@@ -34,4 +32,3 @@ export 'IFlySpeechSynthesizer.g.dart';
 export 'IFlySpeechEvaluatorDelegate.g.dart';
 export 'IFlySpeechConstant.g.dart';
 export 'IFlyDataUploader.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';

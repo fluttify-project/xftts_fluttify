@@ -5,6 +5,8 @@ import 'package:xftts_fluttify/xftts_fluttify.dart';
 void main() {
   const MethodChannel channel = MethodChannel('xftts_fluttify');
 
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
       return '42';

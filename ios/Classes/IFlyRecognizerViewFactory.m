@@ -4,6 +4,7 @@
 
 #import "IFlyRecognizerViewFactory.h"
 #import "XfttsFluttifyPlugin.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -12,10 +13,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
-typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
-
 @implementation IFlyRecognizerViewFactory {
-  NSObject <FlutterPluginRegistrar> *_registrar;
 }
 
 - (instancetype)initWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar {
@@ -34,7 +32,6 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 @end
 
 @implementation IFlyRecognizerViewPlatformView {
-  NSObject <FlutterPluginRegistrar> *_registrar;
   NSInteger _viewId;
   NSDictionary<NSString *, Handler> *_handlerMap;
 }
@@ -56,7 +53,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 
   //region handlers
   _handlerMap = @{
-      @"IFlyRecognizerView::initWithOrigin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::initWithOrigin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // struct arg
           NSValue* originValue = (NSValue*) HEAP[@([args[@"origin"] integerValue])];
@@ -64,11 +61,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [originValue getValue:&origin];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithOrigin(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithOrigin(%@)", args[@"refId"], args[@"origin"]);
           }
       
           // invoke native method
@@ -77,9 +74,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // result
           // return a ref
           HEAP[@(((NSObject*) result).hash)] = result;
-          methodResult(@(((NSObject*) result).hash));
+          NSNumber* jsonableResult = @(((NSObject*) result).hash);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::initWithCenter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::initWithCenter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // struct arg
           NSValue* centerValue = (NSValue*) HEAP[@([args[@"center"] integerValue])];
@@ -87,11 +86,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [centerValue getValue:&center];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithCenter(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithCenter(%@)", args[@"refId"], args[@"center"]);
           }
       
           // invoke native method
@@ -100,19 +99,21 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // result
           // return a ref
           HEAP[@(((NSObject*) result).hash)] = result;
-          methodResult(@(((NSObject*) result).hash));
+          NSNumber* jsonableResult = @(((NSObject*) result).hash);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::setAutoRotate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::setAutoRotate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           BOOL autoRotate = [args[@"autoRotate"] boolValue];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setAutoRotate(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setAutoRotate(%@)", args[@"refId"], args[@"autoRotate"]);
           }
       
           // invoke native method
@@ -120,9 +121,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* value = (NSString*) args[@"value"];
@@ -130,11 +133,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setParameter(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setParameter(%@, %@)", args[@"refId"], args[@"value"], args[@"key"]);
           }
       
           // invoke native method
@@ -142,19 +145,21 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::parameterForKey(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::parameterForKey(%@)", args[@"refId"], args[@"key"]);
           }
       
           // invoke native method
@@ -162,18 +167,20 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::start": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::start": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::start(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::start()", args[@"refId"]);
           }
       
           // invoke native method
@@ -181,18 +188,20 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::cancel(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::cancel()", args[@"refId"]);
           }
       
           // invoke native method
@@ -200,9 +209,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"IFlyRecognizerView::set_delegate");
@@ -212,7 +223,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");

@@ -1,17 +1,18 @@
 name: xftts_fluttify
 description: A `xftts` flutter plugin, Powered by `Fluttify` engine.
 version: 0.0.1
-author: yohom <382146139@qq.com>
-homepage: https://github.com/fluttify-project/xftts_fluttify
+author: yohom <yohombao@qq.com>
+homepage: https://fluttify.com
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
+  flutter: ">=1.12.13 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  foundation_fluttify: ^0.2.1
   
+  foundation_fluttify: ^0.4.16
 
 dev_dependencies:
   flutter_test:
@@ -19,5 +20,9 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: com.fluttify.xftts_fluttify
-    pluginClass: XfttsFluttifyPlugin
+    platforms:
+      android:
+        package: com.fluttify.xftts_fluttify
+        pluginClass: XfttsFluttifyPlugin
+      ios:
+        pluginClass: XfttsFluttifyPlugin
