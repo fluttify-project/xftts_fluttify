@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_idata_extension_IFlyCollectorExt extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.idata.extension.IFlyCollectorExt';
+
   
   //endregion
 

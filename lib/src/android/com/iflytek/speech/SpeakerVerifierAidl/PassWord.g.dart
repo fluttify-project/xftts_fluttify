@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_speech_SpeakerVerifierAidl_PassWord extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.speech.SpeakerVerifierAidl.PassWord';
+
   
   //endregion
 
@@ -71,21 +73,21 @@ class com_iflytek_speech_SpeakerVerifierAidl_PassWord extends java_lang_Object  
 extension com_iflytek_speech_SpeakerVerifierAidl_PassWord_Batch on List<com_iflytek_speech_SpeakerVerifierAidl_PassWord> {
   //region getters
   Future<List<String>> get_pwdt_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_pwid_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_pwtext_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -95,19 +97,19 @@ extension com_iflytek_speech_SpeakerVerifierAidl_PassWord_Batch on List<com_ifly
 
   //region setters
   Future<void> set_pwdt_batch(List<String> pwdt) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pwdt": pwdt[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pwdt": pwdt[__i__]}]);
   
   
   }
   
   Future<void> set_pwid_batch(List<String> pwid) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pwid": pwid[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pwid": pwid[__i__]}]);
   
   
   }
   
   Future<void> set_pwtext_batch(List<String> pwtext) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pwtext": pwtext[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pwtext": pwtext[__i__]}]);
   
   
   }

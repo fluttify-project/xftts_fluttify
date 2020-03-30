@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_util_ResourceUtil extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.util.ResourceUtil';
+
   static final String ENGINE_START = "engine_start";
   static final String ENGINE_DESTROY = "engine_destroy";
   static final String ASR_RES_PATH = "asr_res_path";
@@ -94,7 +96,7 @@ extension com_iflytek_cloud_util_ResourceUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].index, "var2": var2[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].index, "var2": var2[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

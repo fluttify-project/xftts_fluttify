@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyVerifierUtil extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyVerifierUtil';
+
   
   //endregion
 
@@ -111,7 +113,7 @@ extension IFlyVerifierUtil_Batch on List<IFlyVerifierUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVerifierUtil::generateNumberPassword_batch', [for (int i = 0; i < this.length; i++) {"length": length[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVerifierUtil::generateNumberPassword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"length": length[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -130,7 +132,7 @@ extension IFlyVerifierUtil_Batch on List<IFlyVerifierUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVerifierUtil::ARGBToGray_batch', [for (int i = 0; i < this.length; i++) {"sourceImage": sourceImage[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVerifierUtil::ARGBToGray_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"sourceImage": sourceImage[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

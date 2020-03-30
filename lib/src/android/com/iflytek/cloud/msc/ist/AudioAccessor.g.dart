@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.msc.ist.AudioAccessor';
+
   
   //endregion
 
@@ -313,7 +315,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -332,7 +334,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -351,7 +353,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -370,7 +372,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -389,7 +391,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -408,7 +410,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].index, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].index, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -427,7 +429,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -446,7 +448,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -465,7 +467,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -484,7 +486,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -503,7 +505,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -522,7 +524,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

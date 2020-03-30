@@ -32,8 +32,8 @@ public class SubHandler1 {
         return new HashMap<String, Handler>() {{
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_sst_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String sst = (String) ((Map<String, Object>) args).get("sst");
@@ -48,8 +48,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_ret_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int ret = (int) ((Map<String, Object>) args).get("ret");
@@ -64,8 +64,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_dcs_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String dcs = (String) ((Map<String, Object>) args).get("dcs");
@@ -80,8 +80,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_score_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     Double score = (Double) ((Map<String, Object>) args).get("score");
@@ -96,8 +96,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_score_raw_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     Double score_raw = (Double) ((Map<String, Object>) args).get("score_raw");
@@ -112,8 +112,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_vid_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String vid = (String) ((Map<String, Object>) args).get("vid");
@@ -128,8 +128,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_suc_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int suc = (int) ((Map<String, Object>) args).get("suc");
@@ -144,8 +144,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_rgn_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int rgn = (int) ((Map<String, Object>) args).get("rgn");
@@ -160,8 +160,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_trs_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String trs = (String) ((Map<String, Object>) args).get("trs");
@@ -176,8 +176,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_err_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int err = (int) ((Map<String, Object>) args).get("err");
@@ -192,8 +192,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.cloud.VerifierResult::set_source_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String source = (String) ((Map<String, Object>) args).get("source");
@@ -208,8 +208,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_startByte_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int startByte = (int) ((Map<String, Object>) args).get("startByte");
@@ -224,8 +224,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_endByte_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int endByte = (int) ((Map<String, Object>) args).get("endByte");
@@ -240,8 +240,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_status_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int status = (int) ((Map<String, Object>) args).get("status");
@@ -256,8 +256,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_volumeLevel_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int volumeLevel = (int) ((Map<String, Object>) args).get("volumeLevel");
@@ -272,8 +272,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_waitPauseOrEnd_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int waitPauseOrEnd = (int) ((Map<String, Object>) args).get("waitPauseOrEnd");
@@ -288,8 +288,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_endRemainFrameNum_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int endRemainFrameNum = (int) ((Map<String, Object>) args).get("endRemainFrameNum");
@@ -304,8 +304,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_waitStart_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int waitStart = (int) ((Map<String, Object>) args).get("waitStart");
@@ -320,8 +320,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_startRemainFrameNum_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int startRemainFrameNum = (int) ((Map<String, Object>) args).get("startRemainFrameNum");
@@ -336,8 +336,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_wavData_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     byte[] wavData = (byte[]) ((Map<String, Object>) args).get("wavData");
@@ -352,8 +352,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_wavDataSize_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int wavDataSize = (int) ((Map<String, Object>) args).get("wavDataSize");
@@ -368,8 +368,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_inSpeech_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int inSpeech = (int) ((Map<String, Object>) args).get("inSpeech");
@@ -384,8 +384,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_audioQuality_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int audioQuality = (int) ((Map<String, Object>) args).get("audioQuality");
@@ -400,8 +400,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.VAD.VadData::set_firstOutByte_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int firstOutByte = (int) ((Map<String, Object>) args).get("firstOutByte");
@@ -416,8 +416,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_errorcode_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int errorcode = (int) ((Map<String, Object>) args).get("errorcode");
@@ -432,8 +432,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_epstatues_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int epstatues = (int) ((Map<String, Object>) args).get("epstatues");
@@ -448,8 +448,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_rsltstatus_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int rsltstatus = (int) ((Map<String, Object>) args).get("rsltstatus");
@@ -464,8 +464,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_sesstatus_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int sesstatus = (int) ((Map<String, Object>) args).get("sesstatus");
@@ -480,8 +480,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_buffer_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     byte[] buffer = (byte[]) ((Map<String, Object>) args).get("buffer");
@@ -496,8 +496,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MSCSessionInfo::set_buflen_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int buflen = (int) ((Map<String, Object>) args).get("buflen");
@@ -512,8 +512,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_handle_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     long handle = (long) (int) ((Map<String, Object>) args).get("handle");
@@ -528,8 +528,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_rate_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int rate = (int) ((Map<String, Object>) args).get("rate");
@@ -544,8 +544,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_begin_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int begin = (int) ((Map<String, Object>) args).get("begin");
@@ -560,8 +560,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_end_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int end = (int) ((Map<String, Object>) args).get("end");
@@ -576,8 +576,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_seg_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int seg = (int) ((Map<String, Object>) args).get("seg");
@@ -592,8 +592,8 @@ public class SubHandler1 {
             });
             // setter batch
             put("com.iflytek.msc.MetaVAD.Instance::set_volume_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int volume = (int) ((Map<String, Object>) args).get("volume");
@@ -771,8 +771,8 @@ public class SubHandler1 {
                         // list arg
                         List<Integer> argvar1 = new ArrayList<>();
                         for (com.iflytek.speech.SpeakerVerifierAidl.PassWord item : var1) {
-                            getHEAP().put(item.hashCode(), item);
-                            argvar1.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            argvar1.add(System.identityHashCode(item));
                         }
             
                         // call dart method
@@ -1589,7 +1589,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2337,7 +2337,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2372,7 +2372,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2412,7 +2412,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -2465,7 +2465,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2634,7 +2634,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2663,7 +2663,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2698,7 +2698,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -3003,7 +3003,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -3056,7 +3056,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3247,7 +3247,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3282,7 +3282,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3391,7 +3391,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3423,7 +3423,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3458,7 +3458,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -4280,7 +4280,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4315,7 +4315,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4354,7 +4354,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4386,7 +4386,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4421,7 +4421,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -4568,7 +4568,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4600,7 +4600,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4635,7 +4635,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -4966,7 +4966,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5334,7 +5334,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5795,7 +5795,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -5848,7 +5848,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -6142,7 +6142,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6177,7 +6177,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6535,7 +6535,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6570,7 +6570,7 @@ public class SubHandler1 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6737,7 +6737,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -6772,7 +6772,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -6971,7 +6971,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -7006,7 +7006,7 @@ public class SubHandler1 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;

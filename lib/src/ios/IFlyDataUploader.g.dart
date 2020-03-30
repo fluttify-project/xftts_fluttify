@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyDataUploader extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyDataUploader';
+
   
   //endregion
 
@@ -70,18 +72,18 @@ class IFlyDataUploader extends NSObject  {
   //endregion
 
   //region methods
-  Future<void> uploadDataWithCompletionHandlerNamedata(void completionHandler(String result, IFlySpeechError error), String name, String data) async {
+  Future<void> uploadDataWithCompletionHandler_name_data(void completionHandler(String result, IFlySpeechError error), String name, String data) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyDataUploader@$refId::uploadDataWithCompletionHandler([\'name\':$name, \'data\':$data])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::uploadDataWithCompletionHandlerNamedata', {"name": name, "data": data, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::uploadDataWithCompletionHandler_name_data', {"name": name, "data": data, "refId": refId});
   
   
     // handle native call
-    MethodChannel('IFlyDataUploader::uploadDataWithCompletionHandlerNamedata::Callback')
+    MethodChannel('IFlyDataUploader::uploadDataWithCompletionHandler_name_data::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           // final refId = args['callerRefId'] as int;
@@ -111,14 +113,14 @@ class IFlyDataUploader extends NSObject  {
     }
   }
   
-  Future<void> setParameterForKey(String parameter, String key) async {
+  Future<void> setParameter_forKey(String parameter, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyDataUploader@$refId::setParameter([\'parameter\':$parameter, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameterForKey', {"parameter": parameter, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameter_forKey', {"parameter": parameter, "key": key, "refId": refId});
   
   
     // handle native call
@@ -139,14 +141,14 @@ class IFlyDataUploader extends NSObject  {
 extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
   //region getters
   Future<List<String>> get_dataName_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_dataName_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_dataName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_data_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_data_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_data_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -156,13 +158,13 @@ extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
 
   //region setters
   Future<void> set_dataName_batch(List<String> dataName) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_dataName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dataName": dataName[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_dataName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "dataName": dataName[__i__]}]);
   
   
   }
   
   Future<void> set_data_batch(List<String> data) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_data_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "data": data[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_data_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "data": data[__i__]}]);
   
   
   }
@@ -170,13 +172,13 @@ extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
   //endregion
 
   //region methods
-  Future<void> setParameterForKey_batch(List<String> parameter, List<String> key) async {
+  Future<void> setParameter_forKey_batch(List<String> parameter, List<String> key) async {
     if (parameter.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"parameter": parameter[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"parameter": parameter[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

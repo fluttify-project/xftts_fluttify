@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.msc.util.AESUtil';
+
   
   //endregion
 
@@ -88,7 +90,7 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -154,7 +156,7 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -242,7 +244,7 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -265,7 +267,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -284,14 +286,14 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -303,7 +305,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -322,7 +324,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -341,14 +343,14 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -360,7 +362,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -379,7 +381,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -398,7 +400,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -417,14 +419,14 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }

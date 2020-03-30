@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyResourceUtil extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyResourceUtil';
+
   
   //endregion
 
@@ -287,7 +289,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ENGINE_START_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ENGINE_START_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -306,7 +308,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ENGINE_DESTROY_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ENGINE_DESTROY_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -325,7 +327,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ASR_RES_PATH_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::ASR_RES_PATH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -344,7 +346,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::GRM_BUILD_PATH_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::GRM_BUILD_PATH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -363,7 +365,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::TTS_RES_PATH_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::TTS_RES_PATH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -382,7 +384,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::IVW_RES_PATH_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::IVW_RES_PATH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -401,7 +403,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::GRAMMARTYPE_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::GRAMMARTYPE_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -420,7 +422,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::PLUS_LOCAL_DEFAULT_RES_PATH_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::PLUS_LOCAL_DEFAULT_RES_PATH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -439,7 +441,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::generateResourcePath_batch', [for (int i = 0; i < this.length; i++) {"path": path[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::generateResourcePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"path": path[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -458,7 +460,7 @@ extension IFlyResourceUtil_Batch on List<IFlyResourceUtil> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::identifierForVoiceName_batch', [for (int i = 0; i < this.length; i++) {"voiceName": voiceName[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyResourceUtil::identifierForVoiceName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"voiceName": voiceName[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

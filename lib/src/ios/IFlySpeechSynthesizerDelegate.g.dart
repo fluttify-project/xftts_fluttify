@@ -38,20 +38,20 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onBufferProgressMessage(int progress, String msg) {
+  Future<void> onBufferProgress_message(int progress, String msg) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onBufferProgressMessage::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onBufferProgress_message::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> onSpeakProgressBeginPosendPos(int progress, int beginPos, int endPos) {
+  Future<void> onSpeakProgress_beginPos_endPos(int progress, int beginPos, int endPos) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onSpeakProgressBeginPosendPos::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onSpeakProgress_beginPos_endPos::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -83,11 +83,11 @@ mixin IFlySpeechSynthesizerDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onEventArg0arg1data(int eventType, int arg0, int arg1, NSData eventData) {
+  Future<void> onEvent_arg0_arg1_data(int eventType, int arg0, int arg1, NSData eventData) {
     kNativeObjectPool.add(eventData);
   
     if (fluttifyLogEnabled) {
-      debugPrint('onEventArg0arg1data::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onEvent_arg0_arg1_data::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

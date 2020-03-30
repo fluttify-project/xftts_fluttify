@@ -20,11 +20,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> onVolumeChangedBuffer(int volume, NSData buffer) {
+  Future<void> onVolumeChanged_buffer(int volume, NSData buffer) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onVolumeChangedBuffer::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onVolumeChanged_buffer::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -65,11 +65,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onResultsIsLast(NSData results, bool isLast) {
+  Future<void> onResults_isLast(NSData results, bool isLast) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onResultsIsLast::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onResults_isLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

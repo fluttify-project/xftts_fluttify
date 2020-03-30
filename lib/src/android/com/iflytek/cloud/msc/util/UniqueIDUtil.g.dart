@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.msc.util.UniqueIDUtil';
+
   
   //endregion
 
@@ -111,7 +113,7 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -130,7 +132,7 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

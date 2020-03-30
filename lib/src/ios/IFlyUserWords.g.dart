@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyUserWords extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyUserWords';
+
   
   //endregion
 
@@ -87,19 +89,19 @@ class IFlyUserWords extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList());
+      return (result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList();
     }
   }
   
-  Future<bool> putWordValue(String key, String value) async {
+  Future<bool> putWord_value(String key, String value) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyUserWords@$refId::putWord([\'key\':$key, \'value\':$value])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWordValue', {"key": key, "value": value, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWord_value', {"key": key, "value": value, "refId": refId});
   
   
     // handle native call
@@ -114,14 +116,14 @@ class IFlyUserWords extends NSObject  {
     }
   }
   
-  Future<bool> putwordsWords(String key, List<NSObject> words) async {
+  Future<bool> putwords_words(String key, List<NSObject> words) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyUserWords@$refId::putwords([\'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwordsWords', {"key": key, "words": words.map((it) => it.refId).toList(), "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwords_words', {"key": key, "words": words.map((it) => it.refId).toList(), "refId": refId});
   
   
     // handle native call
@@ -177,7 +179,7 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::initWithJson_batch', [for (int i = 0; i < this.length; i++) {"json": json[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::initWithJson_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"json": json[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -196,26 +198,26 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::getWords_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::getWords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<List<bool>> putWordValue_batch(List<String> key, List<String> value) async {
+  Future<List<bool>> putWord_value_batch(List<String> key, List<String> value) async {
     if (key.length != value.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWordValue_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "value": value[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWord_value_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "value": value[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -228,13 +230,13 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   }
   
-  Future<List<bool>> putwordsWords_batch(List<String> key, List<List<NSObject>> words) async {
+  Future<List<bool>> putwords_words_batch(List<String> key, List<List<NSObject>> words) async {
     if (key.length != words.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwordsWords_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "words": words[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwords_words_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "words": words[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -253,7 +255,7 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::containsKey_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::containsKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

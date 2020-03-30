@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.msc.util.Encrypter';
+
   static final int BUFFER_SIZE = 1024;
   //endregion
 
@@ -66,7 +68,7 @@ class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -88,7 +90,7 @@ class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -110,7 +112,7 @@ class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -176,7 +178,7 @@ class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -198,7 +200,7 @@ class com_iflytek_cloud_msc_util_Encrypter extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -243,14 +245,14 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::lightcode_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::lightcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -262,14 +264,14 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::zip5xEncode_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::zip5xEncode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -281,14 +283,14 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::zip5xDecode_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::zip5xDecode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -300,7 +302,7 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::MD5_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::MD5_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -319,7 +321,7 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::cut16MD5_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::cut16MD5_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -338,14 +340,14 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::encrypt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::encrypt_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -357,14 +359,14 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::intToByteArray_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::intToByteArray_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -376,7 +378,7 @@ extension com_iflytek_cloud_msc_util_Encrypter_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::byteArrayToInt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Encrypter::byteArrayToInt_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

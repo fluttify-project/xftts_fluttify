@@ -48,8 +48,8 @@ extern BOOL enableLog;
 
 - (UIView *)view {
   IFlyRecognizerView *view = [[IFlyRecognizerView alloc] init];
-  // 这里viewId加1是为了防止往HEAP里放了nil的key, 把HEAP内原先viewId为0的覆盖掉了, 因为nil实际上就是0
-  HEAP[@(_viewId + 1)] = view;
+  // 这里用一个magic number调整一下id
+  HEAP[@(2147483647 - _viewId)] = view;
 
   //region handlers
   _handlerMap = @{
@@ -125,7 +125,7 @@ extern BOOL enableLog;
       
           methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* value = (NSString*) args[@"value"];
@@ -296,7 +296,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onBufferProgressMessage");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onBufferProgress_message");
   }
 
   // convert to jsonable arg
@@ -305,7 +305,7 @@ extern BOOL enableLog;
   // jsonable callback arg
   NSString* argmsg = msg;
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onBufferProgressMessage" arguments:@{@"progress": argprogress, @"msg": argmsg}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onBufferProgress_message" arguments:@{@"progress": argprogress, @"msg": argmsg}];
   
 }
 
@@ -316,7 +316,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos");
   }
 
   // convert to jsonable arg
@@ -327,7 +327,7 @@ extern BOOL enableLog;
   // primitive callback arg
   NSNumber* argendPos = @(endPos);
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos" arguments:@{@"progress": argprogress, @"beginPos": argbeginPos, @"endPos": argendPos}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos" arguments:@{@"progress": argprogress, @"beginPos": argbeginPos, @"endPos": argendPos}];
   
 }
 
@@ -389,7 +389,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onEventArg0arg1data");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data");
   }
 
   // convert to jsonable arg
@@ -403,7 +403,7 @@ extern BOOL enableLog;
   NSNumber* argeventData = @(eventData.hash);
   HEAP[argeventData] = eventData;
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onEventArg0arg1data" arguments:@{@"eventType": argeventType, @"arg0": argarg0, @"arg1": argarg1, @"eventData": argeventData}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data" arguments:@{@"eventType": argeventType, @"arg0": argarg0, @"arg1": argarg1, @"eventData": argeventData}];
   
 }
 
@@ -414,23 +414,23 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyRecognizerViewDelegate::onResultIsLast");
+    NSLog(@"IFlyRecognizerViewDelegate::onResult_isLast");
   }
 
   // convert to jsonable arg
   // list callback arg
   NSMutableArray<NSNumber*>* argresultArray = [NSMutableArray arrayWithCapacity:resultArray.count];
-  for (int i = 0; i < resultArray.count; i++) {
-      NSObject* item = ((NSObject*) [resultArray objectAtIndex:i]);
+  for (int __i__ = 0; __i__ < resultArray.count; __i__++) {
+      NSObject* item = ((NSObject*) [resultArray objectAtIndex:__i__]);
       // return to dart side data
-      argresultArray[i] = @(item.hash);
+      argresultArray[__i__] = @(item.hash);
       // add to HEAP
       HEAP[@(item.hash)] = item;
   }
   // primitive callback arg
   NSNumber* argisLast = @(isLast);
 
-  [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResultIsLast" arguments:@{@"resultArray": argresultArray, @"isLast": argisLast}];
+  [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResult_isLast" arguments:@{@"resultArray": argresultArray, @"isLast": argisLast}];
   
 }
 
@@ -441,7 +441,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderBufferBufferSize");
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderBuffer_bufferSize");
   }
 
   // convert to jsonable arg
@@ -451,7 +451,7 @@ extern BOOL enableLog;
   // primitive callback arg
   NSNumber* argsize = @(size);
 
-  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderBufferBufferSize" arguments:@{@"buffer": argbuffer, @"size": argsize}];
+  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderBuffer_bufferSize" arguments:@{@"buffer": argbuffer, @"size": argsize}];
   
 }
 
@@ -462,7 +462,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderErrorTheError");
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderError_theError");
   }
 
   // convert to jsonable arg
@@ -472,7 +472,7 @@ extern BOOL enableLog;
   // primitive callback arg
   NSNumber* argerror = @(error);
 
-  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderErrorTheError" arguments:@{@"recoder": argrecoder, @"error": argerror}];
+  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderError_theError" arguments:@{@"recoder": argrecoder, @"error": argerror}];
   
 }
 
@@ -501,7 +501,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onResultsIsLast");
+    NSLog(@"IFlyIdentityVerifierDelegate::onResults_isLast");
   }
 
   // convert to jsonable arg
@@ -511,7 +511,7 @@ extern BOOL enableLog;
   // primitive callback arg
   NSNumber* argisLast = @(isLast);
 
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResultsIsLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
+  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResults_isLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
   
 }
 
@@ -522,7 +522,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onEventArg1arg2extra");
+    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
   }
 
   // convert to jsonable arg
@@ -536,7 +536,7 @@ extern BOOL enableLog;
   NSNumber* argobj = @(((NSObject*) obj).hash);
   HEAP[argobj] = ((NSObject*) obj);
 
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEventArg1arg2extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
+  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
   
 }
 
@@ -635,7 +635,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyVoiceWakeuperDelegate::onEventIsLastarg1data");
+    NSLog(@"IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data");
   }
 
   // convert to jsonable arg
@@ -649,7 +649,7 @@ extern BOOL enableLog;
   NSNumber* argeventData = @(eventData.hash);
   HEAP[argeventData] = eventData;
 
-  [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEventIsLastarg1data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
+  [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
   
 }
 

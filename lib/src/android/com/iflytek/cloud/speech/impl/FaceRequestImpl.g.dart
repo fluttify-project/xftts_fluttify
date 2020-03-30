@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_speech_impl_FaceRequestImpl extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.speech.impl.FaceRequestImpl';
+
   
   //endregion
 
@@ -152,7 +154,7 @@ extension com_iflytek_cloud_speech_impl_FaceRequestImpl_Batch on List<com_iflyte
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.FaceRequestImpl::cancel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.FaceRequestImpl::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -171,7 +173,7 @@ extension com_iflytek_cloud_speech_impl_FaceRequestImpl_Batch on List<com_iflyte
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.FaceRequestImpl::destroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.FaceRequestImpl::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

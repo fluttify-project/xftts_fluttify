@@ -29,11 +29,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onResultsIsLast(List<NSObject> results, bool isLast) {
+  Future<void> onResults_isLast(List<NSObject> results, bool isLast) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onResultsIsLast::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onResults_isLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -74,11 +74,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onEventArg0arg1data(int eventType, int arg0, int arg1, NSData eventData) {
+  Future<void> onEvent_arg0_arg1_data(int eventType, int arg0, int arg1, NSData eventData) {
   
   
     if (fluttifyLogEnabled) {
-      debugPrint('onEventArg0arg1data::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onEvent_arg0_arg1_data::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

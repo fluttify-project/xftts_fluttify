@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlySpeechRecognizer extends NSObject with IFlySpeechRecognizerDelegate {
   //region constants
+  static const String name__ = 'IFlySpeechRecognizer';
+
   
   //endregion
 
@@ -108,14 +110,14 @@ class IFlySpeechRecognizer extends NSObject with IFlySpeechRecognizerDelegate {
     }
   }
   
-  Future<bool> setParameterForKey(String value, String key) async {
+  Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlySpeechRecognizer@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::setParameterForKey', {"value": value, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::setParameter_forKey', {"value": value, "key": key, "refId": refId});
   
   
     // handle native call
@@ -218,18 +220,18 @@ class IFlySpeechRecognizer extends NSObject with IFlySpeechRecognizerDelegate {
     }
   }
   
-  Future<int> buildGrammarCompletionHandlerGrammarTypegrammarContent(void completionHandler(String grammarId, IFlySpeechError error), String grammarType, String grammarContent) async {
+  Future<int> buildGrammarCompletionHandler_grammarType_grammarContent(void completionHandler(String grammarId, IFlySpeechError error), String grammarType, String grammarContent) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlySpeechRecognizer@$refId::buildGrammarCompletionHandler([\'grammarType\':$grammarType, \'grammarContent\':$grammarContent])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::buildGrammarCompletionHandlerGrammarTypegrammarContent', {"grammarType": grammarType, "grammarContent": grammarContent, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::buildGrammarCompletionHandler_grammarType_grammarContent', {"grammarType": grammarType, "grammarContent": grammarContent, "refId": refId});
   
   
     // handle native call
-    MethodChannel('IFlySpeechRecognizer::buildGrammarCompletionHandlerGrammarTypegrammarContent::Callback')
+    MethodChannel('IFlySpeechRecognizer::buildGrammarCompletionHandler_grammarType_grammarContent::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           // final refId = args['callerRefId'] as int;
@@ -287,14 +289,14 @@ class IFlySpeechRecognizer extends NSObject with IFlySpeechRecognizerDelegate {
 extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
   //region getters
   Future<List<IFlySpeechRecognizerDelegate>> get_delegate_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechRecognizer::get_delegate_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechRecognizer::get_delegate_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => IFlySpeechRecognizer()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<bool>> get_isListening_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechRecognizer::get_isListening_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechRecognizer::get_isListening_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -304,7 +306,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
 
   //region setters
   Future<void> set_delegate_batch(List<IFlySpeechRecognizerDelegate> delegate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::set_delegate_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "delegate": delegate[i].refId}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::set_delegate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "delegate": delegate[__i__].refId}]);
   
   
   }
@@ -318,7 +320,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -337,7 +339,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::destroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -350,13 +352,13 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   }
   
-  Future<List<bool>> setParameterForKey_batch(List<String> value, List<String> key) async {
+  Future<List<bool>> setParameter_forKey_batch(List<String> value, List<String> key) async {
     if (value.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"value": value[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -375,7 +377,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::parameterForKey_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::parameterForKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -394,7 +396,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::startListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -413,7 +415,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::stopListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -432,7 +434,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::cancel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -451,7 +453,7 @@ extension IFlySpeechRecognizer_Batch on List<IFlySpeechRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::writeAudio_batch', [for (int i = 0; i < this.length; i++) {"audioData": audioData[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizer::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"audioData": audioData[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

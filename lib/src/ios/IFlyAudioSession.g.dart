@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyAudioSession extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyAudioSession';
+
   
   //endregion
 
@@ -111,7 +113,7 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initPlayingAudioSession_batch', [for (int i = 0; i < this.length; i++) {"isMPCenter": isMPCenter[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initPlayingAudioSession_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"isMPCenter": isMPCenter[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -130,7 +132,7 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initRecordingAudioSession_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initRecordingAudioSession_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

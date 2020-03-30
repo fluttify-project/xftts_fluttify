@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.msc.MetaVAD';
+
   
   //endregion
 
@@ -331,7 +333,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -350,7 +352,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -369,7 +371,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -388,7 +390,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -407,7 +409,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -426,7 +428,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -445,7 +447,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -464,7 +466,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "var3": var3[i], "var4": var4[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -483,7 +485,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -502,7 +504,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -521,7 +523,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -540,7 +542,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

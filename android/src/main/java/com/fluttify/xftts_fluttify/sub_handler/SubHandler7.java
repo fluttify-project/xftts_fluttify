@@ -41,14 +41,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.AppInfoUtil obj = new com.iflytek.cloud.msc.util.AppInfoUtil();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataLogger__", (args, methodResult) -> {
@@ -61,14 +61,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.DataLogger obj = new com.iflytek.cloud.msc.util.DataLogger();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__", (args, methodResult) -> {
@@ -81,14 +81,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.SDCardHelper obj = new com.iflytek.cloud.msc.util.SDCardHelper();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__", (args, methodResult) -> {
@@ -101,14 +101,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context", (args, methodResult) -> {
@@ -124,14 +124,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context", (args, methodResult) -> {
@@ -149,14 +149,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__", (args, methodResult) -> {
@@ -169,14 +169,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.FuncAdapter obj = new com.iflytek.cloud.msc.util.FuncAdapter();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__", (args, methodResult) -> {
@@ -189,14 +189,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.log.PerfLogger obj = new com.iflytek.cloud.msc.util.log.PerfLogger();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_DebugLog__", (args, methodResult) -> {
@@ -209,14 +209,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.log.DebugLog obj = new com.iflytek.cloud.msc.util.log.DebugLog();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__", (args, methodResult) -> {
@@ -229,14 +229,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.UniqueIDUtil obj = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__", (args, methodResult) -> {
@@ -249,14 +249,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.AESUtil obj = new com.iflytek.cloud.msc.util.AESUtil();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__", (args, methodResult) -> {
@@ -269,14 +269,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.HttpRequest obj = new com.iflytek.cloud.msc.util.HttpRequest();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray", (args, methodResult) -> {
@@ -294,14 +294,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.util.HttpRequest obj = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__", (args, methodResult) -> {
@@ -314,14 +314,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.msc.ist.IstSession obj = new com.iflytek.cloud.msc.ist.IstSession();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_SpeechError__int__String", (args, methodResult) -> {
@@ -337,14 +337,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.SpeechError obj = new com.iflytek.cloud.SpeechError(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_SpeechError__int", (args, methodResult) -> {
@@ -358,14 +358,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.SpeechError obj = new com.iflytek.cloud.SpeechError(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context", (args, methodResult) -> {
@@ -379,14 +379,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.DataDownloader obj = new com.iflytek.cloud.DataDownloader(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_EvaluatorResult__String", (args, methodResult) -> {
@@ -400,14 +400,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.EvaluatorResult obj = new com.iflytek.cloud.EvaluatorResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_SpeechEvent__", (args, methodResult) -> {
@@ -420,14 +420,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.SpeechEvent obj = new com.iflytek.cloud.SpeechEvent();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_WakeuperResult__String__byteArray", (args, methodResult) -> {
@@ -443,14 +443,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.WakeuperResult obj = new com.iflytek.cloud.WakeuperResult(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_WakeuperResult__String", (args, methodResult) -> {
@@ -464,14 +464,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.WakeuperResult obj = new com.iflytek.cloud.WakeuperResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_VerifierResult__String", (args, methodResult) -> {
@@ -485,14 +485,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.VerifierResult obj = new com.iflytek.cloud.VerifierResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_DataUploader__android_content_Context", (args, methodResult) -> {
@@ -506,14 +506,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.DataUploader obj = new com.iflytek.cloud.DataUploader(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_RecognizerResult__String", (args, methodResult) -> {
@@ -527,14 +527,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.RecognizerResult obj = new com.iflytek.cloud.RecognizerResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_TranscripterResult__String", (args, methodResult) -> {
@@ -548,14 +548,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.TranscripterResult obj = new com.iflytek.cloud.TranscripterResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_Version__", (args, methodResult) -> {
@@ -568,14 +568,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.Version obj = new com.iflytek.cloud.Version();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_cloud_UnderstanderResult__String", (args, methodResult) -> {
@@ -589,14 +589,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.cloud.UnderstanderResult obj = new com.iflytek.cloud.UnderstanderResult(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_VAD_VadData__", (args, methodResult) -> {
@@ -609,14 +609,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.VAD.VadData obj = new com.iflytek.msc.VAD.VadData();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__", (args, methodResult) -> {
@@ -629,14 +629,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.MSCSessionInfo obj = new com.iflytek.msc.MSCSessionInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_MetaVAD__", (args, methodResult) -> {
@@ -649,14 +649,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.MetaVAD obj = new com.iflytek.msc.MetaVAD();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_VAD__", (args, methodResult) -> {
@@ -669,14 +669,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.VAD obj = new com.iflytek.msc.VAD();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_AIMIC__", (args, methodResult) -> {
@@ -689,14 +689,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.AIMIC obj = new com.iflytek.msc.AIMIC();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_MSC__", (args, methodResult) -> {
@@ -709,14 +709,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.MSC obj = new com.iflytek.msc.MSC();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__", (args, methodResult) -> {
@@ -729,14 +729,14 @@ public class SubHandler7 {
             
                 // create target object
                 com.iflytek.msc.MetaVAD.Instance obj = new com.iflytek.msc.MetaVAD.Instance();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::create_batchcom_iflytek_speech_SpeechComponent__String", (argsBatch, methodResult) -> {
@@ -753,11 +753,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -766,14 +766,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.SpeechComponent obj = new com.iflytek.speech.SpeechComponent(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -793,11 +793,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -805,14 +805,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.UtilityConfig obj = new com.iflytek.speech.UtilityConfig();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -832,11 +832,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -845,14 +845,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.WakeuperResult obj = new com.iflytek.speech.WakeuperResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -872,11 +872,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -885,14 +885,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.VerifierResult obj = new com.iflytek.speech.VerifierResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -912,11 +912,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -925,14 +925,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.RecognizerResult obj = new com.iflytek.speech.RecognizerResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -952,11 +952,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -964,14 +964,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.Version obj = new com.iflytek.speech.Version();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -991,11 +991,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1004,14 +1004,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.speech.UnderstanderResult obj = new com.iflytek.speech.UnderstanderResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1031,11 +1031,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1043,14 +1043,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.ErrorCode obj = new com.iflytek.cloud.ErrorCode();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1070,11 +1070,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1085,14 +1085,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.record.PcmRecorder obj = new com.iflytek.cloud.record.PcmRecorder(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1112,11 +1112,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1129,14 +1129,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.record.PcmRecorder obj = new com.iflytek.cloud.record.PcmRecorder(var1, var2, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1156,11 +1156,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1168,14 +1168,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.UserWords obj = new com.iflytek.cloud.util.UserWords();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1195,11 +1195,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1208,14 +1208,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.UserWords obj = new com.iflytek.cloud.util.UserWords(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1235,11 +1235,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1247,14 +1247,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.VerifierUtil obj = new com.iflytek.cloud.util.VerifierUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1274,11 +1274,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1286,14 +1286,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.ResourceUtil obj = new com.iflytek.cloud.util.ResourceUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1313,11 +1313,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1325,14 +1325,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult obj = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1352,11 +1352,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1365,14 +1365,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.Accelerometer obj = new com.iflytek.cloud.util.Accelerometer(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1392,11 +1392,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1404,14 +1404,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.util.VolumeUtil obj = new com.iflytek.cloud.util.VolumeUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1431,11 +1431,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1444,14 +1444,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.FaceRequest obj = new com.iflytek.cloud.FaceRequest(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1471,11 +1471,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1484,14 +1484,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.IdentityResult obj = new com.iflytek.cloud.IdentityResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1511,11 +1511,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1524,14 +1524,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.VoiceWakeuperImpl obj = new com.iflytek.cloud.speech.impl.VoiceWakeuperImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1551,11 +1551,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1564,14 +1564,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeechTranscripterImpl obj = new com.iflytek.cloud.speech.impl.SpeechTranscripterImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1591,11 +1591,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1604,14 +1604,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.TextUnderstanderImpl obj = new com.iflytek.cloud.speech.impl.TextUnderstanderImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1631,11 +1631,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1644,14 +1644,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.IdentityVerifierImpl obj = new com.iflytek.cloud.speech.impl.IdentityVerifierImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1671,11 +1671,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1686,14 +1686,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.FaceDetectorImpl obj = new com.iflytek.cloud.speech.impl.FaceDetectorImpl(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1713,11 +1713,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1726,14 +1726,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl obj = new com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1753,11 +1753,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1766,14 +1766,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeechRecognizerImpl obj = new com.iflytek.cloud.speech.impl.SpeechRecognizerImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1793,11 +1793,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1806,14 +1806,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl obj = new com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1833,11 +1833,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1846,14 +1846,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeakerVerifierImpl obj = new com.iflytek.cloud.speech.impl.SpeakerVerifierImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1873,11 +1873,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1886,14 +1886,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl obj = new com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1913,11 +1913,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1925,14 +1925,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.FuncAdapterSdk10 obj = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1952,11 +1952,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -1964,14 +1964,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.NetworkUtil obj = new com.iflytek.cloud.msc.util.NetworkUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -1991,11 +1991,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2003,14 +2003,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.DataUtil obj = new com.iflytek.cloud.msc.util.DataUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2030,11 +2030,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2042,14 +2042,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.RSAUtil obj = new com.iflytek.cloud.msc.util.RSAUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2069,11 +2069,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2081,14 +2081,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.Encrypter obj = new com.iflytek.cloud.msc.util.Encrypter();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2108,11 +2108,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2120,14 +2120,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.AppInfoUtil obj = new com.iflytek.cloud.msc.util.AppInfoUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2147,11 +2147,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2159,14 +2159,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.DataLogger obj = new com.iflytek.cloud.msc.util.DataLogger();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2186,11 +2186,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2198,14 +2198,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.SDCardHelper obj = new com.iflytek.cloud.msc.util.SDCardHelper();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2225,11 +2225,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2237,14 +2237,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2264,11 +2264,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2279,14 +2279,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2306,11 +2306,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2323,14 +2323,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.http.HttpDownloadImpl obj = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var3, var4);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2350,11 +2350,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2362,14 +2362,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.FuncAdapter obj = new com.iflytek.cloud.msc.util.FuncAdapter();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2389,11 +2389,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2401,14 +2401,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.log.PerfLogger obj = new com.iflytek.cloud.msc.util.log.PerfLogger();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2428,11 +2428,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2440,14 +2440,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.log.DebugLog obj = new com.iflytek.cloud.msc.util.log.DebugLog();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2467,11 +2467,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2479,14 +2479,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.UniqueIDUtil obj = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2506,11 +2506,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2518,14 +2518,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.AESUtil obj = new com.iflytek.cloud.msc.util.AESUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2545,11 +2545,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2557,14 +2557,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.HttpRequest obj = new com.iflytek.cloud.msc.util.HttpRequest();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2584,11 +2584,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2601,14 +2601,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.util.HttpRequest obj = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2628,11 +2628,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2640,14 +2640,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.msc.ist.IstSession obj = new com.iflytek.cloud.msc.ist.IstSession();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2667,11 +2667,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2682,14 +2682,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.SpeechError obj = new com.iflytek.cloud.SpeechError(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2709,11 +2709,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2722,14 +2722,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.SpeechError obj = new com.iflytek.cloud.SpeechError(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2749,11 +2749,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2762,14 +2762,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.DataDownloader obj = new com.iflytek.cloud.DataDownloader(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2789,11 +2789,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2802,14 +2802,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.EvaluatorResult obj = new com.iflytek.cloud.EvaluatorResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2829,11 +2829,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2841,14 +2841,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.SpeechEvent obj = new com.iflytek.cloud.SpeechEvent();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2868,11 +2868,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2883,14 +2883,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.WakeuperResult obj = new com.iflytek.cloud.WakeuperResult(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2910,11 +2910,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2923,14 +2923,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.WakeuperResult obj = new com.iflytek.cloud.WakeuperResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2950,11 +2950,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -2963,14 +2963,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.VerifierResult obj = new com.iflytek.cloud.VerifierResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -2990,11 +2990,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3003,14 +3003,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.DataUploader obj = new com.iflytek.cloud.DataUploader(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3030,11 +3030,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3043,14 +3043,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.RecognizerResult obj = new com.iflytek.cloud.RecognizerResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3070,11 +3070,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3083,14 +3083,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.TranscripterResult obj = new com.iflytek.cloud.TranscripterResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3110,11 +3110,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3122,14 +3122,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.Version obj = new com.iflytek.cloud.Version();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3149,11 +3149,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3162,14 +3162,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.cloud.UnderstanderResult obj = new com.iflytek.cloud.UnderstanderResult(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3189,11 +3189,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3201,14 +3201,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.VAD.VadData obj = new com.iflytek.msc.VAD.VadData();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3228,11 +3228,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3240,14 +3240,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.MSCSessionInfo obj = new com.iflytek.msc.MSCSessionInfo();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3267,11 +3267,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3279,14 +3279,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.MetaVAD obj = new com.iflytek.msc.MetaVAD();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3306,11 +3306,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3318,14 +3318,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.VAD obj = new com.iflytek.msc.VAD();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3345,11 +3345,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3357,14 +3357,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.AIMIC obj = new com.iflytek.msc.AIMIC();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3384,11 +3384,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3396,14 +3396,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.MSC obj = new com.iflytek.msc.MSC();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -3423,11 +3423,11 @@ public class SubHandler7 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -3435,14 +3435,14 @@ public class SubHandler7 {
             
                     // create target object
                     com.iflytek.msc.MetaVAD.Instance obj = new com.iflytek.msc.MetaVAD.Instance();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);

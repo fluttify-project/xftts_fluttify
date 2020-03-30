@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlySetting extends NSObject  {
   //region constants
+  static const String name__ = 'IFlySetting';
+
   
   //endregion
 
@@ -177,7 +179,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::getVersion_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::getVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -196,7 +198,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::logLvl_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::logLvl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -215,7 +217,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::showLogcat_batch', [for (int i = 0; i < this.length; i++) {"showLog": showLog[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::showLogcat_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"showLog": showLog[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -234,7 +236,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFile_batch', [for (int i = 0; i < this.length; i++) {"level": level[i].index, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFile_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"level": level[__i__].index, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -253,7 +255,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFilePath_batch', [for (int i = 0; i < this.length; i++) {"path": path[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFilePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"path": path[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

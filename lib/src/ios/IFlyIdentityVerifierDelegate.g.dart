@@ -29,11 +29,11 @@ mixin IFlyIdentityVerifierDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> onEventArg1arg2extra(int eventType, int arg1, int arg2, NSObject obj) {
+  Future<void> onEvent_arg1_arg2_extra(int eventType, int arg1, int arg2, NSObject obj) {
     kNativeObjectPool.add(obj);
   
     if (fluttifyLogEnabled) {
-      debugPrint('onEventArg1arg2extra::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onEvent_arg1_arg2_extra::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

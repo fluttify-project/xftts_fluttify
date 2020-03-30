@@ -17,7 +17,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyDebugLog": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyDebugLog* ref = [[IFlyDebugLog alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -32,7 +32,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyDataUploader": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyDataUploader* ref = [[IFlyDataUploader alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -47,7 +47,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyAudioSession": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyAudioSession* ref = [[IFlyAudioSession alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -62,7 +62,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyUserWords": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyUserWords* ref = [[IFlyUserWords alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -77,7 +77,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyTextUnderstander": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyTextUnderstander* ref = [[IFlyTextUnderstander alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -92,7 +92,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlySpeechError": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlySpeechError* ref = [[IFlySpeechError alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -107,7 +107,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyResourceUtil": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyResourceUtil* ref = [[IFlyResourceUtil alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -122,7 +122,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlySpeechUtility": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlySpeechUtility* ref = [[IFlySpeechUtility alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -137,7 +137,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlySpeechEvaluator": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlySpeechEvaluator* ref = [[IFlySpeechEvaluator alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -152,7 +152,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyVerifierUtil": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyVerifierUtil* ref = [[IFlyVerifierUtil alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -167,7 +167,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlyISVRecognizer": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlyISVRecognizer* ref = [[IFlyISVRecognizer alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -182,7 +182,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchIFlySpeechSynthesizer": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 IFlySpeechSynthesizer* ref = [[IFlySpeechSynthesizer alloc] init];
                 HEAP[@(ref.hash)] = ref;
         

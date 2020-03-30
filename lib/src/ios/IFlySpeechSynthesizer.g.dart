@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlySpeechSynthesizer extends NSObject  {
   //region constants
+  static const String name__ = 'IFlySpeechSynthesizer';
+
   
   //endregion
 
@@ -77,23 +79,23 @@ class IFlySpeechSynthesizer extends NSObject  {
             // handle the native call
             delegate?.onSpeakBegin();
             break;
-          case 'Callback::IFlySpeechSynthesizerDelegate::onBufferProgressMessage':
+          case 'Callback::IFlySpeechSynthesizerDelegate::onBufferProgress_message':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBufferProgressMessage([\'progress\':$args[progress], \'msg\':$args[msg]])');
+              print('fluttify-dart-callback: onBufferProgress_message([\'progress\':$args[progress], \'msg\':$args[msg]])');
             }
         
             // handle the native call
-            delegate?.onBufferProgressMessage(args['progress'], args['msg']);
+            delegate?.onBufferProgress_message(args['progress'], args['msg']);
             break;
-          case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos':
+          case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onSpeakProgressBeginPosendPos([\'progress\':$args[progress], \'beginPos\':$args[beginPos], \'endPos\':$args[endPos]])');
+              print('fluttify-dart-callback: onSpeakProgress_beginPos_endPos([\'progress\':$args[progress], \'beginPos\':$args[beginPos], \'endPos\':$args[endPos]])');
             }
         
             // handle the native call
-            delegate?.onSpeakProgressBeginPosendPos(args['progress'], args['beginPos'], args['endPos']);
+            delegate?.onSpeakProgress_beginPos_endPos(args['progress'], args['beginPos'], args['endPos']);
             break;
           case 'Callback::IFlySpeechSynthesizerDelegate::onSpeakPaused':
             // print log
@@ -122,14 +124,14 @@ class IFlySpeechSynthesizer extends NSObject  {
             // handle the native call
             delegate?.onSpeakCancel();
             break;
-          case 'Callback::IFlySpeechSynthesizerDelegate::onEventArg0arg1data':
+          case 'Callback::IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onEventArg0arg1data([\'eventType\':$args[eventType], \'arg0\':$args[arg0], \'arg1\':$args[arg1]])');
+              print('fluttify-dart-callback: onEvent_arg0_arg1_data([\'eventType\':$args[eventType], \'arg0\':$args[arg0], \'arg1\':$args[arg1]])');
             }
         
             // handle the native call
-            delegate?.onEventArg0arg1data(args['eventType'], args['arg0'], args['arg1'], NSData()..refId = (args['eventData'])..tag = 'xftts_fluttify');
+            delegate?.onEvent_arg0_arg1_data(args['eventType'], args['arg0'], args['arg1'], NSData()..refId = (args['eventData'])..tag = 'xftts_fluttify');
             break;
           default:
             break;
@@ -184,14 +186,14 @@ class IFlySpeechSynthesizer extends NSObject  {
     }
   }
   
-  Future<bool> setParameterForKey(String value, String key) async {
+  Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlySpeechSynthesizer@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::setParameterForKey', {"value": value, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::setParameter_forKey', {"value": value, "key": key, "refId": refId});
   
   
     // handle native call
@@ -250,14 +252,14 @@ class IFlySpeechSynthesizer extends NSObject  {
     }
   }
   
-  Future<void> synthesizeToUri(String text, String uri) async {
+  Future<void> synthesize_toUri(String text, String uri) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlySpeechSynthesizer@$refId::synthesize([\'text\':$text, \'uri\':$uri])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::synthesizeToUri', {"text": text, "uri": uri, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::synthesize_toUri', {"text": text, "uri": uri, "refId": refId});
   
   
     // handle native call
@@ -344,7 +346,7 @@ class IFlySpeechSynthesizer extends NSObject  {
 extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
   //region getters
   Future<List<bool>> get_isSpeaking_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechSynthesizer::get_isSpeaking_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechSynthesizer::get_isSpeaking_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -363,7 +365,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -382,7 +384,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::destroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -395,13 +397,13 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   }
   
-  Future<List<bool>> setParameterForKey_batch(List<String> value, List<String> key) async {
+  Future<List<bool>> setParameter_forKey_batch(List<String> value, List<String> key) async {
     if (value.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"value": value[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -420,7 +422,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::parameterForKey_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::parameterForKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -439,7 +441,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::startSpeaking_batch', [for (int i = 0; i < this.length; i++) {"text": text[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::startSpeaking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"text": text[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -452,13 +454,13 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   }
   
-  Future<void> synthesizeToUri_batch(List<String> text, List<String> uri) async {
+  Future<void> synthesize_toUri_batch(List<String> text, List<String> uri) async {
     if (text.length != uri.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::synthesizeToUri_batch', [for (int i = 0; i < this.length; i++) {"text": text[i], "uri": uri[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::synthesize_toUri_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"text": text[__i__], "uri": uri[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -477,7 +479,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::pauseSpeaking_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::pauseSpeaking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -496,7 +498,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::resumeSpeaking_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::resumeSpeaking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -515,7 +517,7 @@ extension IFlySpeechSynthesizer_Batch on List<IFlySpeechSynthesizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::stopSpeaking_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechSynthesizer::stopSpeaking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

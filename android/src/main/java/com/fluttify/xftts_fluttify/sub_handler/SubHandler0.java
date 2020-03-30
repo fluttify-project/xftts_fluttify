@@ -742,8 +742,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.SpeakerVerifierAidl.PassWord ref = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) getHEAP().get((int) args.get("refId"));
@@ -761,8 +761,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.SpeakerVerifierAidl.PassWord ref = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) getHEAP().get((int) args.get("refId"));
@@ -780,8 +780,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.SpeakerVerifierAidl.PassWord ref = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) getHEAP().get((int) args.get("refId"));
@@ -799,8 +799,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_sst_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -818,8 +818,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_ret_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -837,8 +837,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_dcs_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -856,8 +856,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_vid_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -875,8 +875,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_suc_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -894,8 +894,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_rgn_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -913,8 +913,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_trs_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -932,8 +932,8 @@ public class SubHandler0 {
             put("com.iflytek.speech.VerifierResult::get_source_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -951,8 +951,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_buffer_batch", (argsBatch, methodResult) -> {
                 List<byte[]> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -970,8 +970,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_offset_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -989,8 +989,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_length_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1008,8 +1008,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_status_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1027,8 +1027,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_sub_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1046,8 +1046,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_volume_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1065,8 +1065,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_voice_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1084,8 +1084,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_quality_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1103,8 +1103,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_start_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1122,8 +1122,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_end_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1141,8 +1141,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_error_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1160,8 +1160,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_confidence_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.util.AudioDetector.DetectorResult ref = (com.iflytek.cloud.util.AudioDetector.DetectorResult) getHEAP().get((int) args.get("refId"));
@@ -1179,8 +1179,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_sst_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1198,8 +1198,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_ret_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1217,8 +1217,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_dcs_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1236,8 +1236,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_score_batch", (argsBatch, methodResult) -> {
                 List<Double> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1255,8 +1255,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_score_raw_batch", (argsBatch, methodResult) -> {
                 List<Double> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1274,8 +1274,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_vid_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1293,8 +1293,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_suc_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1312,8 +1312,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_rgn_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1331,8 +1331,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_trs_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1350,8 +1350,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_err_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1369,8 +1369,8 @@ public class SubHandler0 {
             put("com.iflytek.cloud.VerifierResult::get_source_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.cloud.VerifierResult ref = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) args.get("refId"));
@@ -1388,8 +1388,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_startByte_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1407,8 +1407,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_endByte_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1426,8 +1426,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_status_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1445,8 +1445,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_volumeLevel_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1464,8 +1464,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_waitPauseOrEnd_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1483,8 +1483,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_endRemainFrameNum_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1502,8 +1502,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_waitStart_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1521,8 +1521,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_startRemainFrameNum_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1540,8 +1540,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_wavData_batch", (argsBatch, methodResult) -> {
                 List<byte[]> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1559,8 +1559,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_wavDataSize_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1578,8 +1578,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_inSpeech_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1597,8 +1597,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_audioQuality_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1616,8 +1616,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.VAD.VadData::get_firstOutByte_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.VAD.VadData ref = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) args.get("refId"));
@@ -1635,8 +1635,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_errorcode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1654,8 +1654,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_epstatues_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1673,8 +1673,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_rsltstatus_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1692,8 +1692,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_sesstatus_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1711,8 +1711,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_buffer_batch", (argsBatch, methodResult) -> {
                 List<byte[]> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1730,8 +1730,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MSCSessionInfo::get_buflen_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MSCSessionInfo ref = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) args.get("refId"));
@@ -1749,8 +1749,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_handle_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -1768,8 +1768,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_rate_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -1787,8 +1787,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_begin_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -1806,8 +1806,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_end_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -1825,8 +1825,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_seg_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -1844,8 +1844,8 @@ public class SubHandler0 {
             put("com.iflytek.msc.MetaVAD.Instance::get_volume_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) args.get("refId"));
@@ -2510,8 +2510,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String pwdt = (String) ((Map<String, Object>) args).get("pwdt");
@@ -2526,8 +2526,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String pwid = (String) ((Map<String, Object>) args).get("pwid");
@@ -2542,8 +2542,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String pwtext = (String) ((Map<String, Object>) args).get("pwtext");
@@ -2558,8 +2558,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_sst_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String sst = (String) ((Map<String, Object>) args).get("sst");
@@ -2574,8 +2574,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_ret_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     boolean ret = (boolean) ((Map<String, Object>) args).get("ret");
@@ -2590,8 +2590,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_dcs_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String dcs = (String) ((Map<String, Object>) args).get("dcs");
@@ -2606,8 +2606,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_vid_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String vid = (String) ((Map<String, Object>) args).get("vid");
@@ -2622,8 +2622,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_suc_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int suc = (int) ((Map<String, Object>) args).get("suc");
@@ -2638,8 +2638,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_rgn_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int rgn = (int) ((Map<String, Object>) args).get("rgn");
@@ -2654,8 +2654,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_trs_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String trs = (String) ((Map<String, Object>) args).get("trs");
@@ -2670,8 +2670,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.speech.VerifierResult::set_source_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     String source = (String) ((Map<String, Object>) args).get("source");
@@ -2686,8 +2686,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     byte[] buffer = (byte[]) ((Map<String, Object>) args).get("buffer");
@@ -2702,8 +2702,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_offset_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int offset = (int) ((Map<String, Object>) args).get("offset");
@@ -2718,8 +2718,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_length_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int length = (int) ((Map<String, Object>) args).get("length");
@@ -2734,8 +2734,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_status_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int status = (int) ((Map<String, Object>) args).get("status");
@@ -2750,8 +2750,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_sub_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int sub = (int) ((Map<String, Object>) args).get("sub");
@@ -2766,8 +2766,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_volume_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int volume = (int) ((Map<String, Object>) args).get("volume");
@@ -2782,8 +2782,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_voice_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     boolean voice = (boolean) ((Map<String, Object>) args).get("voice");
@@ -2798,8 +2798,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_quality_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int quality = (int) ((Map<String, Object>) args).get("quality");
@@ -2814,8 +2814,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_start_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int start = (int) ((Map<String, Object>) args).get("start");
@@ -2830,8 +2830,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_end_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int end = (int) ((Map<String, Object>) args).get("end");
@@ -2846,8 +2846,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_error_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     int error = (int) ((Map<String, Object>) args).get("error");
@@ -2862,8 +2862,8 @@ public class SubHandler0 {
             });
             // setter batch
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_confidence_batch", (argsBatch, methodResult) -> {
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // jsonable arg
                     Double confidence = (Double) ((Map<String, Object>) args).get("confidence");

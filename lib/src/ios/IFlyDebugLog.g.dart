@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyDebugLog extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyDebugLog';
+
   
   //endregion
 
@@ -133,7 +135,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::showLog_batch', [for (int i = 0; i < this.length; i++) {"format": format[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::showLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"format": format[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -152,7 +154,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::writeLog_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::writeLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -171,7 +173,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::setShowLog_batch', [for (int i = 0; i < this.length; i++) {"showLog": showLog[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::setShowLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"showLog": showLog[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

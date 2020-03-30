@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_speech_impl_VoiceWakeuperImpl extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.speech.impl.VoiceWakeuperImpl';
+
   
   //endregion
 
@@ -30,7 +32,7 @@ class com_iflytek_cloud_speech_impl_VoiceWakeuperImpl extends java_lang_Object  
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
     final List<com_iflytek_cloud_speech_impl_VoiceWakeuperImpl> typedResult = resultBatch.map((result) => com_iflytek_cloud_speech_impl_VoiceWakeuperImpl()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
@@ -394,7 +396,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::restartWorking__String_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::restartWorking__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -413,7 +415,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::writeAudio_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -432,7 +434,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::stopListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -451,7 +453,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::cancel_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -470,7 +472,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::destroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -489,7 +491,7 @@ extension com_iflytek_cloud_speech_impl_VoiceWakeuperImpl_Batch on List<com_ifly
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::isListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

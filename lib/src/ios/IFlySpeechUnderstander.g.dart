@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlySpeechUnderstander extends NSObject  {
   //region constants
+  static const String name__ = 'IFlySpeechUnderstander';
+
   
   //endregion
 
@@ -152,14 +154,14 @@ class IFlySpeechUnderstander extends NSObject  {
     }
   }
   
-  Future<bool> setParameterForKey(String value, String key) async {
+  Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlySpeechUnderstander@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::setParameterForKey', {"value": value, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::setParameter_forKey', {"value": value, "key": key, "refId": refId});
   
   
     // handle native call
@@ -224,14 +226,14 @@ class IFlySpeechUnderstander extends NSObject  {
 extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
   //region getters
   Future<List<bool>> get_isUnderstanding_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechUnderstander::get_isUnderstanding_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechUnderstander::get_isUnderstanding_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<IFlySpeechRecognizerDelegate>> get_delegate_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechUnderstander::get_delegate_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechUnderstander::get_delegate_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => IFlySpeechRecognizer()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
@@ -241,7 +243,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
 
   //region setters
   Future<void> set_delegate_batch(List<IFlySpeechRecognizerDelegate> delegate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::set_delegate_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "delegate": delegate[i].refId}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::set_delegate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "delegate": delegate[__i__].refId}]);
   
   
   }
@@ -255,7 +257,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -274,7 +276,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::startListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -293,7 +295,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::stopListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -312,7 +314,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::cancel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -325,13 +327,13 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   }
   
-  Future<List<bool>> setParameterForKey_batch(List<String> value, List<String> key) async {
+  Future<List<bool>> setParameter_forKey_batch(List<String> value, List<String> key) async {
     if (value.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"value": value[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -350,7 +352,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::writeAudio_batch', [for (int i = 0; i < this.length; i++) {"audioData": audioData[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"audioData": audioData[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -369,7 +371,7 @@ extension IFlySpeechUnderstander_Batch on List<IFlySpeechUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::destroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechUnderstander::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

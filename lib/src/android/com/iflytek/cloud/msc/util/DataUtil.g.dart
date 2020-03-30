@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.msc.util.DataUtil';
+
   static final int SIZE_1K = 1024;
   static final int SIZE_64K = 65536;
   static final String UTF8 = "utf-8";
@@ -159,7 +161,7 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -291,7 +293,7 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -313,7 +315,7 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -335,7 +337,7 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -357,7 +359,7 @@ class com_iflytek_cloud_msc_util_DataUtil extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -424,7 +426,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getComplexDateTime_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getComplexDateTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -443,7 +445,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getSimpleDateTime_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getSimpleDateTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -462,7 +464,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::readInt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::readInt_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -481,7 +483,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::byteToLong_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::byteToLong_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -500,14 +502,14 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::longToByte_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::longToByte_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -519,7 +521,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::RandomInt_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::RandomInt_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -538,7 +540,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::hexstring2Int_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::hexstring2Int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -557,7 +559,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::dip2px_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::dip2px_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -576,7 +578,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::sp2px_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::sp2px_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -595,7 +597,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::spModify_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::spModify_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -614,14 +616,14 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -633,14 +635,14 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -652,14 +654,14 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -671,14 +673,14 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -690,7 +692,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List__String_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -709,7 +711,7 @@ extension com_iflytek_cloud_msc_util_DataUtil_Batch on List<com_iflytek_cloud_ms
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

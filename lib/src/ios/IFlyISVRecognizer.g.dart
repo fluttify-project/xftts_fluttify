@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyISVRecognizer extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyISVRecognizer';
+
   
   //endregion
 
@@ -151,8 +153,8 @@ class IFlyISVRecognizer extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList());
+      return (result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList();
     }
   }
   
@@ -178,14 +180,14 @@ class IFlyISVRecognizer extends NSObject  {
     }
   }
   
-  Future<bool> sendRequestAuthidpwdtptxtviderr(String cmd, String auth_id, int pwdt, String ptxt, String vid, NSValue/* int* */ err) async {
+  Future<bool> sendRequest_authid_pwdt_ptxt_vid_err(String cmd, String auth_id, int pwdt, String ptxt, String vid, NSValue/* int* */ err) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyISVRecognizer@$refId::sendRequest([\'cmd\':$cmd, \'auth_id\':$auth_id, \'pwdt\':$pwdt, \'ptxt\':$ptxt, \'vid\':$vid])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequestAuthidpwdtptxtviderr', {"cmd": cmd, "auth_id": auth_id, "pwdt": pwdt, "ptxt": ptxt, "vid": vid, "err": err.refId, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err', {"cmd": cmd, "auth_id": auth_id, "pwdt": pwdt, "ptxt": ptxt, "vid": vid, "err": err.refId, "refId": refId});
   
   
     // handle native call
@@ -200,14 +202,14 @@ class IFlyISVRecognizer extends NSObject  {
     }
   }
   
-  Future<bool> setParameterForKey(String value, String key) async {
+  Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyISVRecognizer@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameterForKey', {"value": value, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameter_forKey', {"value": value, "key": key, "refId": refId});
   
   
     // handle native call
@@ -329,7 +331,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -348,7 +350,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::generatePassword_batch', [for (int i = 0; i < this.length; i++) {"length": length[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::generatePassword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"length": length[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -367,14 +369,14 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getPasswordList_batch', [for (int i = 0; i < this.length; i++) {"pwdt": pwdt[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getPasswordList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"pwdt": pwdt[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'xftts_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag = 'xftts_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -386,7 +388,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::isListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -399,13 +401,13 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   }
   
-  Future<List<bool>> sendRequestAuthidpwdtptxtviderr_batch(List<String> cmd, List<String> auth_id, List<int> pwdt, List<String> ptxt, List<String> vid, List<NSValue/* int* */> err) async {
+  Future<List<bool>> sendRequest_authid_pwdt_ptxt_vid_err_batch(List<String> cmd, List<String> auth_id, List<int> pwdt, List<String> ptxt, List<String> vid, List<NSValue/* int* */> err) async {
     if (cmd.length != auth_id.length || auth_id.length != pwdt.length || pwdt.length != ptxt.length || ptxt.length != vid.length || vid.length != err.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequestAuthidpwdtptxtviderr_batch', [for (int i = 0; i < this.length; i++) {"cmd": cmd[i], "auth_id": auth_id[i], "pwdt": pwdt[i], "ptxt": ptxt[i], "vid": vid[i], "err": err[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"cmd": cmd[__i__], "auth_id": auth_id[__i__], "pwdt": pwdt[__i__], "ptxt": ptxt[__i__], "vid": vid[__i__], "err": err[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -418,13 +420,13 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   }
   
-  Future<List<bool>> setParameterForKey_batch(List<String> value, List<String> key) async {
+  Future<List<bool>> setParameter_forKey_batch(List<String> value, List<String> key) async {
     if (value.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"value": value[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -443,7 +445,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getParameter_batch', [for (int i = 0; i < this.length; i++) {"key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -462,7 +464,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::startListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -481,7 +483,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::stopListening_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -500,7 +502,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::cancel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

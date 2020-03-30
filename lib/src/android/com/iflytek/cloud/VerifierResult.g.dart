@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_VerifierResult extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.VerifierResult';
+
   static final String TAG = "VerifyResult";
   static final int MSS_ERROR_IVP_GENERAL = 11600;
   static final int MSS_ERROR_IVP_EXTRA_RGN_SOPPORT = 11601;
@@ -39,7 +41,7 @@ class com_iflytek_cloud_VerifierResult extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_VerifierResult__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_VerifierResult__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_iflytek_cloud_VerifierResult> typedResult = resultBatch.map((result) => com_iflytek_cloud_VerifierResult()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
@@ -194,77 +196,77 @@ class com_iflytek_cloud_VerifierResult extends java_lang_Object  {
 extension com_iflytek_cloud_VerifierResult_Batch on List<com_iflytek_cloud_VerifierResult> {
   //region getters
   Future<List<String>> get_sst_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_sst_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_sst_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_ret_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_ret_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_ret_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_dcs_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_dcs_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_dcs_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_score_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_score_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_score_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_score_raw_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_score_raw_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_score_raw_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_vid_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_vid_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_vid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_suc_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_suc_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_suc_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_rgn_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_rgn_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_rgn_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_trs_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_trs_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_trs_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_err_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_err_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_err_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_source_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_source_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.VerifierResult::get_source_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -274,67 +276,67 @@ extension com_iflytek_cloud_VerifierResult_Batch on List<com_iflytek_cloud_Verif
 
   //region setters
   Future<void> set_sst_batch(List<String> sst) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_sst_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sst": sst[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_sst_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sst": sst[__i__]}]);
   
   
   }
   
   Future<void> set_ret_batch(List<int> ret) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_ret_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "ret": ret[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_ret_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "ret": ret[__i__]}]);
   
   
   }
   
   Future<void> set_dcs_batch(List<String> dcs) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_dcs_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dcs": dcs[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_dcs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "dcs": dcs[__i__]}]);
   
   
   }
   
   Future<void> set_score_batch(List<double> score) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_score_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "score": score[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_score_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "score": score[__i__]}]);
   
   
   }
   
   Future<void> set_score_raw_batch(List<double> score_raw) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_score_raw_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "score_raw": score_raw[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_score_raw_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "score_raw": score_raw[__i__]}]);
   
   
   }
   
   Future<void> set_vid_batch(List<String> vid) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_vid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "vid": vid[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_vid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "vid": vid[__i__]}]);
   
   
   }
   
   Future<void> set_suc_batch(List<int> suc) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_suc_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "suc": suc[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_suc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "suc": suc[__i__]}]);
   
   
   }
   
   Future<void> set_rgn_batch(List<int> rgn) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_rgn_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "rgn": rgn[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_rgn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "rgn": rgn[__i__]}]);
   
   
   }
   
   Future<void> set_trs_batch(List<String> trs) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_trs_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "trs": trs[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_trs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "trs": trs[__i__]}]);
   
   
   }
   
   Future<void> set_err_batch(List<int> err) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_err_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "err": err[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_err_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "err": err[__i__]}]);
   
   
   }
   
   Future<void> set_source_batch(List<String> source) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_source_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "source": source[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.VerifierResult::set_source_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "source": source[__i__]}]);
   
   
   }

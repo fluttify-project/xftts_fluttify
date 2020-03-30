@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_msc_AIMIC extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.msc.AIMIC';
+
   static final String DEF_LIBNAME_C = "aimic";
   //endregion
 
@@ -323,7 +325,7 @@ class com_iflytek_msc_AIMIC extends java_lang_Object  {
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -390,7 +392,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::loadLibrary_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::loadLibrary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -409,7 +411,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::isLoaded_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::isLoaded_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -428,7 +430,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::isValid_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::isValid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -447,7 +449,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::getHandler_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::getHandler_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -466,7 +468,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICAudioWrite_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var2": var2[i], "var3": var3[i], "var4": var4[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICAudioWrite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -485,7 +487,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICResetEng_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICResetEng_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -504,7 +506,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICDestroy_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICDestroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -523,7 +525,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICSetParam_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICSetParam_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -542,7 +544,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetParam_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var2": var2[i], "var3": var3[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetParam_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -561,14 +563,14 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetVersion_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }
@@ -580,7 +582,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICDebugLog_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICDebugLog_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -599,7 +601,7 @@ extension com_iflytek_msc_AIMIC_Batch on List<com_iflytek_msc_AIMIC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetChannel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.AIMIC::AIMICGetChannel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

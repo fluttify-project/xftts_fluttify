@@ -184,7 +184,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -275,7 +275,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -842,7 +842,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -874,7 +874,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -1093,7 +1093,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1129,7 +1129,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1167,7 +1167,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1947,7 +1947,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1982,7 +1982,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2026,7 +2026,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -2098,7 +2098,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -2235,7 +2235,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2267,7 +2267,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2302,7 +2302,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -2759,7 +2759,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3245,7 +3245,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -3298,7 +3298,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3487,7 +3487,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3522,7 +3522,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3634,7 +3634,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3666,7 +3666,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3701,7 +3701,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -3843,7 +3843,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3875,7 +3875,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3910,7 +3910,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -4435,7 +4435,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4470,7 +4470,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4512,7 +4512,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -4565,7 +4565,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4683,7 +4683,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -4772,7 +4772,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4801,7 +4801,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -4836,7 +4836,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -5216,7 +5216,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5251,7 +5251,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5360,7 +5360,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -5389,7 +5389,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -5424,7 +5424,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar4;
                         if (var4 != null) {
-                            argvar4 = var4.hashCode();
+                            argvar4 = System.identityHashCode(var4);
                             getHEAP().put(argvar4, var4);
                         } else {
                             argvar4 = null;
@@ -6013,7 +6013,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6048,7 +6048,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6295,7 +6295,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar2;
                         if (var2 != null) {
-                            argvar2 = var2.hashCode();
+                            argvar2 = System.identityHashCode(var2);
                             getHEAP().put(argvar2, var2);
                         } else {
                             argvar2 = null;
@@ -6348,7 +6348,7 @@ public class SubHandler3 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;

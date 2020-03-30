@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_WakeuperResult extends java_lang_Object with android_os_Parcelable {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.WakeuperResult';
+
   
   //endregion
 
@@ -38,7 +40,7 @@ class com_iflytek_cloud_WakeuperResult extends java_lang_Object with android_os_
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String__byteArray', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String__byteArray', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
     final List<com_iflytek_cloud_WakeuperResult> typedResult = resultBatch.map((result) => com_iflytek_cloud_WakeuperResult()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
@@ -49,7 +51,7 @@ class com_iflytek_cloud_WakeuperResult extends java_lang_Object with android_os_
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_iflytek_cloud_WakeuperResult> typedResult = resultBatch.map((result) => com_iflytek_cloud_WakeuperResult()..refId = result..tag = 'xftts_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
@@ -107,7 +109,7 @@ class com_iflytek_cloud_WakeuperResult extends java_lang_Object with android_os_
       return null;
     } else {
     
-      return (result as List).cast<int>();
+      return result as Uint8List;
     }
   }
   
@@ -130,7 +132,7 @@ extension com_iflytek_cloud_WakeuperResult_Batch on List<com_iflytek_cloud_Wakeu
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.WakeuperResult::getResultString_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.WakeuperResult::getResultString_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -149,14 +151,14 @@ extension com_iflytek_cloud_WakeuperResult_Batch on List<com_iflytek_cloud_Wakeu
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.WakeuperResult::getBuffer_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.WakeuperResult::getBuffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>()).toList();
+      final typedResult = (resultBatch as List).map((result) => result as Uint8List).toList();
     
       return typedResult;
     }

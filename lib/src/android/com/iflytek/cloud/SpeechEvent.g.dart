@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_SpeechEvent extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.SpeechEvent';
+
   static final int EVENT_NETPREF = 10001;
   static final int EVENT_SESSION_ID = 20001;
   static final String KEY_EVENT_SESSION_ID = "session_id";

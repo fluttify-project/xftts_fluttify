@@ -20,11 +20,11 @@ mixin IFlyRecognizerViewDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> onResultIsLast(List<NSObject> resultArray, bool isLast) {
+  Future<void> onResult_isLast(List<NSObject> resultArray, bool isLast) {
     kNativeObjectPool.addAll(resultArray);
   
     if (fluttifyLogEnabled) {
-      debugPrint('onResultIsLast::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('onResult_isLast::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

@@ -57,7 +57,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechSynthesizerDelegate::onBufferProgressMessage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechSynthesizerDelegate::onBufferProgress_message": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int progress = [args[@"progress"] intValue];
@@ -81,7 +81,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int progress = [args[@"progress"] intValue];
@@ -170,7 +170,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechSynthesizerDelegate::onEventArg0arg1data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int eventType = [args[@"eventType"] intValue];
@@ -198,13 +198,13 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyRecognizerViewDelegate::onResultIsLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyRecognizerViewDelegate::onResult_isLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // list arg
             NSArray<NSNumber*>* resultArrayRefArray = (NSArray<NSNumber*> *) args[@"resultArray"];
             NSMutableArray<NSArray*>* resultArray = [NSMutableArray arrayWithCapacity:resultArrayRefArray.count];
-            for (int i = 0; i < resultArrayRefArray.count; i++) {
-                NSArray* item = (NSArray*) HEAP[[resultArrayRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < resultArrayRefArray.count; __i__++) {
+                NSArray* item = (NSArray*) HEAP[[resultArrayRefArray objectAtIndex:__i__]];
                 [resultArray addObject:item];
             }
             // jsonable arg
@@ -292,7 +292,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechRecognizer::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechRecognizer::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* value = (NSString*) args[@"value"];
@@ -401,7 +401,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechRecognizer::buildGrammarCompletionHandlerGrammarTypegrammarContent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechRecognizer::buildGrammarCompletionHandler_grammarType_grammarContent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
             // jsonable arg
@@ -420,7 +420,7 @@ extern BOOL enableLog;
             // invoke native method
             int result = [ref buildGrammarCompletionHandler: ^(NSString* grammarId, IFlySpeechError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"IFlySpeechRecognizer::buildGrammarCompletionHandlerGrammarTypegrammarContent::Callback"
+                    methodChannelWithName:@"IFlySpeechRecognizer::buildGrammarCompletionHandler_grammarType_grammarContent::Callback"
                           binaryMessenger:[[self registrar] messenger]];
         
                 // print log
@@ -647,7 +647,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyRecognizerView::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyRecognizerView::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* value = (NSString*) args[@"value"];
@@ -757,7 +757,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechEvaluatorDelegate::onVolumeChangedBuffer": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechEvaluatorDelegate::onVolumeChanged_buffer": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int volume = [args[@"volume"] intValue];
@@ -866,7 +866,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechEvaluatorDelegate::onResultsIsLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechEvaluatorDelegate::onResults_isLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
             NSData* results = (NSData*) HEAP[@([args[@"results"] integerValue])];
@@ -997,7 +997,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyVoiceWakeuper::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyVoiceWakeuper::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* value = (NSString*) args[@"value"];
@@ -3501,7 +3501,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechUnderstander::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechUnderstander::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* value = (NSString*) args[@"value"];
@@ -3633,7 +3633,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyDataUploader::uploadDataWithCompletionHandlerNamedata": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyDataUploader::uploadDataWithCompletionHandler_name_data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
             // jsonable arg
@@ -3652,7 +3652,7 @@ extern BOOL enableLog;
             // invoke native method
             [ref uploadDataWithCompletionHandler : ^(NSString* result, IFlySpeechError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"IFlyDataUploader::uploadDataWithCompletionHandlerNamedata::Callback"
+                    methodChannelWithName:@"IFlyDataUploader::uploadDataWithCompletionHandler_name_data::Callback"
                           binaryMessenger:[[self registrar] messenger]];
         
                 // print log
@@ -3677,7 +3677,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyDataUploader::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyDataUploader::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* parameter = (NSString*) args[@"parameter"];
@@ -3723,13 +3723,13 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechRecognizerDelegate::onResultsIsLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechRecognizerDelegate::onResults_isLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // list arg
             NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
             NSMutableArray<NSArray*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
-            for (int i = 0; i < resultsRefArray.count; i++) {
-                NSArray* item = (NSArray*) HEAP[[resultsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < resultsRefArray.count; __i__++) {
+                NSArray* item = (NSArray*) HEAP[[resultsRefArray objectAtIndex:__i__]];
                 [results addObject:item];
             }
             // jsonable arg
@@ -3837,7 +3837,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechRecognizerDelegate::onEventArg0arg1data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlySpeechRecognizerDelegate::onEvent_arg0_arg1_data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int eventType = [args[@"eventType"] intValue];
@@ -3950,15 +3950,15 @@ extern BOOL enableLog;
             // result
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
         
             methodResult(jsonableResult);
         },
-        @"IFlyUserWords::putWordValue": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyUserWords::putWord_value": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* key = (NSString*) args[@"key"];
@@ -3982,15 +3982,15 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyUserWords::putwordsWords": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyUserWords::putwords_words": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* key = (NSString*) args[@"key"];
             // list arg
             NSArray<NSNumber*>* wordsRefArray = (NSArray<NSNumber*> *) args[@"words"];
             NSMutableArray<NSArray*>* words = [NSMutableArray arrayWithCapacity:wordsRefArray.count];
-            for (int i = 0; i < wordsRefArray.count; i++) {
-                NSArray* item = (NSArray*) HEAP[[wordsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < wordsRefArray.count; __i__++) {
+                NSArray* item = (NSArray*) HEAP[[wordsRefArray objectAtIndex:__i__]];
                 [words addObject:item];
             }
         
@@ -4055,7 +4055,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyIdentityVerifierDelegate::onEventArg1arg2extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             int eventType = [args[@"eventType"] intValue];
@@ -4083,7 +4083,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyTextUnderstander::understandTextWithCompletionHandler": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyTextUnderstander::understandText_withCompletionHandler": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* text = (NSString*) args[@"text"];
@@ -4100,7 +4100,7 @@ extern BOOL enableLog;
             // invoke native method
             int result = [ref understandText: text withCompletionHandler: ^(NSString* result, IFlySpeechError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"IFlyTextUnderstander::understandTextWithCompletionHandler::Callback"
+                    methodChannelWithName:@"IFlyTextUnderstander::understandText_withCompletionHandler::Callback"
                           binaryMessenger:[[self registrar] messenger]];
         
                 // print log
@@ -4125,7 +4125,7 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlyTextUnderstander::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+        @"IFlyTextUnderstander::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
             NSString* value = (NSString*) args[@"value"];

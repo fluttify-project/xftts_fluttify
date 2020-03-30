@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlyTextUnderstander extends NSObject  {
   //region constants
+  static const String name__ = 'IFlyTextUnderstander';
+
   
   //endregion
 
@@ -48,18 +50,18 @@ class IFlyTextUnderstander extends NSObject  {
   //endregion
 
   //region methods
-  Future<int> understandTextWithCompletionHandler(String text, void completionHandler(String result, IFlySpeechError error)) async {
+  Future<int> understandText_withCompletionHandler(String text, void completionHandler(String result, IFlySpeechError error)) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyTextUnderstander@$refId::understandText([\'text\':$text])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::understandTextWithCompletionHandler', {"text": text, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::understandText_withCompletionHandler', {"text": text, "refId": refId});
   
   
     // handle native call
-    MethodChannel('IFlyTextUnderstander::understandTextWithCompletionHandler::Callback')
+    MethodChannel('IFlyTextUnderstander::understandText_withCompletionHandler::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           // final refId = args['callerRefId'] as int;
@@ -89,14 +91,14 @@ class IFlyTextUnderstander extends NSObject  {
     }
   }
   
-  Future<bool> setParameterForKey(String value, String key) async {
+  Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: IFlyTextUnderstander@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::setParameterForKey', {"value": value, "key": key, "refId": refId});
+    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::setParameter_forKey', {"value": value, "key": key, "refId": refId});
   
   
     // handle native call
@@ -146,13 +148,13 @@ extension IFlyTextUnderstander_Batch on List<IFlyTextUnderstander> {
   //endregion
 
   //region methods
-  Future<List<bool>> setParameterForKey_batch(List<String> value, List<String> key) async {
+  Future<List<bool>> setParameter_forKey_batch(List<String> value, List<String> key) async {
     if (value.length != key.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::setParameterForKey_batch', [for (int i = 0; i < this.length; i++) {"value": value[i], "key": key[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -171,7 +173,7 @@ extension IFlyTextUnderstander_Batch on List<IFlyTextUnderstander> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::cancel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyTextUnderstander::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

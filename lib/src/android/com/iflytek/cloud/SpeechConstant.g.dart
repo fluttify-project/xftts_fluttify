@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_SpeechConstant extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.SpeechConstant';
+
   static final String APPID = "appid";
   static final String NET_TYPE = "net_type";
   static final String FORCE_LOGIN = "force_login";

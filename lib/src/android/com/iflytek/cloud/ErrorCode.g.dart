@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_ErrorCode extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.ErrorCode';
+
   static final int SUCCESS = 0;
   static final int MSP_ERROR_FAIL = -1;
   static final int MSP_ERROR_EXCEPTION = -2;

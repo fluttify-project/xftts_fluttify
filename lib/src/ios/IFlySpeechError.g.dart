@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class IFlySpeechError extends NSObject  {
   //region constants
+  static const String name__ = 'IFlySpeechError';
+
   
   //endregion
 
@@ -154,21 +156,21 @@ class IFlySpeechError extends NSObject  {
 extension IFlySpeechError_Batch on List<IFlySpeechError> {
   //region getters
   Future<List<int>> get_errorCode_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorCode_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorCode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_errorType_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorType_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_errorDesc_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorDesc_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorDesc_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -178,19 +180,19 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
 
   //region setters
   Future<void> set_errorCode_batch(List<int> errorCode) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorCode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "errorCode": errorCode[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorCode": errorCode[__i__]}]);
   
   
   }
   
   Future<void> set_errorType_batch(List<int> errorType) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorType_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "errorType": errorType[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorType": errorType[__i__]}]);
   
   
   }
   
   Future<void> set_errorDesc_batch(List<String> errorDesc) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorDesc_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "errorDesc": errorDesc[i]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorDesc": errorDesc[__i__]}]);
   
   
   }
@@ -204,7 +206,7 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::initWithError_batch', [for (int i = 0; i < this.length; i++) {"errorCode": errorCode[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::initWithError_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"errorCode": errorCode[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -223,7 +225,7 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -242,7 +244,7 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorDesc_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

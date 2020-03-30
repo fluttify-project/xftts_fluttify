@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.iflytek.cloud.util.VerifierUtil';
+
   
   //endregion
 
@@ -133,7 +135,7 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -152,7 +154,7 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -171,7 +173,7 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
