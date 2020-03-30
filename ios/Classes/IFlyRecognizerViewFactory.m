@@ -4,6 +4,7 @@
 
 #import "IFlyRecognizerViewFactory.h"
 #import "XfttsFluttifyPlugin.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -12,10 +13,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
-typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
-
 @implementation IFlyRecognizerViewFactory {
-  NSObject <FlutterPluginRegistrar> *_registrar;
 }
 
 - (instancetype)initWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar {
@@ -34,7 +32,6 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 @end
 
 @implementation IFlyRecognizerViewPlatformView {
-  NSObject <FlutterPluginRegistrar> *_registrar;
   NSInteger _viewId;
   NSDictionary<NSString *, Handler> *_handlerMap;
 }
@@ -51,12 +48,12 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 
 - (UIView *)view {
   IFlyRecognizerView *view = [[IFlyRecognizerView alloc] init];
-  // 这里viewId加1是为了防止往HEAP里放了nil的key, 把HEAP内原先viewId为0的覆盖掉了, 因为nil实际上就是0
-  HEAP[@(_viewId + 1)] = view;
+  // 这里用一个magic number调整一下id
+  HEAP[@(2147483647 - _viewId)] = view;
 
   //region handlers
   _handlerMap = @{
-      @"IFlyRecognizerView::initWithOrigin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::initWithOrigin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // struct arg
           NSValue* originValue = (NSValue*) HEAP[@([args[@"origin"] integerValue])];
@@ -64,11 +61,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [originValue getValue:&origin];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithOrigin(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithOrigin(%@)", args[@"refId"], args[@"origin"]);
           }
       
           // invoke native method
@@ -77,9 +74,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // result
           // return a ref
           HEAP[@(((NSObject*) result).hash)] = result;
-          methodResult(@(((NSObject*) result).hash));
+          NSNumber* jsonableResult = @(((NSObject*) result).hash);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::initWithCenter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::initWithCenter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // struct arg
           NSValue* centerValue = (NSValue*) HEAP[@([args[@"center"] integerValue])];
@@ -87,11 +86,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           [centerValue getValue:&center];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithCenter(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::initWithCenter(%@)", args[@"refId"], args[@"center"]);
           }
       
           // invoke native method
@@ -100,19 +99,21 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // result
           // return a ref
           HEAP[@(((NSObject*) result).hash)] = result;
-          methodResult(@(((NSObject*) result).hash));
+          NSNumber* jsonableResult = @(((NSObject*) result).hash);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::setAutoRotate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::setAutoRotate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           BOOL autoRotate = [args[@"autoRotate"] boolValue];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setAutoRotate(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setAutoRotate(%@)", args[@"refId"], args[@"autoRotate"]);
           }
       
           // invoke native method
@@ -120,9 +121,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::setParameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* value = (NSString*) args[@"value"];
@@ -130,11 +133,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setParameter(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::setParameter(%@, %@)", args[@"refId"], args[@"value"], args[@"key"]);
           }
       
           // invoke native method
@@ -142,19 +145,21 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* key = (NSString*) args[@"key"];
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::parameterForKey(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::parameterForKey(%@)", args[@"refId"], args[@"key"]);
           }
       
           // invoke native method
@@ -162,18 +167,20 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::start": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::start": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::start(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::start()", args[@"refId"]);
           }
       
           // invoke native method
@@ -181,18 +188,20 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
           // ref
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[args[@"refId"]];
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           // print log
           if (enableLog) {
-              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::cancel(暂未实现参数打印)", args[@"refId"]);
+              NSLog(@"fluttify-objc: IFlyRecognizerView@%@::cancel()", args[@"refId"]);
           }
       
           // invoke native method
@@ -200,9 +209,11 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"IFlyRecognizerView::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"IFlyRecognizerView::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"IFlyRecognizerView::set_delegate");
@@ -211,8 +222,8 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
           // args
       
       
-          NSInteger refId = [args[@"refId"] integerValue];
-          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[@(refId)];
+          // ref
+          IFlyRecognizerView* ref = (IFlyRecognizerView*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -285,7 +296,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onBufferProgressMessage");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onBufferProgress_message");
   }
 
   // convert to jsonable arg
@@ -294,7 +305,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   // jsonable callback arg
   NSString* argmsg = msg;
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onBufferProgressMessage" arguments:@{@"progress": argprogress, @"msg": argmsg}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onBufferProgress_message" arguments:@{@"progress": argprogress, @"msg": argmsg}];
   
 }
 
@@ -305,7 +316,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos");
   }
 
   // convert to jsonable arg
@@ -316,7 +327,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   // primitive callback arg
   NSNumber* argendPos = @(endPos);
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onSpeakProgressBeginPosendPos" arguments:@{@"progress": argprogress, @"beginPos": argbeginPos, @"endPos": argendPos}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos" arguments:@{@"progress": argprogress, @"beginPos": argbeginPos, @"endPos": argendPos}];
   
 }
 
@@ -378,7 +389,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlySpeechSynthesizerDelegate::onEventArg0arg1data");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data");
   }
 
   // convert to jsonable arg
@@ -392,7 +403,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   NSNumber* argeventData = @(eventData.hash);
   HEAP[argeventData] = eventData;
 
-  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onEventArg0arg1data" arguments:@{@"eventType": argeventType, @"arg0": argarg0, @"arg1": argarg1, @"eventData": argeventData}];
+  [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data" arguments:@{@"eventType": argeventType, @"arg0": argarg0, @"arg1": argarg1, @"eventData": argeventData}];
   
 }
 
@@ -403,23 +414,23 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyRecognizerViewDelegate::onResultIsLast");
+    NSLog(@"IFlyRecognizerViewDelegate::onResult_isLast");
   }
 
   // convert to jsonable arg
   // list callback arg
   NSMutableArray<NSNumber*>* argresultArray = [NSMutableArray arrayWithCapacity:resultArray.count];
-  for (int i = 0; i < resultArray.count; i++) {
-      NSObject* item = ((NSObject*) [resultArray objectAtIndex:i]);
+  for (int __i__ = 0; __i__ < resultArray.count; __i__++) {
+      NSObject* item = ((NSObject*) [resultArray objectAtIndex:__i__]);
       // return to dart side data
-      argresultArray[i] = @(item.hash);
+      argresultArray[__i__] = @(item.hash);
       // add to HEAP
       HEAP[@(item.hash)] = item;
   }
   // primitive callback arg
   NSNumber* argisLast = @(isLast);
 
-  [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResultIsLast" arguments:@{@"resultArray": argresultArray, @"isLast": argisLast}];
+  [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResult_isLast" arguments:@{@"resultArray": argresultArray, @"isLast": argisLast}];
   
 }
 
@@ -430,7 +441,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderBufferBufferSize");
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderBuffer_bufferSize");
   }
 
   // convert to jsonable arg
@@ -440,7 +451,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   // primitive callback arg
   NSNumber* argsize = @(size);
 
-  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderBufferBufferSize" arguments:@{@"buffer": argbuffer, @"size": argsize}];
+  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderBuffer_bufferSize" arguments:@{@"buffer": argbuffer, @"size": argsize}];
   
 }
 
@@ -451,7 +462,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderErrorTheError");
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderError_theError");
   }
 
   // convert to jsonable arg
@@ -461,7 +472,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   // primitive callback arg
   NSNumber* argerror = @(error);
 
-  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderErrorTheError" arguments:@{@"recoder": argrecoder, @"error": argerror}];
+  [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderError_theError" arguments:@{@"recoder": argrecoder, @"error": argerror}];
   
 }
 
@@ -490,7 +501,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onResultsIsLast");
+    NSLog(@"IFlyIdentityVerifierDelegate::onResults_isLast");
   }
 
   // convert to jsonable arg
@@ -500,7 +511,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   // primitive callback arg
   NSNumber* argisLast = @(isLast);
 
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResultsIsLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
+  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResults_isLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
   
 }
 
@@ -511,7 +522,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onEventArg1arg2extra");
+    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
   }
 
   // convert to jsonable arg
@@ -525,7 +536,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   NSNumber* argobj = @(((NSObject*) obj).hash);
   HEAP[argobj] = ((NSObject*) obj);
 
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEventArg1arg2extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
+  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
   
 }
 
@@ -624,7 +635,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyVoiceWakeuperDelegate::onEventIsLastarg1data");
+    NSLog(@"IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data");
   }
 
   // convert to jsonable arg
@@ -638,7 +649,7 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
   NSNumber* argeventData = @(eventData.hash);
   HEAP[argeventData] = eventData;
 
-  [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEventIsLastarg1data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
+  [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
   
 }
 

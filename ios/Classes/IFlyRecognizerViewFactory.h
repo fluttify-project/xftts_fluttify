@@ -37,9 +37,17 @@
 #import <iflyMSC/IFlySpeechSynthesizer.h>
 
 @interface IFlyRecognizerViewFactory : NSObject <FlutterPlatformViewFactory>
+
 - (instancetype)initWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
+
 @end
 
 @interface IFlyRecognizerViewPlatformView : NSObject <IFlySpeechSynthesizerDelegate, IFlyRecognizerViewDelegate, IFlyPcmRecorderDelegate, IFlyIdentityVerifierDelegate, IFlySpeechplusDelegate, IFlyISVDelegate, IFlyVoiceWakeuperDelegate, FlutterPlatformView>
+
 - (instancetype)initWithViewId:(NSInteger)viewId registrar:(NSObject <FlutterPluginRegistrar> *)registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
+
 @end
