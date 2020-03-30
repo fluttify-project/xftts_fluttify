@@ -1,6 +1,6 @@
 name: xftts_fluttify
 description: A `xftts` flutter plugin, Powered by `Fluttify` engine.
-version: 0.0.1
+version: 0.0.1+939e12d
 author: yohom <yohombao@qq.com>
 homepage: https://fluttify.com
 
