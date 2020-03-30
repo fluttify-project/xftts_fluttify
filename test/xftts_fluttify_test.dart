@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:xftts_fluttify/xftts_fluttify.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('xftts_fluttify');
@@ -15,9 +14,5 @@ void main() {
 
   tearDown(() {
     channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await XfttsFluttify.platformVersion, '42');
   });
 }
