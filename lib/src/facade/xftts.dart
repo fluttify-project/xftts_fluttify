@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
@@ -29,13 +30,13 @@ class XfTTS {
         final synthesizer =
             await com_iflytek_cloud_SpeechSynthesizer.createSynthesizer(
           application,
-          null,
+          _AndroidDelegate(),
         );
         return Synthesizer._android(synthesizer);
       },
       ios: (pool) async {
         final synthesizer = await IFlySpeechSynthesizer.sharedInstance();
-        synthesizer.set_delegate(Delegate());
+        synthesizer.set_delegate(_IOSDelegate());
         return Synthesizer._ios(synthesizer);
       },
     );
@@ -135,10 +136,62 @@ class Synthesizer {
   }
 }
 
-class Delegate extends NSObject with IFlySpeechSynthesizerDelegate {
+class _IOSDelegate extends NSObject with IFlySpeechSynthesizerDelegate {
   @override
   Future<void> onCompleted(IFlySpeechError error) async {
     super.onCompleted(error);
     print('错误: ${await error.errorDesc()}');
+  }
+
+  @override
+  Future<void> onEvent_arg0_arg1_data(
+    int eventType,
+    int arg0,
+    int arg1,
+    NSData eventData,
+  ) async {
+    super.onEvent_arg0_arg1_data(eventType, arg0, arg1, eventData);
+  }
+
+  @override
+  Future<void> onSpeakCancel() async {
+    super.onSpeakCancel();
+  }
+
+  @override
+  Future<void> onSpeakResumed() async {
+    super.onSpeakResumed();
+  }
+
+  @override
+  Future<void> onSpeakPaused() async {
+    super.onSpeakPaused();
+  }
+
+  @override
+  Future<void> onSpeakProgress_beginPos_endPos(
+    int progress,
+    int beginPos,
+    int endPos,
+  ) async {
+    super.onSpeakProgress_beginPos_endPos(progress, beginPos, endPos);
+  }
+
+  @override
+  Future<void> onBufferProgress_message(int progress, String msg) async {
+    super.onBufferProgress_message(progress, msg);
+  }
+
+  @override
+  Future<void> onSpeakBegin() async {
+    super.onSpeakBegin();
+  }
+}
+
+class _AndroidDelegate extends java_lang_Object
+    with com_iflytek_cloud_InitListener {
+  @override
+  Future<void> onInit(int var1) async {
+    super.onInit(var1);
   }
 }
