@@ -14,403 +14,6 @@ extern BOOL enableLog;
 @implementation XfttsFluttifyPlugin (SubHandler1)
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
     return @{
-        @"IFlyResourceUtil::generateResourcePath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* path = (NSString*) args[@"path"];
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyResourceUtil::generateResourcePath(%@)", args[@"path"]);
-            }
-        
-            // invoke native method
-            NSString* result = [IFlyResourceUtil generateResourcePath: path];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyResourceUtil::identifierForVoiceName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* voiceName = (NSString*) args[@"voiceName"];
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyResourceUtil::identifierForVoiceName(%@)", args[@"voiceName"]);
-            }
-        
-            // invoke native method
-            NSString* result = [IFlyResourceUtil identifierForVoiceName: voiceName];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechplusDelegate::onCompleted__int": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int errorCode = [args[@"errorCode"] intValue];
-        
-            // ref
-            id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechplusDelegate@%@::onCompleted(%@)", args[@"refId"], args[@"errorCode"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted : errorCode];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechplusDelegate::onCompleted": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechplusDelegate@%@::onCompleted()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::createUtility": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* params = (NSString*) args[@"params"];
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility::createUtility(%@)", args[@"params"]);
-            }
-        
-            // invoke native method
-            IFlySpeechUtility* result = [IFlySpeechUtility createUtility: params];
-        
-            // result
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::destroy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility::destroy()");
-            }
-        
-            // invoke native method
-            BOOL result = [IFlySpeechUtility destroy];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::getUtility": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility::getUtility()");
-            }
-        
-            // invoke native method
-            IFlySpeechUtility* result = [IFlySpeechUtility getUtility];
-        
-            // result
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* value = (NSString*) args[@"value"];
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-            IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility@%@::setParameter(%@, %@)", args[@"refId"], args[@"value"], args[@"key"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref setParameter: value forKey: key];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-            IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility@%@::parameterForKey(%@)", args[@"refId"], args[@"key"]);
-            }
-        
-            // invoke native method
-            NSString* result = [ref parameterForKey: key];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::checkServiceInstalled": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility::checkServiceInstalled()");
-            }
-        
-            // invoke native method
-            BOOL result = [IFlySpeechUtility checkServiceInstalled];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::componentUrl": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility::componentUrl()");
-            }
-        
-            // invoke native method
-            NSString* result = [IFlySpeechUtility componentUrl];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechUtility::openSpeechPlus": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // enum arg
-            IFlySpeechPlusServiceType serviceType = (IFlySpeechPlusServiceType) [args[@"serviceType"] integerValue];
-        
-            // ref
-            IFlySpeechUtility* ref = (IFlySpeechUtility*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechUtility@%@::openSpeechPlus(%@)", args[@"refId"], args[@"serviceType"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref openSpeechPlus: serviceType];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator::sharedInstance()");
-            }
-        
-            // invoke native method
-            IFlySpeechEvaluator* result = [IFlySpeechEvaluator sharedInstance];
-        
-            // result
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::destroy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::destroy()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref destroy];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* value = (NSString*) args[@"value"];
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::setParameter(%@, %@)", args[@"refId"], args[@"value"], args[@"key"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref setParameter: value forKey: key];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::parameterForKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::parameterForKey(%@)", args[@"refId"], args[@"key"]);
-            }
-        
-            // invoke native method
-            NSString* result = [ref parameterForKey: key];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::startListening_params": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            NSData* data = (NSData*) HEAP[@([args[@"data"] integerValue])];
-            // jsonable arg
-            NSString* params = (NSString*) args[@"params"];
-        
-            // ref
-            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::startListening(%@, %@)", args[@"refId"], args[@"data"], args[@"params"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref startListening: data params: params];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechEvaluator::stopListening": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::stopListening()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref stopListening ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"IFlySpeechEvaluator::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
@@ -516,51 +119,6 @@ extern BOOL enableLog;
             // result
             // 无返回值
             NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyVerifierUtil::generateNumberPassword": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int length = [args[@"length"] intValue];
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyVerifierUtil::generateNumberPassword(%@)", args[@"length"]);
-            }
-        
-            // invoke native method
-            NSString* result = [IFlyVerifierUtil generateNumberPassword: length];
-        
-            // result
-            // 返回值: jsonable
-            id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyVerifierUtil::ARGBToGray": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            UIImage* sourceImage = (UIImage*) HEAP[@([args[@"sourceImage"] integerValue])];
-        
-            // ref
-        
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyVerifierUtil::ARGBToGray(%@)", args[@"sourceImage"]);
-            }
-        
-            // invoke native method
-            UIImage* result = [IFlyVerifierUtil ARGBToGray: sourceImage];
-        
-            // result
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
         
             methodResult(jsonableResult);
         },
@@ -2438,126 +1996,6 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"IFlySpeechConstant::LANGUAGE_RUSSIAN_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant LANGUAGE_RUSSIAN];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"IFlySpeechConstant::LANGUAGE_JAPANESE_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant LANGUAGE_JAPANESE];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"IFlySpeechConstant::LANGUAGE_FRENCH_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant LANGUAGE_FRENCH];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"IFlySpeechConstant::LANGUAGE_SPANISH_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant LANGUAGE_SPANISH];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"IFlySpeechConstant::LANGUAGE_KOREAN_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant LANGUAGE_KOREAN];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
         @"IFlySpeechConstant::RESULT_TYPE_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -2884,30 +2322,6 @@ extern BOOL enableLog;
         
                 // invoke native method
                 NSString* result = [IFlySpeechConstant ENGINE_TYPE];
-        
-                // result
-                // 返回值: jsonable
-                id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"IFlySpeechConstant::TYPE_LOCAL_XTTS_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-        
-        
-                // ref
-        
-        
-                // invoke native method
-                NSString* result = [IFlySpeechConstant TYPE_LOCAL_XTTS];
         
                 // result
                 // 返回值: jsonable
@@ -4780,6 +4194,675 @@ extern BOOL enableLog;
         
                 // invoke native method
                 NSString* result = [IFlySpeechConstant FACE_RAW];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechConstant::FACE_PSET_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                NSString* result = [IFlySpeechConstant FACE_PSET];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechConstant::FACE_SKIP_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                NSString* result = [IFlySpeechConstant FACE_SKIP];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechConstant::FACE_GID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                NSString* result = [IFlySpeechConstant FACE_GID];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechConstant::FACE_AUTH_ID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                NSString* result = [IFlySpeechConstant FACE_AUTH_ID];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechConstant::FACE_DVC_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                NSString* result = [IFlySpeechConstant FACE_DVC];
+        
+                // result
+                // 返回值: jsonable
+                id jsonableResult = result;
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyDebugLog::showLog_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* format = (NSString*) args[@"format"];
+        
+                // ref
+        
+        
+                // invoke native method
+                [IFlyDebugLog showLog: format];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyDebugLog::writeLog_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                [IFlyDebugLog writeLog];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyDebugLog::setShowLog_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL showLog = [args[@"showLog"] boolValue];
+        
+                // ref
+        
+        
+                // invoke native method
+                [IFlyDebugLog setShowLog: showLog];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyDataUploader::setParameter_forKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* parameter = (NSString*) args[@"parameter"];
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+        
+                // ref
+                IFlyDataUploader* ref = (IFlyDataUploader*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref setParameter : parameter forKey: key];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onCompleted_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                IFlySpeechError* errorCode = (IFlySpeechError*) HEAP[@([args[@"errorCode"] integerValue])];
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onCompleted : errorCode];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onResults_isLast_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
+                NSMutableArray<NSArray*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
+                for (int __i__ = 0; __i__ < resultsRefArray.count; __i__++) {
+                    NSArray* item = (NSArray*) HEAP[[resultsRefArray objectAtIndex:__i__]];
+                    [results addObject:item];
+                }
+                // jsonable arg
+                BOOL isLast = [args[@"isLast"] boolValue];
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onResults : results isLast: isLast];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onVolumeChanged_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                int volume = [args[@"volume"] intValue];
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onVolumeChanged : volume];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onBeginOfSpeech_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onBeginOfSpeech ];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onEndOfSpeech_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onEndOfSpeech ];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onCancel_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onCancel ];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechRecognizerDelegate::onEvent_arg0_arg1_data_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                int eventType = [args[@"eventType"] intValue];
+                // jsonable arg
+                int arg0 = [args[@"arg0"] intValue];
+                // jsonable arg
+                int arg1 = [args[@"arg1"] intValue];
+                // ref arg
+                NSData* eventData = (NSData*) HEAP[@([args[@"eventData"] integerValue])];
+        
+                // ref
+                id<IFlySpeechRecognizerDelegate> ref = (id<IFlySpeechRecognizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                [ref onEvent : eventType arg0: arg0 arg1: arg1 data: eventData];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyAudioSession::initPlayingAudioSession_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL isMPCenter = [args[@"isMPCenter"] boolValue];
+        
+                // ref
+        
+        
+                // invoke native method
+                [IFlyAudioSession initPlayingAudioSession: isMPCenter];
+        
+                // result
+                // 无返回值
+                NSString* jsonableResult = @"success";
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyAudioSession::initRecordingAudioSession_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                BOOL result = [IFlyAudioSession initRecordingAudioSession];
+        
+                // result
+                // 返回值: Value
+                id jsonableResult = @(result);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyUserWords::initWithJson_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* json = (NSString*) args[@"json"];
+        
+                // ref
+                IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                id result = [ref initWithJson: json];
+        
+                // result
+                // return a ref
+                HEAP[@(((NSObject*) result).hash)] = result;
+                NSNumber* jsonableResult = @(((NSObject*) result).hash);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyUserWords::getWords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+        
+                // ref
+                IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                NSArray* result = [ref getWords: key];
+        
+                // result
+                // 返回值: 列表
+                NSMutableArray* jsonableResult = [NSMutableArray array];
+                for (int __i__ = 0; __i__ < result.count; __i__++) {
+                    NSObject* object = [result objectAtIndex:__i__];
+                    [jsonableResult addObject: @(object.hash)];
+                    HEAP[@([object hash])] = object;
+                }
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyUserWords::putWord_value_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+                // jsonable arg
+                NSString* value = (NSString*) args[@"value"];
+        
+                // ref
+                IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                BOOL result = [ref putWord: key value: value];
+        
+                // result
+                // 返回值: Value
+                id jsonableResult = @(result);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyUserWords::putwords_words_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+                // list arg
+                NSArray<NSNumber*>* wordsRefArray = (NSArray<NSNumber*> *) args[@"words"];
+                NSMutableArray<NSArray*>* words = [NSMutableArray arrayWithCapacity:wordsRefArray.count];
+                for (int __i__ = 0; __i__ < wordsRefArray.count; __i__++) {
+                    NSArray* item = (NSArray*) HEAP[[wordsRefArray objectAtIndex:__i__]];
+                    [words addObject:item];
+                }
+        
+                // ref
+                IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                BOOL result = [ref putwords: key words: words];
+        
+                // result
+                // 返回值: Value
+                id jsonableResult = @(result);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlyUserWords::containsKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+        
+                // ref
+                IFlyUserWords* ref = (IFlyUserWords*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                BOOL result = [ref containsKey: key];
+        
+                // result
+                // 返回值: Value
+                id jsonableResult = @(result);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechError::initWithError_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                int errorCode = [args[@"errorCode"] intValue];
+        
+                // ref
+        
+        
+                // invoke native method
+                IFlySpeechError* result = [IFlySpeechError initWithError: errorCode];
+        
+                // result
+                // return a ref
+                HEAP[@((result).hash)] = result;
+                NSNumber* jsonableResult = @((result).hash);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechError::errorCode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                int result = [ref errorCode];
+        
+                // result
+                // 返回值: Value
+                id jsonableResult = @(result);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        @"IFlySpeechError::errorDesc_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                IFlySpeechError* ref = (IFlySpeechError*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                // invoke native method
+                NSString* result = [ref errorDesc];
         
                 // result
                 // 返回值: jsonable

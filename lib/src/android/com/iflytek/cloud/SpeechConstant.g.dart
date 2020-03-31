@@ -20,7 +20,6 @@ class com_iflytek_cloud_SpeechConstant extends java_lang_Object  {
   static final String NET_TYPE = "net_type";
   static final String FORCE_LOGIN = "force_login";
   static final String LIB_NAME = "lib_name";
-  static final String LIB_PATH = "lib_path";
   static final String RESULT_TYPE = "result_type";
   static final String RESULT_LEVEL = "result_level";
   static final String LANGUAGE = "language";
@@ -63,7 +62,6 @@ class com_iflytek_cloud_SpeechConstant extends java_lang_Object  {
   static final String TYPE_LOCAL = "local";
   static final String TYPE_CLOUD = "cloud";
   static final String TYPE_XTTS = "purextts";
-  static final String TYPE_MTTS = "mtts";
   static final String TYPE_MIX = "mixed";
   static final String TYPE_DISTRIBUTED = "distributed";
   static final String TYPE_AUTO = "auto";

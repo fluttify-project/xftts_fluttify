@@ -39,11 +39,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
     return result;
   }
   
-  Future<bool> isIFlySpeechUnderstander() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlySpeechUnderstander', {'refId': refId});
-    return result;
-  }
-  
   Future<bool> isIFlyDebugLog() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyDebugLog', {'refId': refId});
     return result;
@@ -64,11 +59,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
     return result;
   }
   
-  Future<bool> isIFlyTextUnderstander() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyTextUnderstander', {'refId': refId});
-    return result;
-  }
-  
   Future<bool> isIFlySpeechError() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlySpeechError', {'refId': refId});
     return result;
@@ -86,11 +76,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
   
   Future<bool> isIFlySpeechEvaluator() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlySpeechEvaluator', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isIFlyVerifierUtil() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::isKindOfIFlyVerifierUtil', {'refId': refId});
     return result;
   }
   
@@ -130,11 +115,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
     return IFlySpeechConstant()..refId = result;
   }
   
-  Future<IFlySpeechUnderstander> asIFlySpeechUnderstander() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlySpeechUnderstander', {'refId': refId});
-    return IFlySpeechUnderstander()..refId = result;
-  }
-  
   Future<IFlyDebugLog> asIFlyDebugLog() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyDebugLog', {'refId': refId});
     return IFlyDebugLog()..refId = result;
@@ -155,11 +135,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
     return IFlyUserWords()..refId = result;
   }
   
-  Future<IFlyTextUnderstander> asIFlyTextUnderstander() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyTextUnderstander', {'refId': refId});
-    return IFlyTextUnderstander()..refId = result;
-  }
-  
   Future<IFlySpeechError> asIFlySpeechError() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlySpeechError', {'refId': refId});
     return IFlySpeechError()..refId = result;
@@ -178,11 +153,6 @@ extension TypeOpXfttsFluttifyIOS on Ref {
   Future<IFlySpeechEvaluator> asIFlySpeechEvaluator() async {
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlySpeechEvaluator', {'refId': refId});
     return IFlySpeechEvaluator()..refId = result;
-  }
-  
-  Future<IFlyVerifierUtil> asIFlyVerifierUtil() async {
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('RefClass::asIFlyVerifierUtil', {'refId': refId});
-    return IFlyVerifierUtil()..refId = result;
   }
   
   Future<IFlyISVRecognizer> asIFlyISVRecognizer() async {

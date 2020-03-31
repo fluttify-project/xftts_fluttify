@@ -31,3122 +31,6 @@ public class SubHandler3 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.iflytek.cloud.msc.util.log.DebugLog::setLogLevel", (args, methodResult) -> {
-                // args
-                // enum arg
-                com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL var0 = com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL.values()[(int) ((Map<String, Object>) args).get("var0")];
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.log.DebugLog::setLogLevel(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.msc.util.log.DebugLog.setLogLevel(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.log.DebugLog::updateJniLogStatus", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.log.DebugLog::updateJniLogStatus(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.msc.util.log.DebugLog.updateJniLogStatus();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID", (args, methodResult) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.UniqueIDUtil.getUniqueID(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord", (args, methodResult) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.msc.util.UniqueIDUtil.cleanRecord(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager", (args, methodResult) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.util.FileDownloader result;
-                try {
-                    result = com.iflytek.cloud.msc.util.FileDownloader.getDownLoadManager(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.FileDownloader::startDownload", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                String var3 = (String) ((Map<String, Object>) args).get("var3");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.FileDownloader ref = (com.iflytek.cloud.msc.util.FileDownloader) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.FileDownloader@" + refId + "::startDownload(" + var1 + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.startDownload(var1, var2, var3, new com.iflytek.cloud.util.FileDownloadListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.msc.util.FileDownloader::startDownload::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onStart() {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onStart(" + "" + ")");
-                        }
-            
-                        // convert to jsonable data
-            
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.util.FileDownloadListener::onStart",
-                                new HashMap<String, Object>() {{
-                
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onProgress(int var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onProgress(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        int argvar1 = var1;
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.util.FileDownloadListener::onProgress",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onCompleted(String var1, com.iflytek.cloud.SpeechError var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onCompleted(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        String argvar1 = var1;
-                        // ref arg
-                        final Integer argvar2;
-                        if (var2 != null) {
-                            argvar2 = System.identityHashCode(var2);
-                            getHEAP().put(argvar2, var2);
-                        } else {
-                            argvar2 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.util.FileDownloadListener::onCompleted",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::generateKeyString", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::generateKeyString(" + "" + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.generateKeyString();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                byte[] result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                byte[] jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                byte[] result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                byte[] jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::byte2hex", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::byte2hex(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.byte2hex(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::hex2byte", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::hex2byte(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] result;
-                try {
-                    result = com.iflytek.cloud.msc.util.AESUtil.hex2byte(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                byte[] jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::setHttpbuf", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                Object var1 = (Object) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::setHttpbuf(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setHttpbuf(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::getHttpbuf", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::getHttpbuf(" + "" + ")");
-                }
-            
-                // invoke native method
-                Object result;
-                try {
-                    result = ref.getHttpbuf();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Object jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::setConectType", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::setConectType(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setConectType(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::setRequest__String__String__Uint8List", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::setRequest(" + var1 + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setRequest(var1, var2, var3);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::setRequest__String__String__Uint8List__String", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-                // jsonable arg
-                String var4 = (String) ((Map<String, Object>) args).get("var4");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::setRequest(" + var1 + var2 + var3 + var4 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setRequest(var1, var2, var3, var4);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::setTimeOut", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::setTimeOut(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setTimeOut(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::startRequest", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::startRequest(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.startRequest(new com.iflytek.cloud.msc.util.HttpRequest.HttpRequestListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.msc.util.HttpRequest::startRequest::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onResult(com.iflytek.cloud.msc.util.HttpRequest var1, byte[] var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-                        // jsonable arg
-                        byte[] argvar2 = var2;
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.msc.util.HttpRequest.HttpRequestListener::onResult",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onError(com.iflytek.cloud.SpeechError var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.msc.util.HttpRequest.HttpRequestListener::onError",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::cancel", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::cancel(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.cancel();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::run", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::run(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.run();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::appendData", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::appendData(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.appendData(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::runPost", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.util.HttpRequest ref = (com.iflytek.cloud.msc.util.HttpRequest) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest@" + refId + "::runPost(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.runPost();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.HttpRequest::hasHttpError", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.HttpRequest::hasHttpError(" + var0 + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = com.iflytek.cloud.msc.util.HttpRequest.hasHttpError(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor result;
-                try {
-                    result = com.iflytek.cloud.msc.ist.AudioAccessor.createBufferAccessor();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor result;
-                try {
-                    result = com.iflytek.cloud.msc.ist.AudioAccessor.createReadOnlyAccessor(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor result;
-                try {
-                    result = com.iflytek.cloud.msc.ist.AudioAccessor.createWriteReadAccessor(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getFilePath(" + "" + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getFilePath();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getDataLength(" + "" + ")");
-                }
-            
-                // invoke native method
-                long result;
-                try {
-                    result = ref.getDataLength();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                long jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo", (args, methodResult) -> {
-                // args
-                // enum arg
-                com.iflytek.cloud.msc.ist.AudioAccessor.AudioKeys var1 = com.iflytek.cloud.msc.ist.AudioAccessor.AudioKeys.values()[(int) ((Map<String, Object>) args).get("var1")];
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getAudioInfo(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getAudioInfo(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getBufferLength(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getBufferLength();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getCacheLeft(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getCacheLeft();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getAudio", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::getAudio(" + var1 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getAudio(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::putAudio", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::putAudio(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.putAudio(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::flush", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::flush(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.flush();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::close", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.AudioAccessor ref = (com.iflytek.cloud.msc.ist.AudioAccessor) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + refId + "::close(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.close();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::sessionEnd", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::sessionEnd(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.sessionEnd(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::pushAudioData", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::pushAudioData(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.pushAudioData(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::pushEndFlag", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::pushEndFlag(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.pushEndFlag();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getEpStatus", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getEpStatus(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getEpStatus();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getAudioVolume", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getAudioVolume(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getAudioVolume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntValue__String", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getIntValue(" + var1 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getIntValue(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getIntValue(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getIntValue(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::setParam", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::setParam(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.setParam(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getStringValue", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getStringValue(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getStringValue(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntByTag", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession::getIntByTag(" + var0 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = com.iflytek.cloud.msc.ist.IstSession.getIntByTag(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getStringByTag", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession::getStringByTag(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.msc.ist.IstSession.getStringByTag(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::hasResult", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::hasResult(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.hasResult();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getResultData", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.msc.ist.IstSession ref = (com.iflytek.cloud.msc.ist.IstSession) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + refId + "::getResultData(" + "" + ")");
-                }
-            
-                // invoke native method
-                byte[] result;
-                try {
-                    result = ref.getResultData();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                byte[] jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::createRecognizer", (args, methodResult) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer::createRecognizer(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.SpeechRecognizer result;
-                try {
-                    result = com.iflytek.cloud.SpeechRecognizer.createRecognizer(var0, new com.iflytek.cloud.InitListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.SpeechRecognizer::createRecognizer::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onInit(int var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onInit(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        int argvar1 = var1;
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.InitListener::onInit",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::getRecognizer", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer::getRecognizer(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.SpeechRecognizer result;
-                try {
-                    result = com.iflytek.cloud.SpeechRecognizer.getRecognizer();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::buildGrammar", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::buildGrammar(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.buildGrammar(var1, var2, new com.iflytek.cloud.GrammarListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.SpeechRecognizer::buildGrammar::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onBuildFinish(String var1, com.iflytek.cloud.SpeechError var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onBuildFinish(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        String argvar1 = var1;
-                        // ref arg
-                        final Integer argvar2;
-                        if (var2 != null) {
-                            argvar2 = System.identityHashCode(var2);
-                            getHEAP().put(argvar2, var2);
-                        } else {
-                            argvar2 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.GrammarListener::onBuildFinish",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::updateLexicon", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::updateLexicon(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.updateLexicon(var1, var2, new com.iflytek.cloud.LexiconListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.SpeechRecognizer::updateLexicon::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onLexiconUpdated(String var1, com.iflytek.cloud.SpeechError var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onLexiconUpdated(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        String argvar1 = var1;
-                        // ref arg
-                        final Integer argvar2;
-                        if (var2 != null) {
-                            argvar2 = System.identityHashCode(var2);
-                            getHEAP().put(argvar2, var2);
-                        } else {
-                            argvar2 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.LexiconListener::onLexiconUpdated",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::startListening", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::startListening(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.startListening(new com.iflytek.cloud.RecognizerListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.SpeechRecognizer::startListening::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onVolumeChanged(int var1, byte[] var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onVolumeChanged(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        int argvar1 = var1;
-                        // jsonable arg
-                        byte[] argvar2 = var2;
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onVolumeChanged",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onBeginOfSpeech() {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onBeginOfSpeech(" + "" + ")");
-                        }
-            
-                        // convert to jsonable data
-            
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onBeginOfSpeech",
-                                new HashMap<String, Object>() {{
-                
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onEndOfSpeech() {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onEndOfSpeech(" + "" + ")");
-                        }
-            
-                        // convert to jsonable data
-            
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onEndOfSpeech",
-                                new HashMap<String, Object>() {{
-                
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onResult(com.iflytek.cloud.RecognizerResult var1, boolean var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-                        // jsonable arg
-                        boolean argvar2 = var2;
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onResult",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onError(com.iflytek.cloud.SpeechError var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onError",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                    @Override
-                    public void onEvent(int var1, int var2, int var3, android.os.Bundle var4) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // jsonable arg
-                        int argvar1 = var1;
-                        // jsonable arg
-                        int argvar2 = var2;
-                        // jsonable arg
-                        int argvar3 = var3;
-                        // ref arg
-                        final Integer argvar4;
-                        if (var4 != null) {
-                            argvar4 = System.identityHashCode(var4);
-                            getHEAP().put(argvar4, var4);
-                        } else {
-                            argvar4 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.iflytek.cloud.RecognizerListener::onEvent",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                    put("var3", argvar3);
-                                    put("var4", argvar4);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::writeAudio", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::writeAudio(" + var1 + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.writeAudio(var1, var2, var3);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::stopListening", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::stopListening(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.stopListening();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::isListening", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::isListening(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.isListening();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::cancel", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::cancel(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.cancel();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::setParameter", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::setParameter(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.setParameter(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::getParameter", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::getParameter(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getParameter(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechRecognizer::destroy", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechRecognizer ref = (com.iflytek.cloud.SpeechRecognizer) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechRecognizer@" + refId + "::destroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.destroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechError::getErrorCode", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechError ref = (com.iflytek.cloud.SpeechError) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechError@" + refId + "::getErrorCode(" + "" + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.getErrorCode();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechError::getErrorDescription", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechError ref = (com.iflytek.cloud.SpeechError) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechError@" + refId + "::getErrorDescription(" + "" + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getErrorDescription();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechError::getHtmlDescription", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechError ref = (com.iflytek.cloud.SpeechError) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechError@" + refId + "::getHtmlDescription(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getHtmlDescription(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechError::getPlainDescription", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.SpeechError ref = (com.iflytek.cloud.SpeechError) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.SpeechError@" + refId + "::getPlainDescription(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getPlainDescription(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::setLogLevel", (args, methodResult) -> {
-                // args
-                // enum arg
-                com.iflytek.cloud.Setting.LOG_LEVEL var0 = com.iflytek.cloud.Setting.LOG_LEVEL.values()[(int) ((Map<String, Object>) args).get("var0")];
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::setLogLevel(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.Setting.setLogLevel(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::getLogLevel", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::getLogLevel(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.Setting.LOG_LEVEL result;
-                try {
-                    result = com.iflytek.cloud.Setting.getLogLevel();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = System.identityHashCode(result);
-                    getHEAP().put(jsonableResult, result);
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::setLogPath", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::setLogPath(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.Setting.setLogPath(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::getLogPath", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::getLogPath(" + "" + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = com.iflytek.cloud.Setting.getLogPath();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::setShowLog", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                boolean var0 = (boolean) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::setShowLog(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.Setting.setShowLog(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::getShowLog", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::getShowLog(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = com.iflytek.cloud.Setting.getShowLog();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::setSaveTestLog", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                boolean var0 = (boolean) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::setSaveTestLog(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.Setting.setSaveTestLog(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::getSaveTestLog", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::getSaveTestLog(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = com.iflytek.cloud.Setting.getSaveTestLog();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::setLocationEnable", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                boolean var0 = (boolean) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::setLocationEnable(" + var0 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    com.iflytek.cloud.Setting.setLocationEnable(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.Setting::getLocationEnable", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.Setting::getLocationEnable(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = com.iflytek.cloud.Setting.getLocationEnable();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperListener::onBeginOfSpeech", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.WakeuperListener ref = (com.iflytek.cloud.WakeuperListener) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.WakeuperListener@" + refId + "::onBeginOfSpeech(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onBeginOfSpeech();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperListener::onResult", (args, methodResult) -> {
-                // args
-                // ref arg
-                com.iflytek.cloud.WakeuperResult var1 = (com.iflytek.cloud.WakeuperResult) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.WakeuperListener ref = (com.iflytek.cloud.WakeuperListener) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.WakeuperListener@" + refId + "::onResult(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onResult(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperListener::onError", (args, methodResult) -> {
-                // args
-                // ref arg
-                com.iflytek.cloud.SpeechError var1 = (com.iflytek.cloud.SpeechError) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.WakeuperListener ref = (com.iflytek.cloud.WakeuperListener) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.WakeuperListener@" + refId + "::onError(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onError(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperListener::onEvent", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) args).get("var3");
-                // ref arg
-                android.os.Bundle var4 = (android.os.Bundle) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.iflytek.cloud.WakeuperListener ref = (com.iflytek.cloud.WakeuperListener) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.WakeuperListener@" + refId + "::onEvent(" + var1 + var2 + var3 + var4 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onEvent(var1, var2, var3, var4);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
             put("com.iflytek.cloud.WakeuperListener::onVolumeChanged", (args, methodResult) -> {
                 // args
                 // jsonable arg
@@ -8106,38 +4990,6 @@ public class SubHandler3 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.iflytek.msc.MSC::load", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::load(" + var0 + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = com.iflytek.msc.MSC.load(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
             put("com.iflytek.msc.MSC::isLoaded", (args, methodResult) -> {
                 // args
             
@@ -8294,6 +5146,2961 @@ public class SubHandler3 {
                 int jsonableResult = result;
             
                 methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRInit", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISRInit(" + var0 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISRInit(var0);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRBuildGrammar", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+                // jsonable arg
+                Object var5 = (Object) ((Map<String, Object>) args).get("var5");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISRBuildGrammar(" + var0 + var1 + var2 + var3 + var4 + var5 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISRBuildGrammar(var0, var1, var2, var3, var4, var5);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRUpdateLexicon", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+                // jsonable arg
+                Object var5 = (Object) ((Map<String, Object>) args).get("var5");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISRUpdateLexicon(" + var0 + var1 + var2 + var3 + var4 + var5 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISRUpdateLexicon(var0, var1, var2, var3, var4, var5);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRFini", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISRFini(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISRFini();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QHCRInit", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QHCRInit(" + var0 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QHCRInit(var0);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QHCRFini", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QHCRFini(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QHCRFini();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISVInit", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISVInit(" + var0 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISVInit(var0);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISVFini", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISVFini(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISVFini();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPLogin", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPLogin(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPLogin(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::UMSPLogin", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                Object var3 = (Object) ((Map<String, Object>) args).get("var3");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::UMSPLogin(" + var0 + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.UMSPLogin(var0, var1, var2, var3);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPSetParam", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPSetParam(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPSetParam(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPGetParam", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPGetParam(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPGetParam(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPUploadData", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var4 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPUploadData(" + var0 + var1 + var2 + var3 + var4 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPUploadData(var0, var1, var2, var3, var4);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPDownloadData", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPDownloadData(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPDownloadData(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPDownload", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                Object var2 = (Object) ((Map<String, Object>) args).get("var2");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPDownload(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPDownload(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPSearch", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPSearch(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPSearch(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPLogOut", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPLogOut(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPLogOut();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPRegisterNotify", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var0 = (String) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPRegisterNotify(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPRegisterNotify(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPGetVersion", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QMSPGetVersion(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QMSPGetVersion(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISEInit", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISEInit(" + var0 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISEInit(var0);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISEFini", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QISEFini(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QISEFini();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIVWResMerge", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIVWResMerge(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QIVWResMerge(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIVWGetResInfo", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIVWGetResInfo(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QIVWGetResInfo(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDInit", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                Object var1 = (Object) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIFDInit(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    com.iflytek.msc.MSC.QIFDInit(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDFacedetect", (args, methodResult) -> {
+                // args
+                // ref arg
+                android.graphics.Bitmap var0 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                // jsonable arg
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                Object var2 = (Object) ((Map<String, Object>) args).get("var2");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIFDFacedetect(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QIFDFacedetect(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDMultitracker", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
+                // jsonable arg
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                int var4 = (int) ((Map<String, Object>) args).get("var4");
+                // jsonable arg
+                int var5 = (int) ((Map<String, Object>) args).get("var5");
+                // jsonable arg
+                Object var6 = (Object) ((Map<String, Object>) args).get("var6");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIFDMultitracker(" + var0 + var1 + var2 + var3 + var4 + var5 + var6 + ")");
+                }
+            
+                // invoke native method
+                byte[] result;
+                try {
+                    result = com.iflytek.msc.MSC.QIFDMultitracker(var0, var1, var2, var3, var4, var5, var6);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                byte[] jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDFini", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::QIFDFini(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = com.iflytek.msc.MSC.QIFDFini();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.msc.MSC::doARGB2Gray", (args, methodResult) -> {
+                // args
+                // ref arg
+                android.graphics.Bitmap var0 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                // ref arg
+                android.graphics.Bitmap var1 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.msc.MSC::doARGB2Gray(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                boolean result;
+                try {
+                    result = com.iflytek.msc.MSC.doARGB2Gray(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                boolean jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::getPackageName_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechComponent ref = (com.iflytek.speech.SpeechComponent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getPackageName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::getEngines_batch", (argsBatch, methodResult) -> {
+                List<List<String>> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechComponent ref = (com.iflytek.speech.SpeechComponent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    List<String> result;
+                    try {
+                        result = ref.getEngines();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    List<String> jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::addEngine_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechComponent ref = (com.iflytek.speech.SpeechComponent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.addEngine(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::isEngineAvaible_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechComponent ref = (com.iflytek.speech.SpeechComponent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isEngineAvaible(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeakerVerifierAidl ref = (com.iflytek.speech.SpeakerVerifierAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeakerVerifierAidl ref = (com.iflytek.speech.SpeakerVerifierAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::endSpeak_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeakerVerifierAidl ref = (com.iflytek.speech.SpeakerVerifierAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.endSpeak();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::stopSpeak_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeakerVerifierAidl ref = (com.iflytek.speech.SpeakerVerifierAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.stopSpeak();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::isUnderstanding_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechUnderstanderAidl ref = (com.iflytek.speech.SpeechUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isUnderstanding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechUnderstanderAidl ref = (com.iflytek.speech.SpeechUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechUnderstanderAidl ref = (com.iflytek.speech.SpeechUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::writeAudio_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechUnderstanderAidl ref = (com.iflytek.speech.SpeechUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.writeAudio(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechRecognizerAidl ref = (com.iflytek.speech.SpeechRecognizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechRecognizerAidl ref = (com.iflytek.speech.SpeechRecognizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::destory_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechRecognizerAidl ref = (com.iflytek.speech.SpeechRecognizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.destory();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::isListening_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechRecognizerAidl ref = (com.iflytek.speech.SpeechRecognizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::writeAudio_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechRecognizerAidl ref = (com.iflytek.speech.SpeechRecognizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.writeAudio(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl.DownloadListener::onError_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeakerVerifierAidl.DownloadListener ref = (com.iflytek.speech.SpeakerVerifierAidl.DownloadListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onError(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::isSpeaking_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechSynthesizerAidl ref = (com.iflytek.speech.SpeechSynthesizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechSynthesizerAidl ref = (com.iflytek.speech.SpeechSynthesizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechSynthesizerAidl ref = (com.iflytek.speech.SpeechSynthesizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::destory_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.SpeechSynthesizerAidl ref = (com.iflytek.speech.SpeechSynthesizerAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.destory();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.UtilityConfig::getCallerInfo_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = com.iflytek.speech.UtilityConfig.getCallerInfo(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.UtilityConfig::getComponentUrlParam_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = com.iflytek.speech.UtilityConfig.getComponentUrlParam(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.ISpeechModule::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.ISpeechModule ref = (com.iflytek.speech.ISpeechModule) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.ISpeechModule::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.ISpeechModule ref = (com.iflytek.speech.ISpeechModule) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.ISpeechModule::getIntent_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.ISpeechModule ref = (com.iflytek.speech.ISpeechModule) getHEAP().get(refId);
+            
+                    // invoke native method
+                    android.content.Intent result;
+                    try {
+                        result = ref.getIntent();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.ISpeechModule::destory_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.ISpeechModule ref = (com.iflytek.speech.ISpeechModule) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.destory();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.ISpeechModule::isAvailable_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.ISpeechModule ref = (com.iflytek.speech.ISpeechModule) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isAvailable();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperResult::getResultString_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.WakeuperResult ref = (com.iflytek.speech.WakeuperResult) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.VerifierResult::getResultString_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.VerifierResult ref = (com.iflytek.speech.VerifierResult) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerResult::getResultString_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.RecognizerResult ref = (com.iflytek.speech.RecognizerResult) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.Version::getVersionName_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = com.iflytek.speech.Version.getVersionName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.Version::getVersionCode_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = com.iflytek.speech.Version.getVersionCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::isUnderstanding_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.TextUnderstanderAidl ref = (com.iflytek.speech.TextUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isUnderstanding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.TextUnderstanderAidl ref = (com.iflytek.speech.TextUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.TextUnderstanderAidl ref = (com.iflytek.speech.TextUnderstanderAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.UnderstanderResult::getResultString_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.UnderstanderResult ref = (com.iflytek.speech.UnderstanderResult) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::destroy_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.VoiceWakeuperAidl ref = (com.iflytek.speech.VoiceWakeuperAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::isListening_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.VoiceWakeuperAidl ref = (com.iflytek.speech.VoiceWakeuperAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.VoiceWakeuperAidl ref = (com.iflytek.speech.VoiceWakeuperAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::getParameter_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.speech.VoiceWakeuperAidl ref = (com.iflytek.speech.VoiceWakeuperAidl) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onVolumeChanged_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onVolumeChanged(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onBeginOfSpeech_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onBeginOfSpeech();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onEndOfSpeech_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onEndOfSpeech();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onResult_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.cloud.VerifierResult var1 = (com.iflytek.cloud.VerifierResult) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResult(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onError_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.cloud.SpeechError var1 = (com.iflytek.cloud.SpeechError) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onError(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.VerifierListener::onEvent_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+                    // ref arg
+                    android.os.Bundle var4 = (android.os.Bundle) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.VerifierListener ref = (com.iflytek.cloud.VerifierListener) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onEvent(var1, var2, var3, var4);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::getVerifier_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.SpeakerVerifier result;
+                    try {
+                        result = com.iflytek.cloud.SpeakerVerifier.getVerifier();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::generatePassword_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.generatePassword(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::stopListening_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::writeAudio_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int result;
+                    try {
+                        result = ref.writeAudio(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::isListening_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::cancel_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::setParameter_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.iflytek.cloud.SpeakerVerifier ref = (com.iflytek.cloud.SpeakerVerifier) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
             });
         }};
     }

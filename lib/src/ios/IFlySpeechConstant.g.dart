@@ -270,116 +270,6 @@ class IFlySpeechConstant extends NSObject  {
     }
   }
   
-  static Future<String> LANGUAGE_RUSSIAN() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_RUSSIAN([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_RUSSIAN', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<String> LANGUAGE_JAPANESE() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_JAPANESE([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_JAPANESE', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<String> LANGUAGE_FRENCH() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_FRENCH([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_FRENCH', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<String> LANGUAGE_SPANISH() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_SPANISH([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_SPANISH', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<String> LANGUAGE_KOREAN() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_KOREAN([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_KOREAN', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
   static Future<String> RESULT_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -674,28 +564,6 @@ class IFlySpeechConstant extends NSObject  {
   
     // invoke native method
     final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ENGINE_TYPE', );
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  static Future<String> TYPE_LOCAL_XTTS() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TYPE_LOCAL_XTTS([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_LOCAL_XTTS', );
   
   
     // handle native call
@@ -2739,101 +2607,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   }
   
-  Future<List<String>> LANGUAGE_RUSSIAN_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_RUSSIAN_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<String>> LANGUAGE_JAPANESE_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_JAPANESE_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<String>> LANGUAGE_FRENCH_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_FRENCH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<String>> LANGUAGE_SPANISH_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_SPANISH_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<String>> LANGUAGE_KOREAN_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_KOREAN_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
   Future<List<String>> RESULT_TYPE_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -3088,25 +2861,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
   
     // invoke native method
     final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ENGINE_TYPE_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<String>> TYPE_LOCAL_XTTS_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_LOCAL_XTTS_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

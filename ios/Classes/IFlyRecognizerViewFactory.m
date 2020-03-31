@@ -494,52 +494,6 @@ extern BOOL enableLog;
   
 }
 
-- (void)onResults : (IFlyIdentityResult*)results isLast: (BOOL)isLast
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyIdentityVerifierDelegate::Callback"
-            binaryMessenger:[_registrar messenger]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onResults_isLast");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSNumber* argresults = @(results.hash);
-  HEAP[argresults] = results;
-  // primitive callback arg
-  NSNumber* argisLast = @(isLast);
-
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResults_isLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
-  
-}
-
-- (void)onEvent : (int)eventType arg1: (int)arg1 arg2: (int)arg2 extra: (id)obj
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyIdentityVerifierDelegate::Callback"
-            binaryMessenger:[_registrar messenger]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
-  }
-
-  // convert to jsonable arg
-  // primitive callback arg
-  NSNumber* argeventType = @(eventType);
-  // primitive callback arg
-  NSNumber* argarg1 = @(arg1);
-  // primitive callback arg
-  NSNumber* argarg2 = @(arg2);
-  // ref callback arg
-  NSNumber* argobj = @(((NSObject*) obj).hash);
-  HEAP[argobj] = ((NSObject*) obj);
-
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
-  
-}
-
 - (void)onResult : (NSDictionary*)dic
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel

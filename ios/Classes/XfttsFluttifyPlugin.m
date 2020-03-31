@@ -7,7 +7,6 @@
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/SubHandler1.h"
 #import "SubHandler/SubHandler2.h"
-#import "SubHandler/SubHandler3.h"
 #import "SubHandler/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
@@ -31,7 +30,6 @@ extern BOOL enableLog;
     [_handlerMap addEntriesFromDictionary: [self getSubHandler0]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler1]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler2]];
-    [_handlerMap addEntriesFromDictionary: [self getSubHandler3]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 
@@ -298,52 +296,6 @@ extern BOOL enableLog;
   NSNumber* argpower = @(power);
 
   [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged" arguments:@{@"power": argpower}];
-  
-}
-
-- (void)onResults : (IFlyIdentityResult*)results isLast: (BOOL)isLast
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyIdentityVerifierDelegate::Callback"
-            binaryMessenger:[_registrar messenger]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onResults_isLast");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSNumber* argresults = @(results.hash);
-  HEAP[argresults] = results;
-  // primitive callback arg
-  NSNumber* argisLast = @(isLast);
-
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onResults_isLast" arguments:@{@"results": argresults, @"isLast": argisLast}];
-  
-}
-
-- (void)onEvent : (int)eventType arg1: (int)arg1 arg2: (int)arg2 extra: (id)obj
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyIdentityVerifierDelegate::Callback"
-            binaryMessenger:[_registrar messenger]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
-  }
-
-  // convert to jsonable arg
-  // primitive callback arg
-  NSNumber* argeventType = @(eventType);
-  // primitive callback arg
-  NSNumber* argarg1 = @(arg1);
-  // primitive callback arg
-  NSNumber* argarg2 = @(arg2);
-  // ref callback arg
-  NSNumber* argobj = @(((NSObject*) obj).hash);
-  HEAP[argobj] = ((NSObject*) obj);
-
-  [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType, @"arg1": argarg1, @"arg2": argarg2, @"obj": argobj}];
   
 }
 

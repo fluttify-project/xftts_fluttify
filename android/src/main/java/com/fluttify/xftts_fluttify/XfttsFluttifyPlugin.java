@@ -55,7 +55,6 @@ public class XfttsFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         handlerMapList.add(SubHandler4.getSubHandler(messenger));
         handlerMapList.add(SubHandler5.getSubHandler(messenger));
         handlerMapList.add(SubHandler6.getSubHandler(messenger));
-        handlerMapList.add(SubHandler7.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(plugin);
@@ -87,7 +86,6 @@ public class XfttsFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodC
         handlerMapList.add(SubHandler4.getSubHandler(messenger));
         handlerMapList.add(SubHandler5.getSubHandler(messenger));
         handlerMapList.add(SubHandler6.getSubHandler(messenger));
-        handlerMapList.add(SubHandler7.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);

@@ -94,28 +94,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
     }
   }
   
-  static Future<bool> load(String var0) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::load([\'var0\':$var0])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::load', {"var0": var0});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
   static Future<bool> isLoaded() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -881,25 +859,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
   
     // invoke native method
     final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::loadLibrary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<List<bool>> load_batch(List<String> var0) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::load_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
