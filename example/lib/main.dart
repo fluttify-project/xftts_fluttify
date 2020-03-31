@@ -4,6 +4,7 @@ import 'package:xftts_fluttify/xftts_fluttify.dart';
 
 void main() {
   runApp(MyApp());
+  // 此 appid 有效期至 2020-06-29, 请自行到讯飞官网申请appid, 然后联系 yohombao@qq.com 生成与appid匹配的插件
   XfTTS.init('5e82d068');
 }
 
