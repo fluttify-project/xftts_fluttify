@@ -1,11 +1,14 @@
+// ignore_for_file: non_constant_identifier_names
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 
 class XfTTS {
+  XfTTS._();
+
   /// 初始化
-  Future<void> init(String appId) async {
-    platform(
+  static Future<void> init(String appId) async {
+    await platform(
       android: (pool) async {
         final application = await android_app_Application.get();
         await com_iflytek_cloud_SpeechUtility.createUtility(
@@ -20,29 +23,32 @@ class XfTTS {
   }
 
   /// 创建单例对象 使用此函数创建一个本类单例对象
-  Future<Synthesizer> createSynthesizer() async {
+  static Future<Synthesizer> createSynthesizer() async {
     return platform(
       android: (pool) async {
         final application = await android_app_Application.get();
         final synthesizer =
             await com_iflytek_cloud_SpeechSynthesizer.createSynthesizer(
           application,
-          null,
+          _AndroidDelegate(),
         );
-        return Synthesizer.android(synthesizer);
+        return Synthesizer._android(synthesizer);
       },
       ios: (pool) async {
         final synthesizer = await IFlySpeechSynthesizer.sharedInstance();
-        return Synthesizer.ios(synthesizer);
+        synthesizer.set_delegate(_IOSDelegate());
+        return Synthesizer._ios(synthesizer);
       },
     );
   }
 }
 
 class Synthesizer {
-  Synthesizer.android(this._androidModel);
+  Synthesizer._();
 
-  Synthesizer.ios(this._iosModel);
+  Synthesizer._android(this._androidModel);
+
+  Synthesizer._ios(this._iosModel);
 
   com_iflytek_cloud_SpeechSynthesizer _androidModel;
   IFlySpeechSynthesizer _iosModel;
@@ -127,5 +133,65 @@ class Synthesizer {
       android: (pool) => _androidModel.stopSpeaking(),
       ios: (pool) => _iosModel.stopSpeaking(),
     );
+  }
+}
+
+class _IOSDelegate extends NSObject with IFlySpeechSynthesizerDelegate {
+  @override
+  Future<void> onCompleted(IFlySpeechError error) async {
+    super.onCompleted(error);
+    print('错误: ${await error.errorDesc()}');
+  }
+
+  @override
+  Future<void> onEvent_arg0_arg1_data(
+    int eventType,
+    int arg0,
+    int arg1,
+    NSData eventData,
+  ) async {
+    super.onEvent_arg0_arg1_data(eventType, arg0, arg1, eventData);
+  }
+
+  @override
+  Future<void> onSpeakCancel() async {
+    super.onSpeakCancel();
+  }
+
+  @override
+  Future<void> onSpeakResumed() async {
+    super.onSpeakResumed();
+  }
+
+  @override
+  Future<void> onSpeakPaused() async {
+    super.onSpeakPaused();
+  }
+
+  @override
+  Future<void> onSpeakProgress_beginPos_endPos(
+    int progress,
+    int beginPos,
+    int endPos,
+  ) async {
+    super.onSpeakProgress_beginPos_endPos(progress, beginPos, endPos);
+  }
+
+  @override
+  Future<void> onBufferProgress_message(int progress, String msg) async {
+    super.onBufferProgress_message(progress, msg);
+  }
+
+  @override
+  Future<void> onSpeakBegin() async {
+    super.onSpeakBegin();
+  }
+}
+
+class _AndroidDelegate extends java_lang_Object
+    with com_iflytek_cloud_InitListener {
+  @override
+  Future<void> onInit(int var1) async {
+    super.onInit(var1);
   }
 }

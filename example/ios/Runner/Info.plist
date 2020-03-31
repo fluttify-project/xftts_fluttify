@@ -43,13 +43,13 @@
 	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<string>YES</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string></string>
-    <key>NSLocationUsageDescription</key>
-    <string></string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string></string>
-    <key>NSContactsUsageDescription</key>
-    <string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>haha</string>
+	<key>NSLocationUsageDescription</key>
+	<string>haha</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>haha</string>
+	<key>NSContactsUsageDescription</key>
+	<string>haha</string>
 </dict>
 </plist>
