@@ -1,4 +1,5 @@
 export 'type_op.g.dart';
+export 'constants.g.dart';
 export 'com/iflytek/speech/RecognizerResult.g.dart';
 export 'com/iflytek/speech/SpeakerVerifierAidl.g.dart';
 export 'com/iflytek/speech/UtilityConfig.g.dart';

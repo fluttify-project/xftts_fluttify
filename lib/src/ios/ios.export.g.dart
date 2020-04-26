@@ -13,6 +13,7 @@ export 'IFlySpeechEvaluator.g.dart';
 export 'type_op.g.dart';
 export 'IFlySpeechUtility.g.dart';
 export 'LOG_LEVEL.g.dart';
+export 'constants.g.dart';
 export 'IFlySpeechSynthesizerDelegate.g.dart';
 export 'IFlySpeechEventType.g.dart';
 export 'IFlyPcmRecorderDelegate.g.dart';

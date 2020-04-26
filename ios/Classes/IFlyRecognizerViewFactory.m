@@ -26,28 +26,30 @@ extern BOOL enableLog;
 }
 
 - (NSObject <FlutterPlatformView> *)createWithFrame:(CGRect)frame viewIdentifier:(int64_t)viewId arguments:(id _Nullable)args {
-  return [[IFlyRecognizerViewPlatformView alloc] initWithViewId:viewId registrar:_registrar];
+  return [[IFlyRecognizerViewPlatformView alloc] initWithViewId:viewId frame: frame registrar:_registrar];
 }
 
 @end
 
 @implementation IFlyRecognizerViewPlatformView {
-  NSInteger _viewId;
+  int64_t _viewId;
+  CGRect _frame;
   NSDictionary<NSString *, Handler> *_handlerMap;
 }
 
-- (instancetype)initWithViewId:(NSInteger)viewId registrar:(NSObject <FlutterPluginRegistrar> *)registrar {
+- (instancetype)initWithViewId:(int64_t)viewId frame:(CGRect)frame registrar:(NSObject <FlutterPluginRegistrar> *)registrar {
   self = [super init];
   if (self) {
     _viewId = viewId;
     _registrar = registrar;
+    _frame = frame;
   }
 
   return self;
 }
 
 - (UIView *)view {
-  IFlyRecognizerView *view = [[IFlyRecognizerView alloc] init];
+  IFlyRecognizerView *view = [[IFlyRecognizerView alloc] initWithFrame:_frame];
   // 这里用一个magic number调整一下id
   HEAP[@(2147483647 - _viewId)] = view;
 
@@ -256,7 +258,7 @@ extern BOOL enableLog;
 - (void)onCompleted : (IFlySpeechError*)error
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -275,7 +277,7 @@ extern BOOL enableLog;
 - (void)onSpeakBegin 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -292,7 +294,7 @@ extern BOOL enableLog;
 - (void)onBufferProgress : (int)progress message: (NSString*)msg
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -312,7 +314,7 @@ extern BOOL enableLog;
 - (void)onSpeakProgress : (int)progress beginPos: (int)beginPos endPos: (int)endPos
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -334,7 +336,7 @@ extern BOOL enableLog;
 - (void)onSpeakPaused 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -351,7 +353,7 @@ extern BOOL enableLog;
 - (void)onSpeakResumed 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -368,7 +370,7 @@ extern BOOL enableLog;
 - (void)onSpeakCancel 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -385,7 +387,7 @@ extern BOOL enableLog;
 - (void)onEvent : (int)eventType arg0: (int)arg0 arg1: (int)arg1 data: (NSData*)eventData
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlySpeechSynthesizerDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -410,7 +412,7 @@ extern BOOL enableLog;
 - (void)onResult : (NSArray*)resultArray isLast: (BOOL)isLast
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyRecognizerViewDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyRecognizerViewDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -437,7 +439,7 @@ extern BOOL enableLog;
 - (void)onIFlyRecorderBuffer : (const void*)buffer bufferSize: (int)size
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyPcmRecorderDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -458,7 +460,7 @@ extern BOOL enableLog;
 - (void)onIFlyRecorderError : (IFlyPcmRecorder*)recoder theError: (int)error
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyPcmRecorderDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -479,7 +481,7 @@ extern BOOL enableLog;
 - (void)onIFlyRecorderVolumeChanged : (int)power
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyPcmRecorderDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -497,7 +499,7 @@ extern BOOL enableLog;
 - (void)onResult : (NSDictionary*)dic
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyISVDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -505,9 +507,8 @@ extern BOOL enableLog;
   }
 
   // convert to jsonable arg
-  // ref callback arg
-  NSNumber* argdic = @(dic.hash);
-  HEAP[argdic] = dic;
+  // jsonable callback arg
+  NSDictionary* argdic = dic;
 
   [channel invokeMethod:@"Callback::IFlyISVDelegate::onResult" arguments:@{@"dic": argdic}];
   
@@ -516,7 +517,7 @@ extern BOOL enableLog;
 - (void)onRecognition 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyISVDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -533,7 +534,7 @@ extern BOOL enableLog;
 - (void)onVolumeChanged : (int)volume
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyISVDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -551,7 +552,7 @@ extern BOOL enableLog;
 - (void)onBeginOfSpeech 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyVoiceWakeuperDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyVoiceWakeuperDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -568,7 +569,7 @@ extern BOOL enableLog;
 - (void)onEndOfSpeech 
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyVoiceWakeuperDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyVoiceWakeuperDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -585,7 +586,7 @@ extern BOOL enableLog;
 - (void)onEvent : (int)eventType isLast: (BOOL)isLast arg1: (int)arg1 data: (NSMutableDictionary*)eventData
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-      methodChannelWithName:@"IFlyVoiceWakeuperDelegate::Callback"
+      methodChannelWithName:[NSString stringWithFormat:@"IFlyVoiceWakeuperDelegate::Callback@%@", @(2147483647 - _viewId)]
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
@@ -599,9 +600,8 @@ extern BOOL enableLog;
   NSNumber* argisLast = @(isLast);
   // primitive callback arg
   NSNumber* argarg1 = @(arg1);
-  // ref callback arg
-  NSNumber* argeventData = @(eventData.hash);
-  HEAP[argeventData] = eventData;
+  // jsonable callback arg
+  NSMutableDictionary* argeventData = eventData;
 
   [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
   

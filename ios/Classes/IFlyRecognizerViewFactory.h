@@ -39,7 +39,7 @@
 
 @interface IFlyRecognizerViewPlatformView : NSObject <IFlySpeechSynthesizerDelegate, IFlyRecognizerViewDelegate, IFlyPcmRecorderDelegate, IFlySpeechplusDelegate, IFlyISVDelegate, IFlyVoiceWakeuperDelegate, FlutterPlatformView>
 
-- (instancetype)initWithViewId:(NSInteger)viewId registrar:(NSObject <FlutterPluginRegistrar> *)registrar;
+- (instancetype)initWithViewId:(int64_t)viewId frame:(CGRect)frame registrar:(NSObject <FlutterPluginRegistrar> *)registrar;
 
 @property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
 
