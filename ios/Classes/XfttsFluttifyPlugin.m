@@ -310,9 +310,8 @@ extern BOOL enableLog;
   }
 
   // convert to jsonable arg
-  // ref callback arg
-  NSNumber* argdic = @(dic.hash);
-  HEAP[argdic] = dic;
+  // jsonable callback arg
+  NSDictionary* argdic = dic;
 
   [channel invokeMethod:@"Callback::IFlyISVDelegate::onResult" arguments:@{@"dic": argdic}];
   
@@ -404,9 +403,8 @@ extern BOOL enableLog;
   NSNumber* argisLast = @(isLast);
   // primitive callback arg
   NSNumber* argarg1 = @(arg1);
-  // ref callback arg
-  NSNumber* argeventData = @(eventData.hash);
-  HEAP[argeventData] = eventData;
+  // jsonable callback arg
+  NSMutableDictionary* argeventData = eventData;
 
   [channel invokeMethod:@"Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data" arguments:@{@"eventType": argeventType, @"isLast": argisLast, @"arg1": argarg1, @"eventData": argeventData}];
   

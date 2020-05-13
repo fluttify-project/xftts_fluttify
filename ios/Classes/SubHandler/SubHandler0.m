@@ -14,241 +14,6 @@ extern BOOL enableLog;
 @implementation XfttsFluttifyPlugin (SubHandler0)
 - (NSDictionary<NSString*, Handler>*) getSubHandler0 {
     return @{
-        @"IFlySpeechSynthesizerDelegate::onCompleted": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onCompleted(%@)", args[@"refId"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted : error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onSpeakBegin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onSpeakBegin()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onSpeakBegin ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onBufferProgress_message": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int progress = [args[@"progress"] intValue];
-            // jsonable arg
-            NSString* msg = (NSString*) args[@"msg"];
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onBufferProgress(%@, %@)", args[@"refId"], args[@"progress"], args[@"msg"]);
-            }
-        
-            // invoke native method
-            [ref onBufferProgress : progress message: msg];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onSpeakProgress_beginPos_endPos": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int progress = [args[@"progress"] intValue];
-            // jsonable arg
-            int beginPos = [args[@"beginPos"] intValue];
-            // jsonable arg
-            int endPos = [args[@"endPos"] intValue];
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onSpeakProgress(%@, %@, %@)", args[@"refId"], args[@"progress"], args[@"beginPos"], args[@"endPos"]);
-            }
-        
-            // invoke native method
-            [ref onSpeakProgress : progress beginPos: beginPos endPos: endPos];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onSpeakPaused": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onSpeakPaused()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onSpeakPaused ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onSpeakResumed": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onSpeakResumed()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onSpeakResumed ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onSpeakCancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onSpeakCancel()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onSpeakCancel ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int eventType = [args[@"eventType"] intValue];
-            // jsonable arg
-            int arg0 = [args[@"arg0"] intValue];
-            // jsonable arg
-            int arg1 = [args[@"arg1"] intValue];
-            // ref arg
-            NSData* eventData = (NSData*) HEAP[@([args[@"eventData"] integerValue])];
-        
-            // ref
-            id<IFlySpeechSynthesizerDelegate> ref = (id<IFlySpeechSynthesizerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechSynthesizerDelegate@%@::onEvent(%@, %@, %@, %@)", args[@"refId"], args[@"eventType"], args[@"arg0"], args[@"arg1"], args[@"eventData"]);
-            }
-        
-            // invoke native method
-            [ref onEvent : eventType arg0: arg0 arg1: arg1 data: eventData];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyRecognizerViewDelegate::onResult_isLast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // list arg
-            NSArray<NSNumber*>* resultArrayRefArray = (NSArray<NSNumber*> *) args[@"resultArray"];
-            NSMutableArray<NSArray*>* resultArray = [NSMutableArray arrayWithCapacity:resultArrayRefArray.count];
-            for (int __i__ = 0; __i__ < resultArrayRefArray.count; __i__++) {
-                NSArray* item = (NSArray*) HEAP[[resultArrayRefArray objectAtIndex:__i__]];
-                [resultArray addObject:item];
-            }
-            // jsonable arg
-            BOOL isLast = [args[@"isLast"] boolValue];
-        
-            // ref
-            id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyRecognizerViewDelegate@%@::onResult(%@, %@)", args[@"refId"], args[@"resultArray"], args[@"isLast"]);
-            }
-        
-            // invoke native method
-            [ref onResult : resultArray isLast: isLast];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyRecognizerViewDelegate::onCompleted": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            IFlySpeechError* error = (IFlySpeechError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<IFlyRecognizerViewDelegate> ref = (id<IFlyRecognizerViewDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyRecognizerViewDelegate@%@::onCompleted(%@)", args[@"refId"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted : error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"IFlySpeechRecognizer::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
@@ -728,28 +493,6 @@ extern BOOL enableLog;
         
             // invoke native method
             [ref cancel ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int power = [args[@"power"] intValue];
-        
-            // ref
-            id<IFlyPcmRecorderDelegate> ref = (id<IFlyPcmRecorderDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlyPcmRecorderDelegate@%@::onIFlyRecorderVolumeChanged(%@)", args[@"refId"], args[@"power"]);
-            }
-        
-            // invoke native method
-            [ref onIFlyRecorderVolumeChanged : power];
         
             // result
             // 无返回值
@@ -4032,49 +3775,6 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"IFlySpeechplusDelegate::onCompleted__int": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // jsonable arg
-            int errorCode = [args[@"errorCode"] intValue];
-        
-            // ref
-            id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechplusDelegate@%@::onCompleted(%@)", args[@"refId"], args[@"errorCode"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted : errorCode];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"IFlySpeechplusDelegate::onCompleted": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-        
-        
-            // ref
-            id<IFlySpeechplusDelegate> ref = (id<IFlySpeechplusDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: IFlySpeechplusDelegate@%@::onCompleted()", args[@"refId"]);
-            }
-        
-            // invoke native method
-            [ref onCompleted ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"IFlySpeechUtility::createUtility": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
@@ -4382,6 +4082,304 @@ extern BOOL enableLog;
             // result
             // 无返回值
             NSString* jsonableResult = @"success";
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlySpeechEvaluator::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::cancel()", args[@"refId"]);
+            }
+        
+            // invoke native method
+            [ref cancel ];
+        
+            // result
+            // 无返回值
+            NSString* jsonableResult = @"success";
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlySpeechEvaluator::writeAudio": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // ref arg
+            NSData* audioData = (NSData*) HEAP[@([args[@"audioData"] integerValue])];
+        
+            // ref
+            IFlySpeechEvaluator* ref = (IFlySpeechEvaluator*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlySpeechEvaluator@%@::writeAudio(%@)", args[@"refId"], args[@"audioData"]);
+            }
+        
+            // invoke native method
+            BOOL result = [ref writeAudio: audioData];
+        
+            // result
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+        
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer::sharedInstance()");
+            }
+        
+            // invoke native method
+            IFlyISVRecognizer* result = [IFlyISVRecognizer sharedInstance];
+        
+            // result
+            // return a ref
+            HEAP[@((result).hash)] = result;
+            NSNumber* jsonableResult = @((result).hash);
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::generatePassword": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            int length = [args[@"length"] intValue];
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::generatePassword(%@)", args[@"refId"], args[@"length"]);
+            }
+        
+            // invoke native method
+            NSString* result = [ref generatePassword: length];
+        
+            // result
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::getPasswordList": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            int pwdt = [args[@"pwdt"] intValue];
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::getPasswordList(%@)", args[@"refId"], args[@"pwdt"]);
+            }
+        
+            // invoke native method
+            NSArray* result = [ref getPasswordList: pwdt];
+        
+            // result
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::isListening": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::isListening()", args[@"refId"]);
+            }
+        
+            // invoke native method
+            BOOL result = [ref isListening];
+        
+            // result
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            NSString* cmd = (NSString*) args[@"cmd"];
+            // jsonable arg
+            NSString* auth_id = (NSString*) args[@"auth_id"];
+            // jsonable arg
+            int pwdt = [args[@"pwdt"] intValue];
+            // jsonable arg
+            NSString* ptxt = (NSString*) args[@"ptxt"];
+            // jsonable arg
+            NSString* vid = (NSString*) args[@"vid"];
+            // ref arg
+            NSValue* err = (NSValue*) HEAP[@([args[@"err"] integerValue])];
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::sendRequest(%@, %@, %@, %@, %@, %@)", args[@"refId"], args[@"cmd"], args[@"auth_id"], args[@"pwdt"], args[@"ptxt"], args[@"vid"], args[@"err"]);
+            }
+        
+            // invoke native method
+            BOOL result = [ref sendRequest: cmd authid: auth_id pwdt: pwdt ptxt: ptxt vid: vid err: [err pointerValue]];
+        
+            // result
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::setParameter_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            NSString* value = (NSString*) args[@"value"];
+            // jsonable arg
+            NSString* key = (NSString*) args[@"key"];
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::setParameter(%@, %@)", args[@"refId"], args[@"value"], args[@"key"]);
+            }
+        
+            // invoke native method
+            BOOL result = [ref setParameter: value forKey: key];
+        
+            // result
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::getParameter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            NSString* key = (NSString*) args[@"key"];
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::getParameter(%@)", args[@"refId"], args[@"key"]);
+            }
+        
+            // invoke native method
+            NSString* result = [ref getParameter: key];
+        
+            // result
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::startListening": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::startListening()", args[@"refId"]);
+            }
+        
+            // invoke native method
+            [ref startListening ];
+        
+            // result
+            // 无返回值
+            NSString* jsonableResult = @"success";
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::stopListening": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::stopListening()", args[@"refId"]);
+            }
+        
+            // invoke native method
+            [ref stopListening ];
+        
+            // result
+            // 无返回值
+            NSString* jsonableResult = @"success";
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlyISVRecognizer::cancel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+            IFlyISVRecognizer* ref = (IFlyISVRecognizer*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlyISVRecognizer@%@::cancel()", args[@"refId"]);
+            }
+        
+            // invoke native method
+            [ref cancel ];
+        
+            // result
+            // 无返回值
+            NSString* jsonableResult = @"success";
+        
+            methodResult(jsonableResult);
+        },
+        @"IFlySpeechSynthesizer::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+        
+        
+            // ref
+        
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: IFlySpeechSynthesizer::sharedInstance()");
+            }
+        
+            // invoke native method
+            IFlySpeechSynthesizer* result = [IFlySpeechSynthesizer sharedInstance];
+        
+            // result
+            // return a ref
+            HEAP[@((result).hash)] = result;
+            NSNumber* jsonableResult = @((result).hash);
         
             methodResult(jsonableResult);
         },
