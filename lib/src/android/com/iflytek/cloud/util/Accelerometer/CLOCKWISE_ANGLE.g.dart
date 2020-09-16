@@ -4,8 +4,29 @@
 //////////////////////////////////////////////////////////
 
 enum com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE {
-  Deg0,
-  Deg90,
-  Deg180,
-  Deg270
+  Deg0 /* null */,
+  Deg90 /* null */,
+  Deg180 /* null */,
+  Deg270 /* null */
+}
+
+extension com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLEToX on com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE {
+  int toValue() {
+    switch (this) {
+      case com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg0: return com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg0.index + 0;
+      case com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg90: return com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg90.index + 0;
+      case com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg180: return com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg180.index + 0;
+      case com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg270: return com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.Deg270.index + 0;
+      default: return 0;
+    }
+  }
+}
+
+extension com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLEFromX on int {
+  com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE tocom_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE() {
+    switch (this) {
+      
+      default: return com_iflytek_cloud_util_Accelerometer_CLOCKWISE_ANGLE.values[this + 0];
+    }
+  }
 }

@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_util_RSAUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_RSAUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_RSAUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_RSAUtil__', );
     final object = com_iflytek_cloud_msc_util_RSAUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_msc_util_RSAUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_RSAUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_RSAUtil__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_RSAUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_RSAUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   

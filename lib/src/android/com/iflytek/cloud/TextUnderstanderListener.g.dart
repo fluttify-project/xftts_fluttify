@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_TextUnderstanderListener on java_lang_Object {
   
@@ -19,22 +20,13 @@ mixin com_iflytek_cloud_TextUnderstanderListener on java_lang_Object {
 
   
 
-  @mustCallSuper
-  Future<void> onResult(com_iflytek_cloud_UnderstanderResult var1) {
-    kNativeObjectPool.add(var1);
   
-    if (fluttifyLogEnabled) {
-      debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+
+  @mustCallSuper
+  Future<void> onResult(com_iflytek_cloud_UnderstanderResult var1) {}
   
   @mustCallSuper
-  Future<void> onError(com_iflytek_cloud_SpeechError var1) {
-    kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onError(com_iflytek_cloud_SpeechError var1) {}
   
 }
+

@@ -6,14 +6,17 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
+class _IFlySpeechEvaluatorDelegate_SUB extends NSObject with IFlySpeechEvaluatorDelegate {}
+
 mixin IFlySpeechEvaluatorDelegate on NSObject {
   
+
+  static IFlySpeechEvaluatorDelegate subInstance() => _IFlySpeechEvaluatorDelegate_SUB();
 
   
 
@@ -23,11 +26,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onVolumeChanged_buffer(int volume, NSData buffer) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onVolumeChanged([\'volume\':$volume])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onVolumeChanged([\'volume\':$volume])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onVolumeChanged_buffer', {"volume": volume, "buffer": buffer.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onVolumeChanged_buffer', {"volume": volume, "buffer": buffer, "__this__": this});
   
   
     // handle native call
@@ -38,7 +41,6 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -47,11 +49,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onBeginOfSpeech() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onBeginOfSpeech([])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onBeginOfSpeech([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onBeginOfSpeech', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onBeginOfSpeech', {"__this__": this});
   
   
     // handle native call
@@ -62,7 +64,6 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -71,11 +72,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onEndOfSpeech() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onEndOfSpeech([])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onEndOfSpeech([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onEndOfSpeech', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onEndOfSpeech', {"__this__": this});
   
   
     // handle native call
@@ -86,7 +87,6 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -95,11 +95,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onCancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onCancel([])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onCancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onCancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onCancel', {"__this__": this});
   
   
     // handle native call
@@ -110,7 +110,6 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -119,11 +118,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError errorCode) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onCompleted([])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onCompleted([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onCompleted', {"errorCode": errorCode.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onCompleted', {"errorCode": errorCode, "__this__": this});
   
   
     // handle native call
@@ -134,7 +133,6 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -143,11 +141,11 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
   Future<void> onResults_isLast(NSData results, bool isLast) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onResults([\'isLast\':$isLast])');
+      debugPrint('fluttify-dart: IFlySpeechEvaluatorDelegate@$refId::onResults([\'isLast\':$isLast])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechEvaluatorDelegate::onResults_isLast', {"results": results.refId, "isLast": isLast, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onResults_isLast', {"results": results, "isLast": isLast, "__this__": this});
   
   
     // handle native call
@@ -158,9 +156,127 @@ mixin IFlySpeechEvaluatorDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
   
+}
+
+extension IFlySpeechEvaluatorDelegate_Batch on List<IFlySpeechEvaluatorDelegate> {
+  //region methods
+  
+  Future<List<void>> onVolumeChanged_buffer_batch(List<int> volume, List<NSData> buffer) async {
+    if (volume.length != buffer.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onVolumeChanged_buffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"volume": volume[__i__], "buffer": buffer[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onBeginOfSpeech_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onBeginOfSpeech_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onEndOfSpeech_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onEndOfSpeech_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onCancel_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onCancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onCompleted_batch(List<IFlySpeechError> errorCode) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onCompleted_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"errorCode": errorCode[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onResults_isLast_batch(List<NSData> results, List<bool> isLast) async {
+    if (results.length != isLast.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechEvaluatorDelegate::onResults_isLast_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"results": results[__i__], "isLast": isLast[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  //endregion
 }

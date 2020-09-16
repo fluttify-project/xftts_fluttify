@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_util_Accelerometer> create__android_content_Context(android_content_Context var1) async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_Accelerometer__android_content_Context', {"var1": var1.refId});
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_Accelerometer__android_content_Context', {"var1": var1});
     final object = com_iflytek_cloud_util_Accelerometer()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_Accelerometer__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_Accelerometer__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_iflytek_cloud_util_Accelerometer> typedResult = resultBatch.map((result) => com_iflytek_cloud_util_Accelerometer()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
   Future<void> start() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.Accelerometer@$refId::start([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.Accelerometer@$refId::start([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::start', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::start', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
   Future<void> stop() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.Accelerometer@$refId::stop([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.Accelerometer@$refId::stop([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::stop', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::stop', {"__this__": this});
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
   static Future<int> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.Accelerometer::getDirection([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.Accelerometer::getDirection([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::getDirection', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::getDirection', );
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_cloud_util_Accelerometer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -142,7 +135,7 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -150,7 +143,6 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -162,7 +154,7 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::stop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::stop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -170,7 +162,6 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -182,7 +173,7 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.Accelerometer::getDirection_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.Accelerometer::getDirection_batch', );
   
   
     // convert native result to dart side object
@@ -190,7 +181,6 @@ extension com_iflytek_cloud_util_Accelerometer_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

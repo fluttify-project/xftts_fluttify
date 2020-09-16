@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
   
@@ -19,40 +20,19 @@ mixin com_iflytek_cloud_msc_util_http_HttpDownloadListener on java_lang_Object {
 
   
 
-  @mustCallSuper
-  Future<void> onStart(int var1, String var3, String var4, String var5, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var6) {
-    kNativeObjectPool.add(var6);
   
-    if (fluttifyLogEnabled) {
-      debugPrint('onStart::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+
+  @mustCallSuper
+  Future<void> onStart(int var1, String var3, String var4, String var5, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var6) {}
   
   @mustCallSuper
-  Future<void> onProgress(int var1, int var3, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var4) {
-    kNativeObjectPool.add(var4);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onProgress::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onProgress(int var1, int var3, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var4) {}
   
   @mustCallSuper
-  Future<void> onFinish(String var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {
-    kNativeObjectPool.add(var2);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onFinish::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onFinish(String var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {}
   
   @mustCallSuper
-  Future<void> onError(int var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {
-    kNativeObjectPool.add(var2);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onError(int var1, com_iflytek_cloud_msc_util_http_HttpDownloadImpl var2) {}
   
 }
+

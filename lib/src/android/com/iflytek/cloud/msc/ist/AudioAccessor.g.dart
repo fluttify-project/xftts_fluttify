@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,11 +35,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   static Future<com_iflytek_cloud_msc_ist_AudioAccessor> createBufferAccessor() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor', );
   
   
     // handle native call
@@ -51,7 +50,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -60,11 +58,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   static Future<com_iflytek_cloud_msc_ist_AudioAccessor> createReadOnlyAccessor(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor', {"var0": var0});
   
   
     // handle native call
@@ -75,7 +73,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -84,11 +81,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   static Future<com_iflytek_cloud_msc_ist_AudioAccessor> createWriteReadAccessor(String var0, int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -99,7 +96,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -108,11 +104,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<String> getFilePath() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getFilePath([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getFilePath([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath', {"__this__": this});
   
   
     // handle native call
@@ -123,7 +119,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -132,11 +127,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<int> getDataLength() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getDataLength([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getDataLength([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength', {"__this__": this});
   
   
     // handle native call
@@ -147,7 +142,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -156,11 +150,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<String> getAudioInfo(com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getAudioInfo([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getAudioInfo([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo', {"var1": var1.toValue(), "__this__": this});
   
   
     // handle native call
@@ -171,7 +165,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -180,11 +173,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<int> getBufferLength() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getBufferLength([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getBufferLength([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength', {"__this__": this});
   
   
     // handle native call
@@ -195,7 +188,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -204,11 +196,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<int> getCacheLeft() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getCacheLeft([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getCacheLeft([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft', {"__this__": this});
   
   
     // handle native call
@@ -219,7 +211,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -228,11 +219,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<int> getAudio(Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getAudio([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::getAudio([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -243,7 +234,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -252,11 +242,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<bool> putAudio(Uint8List var1, int var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::putAudio([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::putAudio([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -267,7 +257,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -276,11 +265,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<void> flush() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::flush([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::flush([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush', {"__this__": this});
   
   
     // handle native call
@@ -291,7 +280,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -300,11 +288,11 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
   Future<void> close() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::close([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.AudioAccessor@$refId::close([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close', {"__this__": this});
   
   
     // handle native call
@@ -315,7 +303,6 @@ class com_iflytek_cloud_msc_ist_AudioAccessor extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -340,15 +327,14 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -360,15 +346,14 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -380,15 +365,14 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_msc_ist_AudioAccessor()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -400,7 +384,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -408,7 +392,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -420,7 +403,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -428,7 +411,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -440,7 +422,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].index, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -448,7 +430,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -460,7 +441,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -468,7 +449,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -480,7 +460,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -488,7 +468,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -500,7 +479,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::getAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -508,7 +487,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -520,7 +498,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::putAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -528,7 +506,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -540,7 +517,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::flush_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -548,7 +525,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -560,7 +536,7 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.AudioAccessor::close_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -568,7 +544,6 @@ extension com_iflytek_cloud_msc_ist_AudioAccessor_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

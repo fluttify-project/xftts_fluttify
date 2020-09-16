@@ -4,8 +4,29 @@
 //////////////////////////////////////////////////////////
 
 enum com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys {
-  CHANNEL,
-  FORMAT,
-  BIT,
-  RATE
+  CHANNEL /* null */,
+  FORMAT /* null */,
+  BIT /* null */,
+  RATE /* null */
+}
+
+extension com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeysToX on com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys {
+  int toValue() {
+    switch (this) {
+      case com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.CHANNEL: return com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.CHANNEL.index + 0;
+      case com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.FORMAT: return com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.FORMAT.index + 0;
+      case com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.BIT: return com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.BIT.index + 0;
+      case com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.RATE: return com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.RATE.index + 0;
+      default: return 0;
+    }
+  }
+}
+
+extension com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeysFromX on int {
+  com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys tocom_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys() {
+    switch (this) {
+      
+      default: return com_iflytek_cloud_msc_ist_AudioAccessor_AudioKeys.values[this + 0];
+    }
+  }
 }

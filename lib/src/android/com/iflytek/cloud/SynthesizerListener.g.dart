@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_SynthesizerListener on java_lang_Object {
   
@@ -19,67 +20,28 @@ mixin com_iflytek_cloud_SynthesizerListener on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onSpeakBegin() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onSpeakBegin::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onSpeakBegin() {}
   
   @mustCallSuper
-  Future<void> onBufferProgress(int var1, int var2, int var3, String var4) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onBufferProgress::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onBufferProgress(int var1, int var2, int var3, String var4) {}
   
   @mustCallSuper
-  Future<void> onSpeakPaused() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onSpeakPaused::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onSpeakPaused() {}
   
   @mustCallSuper
-  Future<void> onSpeakResumed() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onSpeakResumed::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onSpeakResumed() {}
   
   @mustCallSuper
-  Future<void> onSpeakProgress(int var1, int var2, int var3) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onSpeakProgress::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onSpeakProgress(int var1, int var2, int var3) {}
   
   @mustCallSuper
-  Future<void> onCompleted(com_iflytek_cloud_SpeechError var1) {
-    kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCompleted(com_iflytek_cloud_SpeechError var1) {}
   
   @mustCallSuper
-  Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {
-    kNativeObjectPool.add(var4);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {}
   
 }
+

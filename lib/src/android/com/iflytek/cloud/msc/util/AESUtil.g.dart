@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_AESUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__', );
     final object = com_iflytek_cloud_msc_util_AESUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AESUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AESUtil__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_AESUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_AESUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> generateKeyString() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::generateKeyString([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::generateKeyString([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString', );
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<Uint8List> encrypt__Uint8List__Uint8List(Uint8List var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> encrypt__String__Uint8List(String var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> encrypt__String__String(String var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::encrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<Uint8List> decrypt__Uint8List__Uint8List(Uint8List var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -165,7 +157,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -174,11 +165,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> decrypt__String__String(String var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -189,7 +180,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -198,11 +188,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> decrypt__String__Uint8List(String var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::decrypt([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -213,7 +203,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -222,11 +211,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<String> byte2hex(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::byte2hex([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::byte2hex([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex', {"var0": var0});
   
   
     // handle native call
@@ -237,7 +226,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -246,11 +234,11 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
   static Future<Uint8List> hex2byte(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::hex2byte([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AESUtil::hex2byte([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte', {"var0": var0});
   
   
     // handle native call
@@ -261,7 +249,6 @@ class com_iflytek_cloud_msc_util_AESUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -286,7 +273,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::generateKeyString_batch', );
   
   
     // convert native result to dart side object
@@ -294,7 +281,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -306,7 +292,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -314,7 +300,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -326,7 +311,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -334,7 +319,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -346,7 +330,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -354,7 +338,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -366,7 +349,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -374,7 +357,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -386,7 +368,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -394,7 +376,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -406,7 +387,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -414,7 +395,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -426,7 +406,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::byte2hex_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -434,7 +414,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -446,7 +425,7 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AESUtil::hex2byte_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -454,7 +433,6 @@ extension com_iflytek_cloud_msc_util_AESUtil_Batch on List<com_iflytek_cloud_msc
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }

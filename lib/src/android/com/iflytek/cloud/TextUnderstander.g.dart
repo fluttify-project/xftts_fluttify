@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,32 +35,34 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   static Future<com_iflytek_cloud_TextUnderstander> createTextUnderstander(android_content_Context var0, com_iflytek_cloud_InitListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander::createTextUnderstander([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander::createTextUnderstander([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::createTextUnderstander', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::createTextUnderstander', {"var0": var0});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.TextUnderstander::createTextUnderstander::Callback')
+    MethodChannel('com.iflytek.cloud.TextUnderstander::createTextUnderstander::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.InitListener::onInit':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onInit(args['var1']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.InitListener::onInit':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onInit(args['var1']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -70,7 +71,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_TextUnderstander()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -79,11 +79,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   static Future<com_iflytek_cloud_TextUnderstander> getTextUnderstander() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander::getTextUnderstander([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander::getTextUnderstander([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::getTextUnderstander', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::getTextUnderstander', );
   
   
     // handle native call
@@ -94,7 +94,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_TextUnderstander()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -103,41 +102,43 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<int> understandText(String var1, com_iflytek_cloud_TextUnderstanderListener var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::understandText([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::understandText([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::understandText', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::understandText', {"var1": var1, "__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.TextUnderstander::understandText::Callback')
+    MethodChannel('com.iflytek.cloud.TextUnderstander::understandText::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.TextUnderstanderListener::onResult':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onResult([])');
-              }
-        
-              // handle the native call
-              var2?.onResult((com_iflytek_cloud_UnderstanderResult()..refId = (args['var1'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.TextUnderstanderListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([])');
-              }
-        
-              // handle the native call
-              var2?.onError((com_iflytek_cloud_SpeechError()..refId = (args['var1'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.TextUnderstanderListener::onResult':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onResult([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var2?.onResult(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_UnderstanderResult>());
+                break;
+              case 'Callback::com.iflytek.cloud.TextUnderstanderListener::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var2?.onError(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -146,7 +147,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -155,11 +155,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<bool> isUnderstanding() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::isUnderstanding([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::isUnderstanding([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::isUnderstanding', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::isUnderstanding', {"__this__": this});
   
   
     // handle native call
@@ -170,7 +170,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -179,11 +178,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<void> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::cancel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::cancel', {"__this__": this});
   
   
     // handle native call
@@ -194,7 +193,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -203,11 +201,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<bool> setParameter(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::setParameter', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::setParameter', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -218,7 +216,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -227,11 +224,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<String> getParameter(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::getParameter([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::getParameter([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::getParameter', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::getParameter', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -242,7 +239,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -251,11 +247,11 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
   Future<bool> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.TextUnderstander@$refId::destroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::destroy', {"__this__": this});
   
   
     // handle native call
@@ -266,7 +262,6 @@ class com_iflytek_cloud_TextUnderstander extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -291,15 +286,14 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::getTextUnderstander_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::getTextUnderstander_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_TextUnderstander()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_TextUnderstander()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -311,7 +305,7 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::isUnderstanding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::isUnderstanding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -319,7 +313,6 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -331,7 +324,7 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -339,7 +332,6 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -351,7 +343,7 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -359,7 +351,6 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -371,7 +362,7 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -379,7 +370,6 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -391,7 +381,7 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.TextUnderstander::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.TextUnderstander::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -399,7 +389,6 @@ extension com_iflytek_cloud_TextUnderstander_Batch on List<com_iflytek_cloud_Tex
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -26,10 +25,8 @@ class com_iflytek_cloud_util_ResourceUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_util_ResourceUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_ResourceUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_ResourceUtil__', );
     final object = com_iflytek_cloud_util_ResourceUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -37,10 +34,9 @@ class com_iflytek_cloud_util_ResourceUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_ResourceUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_ResourceUtil__', {'length': length});
   
     final List<com_iflytek_cloud_util_ResourceUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_util_ResourceUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -59,11 +55,11 @@ class com_iflytek_cloud_util_ResourceUtil extends java_lang_Object  {
   static Future<String> generateResourcePath(android_content_Context var0, com_iflytek_cloud_util_ResourceUtil_RESOURCE_TYPE var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.ResourceUtil::generateResourcePath([\'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ResourceUtil::generateResourcePath([\'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath', {"var0": var0.refId, "var1": var1.index, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath', {"var0": var0, "var1": var1.toValue(), "var2": var2});
   
   
     // handle native call
@@ -74,7 +70,6 @@ class com_iflytek_cloud_util_ResourceUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -99,7 +94,7 @@ extension com_iflytek_cloud_util_ResourceUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].index, "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ResourceUtil::generateResourcePath_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__].toValue(), "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -107,7 +102,6 @@ extension com_iflytek_cloud_util_ResourceUtil_Batch on List<com_iflytek_cloud_ut
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

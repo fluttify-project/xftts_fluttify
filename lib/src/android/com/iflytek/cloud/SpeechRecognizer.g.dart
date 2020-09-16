@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,32 +35,34 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   static Future<com_iflytek_cloud_SpeechRecognizer> createRecognizer(android_content_Context var0, com_iflytek_cloud_InitListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer::createRecognizer([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer::createRecognizer([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::createRecognizer', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::createRecognizer', {"var0": var0});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.SpeechRecognizer::createRecognizer::Callback')
+    MethodChannel('com.iflytek.cloud.SpeechRecognizer::createRecognizer::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.InitListener::onInit':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onInit(args['var1']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.InitListener::onInit':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onInit(args['var1']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -70,7 +71,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_SpeechRecognizer()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -79,11 +79,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   static Future<com_iflytek_cloud_SpeechRecognizer> getRecognizer() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer::getRecognizer([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer::getRecognizer([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::getRecognizer', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::getRecognizer', );
   
   
     // handle native call
@@ -94,7 +94,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_SpeechRecognizer()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -103,32 +102,34 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<int> buildGrammar(String var1, String var2, com_iflytek_cloud_GrammarListener var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::buildGrammar([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::buildGrammar([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::buildGrammar', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::buildGrammar', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.SpeechRecognizer::buildGrammar::Callback')
+    MethodChannel('com.iflytek.cloud.SpeechRecognizer::buildGrammar::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.GrammarListener::onBuildFinish':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBuildFinish([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var3?.onBuildFinish(args['var1'], (com_iflytek_cloud_SpeechError()..refId = (args['var2'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.GrammarListener::onBuildFinish':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBuildFinish([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var3?.onBuildFinish(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -137,7 +138,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -146,32 +146,34 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<int> updateLexicon(String var1, String var2, com_iflytek_cloud_LexiconListener var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::updateLexicon([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::updateLexicon([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::updateLexicon', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::updateLexicon', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.SpeechRecognizer::updateLexicon::Callback')
+    MethodChannel('com.iflytek.cloud.SpeechRecognizer::updateLexicon::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.LexiconListener::onLexiconUpdated':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onLexiconUpdated([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var3?.onLexiconUpdated(args['var1'], (com_iflytek_cloud_SpeechError()..refId = (args['var2'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.LexiconListener::onLexiconUpdated':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onLexiconUpdated([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var3?.onLexiconUpdated(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -180,7 +182,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -189,77 +190,79 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<int> startListening(com_iflytek_cloud_RecognizerListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::startListening([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::startListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::startListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::startListening', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.SpeechRecognizer::startListening::Callback')
+    MethodChannel('com.iflytek.cloud.SpeechRecognizer::startListening::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onVolumeChanged':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onVolumeChanged([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onVolumeChanged(args['var1'], args['var2']);
-              break;
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onBeginOfSpeech':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBeginOfSpeech([])');
-              }
-        
-              // handle the native call
-              var1?.onBeginOfSpeech();
-              break;
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onEndOfSpeech':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onEndOfSpeech([])');
-              }
-        
-              // handle the native call
-              var1?.onEndOfSpeech();
-              break;
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onResult':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onResult([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onResult((com_iflytek_cloud_RecognizerResult()..refId = (args['var1'])..tag__ = 'xftts_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([])');
-              }
-        
-              // handle the native call
-              var1?.onError((com_iflytek_cloud_SpeechError()..refId = (args['var1'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.RecognizerListener::onEvent':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-              }
-        
-              // handle the native call
-              var1?.onEvent(args['var1'], args['var2'], args['var3'], (android_os_Bundle()..refId = (args['var4'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onVolumeChanged':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onVolumeChanged([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onVolumeChanged(args['var1'], args['var2']);
+                break;
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onBeginOfSpeech':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBeginOfSpeech([])');
+                }
+          
+                // handle the native call
+                var1?.onBeginOfSpeech();
+                break;
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onEndOfSpeech':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onEndOfSpeech([])');
+                }
+          
+                // handle the native call
+                var1?.onEndOfSpeech();
+                break;
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onResult':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onResult([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onResult(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_RecognizerResult>(), args['var2']);
+                break;
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onError(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              case 'Callback::com.iflytek.cloud.RecognizerListener::onEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                }
+          
+                // handle the native call
+                var1?.onEvent(args['var1'], args['var2'], args['var3'], TypeOpXfttsFluttifyAndroid((args['var4'] as Object))?.as__<android_os_Bundle>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -268,7 +271,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -277,11 +279,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<int> writeAudio(Uint8List var1, int var2, int var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::writeAudio([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::writeAudio([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::writeAudio', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::writeAudio', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
@@ -292,7 +294,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -301,11 +302,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<void> stopListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::stopListening([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::stopListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::stopListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::stopListening', {"__this__": this});
   
   
     // handle native call
@@ -316,7 +317,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -325,11 +325,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<bool> isListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::isListening([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::isListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::isListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::isListening', {"__this__": this});
   
   
     // handle native call
@@ -340,7 +340,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -349,11 +348,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<void> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::cancel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::cancel', {"__this__": this});
   
   
     // handle native call
@@ -364,7 +363,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -373,11 +371,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<bool> setParameter(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::setParameter', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::setParameter', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -388,7 +386,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -397,11 +394,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<String> getParameter(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::getParameter([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::getParameter([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::getParameter', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::getParameter', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -412,7 +409,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -421,11 +417,11 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
   Future<bool> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechRecognizer@$refId::destroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::destroy', {"__this__": this});
   
   
     // handle native call
@@ -436,7 +432,6 @@ class com_iflytek_cloud_SpeechRecognizer extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -461,15 +456,14 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::getRecognizer_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::getRecognizer_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_SpeechRecognizer()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_SpeechRecognizer()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -481,7 +475,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -489,7 +483,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -501,7 +494,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -509,7 +502,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -521,7 +513,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -529,7 +521,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -541,7 +532,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -549,7 +540,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -561,7 +551,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -569,7 +559,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -581,7 +570,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -589,7 +578,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -601,7 +589,7 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechRecognizer::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechRecognizer::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -609,7 +597,6 @@ extension com_iflytek_cloud_SpeechRecognizer_Batch on List<com_iflytek_cloud_Spe
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

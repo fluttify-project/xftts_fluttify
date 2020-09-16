@@ -5,14 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
+/* abstract */ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
   //region constants
   static const String name__ = 'com.iflytek.cloud.util.ContactManager';
 
@@ -33,14 +32,81 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
 
   //region methods
   
-  static Future<void> destroy() async {
+  static Future<com_iflytek_cloud_util_ContactManager> getManager() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.ContactManager::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ContactManager::getManager([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::destroy', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::getManager', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_iflytek_cloud_util_ContactManager()..refId = __result__..tag__ = 'xftts_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  static Future<com_iflytek_cloud_util_ContactManager> createManager(android_content_Context var0, com_iflytek_cloud_util_ContactManager_ContactListener var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ContactManager::createManager([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::createManager', {"var0": var0});
+  
+  
+    // handle native call
+    MethodChannel('com.iflytek.cloud.util.ContactManager::createManager::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.util.ContactManager.ContactListener::onContactQueryFinish':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onContactQueryFinish([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onContactQueryFinish(args['var1'], args['var2']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
+          }
+        });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_iflytek_cloud_util_ContactManager()..refId = __result__..tag__ = 'xftts_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  static Future<void> destroy() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ContactManager::destroy([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::destroy', );
   
   
     // handle native call
@@ -51,7 +117,6 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -60,11 +125,11 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
   Future<String> queryAllContactsName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.ContactManager@$refId::queryAllContactsName([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ContactManager@$refId::queryAllContactsName([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::queryAllContactsName', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::queryAllContactsName', {"__this__": this});
   
   
     // handle native call
@@ -75,7 +140,6 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -84,11 +148,11 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
   Future<void> asyncQueryAllContactsName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.ContactManager@$refId::asyncQueryAllContactsName([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.ContactManager@$refId::asyncQueryAllContactsName([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::asyncQueryAllContactsName', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::asyncQueryAllContactsName', {"__this__": this});
   
   
     // handle native call
@@ -99,7 +163,6 @@ class com_iflytek_cloud_util_ContactManager extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -118,13 +181,32 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
 
   //region methods
   
+  static Future<List<com_iflytek_cloud_util_ContactManager>> getManager_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::getManager_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_util_ContactManager()..refId = __result__..tag__ = 'xftts_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
   static Future<List<void>> destroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::destroy_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::destroy_batch', );
   
   
     // convert native result to dart side object
@@ -132,7 +214,6 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -144,7 +225,7 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::queryAllContactsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::queryAllContactsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -152,7 +233,6 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -164,7 +244,7 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.ContactManager::asyncQueryAllContactsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.ContactManager::asyncQueryAllContactsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -172,7 +252,6 @@ extension com_iflytek_cloud_util_ContactManager_Batch on List<com_iflytek_cloud_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

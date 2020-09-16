@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -29,10 +28,8 @@ class com_iflytek_cloud_util_AudioDetector_DetectorResult extends java_lang_Obje
 
   //region creators
   static Future<com_iflytek_cloud_util_AudioDetector_DetectorResult> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_AudioDetector_DetectorResult__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_AudioDetector_DetectorResult__', );
     final object = com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -40,10 +37,9 @@ class com_iflytek_cloud_util_AudioDetector_DetectorResult extends java_lang_Obje
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_AudioDetector_DetectorResult__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_AudioDetector_DetectorResult__', {'length': length});
   
     final List<com_iflytek_cloud_util_AudioDetector_DetectorResult> typedResult = resultBatch.map((result) => com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -51,148 +47,136 @@ class com_iflytek_cloud_util_AudioDetector_DetectorResult extends java_lang_Obje
 
   //region getters
   Future<Uint8List> get_buffer() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_buffer", {'refId': refId});
-  
-    return __result__ as Uint8List;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_buffer", {'__this__': this});
+    return __result__ == null ? null : (__result__ as Uint8List);
   }
   
   Future<int> get_offset() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_offset", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_offset", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_length() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_length", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_length", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_status() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_status", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_status", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_sub() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_sub", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_sub", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_volume() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_volume", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_volume", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_voice() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_voice", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_voice", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_quality() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_quality", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_quality", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_start() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_start", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_start", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_end() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_end", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_end", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_error() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_error", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_error", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_confidence() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_confidence", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_confidence", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_buffer(Uint8List buffer) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer', {'refId': refId, "buffer": buffer});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer', <String, dynamic>{'__this__': this, "buffer": buffer});
   
   
   }
   
   Future<void> set_offset(int offset) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_offset', {'refId': refId, "offset": offset});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
   
   
   }
   
   Future<void> set_length(int length) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_length', {'refId': refId, "length": length});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_length', <String, dynamic>{'__this__': this, "length": length});
   
   
   }
   
   Future<void> set_status(int status) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_status', {'refId': refId, "status": status});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_status', <String, dynamic>{'__this__': this, "status": status});
   
   
   }
   
   Future<void> set_sub(int sub) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_sub', {'refId': refId, "sub": sub});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_sub', <String, dynamic>{'__this__': this, "sub": sub});
   
   
   }
   
   Future<void> set_volume(int volume) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_volume', {'refId': refId, "volume": volume});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_volume', <String, dynamic>{'__this__': this, "volume": volume});
   
   
   }
   
   Future<void> set_voice(bool voice) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_voice', {'refId': refId, "voice": voice});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_voice', <String, dynamic>{'__this__': this, "voice": voice});
   
   
   }
   
   Future<void> set_quality(int quality) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_quality', {'refId': refId, "quality": quality});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_quality', <String, dynamic>{'__this__': this, "quality": quality});
   
   
   }
   
   Future<void> set_start(int start) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_start', {'refId': refId, "start": start});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_start', <String, dynamic>{'__this__': this, "start": start});
   
   
   }
   
   Future<void> set_end(int end) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_end', {'refId': refId, "end": end});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_end', <String, dynamic>{'__this__': this, "end": end});
   
   
   }
   
   Future<void> set_error(int error) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_error', {'refId': refId, "error": error});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_error', <String, dynamic>{'__this__': this, "error": error});
   
   
   }
   
   Future<void> set_confidence(double confidence) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_confidence', {'refId': refId, "confidence": confidence});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_confidence', <String, dynamic>{'__this__': this, "confidence": confidence});
   
   
   }
@@ -207,86 +191,86 @@ class com_iflytek_cloud_util_AudioDetector_DetectorResult extends java_lang_Obje
 extension com_iflytek_cloud_util_AudioDetector_DetectorResult_Batch on List<com_iflytek_cloud_util_AudioDetector_DetectorResult> {
   //region getters
   Future<List<Uint8List>> get_buffer_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_buffer_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_buffer_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
     return typedResult;
   }
   
   Future<List<int>> get_offset_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_offset_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_offset_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_length_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_length_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_length_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_status_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_status_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_sub_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_sub_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_sub_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_volume_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_volume_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_volume_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_voice_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_voice_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_voice_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_quality_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_quality_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_quality_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_start_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_start_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_start_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_end_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_end_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_end_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_error_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_error_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_error_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_confidence_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_confidence_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.util.AudioDetector.DetectorResult::get_confidence_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -294,73 +278,73 @@ extension com_iflytek_cloud_util_AudioDetector_DetectorResult_Batch on List<com_
 
   //region setters
   Future<void> set_buffer_batch(List<Uint8List> buffer) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "buffer": buffer[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "buffer": buffer[__i__]}]);
   
   
   }
   
   Future<void> set_offset_batch(List<int> offset) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_offset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "offset": offset[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_offset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "offset": offset[__i__]}]);
   
   
   }
   
   Future<void> set_length_batch(List<int> length) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_length_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "length": length[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_length_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "length": length[__i__]}]);
   
   
   }
   
   Future<void> set_status_batch(List<int> status) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_status_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "status": status[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_status_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "status": status[__i__]}]);
   
   
   }
   
   Future<void> set_sub_batch(List<int> sub) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_sub_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sub": sub[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_sub_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "sub": sub[__i__]}]);
   
   
   }
   
   Future<void> set_volume_batch(List<int> volume) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_volume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "volume": volume[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_volume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "volume": volume[__i__]}]);
   
   
   }
   
   Future<void> set_voice_batch(List<bool> voice) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_voice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "voice": voice[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_voice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "voice": voice[__i__]}]);
   
   
   }
   
   Future<void> set_quality_batch(List<int> quality) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_quality_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "quality": quality[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_quality_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "quality": quality[__i__]}]);
   
   
   }
   
   Future<void> set_start_batch(List<int> start) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "start": start[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "start": start[__i__]}]);
   
   
   }
   
   Future<void> set_end_batch(List<int> end) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_end_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "end": end[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_end_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "end": end[__i__]}]);
   
   
   }
   
   Future<void> set_error_batch(List<int> error) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_error_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "error": error[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_error_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "error": error[__i__]}]);
   
   
   }
   
   Future<void> set_confidence_batch(List<double> confidence) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_confidence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "confidence": confidence[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.cloud.util.AudioDetector.DetectorResult::set_confidence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "confidence": confidence[__i__]}]);
   
   
   }

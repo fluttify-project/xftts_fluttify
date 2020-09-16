@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -38,11 +37,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   static Future<com_iflytek_cloud_SpeechUtility> createUtility(android_content_Context var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility::createUtility([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility::createUtility([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::createUtility', {"var0": var0.refId, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::createUtility', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -53,7 +52,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -62,11 +60,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   static Future<com_iflytek_cloud_SpeechUtility> getUtility() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility::getUtility([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility::getUtility([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getUtility', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getUtility', );
   
   
     // handle native call
@@ -77,7 +75,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -86,11 +83,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<bool> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::destroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::destroy', {"__this__": this});
   
   
     // handle native call
@@ -101,7 +98,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -110,11 +106,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<bool> checkServiceInstalled() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::checkServiceInstalled([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::checkServiceInstalled([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::checkServiceInstalled', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::checkServiceInstalled', {"__this__": this});
   
   
     // handle native call
@@ -125,7 +121,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -134,11 +129,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<List<String>> queryAvailableEngines() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::queryAvailableEngines([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::queryAvailableEngines([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::queryAvailableEngines', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::queryAvailableEngines', {"__this__": this});
   
   
     // handle native call
@@ -149,7 +144,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = (__result__ as List).cast<String>();
-    
       return __return__;
     }
   }
@@ -158,11 +152,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<int> openEngineSettings(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::openEngineSettings([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::openEngineSettings([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::openEngineSettings', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::openEngineSettings', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -173,7 +167,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -182,11 +175,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<String> getComponentUrl() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getComponentUrl([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getComponentUrl([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getComponentUrl', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getComponentUrl', {"__this__": this});
   
   
     // handle native call
@@ -197,7 +190,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -206,11 +198,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<bool> setParameter(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::setParameter', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::setParameter', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -221,7 +213,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -230,11 +221,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<String> getParameter(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getParameter([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getParameter([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getParameter', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getParameter', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -245,7 +236,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -254,11 +244,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<String> getPlusLocalInfo(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getPlusLocalInfo([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getPlusLocalInfo([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getPlusLocalInfo', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getPlusLocalInfo', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -269,7 +259,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -278,11 +267,11 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
   Future<int> getServiceVersion() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getServiceVersion([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.SpeechUtility@$refId::getServiceVersion([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getServiceVersion', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getServiceVersion', {"__this__": this});
   
   
     // handle native call
@@ -293,7 +282,6 @@ class com_iflytek_cloud_SpeechUtility extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,15 +306,14 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::createUtility_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::createUtility_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -338,15 +325,14 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getUtility_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getUtility_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_SpeechUtility()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -358,7 +344,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -366,7 +352,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -378,7 +363,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::checkServiceInstalled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::checkServiceInstalled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -386,7 +371,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -398,7 +382,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::queryAvailableEngines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::queryAvailableEngines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -406,7 +390,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
-    
       return typedResult;
     }
   }
@@ -418,7 +401,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::openEngineSettings_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::openEngineSettings_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -426,7 +409,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -438,7 +420,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getComponentUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getComponentUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -446,7 +428,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -458,7 +439,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -466,7 +447,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -478,7 +458,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -486,7 +466,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -498,7 +477,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getPlusLocalInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getPlusLocalInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -506,7 +485,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -518,7 +496,7 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechUtility::getServiceVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.SpeechUtility::getServiceVersion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -526,7 +504,6 @@ extension com_iflytek_cloud_SpeechUtility_Batch on List<com_iflytek_cloud_Speech
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

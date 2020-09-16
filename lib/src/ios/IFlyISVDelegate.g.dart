@@ -6,11 +6,12 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin IFlyISVDelegate on NSObject {
   
@@ -19,40 +20,19 @@ mixin IFlyISVDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onResult(Map dic) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onResult(Map dic) {}
   
   @mustCallSuper
-  Future<void> onCompleted(IFlySpeechError errorCode) {
-    kNativeObjectPool.add(errorCode);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCompleted(IFlySpeechError errorCode) {}
   
   @mustCallSuper
-  Future<void> onRecognition() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onRecognition::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onRecognition() {}
   
   @mustCallSuper
-  Future<void> onVolumeChanged(int volume) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onVolumeChanged(int volume) {}
   
 }
+

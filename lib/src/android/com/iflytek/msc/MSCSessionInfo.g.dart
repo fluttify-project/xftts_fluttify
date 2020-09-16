@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_msc_MSCSessionInfo extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_msc_MSCSessionInfo> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__', );
     final object = com_iflytek_msc_MSCSessionInfo()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_msc_MSCSessionInfo extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MSCSessionInfo__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MSCSessionInfo__', {'length': length});
   
     final List<com_iflytek_msc_MSCSessionInfo> typedResult = resultBatch.map((result) => com_iflytek_msc_MSCSessionInfo()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,76 +39,70 @@ class com_iflytek_msc_MSCSessionInfo extends java_lang_Object  {
 
   //region getters
   Future<int> get_errorcode() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_errorcode", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_errorcode", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_epstatues() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_epstatues", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_epstatues", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_rsltstatus() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_rsltstatus", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_rsltstatus", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_sesstatus() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_sesstatus", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_sesstatus", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<Uint8List> get_buffer() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buffer", {'refId': refId});
-  
-    return __result__ as Uint8List;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buffer", {'__this__': this});
+    return __result__ == null ? null : (__result__ as Uint8List);
   }
   
   Future<int> get_buflen() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buflen", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buflen", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_errorcode(int errorcode) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_errorcode', {'refId': refId, "errorcode": errorcode});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_errorcode', <String, dynamic>{'__this__': this, "errorcode": errorcode});
   
   
   }
   
   Future<void> set_epstatues(int epstatues) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_epstatues', {'refId': refId, "epstatues": epstatues});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_epstatues', <String, dynamic>{'__this__': this, "epstatues": epstatues});
   
   
   }
   
   Future<void> set_rsltstatus(int rsltstatus) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_rsltstatus', {'refId': refId, "rsltstatus": rsltstatus});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_rsltstatus', <String, dynamic>{'__this__': this, "rsltstatus": rsltstatus});
   
   
   }
   
   Future<void> set_sesstatus(int sesstatus) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_sesstatus', {'refId': refId, "sesstatus": sesstatus});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_sesstatus', <String, dynamic>{'__this__': this, "sesstatus": sesstatus});
   
   
   }
   
   Future<void> set_buffer(Uint8List buffer) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buffer', {'refId': refId, "buffer": buffer});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buffer', <String, dynamic>{'__this__': this, "buffer": buffer});
   
   
   }
   
   Future<void> set_buflen(int buflen) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buflen', {'refId': refId, "buflen": buflen});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buflen', <String, dynamic>{'__this__': this, "buflen": buflen});
   
   
   }
@@ -127,44 +117,44 @@ class com_iflytek_msc_MSCSessionInfo extends java_lang_Object  {
 extension com_iflytek_msc_MSCSessionInfo_Batch on List<com_iflytek_msc_MSCSessionInfo> {
   //region getters
   Future<List<int>> get_errorcode_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_errorcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_errorcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_epstatues_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_epstatues_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_epstatues_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_rsltstatus_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_rsltstatus_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_rsltstatus_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_sesstatus_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_sesstatus_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_sesstatus_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<Uint8List>> get_buffer_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buffer_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buffer_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
     return typedResult;
   }
   
   Future<List<int>> get_buflen_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buflen_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MSCSessionInfo::get_buflen_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -172,37 +162,37 @@ extension com_iflytek_msc_MSCSessionInfo_Batch on List<com_iflytek_msc_MSCSessio
 
   //region setters
   Future<void> set_errorcode_batch(List<int> errorcode) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_errorcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorcode": errorcode[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_errorcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "errorcode": errorcode[__i__]}]);
   
   
   }
   
   Future<void> set_epstatues_batch(List<int> epstatues) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_epstatues_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "epstatues": epstatues[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_epstatues_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "epstatues": epstatues[__i__]}]);
   
   
   }
   
   Future<void> set_rsltstatus_batch(List<int> rsltstatus) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_rsltstatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "rsltstatus": rsltstatus[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_rsltstatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "rsltstatus": rsltstatus[__i__]}]);
   
   
   }
   
   Future<void> set_sesstatus_batch(List<int> sesstatus) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_sesstatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sesstatus": sesstatus[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_sesstatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "sesstatus": sesstatus[__i__]}]);
   
   
   }
   
   Future<void> set_buffer_batch(List<Uint8List> buffer) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "buffer": buffer[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "buffer": buffer[__i__]}]);
   
   
   }
   
   Future<void> set_buflen_batch(List<int> buflen) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buflen_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "buflen": buflen[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MSCSessionInfo::set_buflen_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "buflen": buflen[__i__]}]);
   
   
   }

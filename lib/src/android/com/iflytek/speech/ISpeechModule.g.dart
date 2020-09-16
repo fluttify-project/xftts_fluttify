@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
   
@@ -19,49 +20,22 @@ mixin com_iflytek_speech_ISpeechModule on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
-  Future<int> setParameter(String var1, String var2) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('setParameter::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<int> setParameter(String var1, String var2) {}
   
   @mustCallSuper
-  Future<String> getParameter(String var1) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('getParameter::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> getParameter(String var1) {}
   
   @mustCallSuper
-  Future<android_content_Intent> getIntent() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('getIntent::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<android_content_Intent> getIntent() {}
   
   @mustCallSuper
-  Future<bool> destory() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('destory::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<bool> destory() {}
   
   @mustCallSuper
-  Future<bool> isAvailable() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('isAvailable::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<bool> isAvailable() {}
   
 }
+

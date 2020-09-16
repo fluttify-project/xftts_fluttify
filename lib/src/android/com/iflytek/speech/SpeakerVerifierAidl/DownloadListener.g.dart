@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_speech_SpeakerVerifierAidl_DownloadListener on java_lang_Object {
   
@@ -19,22 +20,13 @@ mixin com_iflytek_speech_SpeakerVerifierAidl_DownloadListener on java_lang_Objec
 
   
 
-  @mustCallSuper
-  Future<void> onData(List<com_iflytek_speech_SpeakerVerifierAidl_PassWord> var1) {
-    kNativeObjectPool.addAll(var1);
   
-    if (fluttifyLogEnabled) {
-      debugPrint('onData::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+
+  @mustCallSuper
+  Future<void> onData(List<com_iflytek_speech_SpeakerVerifierAidl_PassWord> var1) {}
   
   @mustCallSuper
-  Future<void> onError(int var1) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onError(int var1) {}
   
 }
+

@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -34,10 +33,8 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_log_PerfLogger> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__', );
     final object = com_iflytek_cloud_msc_util_log_PerfLogger()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -45,10 +42,9 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_PerfLogger__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_PerfLogger__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_log_PerfLogger> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_log_PerfLogger()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -67,11 +63,11 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
   static Future<void> setLogSaved(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved', {"var0": var0});
   
   
     // handle native call
@@ -82,7 +78,6 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -91,11 +86,11 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
   static Future<void> saveLogFile(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile', {"var0": var0});
   
   
     // handle native call
@@ -106,7 +101,6 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -115,11 +109,11 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
   static Future<void> clear() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::clear([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::clear([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::clear', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::clear', );
   
   
     // handle native call
@@ -130,7 +124,6 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -139,11 +132,11 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
   static Future<void> appendInfo(String var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -154,7 +147,6 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -163,11 +155,11 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
   static Future<void> appendInfoByValue(String var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -178,7 +170,6 @@ class com_iflytek_cloud_msc_util_log_PerfLogger extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -203,7 +194,7 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -211,7 +202,6 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -223,7 +213,7 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -231,7 +221,6 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -243,7 +232,7 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::clear_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::clear_batch', );
   
   
     // convert native result to dart side object
@@ -251,7 +240,6 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -263,7 +251,7 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -271,7 +259,6 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -283,7 +270,7 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -291,7 +278,6 @@ extension com_iflytek_cloud_msc_util_log_PerfLogger_Batch on List<com_iflytek_cl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

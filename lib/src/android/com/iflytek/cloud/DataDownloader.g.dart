@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_DataDownloader extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_DataDownloader> create__android_content_Context(android_content_Context var1) async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context', {"var1": var1.refId});
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context', {"var1": var1});
     final object = com_iflytek_cloud_DataDownloader()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_DataDownloader extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_DataDownloader__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_DataDownloader__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_iflytek_cloud_DataDownloader> typedResult = resultBatch.map((result) => com_iflytek_cloud_DataDownloader()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,22 +50,60 @@ class com_iflytek_cloud_DataDownloader extends java_lang_Object  {
   Future<int> downloadData(com_iflytek_cloud_SpeechListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.DataDownloader@$refId::downloadData([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.DataDownloader@$refId::downloadData([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.DataDownloader::downloadData', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.DataDownloader::downloadData', {"__this__": this});
   
   
     // handle native call
-  
+    MethodChannel('com.iflytek.cloud.DataDownloader::downloadData::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.SpeechListener::onEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onEvent(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<android_os_Bundle>());
+                break;
+              case 'Callback::com.iflytek.cloud.SpeechListener::onBufferReceived':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBufferReceived([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onBufferReceived(args['var1']);
+                break;
+              case 'Callback::com.iflytek.cloud.SpeechListener::onCompleted':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onCompleted([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onCompleted(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
+          }
+        });
   
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -87,25 +121,6 @@ extension com_iflytek_cloud_DataDownloader_Batch on List<com_iflytek_cloud_DataD
   //endregion
 
   //region methods
-  
-  Future<List<int>> downloadData_batch(List<com_iflytek_cloud_SpeechListener> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.DataDownloader::downloadData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
   
   //endregion
 }

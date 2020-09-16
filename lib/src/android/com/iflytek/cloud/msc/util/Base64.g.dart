@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,11 +35,11 @@ class com_iflytek_cloud_msc_util_Base64 extends java_lang_Object  {
   static Future<String> encode(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.Base64::encode([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.Base64::encode([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Base64::encode', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.Base64::encode', {"var0": var0});
   
   
     // handle native call
@@ -51,7 +50,6 @@ class com_iflytek_cloud_msc_util_Base64 extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -60,11 +58,11 @@ class com_iflytek_cloud_msc_util_Base64 extends java_lang_Object  {
   static Future<Uint8List> decode(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.Base64::decode([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.Base64::decode([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Base64::decode', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.Base64::decode', {"var0": var0});
   
   
     // handle native call
@@ -75,7 +73,6 @@ class com_iflytek_cloud_msc_util_Base64 extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -100,7 +97,7 @@ extension com_iflytek_cloud_msc_util_Base64_Batch on List<com_iflytek_cloud_msc_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Base64::encode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.Base64::encode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -108,7 +105,6 @@ extension com_iflytek_cloud_msc_util_Base64_Batch on List<com_iflytek_cloud_msc_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -120,7 +116,7 @@ extension com_iflytek_cloud_msc_util_Base64_Batch on List<com_iflytek_cloud_msc_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.Base64::decode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.Base64::decode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -128,7 +124,6 @@ extension com_iflytek_cloud_msc_util_Base64_Batch on List<com_iflytek_cloud_msc_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }

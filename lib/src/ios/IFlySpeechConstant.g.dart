@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlySpeechConstant extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlySpeechConstant> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlySpeechConstant');
+  static Future<IFlySpeechConstant> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlySpeechConstant', {'init': init});
     final object = IFlySpeechConstant()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlySpeechConstant>> create_batch__(int length) async {
+  static Future<List<IFlySpeechConstant>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlySpeechConstant', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlySpeechConstant', {'length': length, 'init': init});
   
     final List<IFlySpeechConstant> typedResult = resultBatch.map((result) => IFlySpeechConstant()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> APPID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::APPID([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::APPID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::APPID', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::APPID', );
   
   
     // handle native call
@@ -69,7 +65,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ACCENT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ACCENT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ACCENT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT', );
   
   
     // handle native call
@@ -93,7 +88,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ACCENT_MANDARIN() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ACCENT_MANDARIN([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ACCENT_MANDARIN([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_MANDARIN', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_MANDARIN', );
   
   
     // handle native call
@@ -117,7 +111,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ACCENT_HENANESE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ACCENT_HENANESE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ACCENT_HENANESE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_HENANESE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_HENANESE', );
   
   
     // handle native call
@@ -141,7 +134,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ACCENT_SICHUANESE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ACCENT_SICHUANESE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ACCENT_SICHUANESE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_SICHUANESE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_SICHUANESE', );
   
   
     // handle native call
@@ -165,7 +157,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -174,11 +165,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ACCENT_CANTONESE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ACCENT_CANTONESE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ACCENT_CANTONESE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_CANTONESE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_CANTONESE', );
   
   
     // handle native call
@@ -189,7 +180,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -198,11 +188,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LANGUAGE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE', );
   
   
     // handle native call
@@ -213,7 +203,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -222,11 +211,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LANGUAGE_CHINESE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_CHINESE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_CHINESE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE', );
   
   
     // handle native call
@@ -237,7 +226,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -246,11 +234,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LANGUAGE_CHINESE_TW() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_CHINESE_TW([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_CHINESE_TW([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_TW', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_TW', );
   
   
     // handle native call
@@ -261,7 +249,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -270,11 +257,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LANGUAGE_ENGLISH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LANGUAGE_ENGLISH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_ENGLISH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_ENGLISH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_ENGLISH', );
   
   
     // handle native call
@@ -285,7 +272,121 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> LANGUAGE_RUSSIAN() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_RUSSIAN([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_RUSSIAN', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> LANGUAGE_JAPANESE() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_JAPANESE([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_JAPANESE', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> LANGUAGE_FRENCH() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_FRENCH([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_FRENCH', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> LANGUAGE_SPANISH() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_SPANISH([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_SPANISH', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> LANGUAGE_KOREAN() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::LANGUAGE_KOREAN([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_KOREAN', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
       return __return__;
     }
   }
@@ -294,11 +395,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> RESULT_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::RESULT_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::RESULT_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RESULT_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RESULT_TYPE', );
   
   
     // handle native call
@@ -309,7 +410,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,11 +418,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> IFLY_DOMAIN() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::IFLY_DOMAIN([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::IFLY_DOMAIN([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IFLY_DOMAIN', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IFLY_DOMAIN', );
   
   
     // handle native call
@@ -333,7 +433,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -342,11 +441,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> DATA_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::DATA_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::DATA_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::DATA_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::DATA_TYPE', );
   
   
     // handle native call
@@ -357,7 +456,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -366,11 +464,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SPEECH_TIMEOUT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SPEECH_TIMEOUT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SPEECH_TIMEOUT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SPEECH_TIMEOUT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SPEECH_TIMEOUT', );
   
   
     // handle native call
@@ -381,7 +479,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -390,11 +487,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> NET_TIMEOUT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::NET_TIMEOUT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::NET_TIMEOUT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NET_TIMEOUT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NET_TIMEOUT', );
   
   
     // handle native call
@@ -405,7 +502,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -414,11 +510,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SUBJECT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SUBJECT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SUBJECT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SUBJECT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SUBJECT', );
   
   
     // handle native call
@@ -429,7 +525,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -438,11 +533,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PARAMS() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PARAMS([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PARAMS([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PARAMS', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PARAMS', );
   
   
     // handle native call
@@ -453,7 +548,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -462,11 +556,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PROT_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PROT_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PROT_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PROT_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PROT_TYPE', );
   
   
     // handle native call
@@ -477,7 +571,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -486,11 +579,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SSL_CERT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SSL_CERT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SSL_CERT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SSL_CERT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SSL_CERT', );
   
   
     // handle native call
@@ -501,7 +594,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -510,11 +602,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> POWER_CYCLE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::POWER_CYCLE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::POWER_CYCLE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::POWER_CYCLE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::POWER_CYCLE', );
   
   
     // handle native call
@@ -525,7 +617,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -534,11 +625,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SAMPLE_RATE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE', );
   
   
     // handle native call
@@ -549,7 +640,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -558,11 +648,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SAMPLE_RATE_8K() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE_8K([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE_8K([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE_8K', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE_8K', );
   
   
     // handle native call
@@ -573,7 +663,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -582,11 +671,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SAMPLE_RATE_16K() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE_16K([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SAMPLE_RATE_16K([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE_16K', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE_16K', );
   
   
     // handle native call
@@ -597,7 +686,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -606,11 +694,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ENGINE_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ENGINE_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ENGINE_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ENGINE_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ENGINE_TYPE', );
   
   
     // handle native call
@@ -621,7 +709,29 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
+      return __return__;
+    }
+  }
+  
+  
+  static Future<String> TYPE_LOCAL_XTTS() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: IFlySpeechConstant::TYPE_LOCAL_XTTS([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_LOCAL_XTTS', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
       return __return__;
     }
   }
@@ -630,11 +740,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TYPE_LOCAL() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TYPE_LOCAL([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TYPE_LOCAL([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_LOCAL', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_LOCAL', );
   
   
     // handle native call
@@ -645,7 +755,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -654,11 +763,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TYPE_CLOUD() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TYPE_CLOUD([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TYPE_CLOUD([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_CLOUD', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_CLOUD', );
   
   
     // handle native call
@@ -669,7 +778,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -678,11 +786,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TYPE_MIX() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TYPE_MIX([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TYPE_MIX([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_MIX', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_MIX', );
   
   
     // handle native call
@@ -693,7 +801,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -702,11 +809,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TYPE_AUTO() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TYPE_AUTO([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TYPE_AUTO([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_AUTO', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_AUTO', );
   
   
     // handle native call
@@ -717,7 +824,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -726,11 +832,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TEXT_ENCODING() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TEXT_ENCODING([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TEXT_ENCODING([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TEXT_ENCODING', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TEXT_ENCODING', );
   
   
     // handle native call
@@ -741,7 +847,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -750,11 +855,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> RESULT_ENCODING() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::RESULT_ENCODING([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::RESULT_ENCODING([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RESULT_ENCODING', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RESULT_ENCODING', );
   
   
     // handle native call
@@ -765,7 +870,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -774,11 +878,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLAYER_INIT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLAYER_INIT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLAYER_INIT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLAYER_INIT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLAYER_INIT', );
   
   
     // handle native call
@@ -789,7 +893,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -798,11 +901,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLAYER_DEACTIVE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLAYER_DEACTIVE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLAYER_DEACTIVE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLAYER_DEACTIVE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLAYER_DEACTIVE', );
   
   
     // handle native call
@@ -813,7 +916,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -822,11 +924,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> RECORDER_INIT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::RECORDER_INIT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::RECORDER_INIT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RECORDER_INIT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RECORDER_INIT', );
   
   
     // handle native call
@@ -837,7 +939,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -846,11 +947,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> RECORDER_DEACTIVE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::RECORDER_DEACTIVE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::RECORDER_DEACTIVE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RECORDER_DEACTIVE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RECORDER_DEACTIVE', );
   
   
     // handle native call
@@ -861,7 +962,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -870,11 +970,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> SPEED() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::SPEED([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::SPEED([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SPEED', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SPEED', );
   
   
     // handle native call
@@ -885,7 +985,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -894,11 +993,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PITCH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PITCH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PITCH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PITCH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PITCH', );
   
   
     // handle native call
@@ -909,7 +1008,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -918,11 +1016,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TTS_AUDIO_PATH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TTS_AUDIO_PATH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TTS_AUDIO_PATH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_AUDIO_PATH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_AUDIO_PATH', );
   
   
     // handle native call
@@ -933,7 +1031,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -942,11 +1039,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VAD_ENABLE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VAD_ENABLE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VAD_ENABLE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_ENABLE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_ENABLE', );
   
   
     // handle native call
@@ -957,7 +1054,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -966,11 +1062,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VAD_BOS() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VAD_BOS([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VAD_BOS([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_BOS', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_BOS', );
   
   
     // handle native call
@@ -981,7 +1077,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -990,11 +1085,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VAD_EOS() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VAD_EOS([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VAD_EOS([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_EOS', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_EOS', );
   
   
     // handle native call
@@ -1005,7 +1100,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1014,11 +1108,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VOICE_NAME() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VOICE_NAME([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VOICE_NAME([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_NAME', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_NAME', );
   
   
     // handle native call
@@ -1029,7 +1123,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1038,11 +1131,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VOICE_ID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VOICE_ID([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VOICE_ID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_ID', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_ID', );
   
   
     // handle native call
@@ -1053,7 +1146,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1062,11 +1154,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VOICE_LANG() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VOICE_LANG([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VOICE_LANG([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_LANG', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_LANG', );
   
   
     // handle native call
@@ -1077,7 +1169,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1086,11 +1177,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> VOLUME() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::VOLUME([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::VOLUME([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOLUME', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOLUME', );
   
   
     // handle native call
@@ -1101,7 +1192,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1110,11 +1200,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TTS_BUFFER_TIME() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TTS_BUFFER_TIME([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TTS_BUFFER_TIME([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_BUFFER_TIME', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_BUFFER_TIME', );
   
   
     // handle native call
@@ -1125,7 +1215,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1134,11 +1223,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> TTS_DATA_NOTIFY() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::TTS_DATA_NOTIFY([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::TTS_DATA_NOTIFY([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_DATA_NOTIFY', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_DATA_NOTIFY', );
   
   
     // handle native call
@@ -1149,7 +1238,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1158,11 +1246,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> NEXT_TEXT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::NEXT_TEXT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::NEXT_TEXT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NEXT_TEXT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NEXT_TEXT', );
   
   
     // handle native call
@@ -1173,7 +1261,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1182,11 +1269,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MPPLAYINGINFOCENTER() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MPPLAYINGINFOCENTER([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MPPLAYINGINFOCENTER([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MPPLAYINGINFOCENTER', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MPPLAYINGINFOCENTER', );
   
   
     // handle native call
@@ -1197,7 +1284,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1206,11 +1292,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> AUDIO_SOURCE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::AUDIO_SOURCE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::AUDIO_SOURCE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::AUDIO_SOURCE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::AUDIO_SOURCE', );
   
   
     // handle native call
@@ -1221,7 +1307,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1230,11 +1315,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ASR_AUDIO_PATH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ASR_AUDIO_PATH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ASR_AUDIO_PATH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_AUDIO_PATH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_AUDIO_PATH', );
   
   
     // handle native call
@@ -1245,7 +1330,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1254,11 +1338,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ASR_SCH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ASR_SCH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ASR_SCH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_SCH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_SCH', );
   
   
     // handle native call
@@ -1269,7 +1353,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1278,11 +1361,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ASR_PTT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ASR_PTT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ASR_PTT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT', );
   
   
     // handle native call
@@ -1293,7 +1376,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1302,11 +1384,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ASR_PTT_HAVEDOT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ASR_PTT_HAVEDOT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ASR_PTT_HAVEDOT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT_HAVEDOT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT_HAVEDOT', );
   
   
     // handle native call
@@ -1317,7 +1399,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1326,11 +1407,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ASR_PTT_NODOT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ASR_PTT_NODOT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ASR_PTT_NODOT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT_NODOT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT_NODOT', );
   
   
     // handle native call
@@ -1341,7 +1422,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1350,11 +1430,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LOCAL_GRAMMAR() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LOCAL_GRAMMAR([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LOCAL_GRAMMAR([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LOCAL_GRAMMAR', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LOCAL_GRAMMAR', );
   
   
     // handle native call
@@ -1365,7 +1445,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1374,11 +1453,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> CLOUD_GRAMMAR() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::CLOUD_GRAMMAR([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::CLOUD_GRAMMAR([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::CLOUD_GRAMMAR', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::CLOUD_GRAMMAR', );
   
   
     // handle native call
@@ -1389,7 +1468,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1398,11 +1476,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> GRAMMAR_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::GRAMMAR_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::GRAMMAR_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_TYPE', );
   
   
     // handle native call
@@ -1413,7 +1491,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1422,11 +1499,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> GRAMMAR_CONTENT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::GRAMMAR_CONTENT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::GRAMMAR_CONTENT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_CONTENT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_CONTENT', );
   
   
     // handle native call
@@ -1437,7 +1514,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1446,11 +1522,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LEXICON_CONTENT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LEXICON_CONTENT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LEXICON_CONTENT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LEXICON_CONTENT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LEXICON_CONTENT', );
   
   
     // handle native call
@@ -1461,7 +1537,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1470,11 +1545,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> LEXICON_NAME() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::LEXICON_NAME([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::LEXICON_NAME([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LEXICON_NAME', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LEXICON_NAME', );
   
   
     // handle native call
@@ -1485,7 +1560,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1494,11 +1568,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> GRAMMAR_LIST() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::GRAMMAR_LIST([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::GRAMMAR_LIST([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_LIST', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_LIST', );
   
   
     // handle native call
@@ -1509,7 +1583,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1518,11 +1591,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> NLP_VERSION() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::NLP_VERSION([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::NLP_VERSION([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NLP_VERSION', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NLP_VERSION', );
   
   
     // handle native call
@@ -1533,7 +1606,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1542,11 +1614,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> IVW_THRESHOLD() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::IVW_THRESHOLD([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::IVW_THRESHOLD([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_THRESHOLD', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_THRESHOLD', );
   
   
     // handle native call
@@ -1557,7 +1629,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1566,11 +1637,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> IVW_SST() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::IVW_SST([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::IVW_SST([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_SST', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_SST', );
   
   
     // handle native call
@@ -1581,7 +1652,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1590,11 +1660,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> IVW_ONESHOT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::IVW_ONESHOT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::IVW_ONESHOT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_ONESHOT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_ONESHOT', );
   
   
     // handle native call
@@ -1605,7 +1675,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1614,11 +1683,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> KEEP_ALIVE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::KEEP_ALIVE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::KEEP_ALIVE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::KEEP_ALIVE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::KEEP_ALIVE', );
   
   
     // handle native call
@@ -1629,7 +1698,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1638,11 +1706,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> IVW_AUDIO_PATH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::IVW_AUDIO_PATH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::IVW_AUDIO_PATH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_AUDIO_PATH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_AUDIO_PATH', );
   
   
     // handle native call
@@ -1653,7 +1721,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1662,11 +1729,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_CATEGORY() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_CATEGORY([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_CATEGORY([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_CATEGORY', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_CATEGORY', );
   
   
     // handle native call
@@ -1677,7 +1744,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1686,11 +1752,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_RESULT_LEVEL() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_RESULT_LEVEL([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_RESULT_LEVEL([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_RESULT_LEVEL', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_RESULT_LEVEL', );
   
   
     // handle native call
@@ -1701,7 +1767,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1710,11 +1775,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_RESULT_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_RESULT_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_RESULT_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_RESULT_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_RESULT_TYPE', );
   
   
     // handle native call
@@ -1725,7 +1790,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1734,11 +1798,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_AUDIO_PATH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_AUDIO_PATH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_AUDIO_PATH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_AUDIO_PATH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_AUDIO_PATH', );
   
   
     // handle native call
@@ -1749,7 +1813,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1758,11 +1821,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_AUTO_TRACKING() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_AUTO_TRACKING([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_AUTO_TRACKING([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_AUTO_TRACKING', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_AUTO_TRACKING', );
   
   
     // handle native call
@@ -1773,7 +1836,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1782,11 +1844,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> ISE_TRACK_TYPE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::ISE_TRACK_TYPE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::ISE_TRACK_TYPE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_TRACK_TYPE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_TRACK_TYPE', );
   
   
     // handle native call
@@ -1797,7 +1859,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1806,11 +1867,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLUS_LOCAL_ALL() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_ALL([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_ALL([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ALL', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ALL', );
   
   
     // handle native call
@@ -1821,7 +1882,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1830,11 +1890,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLUS_LOCAL_TTS() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_TTS([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_TTS([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_TTS', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_TTS', );
   
   
     // handle native call
@@ -1845,7 +1905,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1854,11 +1913,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLUS_LOCAL_ASR() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_ASR([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_ASR([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ASR', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ASR', );
   
   
     // handle native call
@@ -1869,7 +1928,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1878,11 +1936,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> PLUS_LOCAL_IVW() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_IVW([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::PLUS_LOCAL_IVW([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_IVW', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_IVW', );
   
   
     // handle native call
@@ -1893,7 +1951,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1902,11 +1959,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_AUTH_ID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_AUTH_ID([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_AUTH_ID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_AUTH_ID', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_AUTH_ID', );
   
   
     // handle native call
@@ -1917,7 +1974,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1926,11 +1982,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_SUB() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_SUB([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_SUB([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SUB', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SUB', );
   
   
     // handle native call
@@ -1941,7 +1997,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1950,11 +2005,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_SST() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_SST([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_SST([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SST', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SST', );
   
   
     // handle native call
@@ -1965,7 +2020,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1974,11 +2028,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_VCM() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_VCM([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_VCM([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_VCM', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_VCM', );
   
   
     // handle native call
@@ -1989,7 +2043,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1998,11 +2051,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_SCENES() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_SCENES([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_SCENES([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SCENES', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SCENES', );
   
   
     // handle native call
@@ -2013,7 +2066,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2022,11 +2074,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_AFC() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_AFC([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_AFC([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_AFC', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_AFC', );
   
   
     // handle native call
@@ -2037,7 +2089,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2046,11 +2097,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_DATA_PATH() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_DATA_PATH([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_DATA_PATH([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_PATH', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_PATH', );
   
   
     // handle native call
@@ -2061,7 +2112,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2070,11 +2120,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_RGN() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_RGN([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_RGN([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_RGN', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_RGN', );
   
   
     // handle native call
@@ -2085,7 +2135,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2094,11 +2143,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_TSD() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_TSD([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_TSD([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_TSD', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_TSD', );
   
   
     // handle native call
@@ -2109,7 +2158,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2118,11 +2166,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_PTXT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_PTXT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_PTXT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_PTXT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_PTXT', );
   
   
     // handle native call
@@ -2133,7 +2181,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2142,11 +2189,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_PWDT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_PWDT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_PWDT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_PWDT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_PWDT', );
   
   
     // handle native call
@@ -2157,7 +2204,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2166,11 +2212,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_FIN() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_FIN([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_FIN([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_FIN', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_FIN', );
   
   
     // handle native call
@@ -2181,7 +2227,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2190,11 +2235,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_WTT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_WTT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_WTT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_WTT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_WTT', );
   
   
     // handle native call
@@ -2205,7 +2250,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2214,11 +2258,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_DATA_FORMAT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_DATA_FORMAT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_DATA_FORMAT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_FORMAT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_FORMAT', );
   
   
     // handle native call
@@ -2229,7 +2273,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2238,11 +2281,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> MFV_DATA_ENCODING() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::MFV_DATA_ENCODING([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::MFV_DATA_ENCODING([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_ENCODING', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_ENCODING', );
   
   
     // handle native call
@@ -2253,7 +2296,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2262,11 +2304,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_SUB() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_SUB([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_SUB([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SUB', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SUB', );
   
   
     // handle native call
@@ -2277,7 +2319,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2286,11 +2327,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_WFR() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_WFR([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_WFR([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_WFR', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_WFR', );
   
   
     // handle native call
@@ -2301,7 +2342,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2310,11 +2350,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_SST() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_SST([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_SST([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SST', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SST', );
   
   
     // handle native call
@@ -2325,7 +2365,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2334,11 +2373,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_REG() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_REG([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_REG([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_REG', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_REG', );
   
   
     // handle native call
@@ -2349,7 +2388,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2358,11 +2396,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_VERIFY() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_VERIFY([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_VERIFY([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_VERIFY', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_VERIFY', );
   
   
     // handle native call
@@ -2373,7 +2411,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2382,11 +2419,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_DETECT() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_DETECT([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_DETECT([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_DETECT', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_DETECT', );
   
   
     // handle native call
@@ -2397,7 +2434,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2406,11 +2442,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_ALIGN() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_ALIGN([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_ALIGN([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_ALIGN', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_ALIGN', );
   
   
     // handle native call
@@ -2421,7 +2457,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2430,11 +2465,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_ATTR() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_ATTR([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_ATTR([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_ATTR', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_ATTR', );
   
   
     // handle native call
@@ -2445,7 +2480,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2454,11 +2488,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_AUE() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_AUE([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_AUE([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_AUE', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_AUE', );
   
   
     // handle native call
@@ -2469,7 +2503,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2478,11 +2511,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_RAW() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_RAW([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_RAW([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_RAW', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_RAW', );
   
   
     // handle native call
@@ -2493,7 +2526,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2502,11 +2534,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_PSET() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_PSET([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_PSET([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_PSET', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_PSET', );
   
   
     // handle native call
@@ -2517,7 +2549,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2526,11 +2557,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_SKIP() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_SKIP([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_SKIP([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SKIP', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SKIP', );
   
   
     // handle native call
@@ -2541,7 +2572,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2550,11 +2580,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_GID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_GID([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_GID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_GID', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_GID', );
   
   
     // handle native call
@@ -2565,7 +2595,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2574,11 +2603,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_AUTH_ID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_AUTH_ID([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_AUTH_ID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_AUTH_ID', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_AUTH_ID', );
   
   
     // handle native call
@@ -2589,7 +2618,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2598,11 +2626,11 @@ class IFlySpeechConstant extends NSObject  {
   static Future<String> FACE_DVC() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechConstant::FACE_DVC([])');
+      debugPrint('fluttify-dart: IFlySpeechConstant::FACE_DVC([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_DVC', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_DVC', );
   
   
     // handle native call
@@ -2613,7 +2641,6 @@ class IFlySpeechConstant extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -2638,7 +2665,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::APPID_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::APPID_batch', );
   
   
     // convert native result to dart side object
@@ -2646,7 +2673,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2658,7 +2684,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_batch', );
   
   
     // convert native result to dart side object
@@ -2666,7 +2692,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2678,7 +2703,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_MANDARIN_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_MANDARIN_batch', );
   
   
     // convert native result to dart side object
@@ -2686,7 +2711,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2698,7 +2722,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_HENANESE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_HENANESE_batch', );
   
   
     // convert native result to dart side object
@@ -2706,7 +2730,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2718,7 +2741,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_SICHUANESE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_SICHUANESE_batch', );
   
   
     // convert native result to dart side object
@@ -2726,7 +2749,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2738,7 +2760,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ACCENT_CANTONESE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ACCENT_CANTONESE_batch', );
   
   
     // convert native result to dart side object
@@ -2746,7 +2768,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2758,7 +2779,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_batch', );
   
   
     // convert native result to dart side object
@@ -2766,7 +2787,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2778,7 +2798,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_batch', );
   
   
     // convert native result to dart side object
@@ -2786,7 +2806,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2798,7 +2817,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_TW_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_CHINESE_TW_batch', );
   
   
     // convert native result to dart side object
@@ -2806,7 +2825,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2818,7 +2836,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LANGUAGE_ENGLISH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_ENGLISH_batch', );
   
   
     // convert native result to dart side object
@@ -2826,7 +2844,101 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> LANGUAGE_RUSSIAN_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_RUSSIAN_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> LANGUAGE_JAPANESE_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_JAPANESE_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> LANGUAGE_FRENCH_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_FRENCH_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> LANGUAGE_SPANISH_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_SPANISH_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> LANGUAGE_KOREAN_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LANGUAGE_KOREAN_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
       return typedResult;
     }
   }
@@ -2838,7 +2950,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RESULT_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RESULT_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -2846,7 +2958,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2858,7 +2969,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IFLY_DOMAIN_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IFLY_DOMAIN_batch', );
   
   
     // convert native result to dart side object
@@ -2866,7 +2977,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2878,7 +2988,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::DATA_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::DATA_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -2886,7 +2996,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2898,7 +3007,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SPEECH_TIMEOUT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SPEECH_TIMEOUT_batch', );
   
   
     // convert native result to dart side object
@@ -2906,7 +3015,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2918,7 +3026,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NET_TIMEOUT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NET_TIMEOUT_batch', );
   
   
     // convert native result to dart side object
@@ -2926,7 +3034,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2938,7 +3045,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SUBJECT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SUBJECT_batch', );
   
   
     // convert native result to dart side object
@@ -2946,7 +3053,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2958,7 +3064,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PARAMS_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PARAMS_batch', );
   
   
     // convert native result to dart side object
@@ -2966,7 +3072,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2978,7 +3083,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PROT_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PROT_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -2986,7 +3091,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2998,7 +3102,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SSL_CERT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SSL_CERT_batch', );
   
   
     // convert native result to dart side object
@@ -3006,7 +3110,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3018,7 +3121,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::POWER_CYCLE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::POWER_CYCLE_batch', );
   
   
     // convert native result to dart side object
@@ -3026,7 +3129,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3038,7 +3140,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE_batch', );
   
   
     // convert native result to dart side object
@@ -3046,7 +3148,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3058,7 +3159,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE_8K_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE_8K_batch', );
   
   
     // convert native result to dart side object
@@ -3066,7 +3167,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3078,7 +3178,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SAMPLE_RATE_16K_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SAMPLE_RATE_16K_batch', );
   
   
     // convert native result to dart side object
@@ -3086,7 +3186,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3098,7 +3197,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ENGINE_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ENGINE_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -3106,7 +3205,25 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<String>> TYPE_LOCAL_XTTS_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_LOCAL_XTTS_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
       return typedResult;
     }
   }
@@ -3118,7 +3235,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_LOCAL_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_LOCAL_batch', );
   
   
     // convert native result to dart side object
@@ -3126,7 +3243,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3138,7 +3254,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_CLOUD_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_CLOUD_batch', );
   
   
     // convert native result to dart side object
@@ -3146,7 +3262,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3158,7 +3273,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_MIX_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_MIX_batch', );
   
   
     // convert native result to dart side object
@@ -3166,7 +3281,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3178,7 +3292,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TYPE_AUTO_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TYPE_AUTO_batch', );
   
   
     // convert native result to dart side object
@@ -3186,7 +3300,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3198,7 +3311,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TEXT_ENCODING_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TEXT_ENCODING_batch', );
   
   
     // convert native result to dart side object
@@ -3206,7 +3319,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3218,7 +3330,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RESULT_ENCODING_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RESULT_ENCODING_batch', );
   
   
     // convert native result to dart side object
@@ -3226,7 +3338,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3238,7 +3349,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLAYER_INIT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLAYER_INIT_batch', );
   
   
     // convert native result to dart side object
@@ -3246,7 +3357,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3258,7 +3368,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLAYER_DEACTIVE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLAYER_DEACTIVE_batch', );
   
   
     // convert native result to dart side object
@@ -3266,7 +3376,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3278,7 +3387,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RECORDER_INIT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RECORDER_INIT_batch', );
   
   
     // convert native result to dart side object
@@ -3286,7 +3395,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3298,7 +3406,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::RECORDER_DEACTIVE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::RECORDER_DEACTIVE_batch', );
   
   
     // convert native result to dart side object
@@ -3306,7 +3414,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3318,7 +3425,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::SPEED_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::SPEED_batch', );
   
   
     // convert native result to dart side object
@@ -3326,7 +3433,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3338,7 +3444,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PITCH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PITCH_batch', );
   
   
     // convert native result to dart side object
@@ -3346,7 +3452,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3358,7 +3463,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_AUDIO_PATH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_AUDIO_PATH_batch', );
   
   
     // convert native result to dart side object
@@ -3366,7 +3471,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3378,7 +3482,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_ENABLE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_ENABLE_batch', );
   
   
     // convert native result to dart side object
@@ -3386,7 +3490,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3398,7 +3501,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_BOS_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_BOS_batch', );
   
   
     // convert native result to dart side object
@@ -3406,7 +3509,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3418,7 +3520,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VAD_EOS_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VAD_EOS_batch', );
   
   
     // convert native result to dart side object
@@ -3426,7 +3528,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3438,7 +3539,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_NAME_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_NAME_batch', );
   
   
     // convert native result to dart side object
@@ -3446,7 +3547,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3458,7 +3558,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_ID_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_ID_batch', );
   
   
     // convert native result to dart side object
@@ -3466,7 +3566,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3478,7 +3577,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOICE_LANG_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOICE_LANG_batch', );
   
   
     // convert native result to dart side object
@@ -3486,7 +3585,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3498,7 +3596,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::VOLUME_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::VOLUME_batch', );
   
   
     // convert native result to dart side object
@@ -3506,7 +3604,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3518,7 +3615,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_BUFFER_TIME_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_BUFFER_TIME_batch', );
   
   
     // convert native result to dart side object
@@ -3526,7 +3623,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3538,7 +3634,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::TTS_DATA_NOTIFY_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::TTS_DATA_NOTIFY_batch', );
   
   
     // convert native result to dart side object
@@ -3546,7 +3642,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3558,7 +3653,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NEXT_TEXT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NEXT_TEXT_batch', );
   
   
     // convert native result to dart side object
@@ -3566,7 +3661,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3578,7 +3672,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MPPLAYINGINFOCENTER_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MPPLAYINGINFOCENTER_batch', );
   
   
     // convert native result to dart side object
@@ -3586,7 +3680,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3598,7 +3691,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::AUDIO_SOURCE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::AUDIO_SOURCE_batch', );
   
   
     // convert native result to dart side object
@@ -3606,7 +3699,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3618,7 +3710,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_AUDIO_PATH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_AUDIO_PATH_batch', );
   
   
     // convert native result to dart side object
@@ -3626,7 +3718,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3638,7 +3729,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_SCH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_SCH_batch', );
   
   
     // convert native result to dart side object
@@ -3646,7 +3737,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3658,7 +3748,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT_batch', );
   
   
     // convert native result to dart side object
@@ -3666,7 +3756,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3678,7 +3767,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT_HAVEDOT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT_HAVEDOT_batch', );
   
   
     // convert native result to dart side object
@@ -3686,7 +3775,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3698,7 +3786,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ASR_PTT_NODOT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ASR_PTT_NODOT_batch', );
   
   
     // convert native result to dart side object
@@ -3706,7 +3794,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3718,7 +3805,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LOCAL_GRAMMAR_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LOCAL_GRAMMAR_batch', );
   
   
     // convert native result to dart side object
@@ -3726,7 +3813,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3738,7 +3824,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::CLOUD_GRAMMAR_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::CLOUD_GRAMMAR_batch', );
   
   
     // convert native result to dart side object
@@ -3746,7 +3832,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3758,7 +3843,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -3766,7 +3851,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3778,7 +3862,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_CONTENT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_CONTENT_batch', );
   
   
     // convert native result to dart side object
@@ -3786,7 +3870,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3798,7 +3881,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LEXICON_CONTENT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LEXICON_CONTENT_batch', );
   
   
     // convert native result to dart side object
@@ -3806,7 +3889,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3818,7 +3900,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::LEXICON_NAME_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::LEXICON_NAME_batch', );
   
   
     // convert native result to dart side object
@@ -3826,7 +3908,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3838,7 +3919,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::GRAMMAR_LIST_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::GRAMMAR_LIST_batch', );
   
   
     // convert native result to dart side object
@@ -3846,7 +3927,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3858,7 +3938,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::NLP_VERSION_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::NLP_VERSION_batch', );
   
   
     // convert native result to dart side object
@@ -3866,7 +3946,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3878,7 +3957,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_THRESHOLD_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_THRESHOLD_batch', );
   
   
     // convert native result to dart side object
@@ -3886,7 +3965,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3898,7 +3976,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_SST_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_SST_batch', );
   
   
     // convert native result to dart side object
@@ -3906,7 +3984,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3918,7 +3995,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_ONESHOT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_ONESHOT_batch', );
   
   
     // convert native result to dart side object
@@ -3926,7 +4003,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3938,7 +4014,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::KEEP_ALIVE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::KEEP_ALIVE_batch', );
   
   
     // convert native result to dart side object
@@ -3946,7 +4022,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3958,7 +4033,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::IVW_AUDIO_PATH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::IVW_AUDIO_PATH_batch', );
   
   
     // convert native result to dart side object
@@ -3966,7 +4041,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3978,7 +4052,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_CATEGORY_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_CATEGORY_batch', );
   
   
     // convert native result to dart side object
@@ -3986,7 +4060,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3998,7 +4071,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_RESULT_LEVEL_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_RESULT_LEVEL_batch', );
   
   
     // convert native result to dart side object
@@ -4006,7 +4079,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4018,7 +4090,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_RESULT_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_RESULT_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -4026,7 +4098,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4038,7 +4109,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_AUDIO_PATH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_AUDIO_PATH_batch', );
   
   
     // convert native result to dart side object
@@ -4046,7 +4117,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4058,7 +4128,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_AUTO_TRACKING_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_AUTO_TRACKING_batch', );
   
   
     // convert native result to dart side object
@@ -4066,7 +4136,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4078,7 +4147,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::ISE_TRACK_TYPE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::ISE_TRACK_TYPE_batch', );
   
   
     // convert native result to dart side object
@@ -4086,7 +4155,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4098,7 +4166,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ALL_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ALL_batch', );
   
   
     // convert native result to dart side object
@@ -4106,7 +4174,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4118,7 +4185,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_TTS_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_TTS_batch', );
   
   
     // convert native result to dart side object
@@ -4126,7 +4193,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4138,7 +4204,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ASR_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_ASR_batch', );
   
   
     // convert native result to dart side object
@@ -4146,7 +4212,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4158,7 +4223,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::PLUS_LOCAL_IVW_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::PLUS_LOCAL_IVW_batch', );
   
   
     // convert native result to dart side object
@@ -4166,7 +4231,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4178,7 +4242,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_AUTH_ID_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_AUTH_ID_batch', );
   
   
     // convert native result to dart side object
@@ -4186,7 +4250,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4198,7 +4261,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SUB_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SUB_batch', );
   
   
     // convert native result to dart side object
@@ -4206,7 +4269,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4218,7 +4280,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SST_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SST_batch', );
   
   
     // convert native result to dart side object
@@ -4226,7 +4288,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4238,7 +4299,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_VCM_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_VCM_batch', );
   
   
     // convert native result to dart side object
@@ -4246,7 +4307,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4258,7 +4318,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_SCENES_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_SCENES_batch', );
   
   
     // convert native result to dart side object
@@ -4266,7 +4326,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4278,7 +4337,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_AFC_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_AFC_batch', );
   
   
     // convert native result to dart side object
@@ -4286,7 +4345,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4298,7 +4356,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_PATH_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_PATH_batch', );
   
   
     // convert native result to dart side object
@@ -4306,7 +4364,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4318,7 +4375,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_RGN_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_RGN_batch', );
   
   
     // convert native result to dart side object
@@ -4326,7 +4383,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4338,7 +4394,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_TSD_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_TSD_batch', );
   
   
     // convert native result to dart side object
@@ -4346,7 +4402,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4358,7 +4413,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_PTXT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_PTXT_batch', );
   
   
     // convert native result to dart side object
@@ -4366,7 +4421,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4378,7 +4432,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_PWDT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_PWDT_batch', );
   
   
     // convert native result to dart side object
@@ -4386,7 +4440,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4398,7 +4451,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_FIN_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_FIN_batch', );
   
   
     // convert native result to dart side object
@@ -4406,7 +4459,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4418,7 +4470,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_WTT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_WTT_batch', );
   
   
     // convert native result to dart side object
@@ -4426,7 +4478,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4438,7 +4489,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_FORMAT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_FORMAT_batch', );
   
   
     // convert native result to dart side object
@@ -4446,7 +4497,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4458,7 +4508,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::MFV_DATA_ENCODING_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::MFV_DATA_ENCODING_batch', );
   
   
     // convert native result to dart side object
@@ -4466,7 +4516,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4478,7 +4527,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SUB_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SUB_batch', );
   
   
     // convert native result to dart side object
@@ -4486,7 +4535,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4498,7 +4546,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_WFR_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_WFR_batch', );
   
   
     // convert native result to dart side object
@@ -4506,7 +4554,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4518,7 +4565,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SST_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SST_batch', );
   
   
     // convert native result to dart side object
@@ -4526,7 +4573,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4538,7 +4584,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_REG_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_REG_batch', );
   
   
     // convert native result to dart side object
@@ -4546,7 +4592,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4558,7 +4603,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_VERIFY_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_VERIFY_batch', );
   
   
     // convert native result to dart side object
@@ -4566,7 +4611,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4578,7 +4622,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_DETECT_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_DETECT_batch', );
   
   
     // convert native result to dart side object
@@ -4586,7 +4630,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4598,7 +4641,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_ALIGN_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_ALIGN_batch', );
   
   
     // convert native result to dart side object
@@ -4606,7 +4649,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4618,7 +4660,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_ATTR_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_ATTR_batch', );
   
   
     // convert native result to dart side object
@@ -4626,7 +4668,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4638,7 +4679,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_AUE_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_AUE_batch', );
   
   
     // convert native result to dart side object
@@ -4646,7 +4687,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4658,7 +4698,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_RAW_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_RAW_batch', );
   
   
     // convert native result to dart side object
@@ -4666,7 +4706,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4678,7 +4717,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_PSET_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_PSET_batch', );
   
   
     // convert native result to dart side object
@@ -4686,7 +4725,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4698,7 +4736,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_SKIP_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_SKIP_batch', );
   
   
     // convert native result to dart side object
@@ -4706,7 +4744,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4718,7 +4755,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_GID_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_GID_batch', );
   
   
     // convert native result to dart side object
@@ -4726,7 +4763,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4738,7 +4774,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_AUTH_ID_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_AUTH_ID_batch', );
   
   
     // convert native result to dart side object
@@ -4746,7 +4782,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -4758,7 +4793,7 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechConstant::FACE_DVC_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechConstant::FACE_DVC_batch', );
   
   
     // convert native result to dart side object
@@ -4766,7 +4801,6 @@ extension IFlySpeechConstant_Batch on List<IFlySpeechConstant> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

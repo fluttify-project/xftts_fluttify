@@ -6,11 +6,12 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin IFlySpeechplusDelegate on NSObject {
   
@@ -19,22 +20,13 @@ mixin IFlySpeechplusDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onCompleted__int(int errorCode) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onCompleted__int::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCompleted__int(int errorCode) {}
   
   @mustCallSuper
-  Future<void> onCompleted() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onCompleted::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCompleted() {}
   
 }
+

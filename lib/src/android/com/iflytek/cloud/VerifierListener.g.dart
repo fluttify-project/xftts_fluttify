@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_VerifierListener on java_lang_Object {
   
@@ -19,58 +20,25 @@ mixin com_iflytek_cloud_VerifierListener on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onVolumeChanged(int var1, Uint8List var2) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onVolumeChanged(int var1, Uint8List var2) {}
   
   @mustCallSuper
-  Future<void> onBeginOfSpeech() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onBeginOfSpeech::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onBeginOfSpeech() {}
   
   @mustCallSuper
-  Future<void> onEndOfSpeech() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onEndOfSpeech::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onEndOfSpeech() {}
   
   @mustCallSuper
-  Future<void> onResult(com_iflytek_cloud_VerifierResult var1) {
-    kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onResult::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onResult(com_iflytek_cloud_VerifierResult var1) {}
   
   @mustCallSuper
-  Future<void> onError(com_iflytek_cloud_SpeechError var1) {
-    kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onError(com_iflytek_cloud_SpeechError var1) {}
   
   @mustCallSuper
-  Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {
-    kNativeObjectPool.add(var4);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onEvent::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onEvent(int var1, int var2, int var3, android_os_Bundle var4) {}
   
 }
+

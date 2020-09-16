@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,11 +35,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   static Future<com_iflytek_cloud_FaceDetector> createDetector(android_content_Context var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector::createDetector([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector::createDetector([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::createDetector', {"var0": var0.refId, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::createDetector', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -51,7 +50,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -60,11 +58,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   static Future<com_iflytek_cloud_FaceDetector> getDetector() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector::getDetector([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector::getDetector([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::getDetector', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::getDetector', );
   
   
     // handle native call
@@ -75,7 +73,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -84,11 +81,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   Future<String> detectARGB(android_graphics_Bitmap var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::detectARGB([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::detectARGB([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::detectARGB', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::detectARGB', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -99,7 +96,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -108,11 +104,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   Future<String> detectGray(android_graphics_Bitmap var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::detectGray([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::detectGray([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::detectGray', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::detectGray', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -123,7 +119,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -132,11 +127,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   Future<String> trackNV21(Uint8List var1, int var2, int var3, int var4, int var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::trackNV21([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::trackNV21([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::trackNV21', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::trackNV21', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "__this__": this});
   
   
     // handle native call
@@ -147,7 +142,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -156,11 +150,11 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
   Future<bool> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.FaceDetector@$refId::destroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::destroy', {"__this__": this});
   
   
     // handle native call
@@ -171,7 +165,6 @@ class com_iflytek_cloud_FaceDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -196,15 +189,14 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::createDetector_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::createDetector_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -216,15 +208,14 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::getDetector_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::getDetector_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_FaceDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -236,7 +227,7 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::detectARGB_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::detectARGB_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -244,7 +235,6 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -256,7 +246,7 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::detectGray_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::detectGray_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -264,7 +254,6 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -276,7 +265,7 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::trackNV21_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::trackNV21_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -284,7 +273,6 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -296,7 +284,7 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.FaceDetector::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.FaceDetector::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -304,7 +292,6 @@ extension com_iflytek_cloud_FaceDetector_Batch on List<com_iflytek_cloud_FaceDet
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

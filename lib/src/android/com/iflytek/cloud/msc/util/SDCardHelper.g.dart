@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_SDCardHelper> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__', );
     final object = com_iflytek_cloud_msc_util_SDCardHelper()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_SDCardHelper__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_SDCardHelper__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_SDCardHelper> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_SDCardHelper()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
   static Future<bool> checkSDCardStatus() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus', );
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
   static Future<String> getExternalStorageDirectory() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory', );
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
   static Future<int> getAvailableSpace(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace', {"var0": var0});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
   static Future<int> getAvaliableMemSpace(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace', {"var0": var0});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class com_iflytek_cloud_msc_util_SDCardHelper extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -166,7 +158,7 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus_batch', );
   
   
     // convert native result to dart side object
@@ -174,7 +166,6 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -186,7 +177,7 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory_batch', );
   
   
     // convert native result to dart side object
@@ -194,7 +185,6 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -206,7 +196,7 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -214,7 +204,6 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -226,7 +215,7 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -234,7 +223,6 @@ extension com_iflytek_cloud_msc_util_SDCardHelper_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

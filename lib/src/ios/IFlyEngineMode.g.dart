@@ -4,7 +4,27 @@
 //////////////////////////////////////////////////////////
 
 enum IFlyEngineMode {
-  IFlyEngineModeAuto,
-  IFlyEngineModeMsc,
-  IFlyEngineModePlus
+  IFlyEngineModeAuto /* 0 */,
+  IFlyEngineModeMsc /* null */,
+  IFlyEngineModePlus /* null */
+}
+
+extension IFlyEngineModeToX on IFlyEngineMode {
+  int toValue() {
+    switch (this) {
+      case IFlyEngineMode.IFlyEngineModeAuto: return 0;
+      case IFlyEngineMode.IFlyEngineModeMsc: return IFlyEngineMode.IFlyEngineModeMsc.index + 0;
+      case IFlyEngineMode.IFlyEngineModePlus: return IFlyEngineMode.IFlyEngineModePlus.index + 0;
+      default: return 0;
+    }
+  }
+}
+
+extension IFlyEngineModeFromX on int {
+  IFlyEngineMode toIFlyEngineMode() {
+    switch (this) {
+      case 0: return IFlyEngineMode.IFlyEngineModeAuto;
+      default: return IFlyEngineMode.values[this + 0];
+    }
+  }
 }

@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import com.fluttify.xftts_fluttify.XfttsFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -31,6543 +33,6458 @@ public class SubHandler5 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.iflytek.cloud.SpeechUnderstander::writeAudio_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.writeAudio(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechUnderstander::stopUnderstanding_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.stopUnderstanding();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechUnderstander::cancel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.cancel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechUnderstander::setParameter_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.setParameter(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechUnderstander::getParameter_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getParameter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.SpeechUnderstander::destroy_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.SpeechUnderstander ref = (com.iflytek.cloud.SpeechUnderstander) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.destroy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::getLanguage_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.getLanguage();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::matchLanguage_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.matchLanguage(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::setTitle_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.cloud.resource.Resource.setTitle(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::getTitle_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.getTitle(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::getText_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.getText(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::setText_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.cloud.resource.Resource.setText(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::getErrorDescription_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.getErrorDescription(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::setErrorDescription_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.cloud.resource.Resource.setErrorDescription(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.resource.Resource::getErrorTag_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = com.iflytek.cloud.resource.Resource.getErrorTag(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::createDetector_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            put("com.iflytek.cloud.msc.util.DataUtil::sp2px_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    com.iflytek.cloud.FaceDetector result;
+                    Integer __result__ = null;
                     try {
-                        result = com.iflytek.cloud.FaceDetector.createDetector(var0, var1);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.sp2px(var0, var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.cloud.FaceDetector::getDetector_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::spModify_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    com.iflytek.cloud.FaceDetector result;
-                    try {
-                        result = com.iflytek.cloud.FaceDetector.getDetector();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::detectARGB_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.FaceDetector ref = (com.iflytek.cloud.FaceDetector) getHEAP().get(refId);
+            
             
                     // invoke native method
-                    String result;
+                    Integer __result__ = null;
                     try {
-                        result = ref.detectARGB(var1);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.spModify(var0, var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.cloud.FaceDetector::detectGray_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::splitBuffer_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.ArrayList<byte[]>> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.FaceDetector ref = (com.iflytek.cloud.FaceDetector) getHEAP().get(refId);
+            
             
                     // invoke native method
-                    String result;
+                    java.util.ArrayList<byte[]> __result__ = null;
                     try {
-                        result = ref.detectGray(var1);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.splitBuffer(var0, var1.intValue(), var2.intValue(), var3.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.cloud.FaceDetector::trackNV21_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__Uint8List_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    int var4 = (int) ((Map<String, Object>) args).get("var4");
-                    // jsonable arg
-                    int var5 = (int) ((Map<String, Object>) args).get("var5");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.FaceDetector ref = (com.iflytek.cloud.FaceDetector) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.trackNV21(var1, var2, var3, var4, var5);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::destroy_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.FaceDetector ref = (com.iflytek.cloud.FaceDetector) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.destroy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperResult::getResultString_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.WakeuperResult ref = (com.iflytek.cloud.WakeuperResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.WakeuperResult::getBuffer_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.WakeuperResult ref = (com.iflytek.cloud.WakeuperResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = ref.getBuffer();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.DataUploader::uploadData_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.cloud.SpeechListener var1 = (com.iflytek.cloud.SpeechListener) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.DataUploader ref = (com.iflytek.cloud.DataUploader) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.uploadData(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.RecognizerResult::getResultString_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.RecognizerResult ref = (com.iflytek.cloud.RecognizerResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.TranscripterResult::getResultString_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.TranscripterResult ref = (com.iflytek.cloud.TranscripterResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.cloud.Version::getVersion_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    String result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.cloud.Version.getVersion();
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getUTF8Bom(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.cloud.UnderstanderResult::getResultString_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.cloud.UnderstanderResult ref = (com.iflytek.cloud.UnderstanderResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MetaVAD::VADInitialize_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MetaVAD.VADInitialize(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MetaVAD::VADUninitialize_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MetaVAD.VADUninitialize();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MetaVAD::VADLoadResource_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MetaVAD.VADLoadResource(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MetaVAD::VADDelResource_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MetaVAD.VADDelResource(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MetaVAD::VADCreateSession_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADCreateSession(var0);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getUTF8Bom(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADDestroySession_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADDestroySession(var0);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getNativeByteArray(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADResetSession_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADResetSession(var0);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getNativeByteArray(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADAppendPCM_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    int var4 = (int) ((Map<String, Object>) args).get("var4");
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    String __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADAppendPCM(var0, var1, var2, var3, var4);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getStringFromNativeByteArray(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADGetSeg_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    String __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADGetSeg(var0);
+                        __result__ = com.iflytek.cloud.msc.util.DataUtil.getStringFromNativeByteArray(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADSetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::lightcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADSetParam(var0, var1, var2);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.lightcode(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch", (argsBatch, methodResult) -> {
-                List<Float> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::zip5xEncode_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    float result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADGetSentConfidence(var0);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.zip5xEncode(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    float jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD::VADResetSentence_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::zip5xDecode_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MetaVAD.VADResetSentence(var0);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.zip5xDecode(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.VAD::Initialize_batch", (argsBatch, methodResult) -> {
-                List<Long> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    long result;
-                    try {
-                        result = com.iflytek.msc.VAD.Initialize(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    long jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::Uninitialize_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.msc.VAD.Uninitialize(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::Reset_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.msc.VAD.Reset(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::AppendData_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.AppendData(var0, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::SetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.SetParam(var0, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::EndAudioData_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.EndAudioData(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::CalcVolumLevel_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // ref arg
-                    com.iflytek.msc.VAD.VadData var4 = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.CalcVolumLevel(var0, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::FetchData_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // ref arg
-                    com.iflytek.msc.VAD.VadData var2 = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.FetchData(var0, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.VAD::GetLastSpeechPos_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // ref arg
-                    com.iflytek.msc.VAD.VadData var2 = (com.iflytek.msc.VAD.VadData) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.VAD.GetLastSpeechPos(var0, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::loadLibrary_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.msc.AIMIC.loadLibrary(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::isLoaded_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.isLoaded();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::isValid_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.isValid();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::getHandler_batch", (argsBatch, methodResult) -> {
-                List<Long> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    long result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.getHandler();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    long jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICAudioWrite_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    int var4 = (int) ((Map<String, Object>) args).get("var4");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICAudioWrite(var0, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICResetEng_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICResetEng(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICDestroy_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICDestroy(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICSetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICSetParam(var0, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICGetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICGetParam(var0, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICGetVersion_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICGetVersion();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICDebugLog_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var0 = (boolean) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.msc.AIMIC.AIMICDebugLog(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.AIMIC::AIMICGetChannel_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.AIMIC.AIMICGetChannel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::isIflyVersion_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.msc.MSC.isIflyVersion();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::loadLibrary_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var0 = (String) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.msc.MSC.loadLibrary(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::isLoaded_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = com.iflytek.msc.MSC.isLoaded();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::DebugLog_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var0 = (boolean) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.DebugLog(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::SetLogLevel_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.SetLogLevel(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QTTSInit_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QTTSInit(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QTTSFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QTTSFini();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISRInit_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISRInit(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISRBuildGrammar_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    String var4 = (String) ((Map<String, Object>) args).get("var4");
-                    // jsonable arg
-                    Object var5 = (Object) ((Map<String, Object>) args).get("var5");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISRBuildGrammar(var0, var1, var2, var3, var4, var5);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISRUpdateLexicon_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    String var4 = (String) ((Map<String, Object>) args).get("var4");
-                    // jsonable arg
-                    Object var5 = (Object) ((Map<String, Object>) args).get("var5");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISRUpdateLexicon(var0, var1, var2, var3, var4, var5);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISRFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISRFini();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QHCRInit_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QHCRInit(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QHCRFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QHCRFini();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISVInit_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISVInit(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISVFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISVFini();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPLogin_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPLogin(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::UMSPLogin_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    Object var3 = (Object) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.UMSPLogin(var0, var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPSetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPSetParam(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPGetParam_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPGetParam(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPUploadData_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var4 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPUploadData(var0, var1, var2, var3, var4);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPDownloadData_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPDownloadData(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPDownload_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    Object var2 = (Object) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPDownload(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPSearch_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPSearch(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPLogOut_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPLogOut();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPRegisterNotify_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var0 = (String) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPRegisterNotify(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QMSPGetVersion_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    byte[] result;
-                    try {
-                        result = com.iflytek.msc.MSC.QMSPGetVersion(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISEInit_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISEInit(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QISEFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QISEFini();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QIVWResMerge_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QIVWResMerge(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QIVWGetResInfo_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    byte[] var1 = (byte[]) ((Map<String, Object>) args).get("var1");
-                    // ref arg
-                    com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = com.iflytek.msc.MSC.QIVWGetResInfo(var0, var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QIFDInit_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    Object var1 = (Object) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    try {
-                        com.iflytek.msc.MSC.QIFDInit(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.iflytek.msc.MSC::QIFDFacedetect_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            put("com.iflytek.cloud.msc.util.Encrypter::MD5_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.graphics.Bitmap var0 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    Object var2 = (Object) ((Map<String, Object>) args).get("var2");
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    byte[] result;
+                    String __result__ = null;
                     try {
-                        result = com.iflytek.msc.MSC.QIFDFacedetect(var0, var1, var2);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.MD5(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MSC::QIFDMultitracker_batch", (argsBatch, methodResult) -> {
-                List<byte[]> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::cut16MD5_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    byte[] var0 = (byte[]) ((Map<String, Object>) args).get("var0");
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    int var4 = (int) ((Map<String, Object>) args).get("var4");
-                    // jsonable arg
-                    int var5 = (int) ((Map<String, Object>) args).get("var5");
-                    // jsonable arg
-                    Object var6 = (Object) ((Map<String, Object>) args).get("var6");
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    byte[] result;
+                    String __result__ = null;
                     try {
-                        result = com.iflytek.msc.MSC.QIFDMultitracker(var0, var1, var2, var3, var4, var5, var6);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.cut16MD5(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    byte[] jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MSC::QIFDFini_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::getFileMd5_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-            
+                    // ref arg
+                    java.io.File var0 = (java.io.File) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    int result;
+                    String __result__ = null;
                     try {
-                        result = com.iflytek.msc.MSC.QIFDFini();
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.getFileMd5(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MSC::doARGB2Gray_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::encrypt_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.graphics.Bitmap var0 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var0"));
-                    // ref arg
-                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
             
                     // invoke native method
-                    boolean result;
+                    byte[] __result__ = null;
                     try {
-                        result = com.iflytek.msc.MSC.doARGB2Gray(var0, var1);
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.encrypt(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.msc.MetaVAD.Instance::a_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            put("com.iflytek.cloud.msc.util.Encrypter::intToByteArray_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-            
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.iflytek.msc.MetaVAD.Instance ref = (com.iflytek.msc.MetaVAD.Instance) getHEAP().get(refId);
+            
             
                     // invoke native method
+                    byte[] __result__ = null;
                     try {
-                        ref.a();
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.intToByteArray(var0.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
                             Log.d("Current HEAP: ", getHEAP().toString());
                         }
-                        methodResult.error(throwable.getMessage(), null, null);
+                        __methodResult__.error(throwable.getMessage(), null, null);
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_SpeechComponent__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_SpeechComponent__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_UtilityConfig__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UtilityConfig__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_WakeuperResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_WakeuperResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_VerifierResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_VerifierResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_RecognizerResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_RecognizerResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_Version__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_Version__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_UnderstanderResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UnderstanderResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_ErrorCode__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_ErrorCode__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.ErrorCode __obj__ = new com.iflytek.cloud.ErrorCode();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int");
-                }
-            
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                // create target object
-                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int__int", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int__int");
-                }
-            
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                // create target object
-                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_VerifierUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VerifierUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_ResourceUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_ResourceUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_AudioDetector_DetectorResult__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_Accelerometer__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_Accelerometer__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // create target object
-                com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_VolumeUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VolumeUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_FaceRequest__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_FaceRequest__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // create target object
-                com.iflytek.cloud.FaceRequest __obj__ = new com.iflytek.cloud.FaceRequest(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_IdentityResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_IdentityResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.IdentityResult __obj__ = new com.iflytek.cloud.IdentityResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapterSdk10__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_NetworkUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_NetworkUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_RSAUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_RSAUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_Encrypter__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_Encrypter__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AppInfoUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AppInfoUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.AppInfoUtil __obj__ = new com.iflytek.cloud.msc.util.AppInfoUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataLogger__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataLogger__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.DataLogger __obj__ = new com.iflytek.cloud.msc.util.DataLogger();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_SDCardHelper__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context");
-                }
-            
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // ref arg
-                android.content.Context var2 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context");
-                }
-            
-                // args
-                // jsonable arg
-                long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) args).get("var3");
-                // ref arg
-                android.content.Context var4 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
-            
-                // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var3, var4);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapter__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_PerfLogger__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_DebugLog__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_DebugLog__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_UniqueIDUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AESUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                // create target object
-                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_ist_IstSession__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_SpeechError__int__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_SpeechError__int__String");
-                }
-            
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                // create target object
-                com.iflytek.cloud.SpeechError __obj__ = new com.iflytek.cloud.SpeechError(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_SpeechError__int", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_SpeechError__int");
-                }
-            
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.SpeechError __obj__ = new com.iflytek.cloud.SpeechError(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataDownloader__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // create target object
-                com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_EvaluatorResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_EvaluatorResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_SpeechEvent__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_SpeechEvent__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.SpeechEvent __obj__ = new com.iflytek.cloud.SpeechEvent();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_WakeuperResult__String__byteArray", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_WakeuperResult__String__byteArray");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
-            
-                // create target object
-                com.iflytek.cloud.WakeuperResult __obj__ = new com.iflytek.cloud.WakeuperResult(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_WakeuperResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_WakeuperResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.WakeuperResult __obj__ = new com.iflytek.cloud.WakeuperResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_VerifierResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_VerifierResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.VerifierResult __obj__ = new com.iflytek.cloud.VerifierResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_DataUploader__android_content_Context", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataUploader__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // create target object
-                com.iflytek.cloud.DataUploader __obj__ = new com.iflytek.cloud.DataUploader(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_RecognizerResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_RecognizerResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.RecognizerResult __obj__ = new com.iflytek.cloud.RecognizerResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_TranscripterResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_TranscripterResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.TranscripterResult __obj__ = new com.iflytek.cloud.TranscripterResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_Version__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_Version__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.Version __obj__ = new com.iflytek.cloud.Version();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_UnderstanderResult__String", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_UnderstanderResult__String");
-                }
-            
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.UnderstanderResult __obj__ = new com.iflytek.cloud.UnderstanderResult(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_VAD_VadData__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_VAD_VadData__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.VAD.VadData __obj__ = new com.iflytek.msc.VAD.VadData();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSCSessionInfo__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.MSCSessionInfo __obj__ = new com.iflytek.msc.MSCSessionInfo();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_MetaVAD__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.MetaVAD __obj__ = new com.iflytek.msc.MetaVAD();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_VAD__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_VAD__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.VAD __obj__ = new com.iflytek.msc.VAD();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_AIMIC__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_AIMIC__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.AIMIC __obj__ = new com.iflytek.msc.AIMIC();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_MSC__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSC__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.MSC __obj__ = new com.iflytek.msc.MSC();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__", (args, methodResult) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD_Instance__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.msc.MetaVAD.Instance __obj__ = new com.iflytek.msc.MetaVAD.Instance();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                methodResult.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_SpeechComponent__String", (argsBatch, methodResult) -> {
+            // method
+            put("com.iflytek.cloud.msc.util.Encrypter::byteArrayToInt_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_UtilityConfig__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_WakeuperResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_VerifierResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_RecognizerResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_Version__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_UnderstanderResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_ErrorCode__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.ErrorCode __obj__ = new com.iflytek.cloud.ErrorCode();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                    // create target object
-                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int__int", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                    // create target object
-                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1, var2, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VerifierUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_ResourceUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_Accelerometer__android_content_Context", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
-                    // create target object
-                    com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    // ref
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.Encrypter.byteArrayToInt(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VolumeUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            // method
+            put("com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.FileDownloader> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_FaceRequest__android_content_Context", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
             
-                    // create target object
-                    com.iflytek.cloud.FaceRequest __obj__ = new com.iflytek.cloud.FaceRequest(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    // ref
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            
+                    // invoke native method
+                    com.iflytek.cloud.msc.util.FileDownloader __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.FileDownloader.getDownLoadManager(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_IdentityResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.IdentityResult __obj__ = new com.iflytek.cloud.IdentityResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_NetworkUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_DataUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_RSAUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_Encrypter__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AppInfoUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.AppInfoUtil __obj__ = new com.iflytek.cloud.msc.util.AppInfoUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_DataLogger__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.DataLogger __obj__ = new com.iflytek.cloud.msc.util.DataLogger();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_SDCardHelper__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // ref arg
-                    android.content.Context var2 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    int var3 = (int) ((Map<String, Object>) args).get("var3");
-                    // ref arg
-                    android.content.Context var4 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1, var3, var4);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapter__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_PerfLogger__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_DebugLog__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_UniqueIDUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AESUtil__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_HttpRequest__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    byte[] var3 = (byte[]) ((Map<String, Object>) args).get("var3");
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_ist_IstSession__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_SpeechError__int__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                    // create target object
-                    com.iflytek.cloud.SpeechError __obj__ = new com.iflytek.cloud.SpeechError(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_SpeechError__int", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.SpeechError __obj__ = new com.iflytek.cloud.SpeechError(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                methodResult.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_DataDownloader__android_content_Context", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+            // method
+            put("com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
             
-                    // create target object
-                    com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    // ref
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.FuncAdapter.CloseHardWareAccelerate(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_EvaluatorResult__String", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            // method
+            put("com.iflytek.cloud.msc.util.FuncAdapterSdk10::avoidSystemError_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
-                    // create target object
-                    com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    // ref
+                    com.iflytek.cloud.msc.util.FuncAdapterSdk10 __this__ = (com.iflytek.cloud.msc.util.FuncAdapterSdk10) ((Map<String, Object>) __args__).get("__this__");
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.avoidSystemError(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_SpeechEvent__", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            // method
+            put("com.iflytek.cloud.msc.util.FuncAdapterSdk10::CloseHardWareAccelerate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    // args
+                    // ref arg
+                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.FuncAdapterSdk10.CloseHardWareAccelerate(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpDownloadImpl::start_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    boolean var4 = (boolean) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __this__ = (com.iflytek.cloud.msc.util.http.HttpDownloadImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.start(var1, var2, var3, var4, var5);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpDownloadImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
             
             
-                    // create target object
-                    com.iflytek.cloud.SpeechEvent __obj__ = new com.iflytek.cloud.SpeechEvent();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __this__ = (com.iflytek.cloud.msc.util.http.HttpDownloadImpl) ((Map<String, Object>) __args__).get("__this__");
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String__byteArray", (argsBatch, methodResult) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    byte[] var2 = (byte[]) ((Map<String, Object>) args).get("var2");
             
-                    // create target object
-                    com.iflytek.cloud.WakeuperResult __obj__ = new com.iflytek.cloud.WakeuperResult(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __this__ = (com.iflytek.cloud.msc.util.http.HttpDownloadImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = __this__.getId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_WakeuperResult__String", (argsBatch, methodResult) -> {
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getType_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-                    }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
             
-                    // create target object
-                    com.iflytek.cloud.WakeuperResult __obj__ = new com.iflytek.cloud.WakeuperResult(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpDownloadImpl __this__ = (com.iflytek.cloud.msc.util.http.HttpDownloadImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__result__);
                 }
             
-                methodResult.success(__resultList__);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpTransListener::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+                    // ref arg
+                    String var6 = (String) ((Map<String, Object>) __args__).get("var6");
+                    // ref arg
+                    String var7 = (String) ((Map<String, Object>) __args__).get("var7");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpTransListener __this__ = (com.iflytek.cloud.msc.util.http.HttpTransListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.onStart(var1.longValue(), var3, var4, var5, var6, var7);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpTransListener::onBuffer_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpTransListener __this__ = (com.iflytek.cloud.msc.util.http.HttpTransListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.onBuffer(var1, var2.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpTransListener::onFinish_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpTransListener __this__ = (com.iflytek.cloud.msc.util.http.HttpTransListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onFinish();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpTransListener::onError_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpTransListener __this__ = (com.iflytek.cloud.msc.util.http.HttpTransListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onError(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.http.HttpTransListener::onCancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.http.HttpTransListener __this__ = (com.iflytek.cloud.msc.util.http.HttpTransListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onCancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::setHttpbuf_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.lang.Object var1 = (java.lang.Object) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setHttpbuf(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::getHttpbuf_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.lang.Object> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.lang.Object __result__ = null;
+                    try {
+                        __result__ = __this__.getHttpbuf();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::setConectType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setConectType(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::setRequest__String__String__Uint8List_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRequest(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::setRequest__String__String__Uint8List__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRequest(var1, var2, var3, var4);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::setTimeOut_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setTimeOut(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::run_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.run();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::appendData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.appendData(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::runPost_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.msc.util.HttpRequest __this__ = (com.iflytek.cloud.msc.util.HttpRequest) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.runPost();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.HttpRequest::hasHttpError_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.HttpRequest.hasHttpError(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::setTag_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.setTag(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogD__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogD(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogD__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogD(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogI__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogI(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogI__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogI(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogE__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogE(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogE__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogE(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogS__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogS(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogS__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogS(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogW__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogW(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::LogW__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.LogW(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::getShowLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.log.DebugLog.getShowLog();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::setShowLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.setShowLog(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::getLogLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.log.DebugLog.getLogLevel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::setLogLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // enum arg
+                    com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL var0 = com.iflytek.cloud.msc.util.log.DebugLog.LOG_LEVEL.values()[(int) ((Map<String, Object>) __args__).get("var0")];
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.setLogLevel(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.DebugLog::updateJniLogStatus_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.DebugLog.updateJniLogStatus();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.PerfLogger::setLogSaved_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.PerfLogger.setLogSaved(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.PerfLogger::saveLogFile_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.PerfLogger.saveLogFile(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.PerfLogger::clear_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.PerfLogger.clear();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.PerfLogger::appendInfo_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.PerfLogger.appendInfo(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.log.PerfLogger::appendInfoByValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.log.PerfLogger.appendInfoByValue(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.NetworkUtil::isWifiConnect_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.NetworkUtil.isWifiConnect(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.NetworkUtil::checkNetwork_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.NetworkUtil.checkNetwork(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.NetworkUtil::isNetworkAvailable_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.NetworkUtil.isNetworkAvailable(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.NetworkUtil::ip2int_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.NetworkUtil.ip2int(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.NetworkUtil::int2ip_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.NetworkUtil.int2ip(var0.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.SDCardHelper::checkSDCardStatus_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.SDCardHelper.checkSDCardStatus();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.SDCardHelper::getExternalStorageDirectory_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.SDCardHelper.getExternalStorageDirectory();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.SDCardHelper::getAvailableSpace_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.SDCardHelper.getAvailableSpace(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.SDCardHelper::getAvaliableMemSpace_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.SDCardHelper.getAvaliableMemSpace(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.msc.util.UniqueIDUtil.getUniqueID(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.msc.util.UniqueIDUtil.cleanRecord(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.RecognizerResult::getResultString_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.RecognizerResult __this__ = (com.iflytek.cloud.RecognizerResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordBuffer_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder.PcmRecordListener __this__ = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onRecordBuffer(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onError_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.cloud.SpeechError var1 = (com.iflytek.cloud.SpeechError) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder.PcmRecordListener __this__ = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onError(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordStarted_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder.PcmRecordListener __this__ = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onRecordStarted(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder.PcmRecordListener::onRecordReleased_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder.PcmRecordListener __this__ = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onRecordReleased();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder::stopRecord_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder __this__ = (com.iflytek.cloud.record.PcmRecorder) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopRecord(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder::startRecording_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.cloud.record.PcmRecorder.PcmRecordListener var1 = (com.iflytek.cloud.record.PcmRecorder.PcmRecordListener) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder __this__ = (com.iflytek.cloud.record.PcmRecorder) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.startRecording(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.record.PcmRecorder::run_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.record.PcmRecorder __this__ = (com.iflytek.cloud.record.PcmRecorder) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.run();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::getLanguage_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.getLanguage();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::matchLanguage_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.matchLanguage(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::setTitle_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.resource.Resource.setTitle(var0.intValue(), var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::getTitle_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.getTitle(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::getText_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.getText(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::setText_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.resource.Resource.setText(var0.intValue(), var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::getErrorDescription_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.getErrorDescription(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::setErrorDescription_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.resource.Resource.setErrorDescription(var0.intValue(), var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.resource.Resource::getErrorTag_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.resource.Resource.getErrorTag(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::setLogLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // enum arg
+                    com.iflytek.cloud.Setting.LOG_LEVEL var0 = com.iflytek.cloud.Setting.LOG_LEVEL.values()[(int) ((Map<String, Object>) __args__).get("var0")];
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.Setting.setLogLevel(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::getLogLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.Setting.LOG_LEVEL> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.Setting.LOG_LEVEL __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.Setting.getLogLevel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::setLogPath_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.Setting.setLogPath(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::getLogPath_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.Setting.getLogPath();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::setShowLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.Setting.setShowLog(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::getShowLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.Setting.getShowLog();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::setSaveTestLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.Setting.setSaveTestLog(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::getSaveTestLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.Setting.getSaveTestLog();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::setLocationEnable_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.cloud.Setting.setLocationEnable(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.Setting::getLocationEnable_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.Setting.getLocationEnable();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::getVerifier_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.SpeakerVerifier> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.SpeakerVerifier __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.SpeakerVerifier.getVerifier();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::generatePassword_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.generatePassword(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::isListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::setParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeakerVerifier::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeakerVerifier __this__ = (com.iflytek.cloud.SpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceDetectorImpl::detectARGB_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __this__ = (com.iflytek.cloud.speech.impl.FaceDetectorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.detectARGB(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceDetectorImpl::detectGray_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __this__ = (com.iflytek.cloud.speech.impl.FaceDetectorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.detectGray(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceDetectorImpl::trackNV21_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __this__ = (com.iflytek.cloud.speech.impl.FaceDetectorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.trackNV21(var1, var2.intValue(), var3.intValue(), var4.intValue(), var5.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceDetectorImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __this__ = (com.iflytek.cloud.speech.impl.FaceDetectorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceRequestImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceRequestImpl __this__ = (com.iflytek.cloud.speech.impl.FaceRequestImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.FaceRequestImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.FaceRequestImpl __this__ = (com.iflytek.cloud.speech.impl.FaceRequestImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.IdentityVerifierImpl::pushSessionInfo_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.IdentityVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pushSessionInfo(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.IdentityVerifierImpl::writeData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.IdentityVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeData(var1, var2, var3, var4.intValue(), var5.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.IdentityVerifierImpl::stopWrite_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.IdentityVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopWrite(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.IdentityVerifierImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.IdentityVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.IdentityVerifierImpl::isWorking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.IdentityVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isWorking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeakerVerifierImpl::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.SpeakerVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeakerVerifierImpl::generatePassword_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.SpeakerVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.generatePassword(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeakerVerifierImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.SpeakerVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeakerVerifierImpl::isListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __this__ = (com.iflytek.cloud.speech.impl.SpeakerVerifierImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl::stopEvaluating_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopEvaluating();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl::isEvaluating_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isEvaluating();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechRecognizerImpl::pushSessionInfo_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechRecognizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pushSessionInfo(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechRecognizerImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechRecognizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechRecognizerImpl::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechRecognizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechRecognizerImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechRecognizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechRecognizerImpl::isListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechRecognizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::onBufferReady_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onBufferReady();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::pauseSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pauseSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::replaySpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.replaySpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::resumeSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.resumeSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::isSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::getState_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getState();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::stopSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopSpeaking(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::getDownflowBytes_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getDownflowBytes(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::getUpflowBytes_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getUpflowBytes(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::pushSessionInfo_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pushSessionInfo(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::stopTranscripting_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopTranscripting();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::isTranscripting_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isTranscripting();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::getSessionID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getSessionID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::getUploadBytes_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getUploadBytes();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::getSyncID_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getSyncID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechTranscripterImpl::getAudioPath_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechTranscripterImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAudioPath();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::createUnderstander_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl.createUnderstander(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::getUnderstander_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl.getUnderstander();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::isUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isUnderstanding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::stopUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopUnderstanding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::setParameter__String__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.TextUnderstanderImpl::isUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.TextUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isUnderstanding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.TextUnderstanderImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.TextUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.TextUnderstanderImpl::setParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.TextUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.TextUnderstanderImpl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.TextUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.TextUnderstanderImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __this__ = (com.iflytek.cloud.speech.impl.TextUnderstanderImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::restartWorking__String_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.restartWorking(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.speech.impl.VoiceWakeuperImpl::isListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __this__ = (com.iflytek.cloud.speech.impl.VoiceWakeuperImpl) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechError::getErrorCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechError __this__ = (com.iflytek.cloud.SpeechError) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getErrorCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechError::getErrorDescription_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechError __this__ = (com.iflytek.cloud.SpeechError) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getErrorDescription();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechError::getHtmlDescription_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechError __this__ = (com.iflytek.cloud.SpeechError) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getHtmlDescription(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechError::getPlainDescription_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechError __this__ = (com.iflytek.cloud.SpeechError) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getPlainDescription(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::getEvaluator_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.SpeechEvaluator> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.SpeechEvaluator __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.SpeechEvaluator.getEvaluator();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::isEvaluating_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isEvaluating();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::stopEvaluating_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopEvaluating();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::setParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechEvaluator::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechEvaluator __this__ = (com.iflytek.cloud.SpeechEvaluator) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::getRecognizer_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.SpeechRecognizer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.SpeechRecognizer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.SpeechRecognizer.getRecognizer();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::isListening_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isListening();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::cancel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.cancel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::setParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechRecognizer::destroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechRecognizer __this__ = (com.iflytek.cloud.SpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.destroy();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::getSynthesizer_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.SpeechSynthesizer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.iflytek.cloud.SpeechSynthesizer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.cloud.SpeechSynthesizer.getSynthesizer();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::pauseSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.pauseSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::resumeSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.resumeSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::stopSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.stopSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::isSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.isSpeaking();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::setParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.setParameter(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.cloud.SpeechSynthesizer::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.iflytek.cloud.SpeechSynthesizer __this__ = (com.iflytek.cloud.SpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getParameter(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
         }};
     }

@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_util_ContactManager_ContactListener on java_lang_Object {
   
@@ -19,13 +20,10 @@ mixin com_iflytek_cloud_util_ContactManager_ContactListener on java_lang_Object 
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onContactQueryFinish(String var1, bool var2) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onContactQueryFinish::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onContactQueryFinish(String var1, bool var2) {}
   
 }
+

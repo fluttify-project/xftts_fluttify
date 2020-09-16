@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_msc_MSC> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_msc_MSC__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_msc_MSC__', );
     final object = com_iflytek_msc_MSC()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MSC__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MSC__', {'length': length});
   
     final List<com_iflytek_msc_MSC> typedResult = resultBatch.map((result) => com_iflytek_msc_MSC()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<bool> isIflyVersion() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::isIflyVersion([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::isIflyVersion([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::isIflyVersion', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::isIflyVersion', );
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<bool> loadLibrary(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::loadLibrary([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::loadLibrary([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::loadLibrary', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::loadLibrary', {"var0": var0});
   
   
     // handle native call
@@ -93,7 +88,29 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
+      return __return__;
+    }
+  }
+  
+  
+  static Future<bool> load(String var0) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::load([\'var0\':$var0])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::load', {"var0": var0});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
       return __return__;
     }
   }
@@ -102,11 +119,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<bool> isLoaded() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::isLoaded([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::isLoaded([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::isLoaded', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::isLoaded', );
   
   
     // handle native call
@@ -117,7 +134,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +142,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> DebugLog(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::DebugLog([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::DebugLog([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::DebugLog', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::DebugLog', {"var0": var0});
   
   
     // handle native call
@@ -141,7 +157,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +165,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> SetLogLevel(int var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::SetLogLevel([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::SetLogLevel([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::SetLogLevel', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::SetLogLevel', {"var0": var0});
   
   
     // handle native call
@@ -165,7 +180,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -174,11 +188,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QTTSInit(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QTTSInit([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QTTSInit([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QTTSInit', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QTTSInit', {"var0": var0});
   
   
     // handle native call
@@ -189,7 +203,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -198,11 +211,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QTTSFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QTTSFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QTTSFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QTTSFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QTTSFini', );
   
   
     // handle native call
@@ -213,7 +226,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -222,11 +234,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISRInit(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISRInit([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISRInit([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRInit', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRInit', {"var0": var0});
   
   
     // handle native call
@@ -237,7 +249,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -246,11 +257,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISRBuildGrammar(Uint8List var0, Uint8List var1, int var2, Uint8List var3, String var4, Object var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISRBuildGrammar([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISRBuildGrammar([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRBuildGrammar', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRBuildGrammar', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
   
   
     // handle native call
@@ -261,7 +272,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -270,11 +280,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISRUpdateLexicon(Uint8List var0, Uint8List var1, int var2, Uint8List var3, String var4, Object var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISRUpdateLexicon([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISRUpdateLexicon([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRUpdateLexicon', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRUpdateLexicon', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
   
   
     // handle native call
@@ -285,7 +295,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -294,11 +303,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISRFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISRFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISRFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRFini', );
   
   
     // handle native call
@@ -309,7 +318,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,11 +326,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QHCRInit(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QHCRInit([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QHCRInit([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QHCRInit', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QHCRInit', {"var0": var0});
   
   
     // handle native call
@@ -333,7 +341,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -342,11 +349,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QHCRFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QHCRFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QHCRFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QHCRFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QHCRFini', );
   
   
     // handle native call
@@ -357,7 +364,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -366,11 +372,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISVInit(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISVInit([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISVInit([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISVInit', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISVInit', {"var0": var0});
   
   
     // handle native call
@@ -381,7 +387,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -390,11 +395,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISVFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISVFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISVFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISVFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISVFini', );
   
   
     // handle native call
@@ -405,7 +410,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -414,11 +418,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPLogin(Uint8List var0, Uint8List var1, Uint8List var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPLogin([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPLogin([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPLogin', {"var0": var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPLogin', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -429,7 +433,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -438,11 +441,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> UMSPLogin(Uint8List var0, Uint8List var1, Uint8List var2, Object var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::UMSPLogin([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::UMSPLogin([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::UMSPLogin', {"var0": var0, "var1": var1, "var2": var2, "var3": var3});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::UMSPLogin', {"var0": var0, "var1": var1, "var2": var2, "var3": var3});
   
   
     // handle native call
@@ -453,7 +456,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -462,11 +464,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPSetParam(Uint8List var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPSetParam([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPSetParam([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPSetParam', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPSetParam', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -477,7 +479,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -486,11 +487,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPGetParam(Uint8List var0, com_iflytek_msc_MSCSessionInfo var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPGetParam([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPGetParam([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPGetParam', {"var0": var0, "var1": var1.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPGetParam', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -501,7 +502,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -510,11 +510,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QMSPUploadData(Uint8List var0, Uint8List var1, int var2, Uint8List var3, com_iflytek_msc_MSCSessionInfo var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPUploadData([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPUploadData([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPUploadData', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPUploadData', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4});
   
   
     // handle native call
@@ -525,7 +525,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -534,11 +533,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QMSPDownloadData(Uint8List var0, com_iflytek_msc_MSCSessionInfo var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPDownloadData([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPDownloadData([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPDownloadData', {"var0": var0, "var1": var1.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPDownloadData', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -549,7 +548,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -558,11 +556,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPDownload(Uint8List var0, Uint8List var1, Object var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPDownload([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPDownload([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPDownload', {"var0": var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPDownload', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -573,7 +571,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -582,11 +579,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QMSPSearch(Uint8List var0, Uint8List var1, com_iflytek_msc_MSCSessionInfo var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPSearch([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPSearch([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPSearch', {"var0": var0, "var1": var1, "var2": var2.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPSearch', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -597,7 +594,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -606,11 +602,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPLogOut() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPLogOut([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPLogOut([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPLogOut', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPLogOut', );
   
   
     // handle native call
@@ -621,7 +617,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -630,11 +625,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QMSPRegisterNotify(String var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPRegisterNotify([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPRegisterNotify([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPRegisterNotify', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPRegisterNotify', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -645,7 +640,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -654,11 +648,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QMSPGetVersion(Uint8List var0, com_iflytek_msc_MSCSessionInfo var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QMSPGetVersion([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QMSPGetVersion([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPGetVersion', {"var0": var0, "var1": var1.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPGetVersion', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -669,7 +663,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -678,11 +671,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISEInit(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISEInit([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISEInit([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISEInit', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISEInit', {"var0": var0});
   
   
     // handle native call
@@ -693,7 +686,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -702,11 +694,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QISEFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QISEFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QISEFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISEFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISEFini', );
   
   
     // handle native call
@@ -717,7 +709,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -726,11 +717,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QIVWResMerge(Uint8List var0, Uint8List var1, Uint8List var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIVWResMerge([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIVWResMerge([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIVWResMerge', {"var0": var0, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIVWResMerge', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -741,7 +732,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -750,11 +740,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QIVWGetResInfo(Uint8List var0, Uint8List var1, com_iflytek_msc_MSCSessionInfo var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIVWGetResInfo([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIVWGetResInfo([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIVWGetResInfo', {"var0": var0, "var1": var1, "var2": var2.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIVWGetResInfo', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -765,7 +755,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -774,11 +763,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<void> QIFDInit(Uint8List var0, Object var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIFDInit([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIFDInit([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDInit', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDInit', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -789,7 +778,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -798,11 +786,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QIFDFacedetect(android_graphics_Bitmap var0, int var1, Object var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIFDFacedetect([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIFDFacedetect([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDFacedetect', {"var0": var0.refId, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDFacedetect', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -813,7 +801,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -822,11 +809,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<Uint8List> QIFDMultitracker(Uint8List var0, int var1, int var2, int var3, int var4, int var5, Object var6) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIFDMultitracker([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIFDMultitracker([\'var0\':$var0, \'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDMultitracker', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "var6": var6});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDMultitracker', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "var6": var6});
   
   
     // handle native call
@@ -837,7 +824,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -846,11 +832,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<int> QIFDFini() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::QIFDFini([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::QIFDFini([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDFini', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDFini', );
   
   
     // handle native call
@@ -861,7 +847,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -870,11 +855,11 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
   static Future<bool> doARGB2Gray(android_graphics_Bitmap var0, android_graphics_Bitmap var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MSC::doARGB2Gray([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MSC::doARGB2Gray([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::doARGB2Gray', {"var0": var0.refId, "var1": var1.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::doARGB2Gray', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -885,7 +870,6 @@ class com_iflytek_msc_MSC extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -910,7 +894,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::isIflyVersion_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::isIflyVersion_batch', );
   
   
     // convert native result to dart side object
@@ -918,7 +902,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -930,7 +913,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::loadLibrary_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::loadLibrary_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -938,7 +921,25 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<bool>> load_batch(List<String> var0) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::load_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
       return typedResult;
     }
   }
@@ -950,7 +951,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::isLoaded_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::isLoaded_batch', );
   
   
     // convert native result to dart side object
@@ -958,7 +959,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -970,7 +970,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::DebugLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::DebugLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -978,7 +978,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -990,7 +989,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::SetLogLevel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::SetLogLevel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -998,7 +997,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1010,7 +1008,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QTTSInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QTTSInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1018,7 +1016,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1030,7 +1027,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QTTSFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QTTSFini_batch', );
   
   
     // convert native result to dart side object
@@ -1038,7 +1035,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1050,7 +1046,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1058,7 +1054,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1070,7 +1065,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRBuildGrammar_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRBuildGrammar_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1078,7 +1073,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1090,7 +1084,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRUpdateLexicon_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRUpdateLexicon_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1098,7 +1092,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1110,7 +1103,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISRFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISRFini_batch', );
   
   
     // convert native result to dart side object
@@ -1118,7 +1111,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1130,7 +1122,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QHCRInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QHCRInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1138,7 +1130,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1150,7 +1141,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QHCRFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QHCRFini_batch', );
   
   
     // convert native result to dart side object
@@ -1158,7 +1149,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1170,7 +1160,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISVInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISVInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1178,7 +1168,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1190,7 +1179,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISVFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISVFini_batch', );
   
   
     // convert native result to dart side object
@@ -1198,7 +1187,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1210,7 +1198,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPLogin_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPLogin_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1218,7 +1206,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1230,7 +1217,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::UMSPLogin_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::UMSPLogin_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1238,7 +1225,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1250,7 +1236,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPSetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPSetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1258,7 +1244,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1270,7 +1255,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPGetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPGetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1278,7 +1263,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1290,7 +1274,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPUploadData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPUploadData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1298,7 +1282,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1310,7 +1293,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPDownloadData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPDownloadData_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1318,7 +1301,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1330,7 +1312,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPDownload_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPDownload_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1338,7 +1320,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1350,7 +1331,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPSearch_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPSearch_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1358,7 +1339,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1370,7 +1350,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPLogOut_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPLogOut_batch', );
   
   
     // convert native result to dart side object
@@ -1378,7 +1358,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1390,7 +1369,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPRegisterNotify_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPRegisterNotify_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1398,7 +1377,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1410,7 +1388,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QMSPGetVersion_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QMSPGetVersion_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1418,7 +1396,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1430,7 +1407,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISEInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISEInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1438,7 +1415,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1450,7 +1426,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QISEFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QISEFini_batch', );
   
   
     // convert native result to dart side object
@@ -1458,7 +1434,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1470,7 +1445,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIVWResMerge_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIVWResMerge_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1478,7 +1453,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1490,7 +1464,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIVWGetResInfo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIVWGetResInfo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1498,7 +1472,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1510,7 +1483,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDInit_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1518,7 +1491,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1530,7 +1502,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDFacedetect_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDFacedetect_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1538,7 +1510,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1550,7 +1521,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDMultitracker_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDMultitracker_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1558,7 +1529,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }
@@ -1570,7 +1540,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::QIFDFini_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::QIFDFini_batch', );
   
   
     // convert native result to dart side object
@@ -1578,7 +1548,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1590,7 +1559,7 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MSC::doARGB2Gray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MSC::doARGB2Gray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1598,7 +1567,6 @@ extension com_iflytek_msc_MSC_Batch on List<com_iflytek_msc_MSC> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

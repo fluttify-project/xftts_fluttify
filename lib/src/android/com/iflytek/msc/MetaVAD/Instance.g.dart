@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_msc_MetaVAD_Instance extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_msc_MetaVAD_Instance> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__', );
     final object = com_iflytek_msc_MetaVAD_Instance()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_msc_MetaVAD_Instance extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MetaVAD_Instance__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MetaVAD_Instance__', {'length': length});
   
     final List<com_iflytek_msc_MetaVAD_Instance> typedResult = resultBatch.map((result) => com_iflytek_msc_MetaVAD_Instance()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,76 +39,95 @@ class com_iflytek_msc_MetaVAD_Instance extends java_lang_Object  {
 
   //region getters
   Future<int> get_handle() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_handle", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_handle", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_rate() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_rate", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_rate", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_begin() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_begin", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_begin", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_end() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_end", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_end", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_seg() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_seg", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_seg", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_volume() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_volume", {'refId': refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_volume", {'__this__': this});
+    return __result__ == null ? null : (__result__);
+  }
   
-    return __result__;
+  static Future<int> get_static_INVALID_HANDLE() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE", );
+    return __result__ == null ? null : (__result__);
+  }
+  
+  static Future<int> get_static_SEG_NONE() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE", );
+    return __result__ == null ? null : (__result__);
+  }
+  
+  static Future<int> get_static_SEG_FIRST() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST", );
+    return __result__ == null ? null : (__result__);
+  }
+  
+  static Future<int> get_static_SEG() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG", );
+    return __result__ == null ? null : (__result__);
+  }
+  
+  static Future<int> get_static_SEG_LAST() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST", );
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_handle(int handle) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_handle', {'refId': refId, "handle": handle});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_handle', <String, dynamic>{'__this__': this, "handle": handle});
   
   
   }
   
   Future<void> set_rate(int rate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_rate', {'refId': refId, "rate": rate});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_rate', <String, dynamic>{'__this__': this, "rate": rate});
   
   
   }
   
   Future<void> set_begin(int begin) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_begin', {'refId': refId, "begin": begin});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_begin', <String, dynamic>{'__this__': this, "begin": begin});
   
   
   }
   
   Future<void> set_end(int end) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_end', {'refId': refId, "end": end});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_end', <String, dynamic>{'__this__': this, "end": end});
   
   
   }
   
   Future<void> set_seg(int seg) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_seg', {'refId': refId, "seg": seg});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_seg', <String, dynamic>{'__this__': this, "seg": seg});
   
   
   }
   
   Future<void> set_volume(int volume) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_volume', {'refId': refId, "volume": volume});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_volume', <String, dynamic>{'__this__': this, "volume": volume});
   
   
   }
@@ -120,29 +135,6 @@ class com_iflytek_msc_MetaVAD_Instance extends java_lang_Object  {
   //endregion
 
   //region methods
-  
-  Future<void> a() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD.Instance@$refId::a([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::a', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
   
   //endregion
 }
@@ -150,44 +142,79 @@ class com_iflytek_msc_MetaVAD_Instance extends java_lang_Object  {
 extension com_iflytek_msc_MetaVAD_Instance_Batch on List<com_iflytek_msc_MetaVAD_Instance> {
   //region getters
   Future<List<int>> get_handle_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_handle_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_handle_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_rate_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_rate_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_rate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_begin_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_begin_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_begin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_end_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_end_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_end_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_seg_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_seg_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_seg_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_volume_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_volume_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_volume_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_INVALID_HANDLE_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SEG_NONE_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SEG_FIRST_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SEG_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SEG_LAST_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -195,37 +222,37 @@ extension com_iflytek_msc_MetaVAD_Instance_Batch on List<com_iflytek_msc_MetaVAD
 
   //region setters
   Future<void> set_handle_batch(List<int> handle) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_handle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "handle": handle[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_handle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "handle": handle[__i__]}]);
   
   
   }
   
   Future<void> set_rate_batch(List<int> rate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_rate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "rate": rate[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_rate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "rate": rate[__i__]}]);
   
   
   }
   
   Future<void> set_begin_batch(List<int> begin) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_begin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "begin": begin[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_begin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "begin": begin[__i__]}]);
   
   
   }
   
   Future<void> set_end_batch(List<int> end) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_end_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "end": end[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_end_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "end": end[__i__]}]);
   
   
   }
   
   Future<void> set_seg_batch(List<int> seg) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_seg_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "seg": seg[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_seg_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "seg": seg[__i__]}]);
   
   
   }
   
   Future<void> set_volume_batch(List<int> volume) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_volume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "volume": volume[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.iflytek.msc.MetaVAD.Instance::set_volume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "volume": volume[__i__]}]);
   
   
   }
@@ -233,25 +260,6 @@ extension com_iflytek_msc_MetaVAD_Instance_Batch on List<com_iflytek_msc_MetaVAD
   //endregion
 
   //region methods
-  
-  Future<List<void>> a_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD.Instance::a_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
   
   //endregion
 }
