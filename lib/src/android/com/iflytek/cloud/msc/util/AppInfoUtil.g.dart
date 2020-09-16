@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -41,10 +40,8 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_AppInfoUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_AppInfoUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_AppInfoUtil__', );
     final object = com_iflytek_cloud_msc_util_AppInfoUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -52,10 +49,9 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AppInfoUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AppInfoUtil__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_AppInfoUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_AppInfoUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -74,11 +70,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> getCarrier(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier', {"var0": var0});
   
   
     // handle native call
@@ -89,7 +85,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -98,11 +93,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> getMac(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getMac([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getMac([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getMac', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getMac', {"var0": var0});
   
   
     // handle native call
@@ -113,7 +108,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -122,11 +116,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> getBrowserUserAgent(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent', {"var0": var0});
   
   
     // handle native call
@@ -137,7 +131,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -146,11 +139,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> getDeviceType(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType', {"var0": var0});
   
   
     // handle native call
@@ -161,7 +154,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -170,11 +162,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> checkAndReplaceIllegalSymbols(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols', {"var0": var0});
   
   
     // handle native call
@@ -185,7 +177,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -194,11 +185,11 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
   static Future<String> getActivityMsg(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg', {"var0": var0});
   
   
     // handle native call
@@ -209,7 +200,6 @@ class com_iflytek_cloud_msc_util_AppInfoUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -234,7 +224,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -242,7 +232,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -254,7 +243,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getMac_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getMac_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -262,7 +251,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -274,7 +262,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -282,7 +270,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -294,7 +281,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -302,7 +289,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -314,7 +300,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -322,7 +308,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -334,7 +319,7 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -342,7 +327,6 @@ extension com_iflytek_cloud_msc_util_AppInfoUtil_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

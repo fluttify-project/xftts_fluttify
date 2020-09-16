@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -24,6 +23,10 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   //endregion
 
   //region getters
+  static Future<String> get_static_a() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.Setting::get_a", );
+    return __result__ == null ? null : (__result__);
+  }
   
   //endregion
 
@@ -36,11 +39,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<void> setLogLevel(com_iflytek_cloud_Setting_LOG_LEVEL var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::setLogLevel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::setLogLevel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLogLevel', {"var0": var0.index});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLogLevel', {"var0": var0.toValue()});
   
   
     // handle native call
@@ -51,7 +54,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -60,11 +62,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<com_iflytek_cloud_Setting_LOG_LEVEL> getLogLevel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::getLogLevel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::getLogLevel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLogLevel', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLogLevel', );
   
   
     // handle native call
@@ -74,8 +76,7 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_iflytek_cloud_Setting_LOG_LEVEL.values[__result__];
-    
+      final __return__ = (__result__ as int).tocom_iflytek_cloud_Setting_LOG_LEVEL();
       return __return__;
     }
   }
@@ -84,11 +85,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<void> setLogPath(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::setLogPath([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::setLogPath([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLogPath', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLogPath', {"var0": var0});
   
   
     // handle native call
@@ -99,7 +100,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -108,11 +108,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<String> getLogPath() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::getLogPath([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::getLogPath([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLogPath', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLogPath', );
   
   
     // handle native call
@@ -123,7 +123,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -132,11 +131,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<void> setShowLog(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::setShowLog([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::setShowLog([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setShowLog', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setShowLog', {"var0": var0});
   
   
     // handle native call
@@ -147,7 +146,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -156,11 +154,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<bool> getShowLog() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::getShowLog([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::getShowLog([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getShowLog', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getShowLog', );
   
   
     // handle native call
@@ -171,7 +169,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -180,11 +177,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<void> setSaveTestLog(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::setSaveTestLog([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::setSaveTestLog([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setSaveTestLog', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setSaveTestLog', {"var0": var0});
   
   
     // handle native call
@@ -195,7 +192,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -204,11 +200,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<bool> getSaveTestLog() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::getSaveTestLog([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::getSaveTestLog([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getSaveTestLog', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getSaveTestLog', );
   
   
     // handle native call
@@ -219,7 +215,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -228,11 +223,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<void> setLocationEnable(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::setLocationEnable([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::setLocationEnable([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLocationEnable', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLocationEnable', {"var0": var0});
   
   
     // handle native call
@@ -243,7 +238,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -252,11 +246,11 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
   static Future<bool> getLocationEnable() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.Setting::getLocationEnable([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.Setting::getLocationEnable([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLocationEnable', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLocationEnable', );
   
   
     // handle native call
@@ -267,7 +261,6 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -277,6 +270,12 @@ class com_iflytek_cloud_Setting extends java_lang_Object  {
 
 extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
   //region getters
+  Future<List<String>> get_static_a_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.Setting::get_a_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
   
   //endregion
 
@@ -292,7 +291,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLogLevel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].index}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLogLevel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].toValue()}]);
   
   
     // convert native result to dart side object
@@ -300,7 +299,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -312,15 +310,14 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLogLevel_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLogLevel_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_Setting_LOG_LEVEL.values[__result__]).toList();
-    
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).tocom_iflytek_cloud_Setting_LOG_LEVEL()).toList();
       return typedResult;
     }
   }
@@ -332,7 +329,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLogPath_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLogPath_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -340,7 +337,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -352,7 +348,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLogPath_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLogPath_batch', );
   
   
     // convert native result to dart side object
@@ -360,7 +356,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -372,7 +367,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setShowLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setShowLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -380,7 +375,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -392,7 +386,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getShowLog_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getShowLog_batch', );
   
   
     // convert native result to dart side object
@@ -400,7 +394,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -412,7 +405,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setSaveTestLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setSaveTestLog_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -420,7 +413,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -432,7 +424,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getSaveTestLog_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getSaveTestLog_batch', );
   
   
     // convert native result to dart side object
@@ -440,7 +432,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -452,7 +443,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::setLocationEnable_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::setLocationEnable_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -460,7 +451,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -472,7 +462,7 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.Setting::getLocationEnable_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.Setting::getLocationEnable_batch', );
   
   
     // convert native result to dart side object
@@ -480,7 +470,6 @@ extension com_iflytek_cloud_Setting_Batch on List<com_iflytek_cloud_Setting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

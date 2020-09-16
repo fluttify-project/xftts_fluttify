@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyISVRecognizer extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyISVRecognizer> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyISVRecognizer');
+  static Future<IFlyISVRecognizer> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyISVRecognizer', {'init': init});
     final object = IFlyISVRecognizer()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyISVRecognizer>> create_batch__(int length) async {
+  static Future<List<IFlyISVRecognizer>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyISVRecognizer', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyISVRecognizer', {'length': length, 'init': init});
   
     final List<IFlyISVRecognizer> typedResult = resultBatch.map((result) => IFlyISVRecognizer()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -47,53 +43,55 @@ class IFlyISVRecognizer extends NSObject  {
 
   //region setters
   Future<void> set_delegate(IFlyISVDelegate delegate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('IFlyISVDelegate::Callback')
+    MethodChannel('IFlyISVDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        // final refId = args['callerRefId'] as int;
-        // if (refId != this.refId) return;
-  
-        switch (methodCall.method) {
-          case 'Callback::IFlyISVDelegate::onResult':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onResult([\'dic\':${args['dic']}])');
-            }
-        
-            // handle the native call
-            delegate?.onResult(args['dic']);
-            break;
-          case 'Callback::IFlyISVDelegate::onCompleted':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onCompleted([])');
-            }
-        
-            // handle the native call
-            delegate?.onCompleted((IFlySpeechError()..refId = (args['errorCode'])..tag__ = 'xftts_fluttify'));
-            break;
-          case 'Callback::IFlyISVDelegate::onRecognition':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRecognition([])');
-            }
-        
-            // handle the native call
-            delegate?.onRecognition();
-            break;
-          case 'Callback::IFlyISVDelegate::onVolumeChanged':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onVolumeChanged([\'volume\':${args['volume']}])');
-            }
-        
-            // handle the native call
-            delegate?.onVolumeChanged(args['volume']);
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::IFlyISVDelegate::onResult':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onResult([\'dic\':${args['dic']}])');
+              }
+          
+              // handle the native call
+              delegate?.onResult(args['dic']);
+              break;
+            case 'Callback::IFlyISVDelegate::onCompleted':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onCompleted([\'errorCode\':${args['errorCode']}])');
+              }
+          
+              // handle the native call
+              delegate?.onCompleted(TypeOpXfttsFluttifyIOS((args['errorCode'] as Object))?.as__<IFlySpeechError>());
+              break;
+            case 'Callback::IFlyISVDelegate::onRecognition':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onRecognition([])');
+              }
+          
+              // handle the native call
+              delegate?.onRecognition();
+              break;
+            case 'Callback::IFlyISVDelegate::onVolumeChanged':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onVolumeChanged([\'volume\':${args['volume']}])');
+              }
+          
+              // handle the native call
+              delegate?.onVolumeChanged(args['volume']);
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
@@ -105,11 +103,11 @@ class IFlyISVRecognizer extends NSObject  {
   static Future<IFlyISVRecognizer> sharedInstance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer::sharedInstance([])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer::sharedInstance([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sharedInstance', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::sharedInstance', );
   
   
     // handle native call
@@ -120,7 +118,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = IFlyISVRecognizer()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -129,11 +126,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<String> generatePassword(int length) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::generatePassword([\'length\':$length])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::generatePassword([\'length\':$length])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::generatePassword', {"length": length, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::generatePassword', {"length": length, "__this__": this});
   
   
     // handle native call
@@ -144,7 +141,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -153,11 +149,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<List<NSObject>> getPasswordList(int pwdt) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::getPasswordList([\'pwdt\':$pwdt])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::getPasswordList([\'pwdt\':$pwdt])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getPasswordList', {"pwdt": pwdt, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::getPasswordList', {"pwdt": pwdt, "__this__": this});
   
   
     // handle native call
@@ -167,8 +163,7 @@ class IFlyISVRecognizer extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => IFlySpeechRecognizer()..refId = __it__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'xftts_fluttify').toList();
       return __return__;
     }
   }
@@ -177,11 +172,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<bool> isListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::isListening([])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::isListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::isListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::isListening', {"__this__": this});
   
   
     // handle native call
@@ -192,7 +187,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -201,11 +195,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<bool> sendRequest_authid_pwdt_ptxt_vid_err(String cmd, String auth_id, int pwdt, String ptxt, String vid, NSValue/* int* */ err) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::sendRequest([\'cmd\':$cmd, \'auth_id\':$auth_id, \'pwdt\':$pwdt, \'ptxt\':$ptxt, \'vid\':$vid])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::sendRequest([\'cmd\':$cmd, \'auth_id\':$auth_id, \'pwdt\':$pwdt, \'ptxt\':$ptxt, \'vid\':$vid])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err', {"cmd": cmd, "auth_id": auth_id, "pwdt": pwdt, "ptxt": ptxt, "vid": vid, "err": err.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err', {"cmd": cmd, "auth_id": auth_id, "pwdt": pwdt, "ptxt": ptxt, "vid": vid, "err": err, "__this__": this});
   
   
     // handle native call
@@ -216,7 +210,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -225,11 +218,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::setParameter([\'value\':$value, \'key\':$key])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameter_forKey', {"value": value, "key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::setParameter_forKey', {"value": value, "key": key, "__this__": this});
   
   
     // handle native call
@@ -240,7 +233,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -249,11 +241,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<String> getParameter(String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::getParameter([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::getParameter([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getParameter', {"key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::getParameter', {"key": key, "__this__": this});
   
   
     // handle native call
@@ -264,7 +256,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -273,11 +264,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<void> startListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::startListening([])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::startListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::startListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::startListening', {"__this__": this});
   
   
     // handle native call
@@ -288,7 +279,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -297,11 +287,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<void> stopListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::stopListening([])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::stopListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::stopListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::stopListening', {"__this__": this});
   
   
     // handle native call
@@ -312,7 +302,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -321,11 +310,11 @@ class IFlyISVRecognizer extends NSObject  {
   Future<void> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyISVRecognizer@$refId::cancel([])');
+      debugPrint('fluttify-dart: IFlyISVRecognizer@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::cancel', {"__this__": this});
   
   
     // handle native call
@@ -336,7 +325,6 @@ class IFlyISVRecognizer extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -361,15 +349,14 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sharedInstance_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::sharedInstance_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => IFlyISVRecognizer()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => IFlyISVRecognizer()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -381,7 +368,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::generatePassword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"length": length[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::generatePassword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"length": length[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -389,7 +376,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -401,15 +387,14 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getPasswordList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"pwdt": pwdt[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::getPasswordList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"pwdt": pwdt[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => IFlySpeechRecognizer()..refId = __it__..tag__ = 'xftts_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'xftts_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -421,7 +406,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::isListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -429,7 +414,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -441,7 +425,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"cmd": cmd[__i__], "auth_id": auth_id[__i__], "pwdt": pwdt[__i__], "ptxt": ptxt[__i__], "vid": vid[__i__], "err": err[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::sendRequest_authid_pwdt_ptxt_vid_err_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"cmd": cmd[__i__], "auth_id": auth_id[__i__], "pwdt": pwdt[__i__], "ptxt": ptxt[__i__], "vid": vid[__i__], "err": err[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -449,7 +433,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -461,7 +444,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -469,7 +452,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -481,7 +463,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -489,7 +471,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -501,7 +482,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -509,7 +490,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -521,7 +501,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -529,7 +509,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -541,7 +520,7 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyISVRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyISVRecognizer::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -549,7 +528,6 @@ extension IFlyISVRecognizer_Batch on List<IFlyISVRecognizer> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

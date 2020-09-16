@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_ist_IstSession> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__', );
     final object = com_iflytek_cloud_msc_ist_IstSession()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_ist_IstSession__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_ist_IstSession__', {'length': length});
   
     final List<com_iflytek_cloud_msc_ist_IstSession> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_ist_IstSession()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<void> sessionEnd(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::sessionEnd([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::sessionEnd([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::sessionEnd', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::sessionEnd', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<void> pushAudioData(Uint8List var1, int var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::pushAudioData([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::pushAudioData([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushAudioData', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushAudioData', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<void> pushEndFlag() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::pushEndFlag([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::pushEndFlag([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushEndFlag', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushEndFlag', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<int> getEpStatus() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getEpStatus([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getEpStatus([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getEpStatus', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getEpStatus', {"__this__": this});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<int> getAudioVolume() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getAudioVolume([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getAudioVolume([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getAudioVolume', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getAudioVolume', {"__this__": this});
   
   
     // handle native call
@@ -165,7 +157,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -174,11 +165,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<int> getIntValue__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getIntValue([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getIntValue([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -189,7 +180,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -198,11 +188,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<int> getIntValue__String__int(String var1, int var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getIntValue([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getIntValue([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -213,7 +203,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -222,11 +211,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<bool> setParam(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::setParam([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::setParam([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::setParam', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::setParam', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -237,7 +226,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -246,11 +234,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<String> getStringValue(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getStringValue([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getStringValue([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringValue', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringValue', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -261,7 +249,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -270,11 +257,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   static Future<int> getIntByTag(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession::getIntByTag([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession::getIntByTag([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntByTag', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntByTag', {"var0": var0});
   
   
     // handle native call
@@ -285,7 +272,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -294,11 +280,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   static Future<String> getStringByTag(String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession::getStringByTag([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession::getStringByTag([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringByTag', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringByTag', {"var0": var0});
   
   
     // handle native call
@@ -309,7 +295,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,11 +303,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<bool> hasResult() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::hasResult([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::hasResult([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::hasResult', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::hasResult', {"__this__": this});
   
   
     // handle native call
@@ -333,7 +318,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -342,11 +326,11 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
   Future<Uint8List> getResultData() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getResultData([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.ist.IstSession@$refId::getResultData([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getResultData', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getResultData', {"__this__": this});
   
   
     // handle native call
@@ -357,7 +341,6 @@ class com_iflytek_cloud_msc_ist_IstSession extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__ as Uint8List;
-    
       return __return__;
     }
   }
@@ -382,7 +365,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::sessionEnd_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::sessionEnd_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -390,7 +373,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -402,7 +384,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushAudioData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushAudioData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -410,7 +392,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -422,7 +403,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushEndFlag_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::pushEndFlag_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -430,7 +411,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -442,7 +422,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getEpStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getEpStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -450,7 +430,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -462,7 +441,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getAudioVolume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getAudioVolume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -470,7 +449,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -482,7 +460,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -490,7 +468,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -502,7 +479,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -510,7 +487,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -522,7 +498,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::setParam_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::setParam_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -530,7 +506,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -542,7 +517,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringValue_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringValue_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -550,7 +525,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -562,7 +536,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntByTag_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getIntByTag_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -570,7 +544,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -582,7 +555,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringByTag_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getStringByTag_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -590,7 +563,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -602,7 +574,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::hasResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::hasResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -610,7 +582,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -622,7 +593,7 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getResultData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.ist.IstSession::getResultData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -630,7 +601,6 @@ extension com_iflytek_cloud_msc_ist_IstSession_Batch on List<com_iflytek_cloud_m
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Uint8List>().map((__result__) => __result__ as Uint8List).toList();
-    
       return typedResult;
     }
   }

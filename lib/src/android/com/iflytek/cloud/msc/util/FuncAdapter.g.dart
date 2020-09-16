@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_util_FuncAdapter extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_FuncAdapter> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__', );
     final object = com_iflytek_cloud_msc_util_FuncAdapter()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,16 +29,24 @@ class com_iflytek_cloud_msc_util_FuncAdapter extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapter__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapter__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_FuncAdapter> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_FuncAdapter()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   //endregion
 
   //region getters
+  static Future<int> get_static_SDK_GINGERBREAD() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD", );
+    return __result__ == null ? null : (__result__);
+  }
+  
+  static Future<int> get_static_SDK_ICECREM() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM", );
+    return __result__ == null ? null : (__result__);
+  }
   
   //endregion
 
@@ -54,11 +59,11 @@ class com_iflytek_cloud_msc_util_FuncAdapter extends java_lang_Object  {
   static Future<void> CloseHardWareAccelerate(android_view_View var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +74,6 @@ class com_iflytek_cloud_msc_util_FuncAdapter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -79,6 +83,19 @@ class com_iflytek_cloud_msc_util_FuncAdapter extends java_lang_Object  {
 
 extension com_iflytek_cloud_msc_util_FuncAdapter_Batch on List<com_iflytek_cloud_msc_util_FuncAdapter> {
   //region getters
+  Future<List<int>> get_static_SDK_GINGERBREAD_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SDK_ICECREM_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
   
   //endregion
 
@@ -94,7 +111,7 @@ extension com_iflytek_cloud_msc_util_FuncAdapter_Batch on List<com_iflytek_cloud
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.FuncAdapter::CloseHardWareAccelerate_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -102,7 +119,6 @@ extension com_iflytek_cloud_msc_util_FuncAdapter_Batch on List<com_iflytek_cloud
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

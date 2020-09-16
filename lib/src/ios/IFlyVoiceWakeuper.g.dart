@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyVoiceWakeuper extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyVoiceWakeuper> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyVoiceWakeuper');
+  static Future<IFlyVoiceWakeuper> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyVoiceWakeuper', {'init': init});
     final object = IFlyVoiceWakeuper()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyVoiceWakeuper>> create_batch__(int length) async {
+  static Future<List<IFlyVoiceWakeuper>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyVoiceWakeuper', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyVoiceWakeuper', {'length': length, 'init': init});
   
     final List<IFlyVoiceWakeuper> typedResult = resultBatch.map((result) => IFlyVoiceWakeuper()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,80 +39,81 @@ class IFlyVoiceWakeuper extends NSObject  {
 
   //region getters
   Future<bool> get_isListening() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyVoiceWakeuper::get_isListening", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyVoiceWakeuper::get_isListening", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_delegate(IFlyVoiceWakeuperDelegate delegate) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('IFlyVoiceWakeuperDelegate::Callback')
+    MethodChannel('IFlyVoiceWakeuperDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        // final refId = args['callerRefId'] as int;
-        // if (refId != this.refId) return;
-  
-        switch (methodCall.method) {
-          case 'Callback::IFlyVoiceWakeuperDelegate::onBeginOfSpeech':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBeginOfSpeech([])');
-            }
-        
-            // handle the native call
-            delegate?.onBeginOfSpeech();
-            break;
-          case 'Callback::IFlyVoiceWakeuperDelegate::onEndOfSpeech':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onEndOfSpeech([])');
-            }
-        
-            // handle the native call
-            delegate?.onEndOfSpeech();
-            break;
-          case 'Callback::IFlyVoiceWakeuperDelegate::onCompleted':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onCompleted([])');
-            }
-        
-            // handle the native call
-            delegate?.onCompleted((IFlySpeechError()..refId = (args['error'])..tag__ = 'xftts_fluttify'));
-            break;
-          case 'Callback::IFlyVoiceWakeuperDelegate::onResult':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onResult([\'resultDic\':${args['resultDic']}])');
-            }
-        
-            // handle the native call
-            delegate?.onResult(args['resultDic']);
-            break;
-          case 'Callback::IFlyVoiceWakeuperDelegate::onVolumeChanged':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onVolumeChanged([\'volume\':${args['volume']}])');
-            }
-        
-            // handle the native call
-            delegate?.onVolumeChanged(args['volume']);
-            break;
-          case 'Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onEvent_isLast_arg1_data([\'eventType\':${args['eventType']}, \'isLast\':${args['isLast']}, \'arg1\':${args['arg1']}, \'eventData\':${args['eventData']}])');
-            }
-        
-            // handle the native call
-            delegate?.onEvent_isLast_arg1_data(args['eventType'], args['isLast'], args['arg1'], args['eventData']);
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::IFlyVoiceWakeuperDelegate::onBeginOfSpeech':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onBeginOfSpeech([])');
+              }
+          
+              // handle the native call
+              delegate?.onBeginOfSpeech();
+              break;
+            case 'Callback::IFlyVoiceWakeuperDelegate::onEndOfSpeech':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onEndOfSpeech([])');
+              }
+          
+              // handle the native call
+              delegate?.onEndOfSpeech();
+              break;
+            case 'Callback::IFlyVoiceWakeuperDelegate::onCompleted':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onCompleted([\'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.onCompleted(TypeOpXfttsFluttifyIOS((args['error'] as Object))?.as__<IFlySpeechError>());
+              break;
+            case 'Callback::IFlyVoiceWakeuperDelegate::onResult':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onResult([\'resultDic\':${args['resultDic']}])');
+              }
+          
+              // handle the native call
+              delegate?.onResult(args['resultDic']);
+              break;
+            case 'Callback::IFlyVoiceWakeuperDelegate::onVolumeChanged':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onVolumeChanged([\'volume\':${args['volume']}])');
+              }
+          
+              // handle the native call
+              delegate?.onVolumeChanged(args['volume']);
+              break;
+            case 'Callback::IFlyVoiceWakeuperDelegate::onEvent_isLast_arg1_data':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onEvent_isLast_arg1_data([\'eventType\':${args['eventType']}, \'isLast\':${args['isLast']}, \'arg1\':${args['arg1']}, \'eventData\':${args['eventData']}])');
+              }
+          
+              // handle the native call
+              delegate?.onEvent_isLast_arg1_data(args['eventType'], args['isLast'], args['arg1'], args['eventData']);
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
@@ -128,11 +125,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   static Future<IFlyVoiceWakeuper> sharedInstance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper::sharedInstance([])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper::sharedInstance([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::sharedInstance', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::sharedInstance', );
   
   
     // handle native call
@@ -143,7 +140,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = IFlyVoiceWakeuper()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -152,11 +148,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<bool> startListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::startListening([])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::startListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::startListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::startListening', {"__this__": this});
   
   
     // handle native call
@@ -167,7 +163,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -176,11 +171,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<bool> stopListening() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::stopListening([])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::stopListening([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::stopListening', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::stopListening', {"__this__": this});
   
   
     // handle native call
@@ -191,7 +186,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -200,11 +194,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<bool> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::cancel([])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::cancel', {"__this__": this});
   
   
     // handle native call
@@ -215,7 +209,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -224,11 +217,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<String> getParameter(String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::getParameter([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::getParameter([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::getParameter', {"key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::getParameter', {"key": key, "__this__": this});
   
   
     // handle native call
@@ -239,7 +232,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -248,11 +240,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<bool> setParameter_forKey(String value, String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::setParameter([\'value\':$value, \'key\':$key])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::setParameter_forKey', {"value": value, "key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::setParameter_forKey', {"value": value, "key": key, "__this__": this});
   
   
     // handle native call
@@ -263,7 +255,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -272,11 +263,11 @@ class IFlyVoiceWakeuper extends NSObject  {
   Future<bool> writeAudio(NSData audioData) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyVoiceWakeuper@$refId::writeAudio([])');
+      debugPrint('fluttify-dart: IFlyVoiceWakeuper@$refId::writeAudio([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::writeAudio', {"audioData": audioData.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::writeAudio', {"audioData": audioData, "__this__": this});
   
   
     // handle native call
@@ -287,7 +278,6 @@ class IFlyVoiceWakeuper extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -298,9 +288,9 @@ class IFlyVoiceWakeuper extends NSObject  {
 extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
   //region getters
   Future<List<bool>> get_isListening_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyVoiceWakeuper::get_isListening_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyVoiceWakeuper::get_isListening_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -318,15 +308,14 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::sharedInstance_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::sharedInstance_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => IFlyVoiceWakeuper()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => IFlyVoiceWakeuper()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -338,7 +327,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::startListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -346,7 +335,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -358,7 +346,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::stopListening_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -366,7 +354,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -378,7 +365,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -386,7 +373,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -398,7 +384,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -406,7 +392,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -418,7 +403,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -426,7 +411,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -438,7 +422,7 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyVoiceWakeuper::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"audioData": audioData[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyVoiceWakeuper::writeAudio_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"audioData": audioData[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -446,7 +430,6 @@ extension IFlyVoiceWakeuper_Batch on List<IFlyVoiceWakeuper> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

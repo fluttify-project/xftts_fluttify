@@ -4,8 +4,29 @@
 //////////////////////////////////////////////////////////
 
 enum IFlySpeechPlusServiceType {
-  IFlySpeechPlusServiceTypeNone,
-  IFlySpeechPlusServiceTypeTTS,
-  IFlySpeechPlusServiceTypeISR,
-  IFlySpeechPlusServiceTypeIVW
+  IFlySpeechPlusServiceTypeNone /* 0 */,
+  IFlySpeechPlusServiceTypeTTS /* null */,
+  IFlySpeechPlusServiceTypeISR /* null */,
+  IFlySpeechPlusServiceTypeIVW /* null */
+}
+
+extension IFlySpeechPlusServiceTypeToX on IFlySpeechPlusServiceType {
+  int toValue() {
+    switch (this) {
+      case IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeNone: return 0;
+      case IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeTTS: return IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeTTS.index + 0;
+      case IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeISR: return IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeISR.index + 0;
+      case IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeIVW: return IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeIVW.index + 0;
+      default: return 0;
+    }
+  }
+}
+
+extension IFlySpeechPlusServiceTypeFromX on int {
+  IFlySpeechPlusServiceType toIFlySpeechPlusServiceType() {
+    switch (this) {
+      case 0: return IFlySpeechPlusServiceType.IFlySpeechPlusServiceTypeNone;
+      default: return IFlySpeechPlusServiceType.values[this + 0];
+    }
+  }
 }

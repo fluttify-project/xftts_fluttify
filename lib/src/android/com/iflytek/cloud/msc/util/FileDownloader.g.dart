@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,11 +35,11 @@ class com_iflytek_cloud_msc_util_FileDownloader extends java_lang_Object  {
   static Future<com_iflytek_cloud_msc_util_FileDownloader> getDownLoadManager(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager', {"var0": var0});
   
   
     // handle native call
@@ -51,7 +50,6 @@ class com_iflytek_cloud_msc_util_FileDownloader extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_msc_util_FileDownloader()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -60,50 +58,52 @@ class com_iflytek_cloud_msc_util_FileDownloader extends java_lang_Object  {
   Future<int> startDownload(String var1, String var2, String var3, com_iflytek_cloud_util_FileDownloadListener var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.FileDownloader@$refId::startDownload([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.FileDownloader@$refId::startDownload([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::startDownload', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::startDownload', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.msc.util.FileDownloader::startDownload::Callback')
+    MethodChannel('com.iflytek.cloud.msc.util.FileDownloader::startDownload::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onStart':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onStart([])');
-              }
-        
-              // handle the native call
-              var4?.onStart();
-              break;
-            case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onProgress':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onProgress([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var4?.onProgress(args['var1']);
-              break;
-            case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onCompleted':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCompleted([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var4?.onCompleted(args['var1'], (com_iflytek_cloud_SpeechError()..refId = (args['var2'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onStart':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onStart([])');
+                }
+          
+                // handle the native call
+                var4?.onStart();
+                break;
+              case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onProgress':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onProgress([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var4?.onProgress(args['var1']);
+                break;
+              case 'Callback::com.iflytek.cloud.util.FileDownloadListener::onCompleted':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onCompleted([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var4?.onCompleted(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -112,7 +112,6 @@ class com_iflytek_cloud_msc_util_FileDownloader extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -137,15 +136,14 @@ extension com_iflytek_cloud_msc_util_FileDownloader_Batch on List<com_iflytek_cl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_msc_util_FileDownloader()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_msc_util_FileDownloader()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }

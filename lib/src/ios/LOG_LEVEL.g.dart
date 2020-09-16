@@ -4,9 +4,35 @@
 //////////////////////////////////////////////////////////
 
 enum LOG_LEVEL {
-  LVL_ALL,
-  LVL_DETAIL,
-  LVL_NORMAL,
-  LVL_LOW,
-  LVL_NONE
+  LVL_ALL /* -1 */,
+  LVL_DETAIL /* 31 */,
+  LVL_NORMAL /* 15 */,
+  LVL_LOW /* 7 */,
+  LVL_NONE /* 0 */
+}
+
+extension LOG_LEVELToX on LOG_LEVEL {
+  int toValue() {
+    switch (this) {
+      case LOG_LEVEL.LVL_ALL: return -1;
+      case LOG_LEVEL.LVL_DETAIL: return 31;
+      case LOG_LEVEL.LVL_NORMAL: return 15;
+      case LOG_LEVEL.LVL_LOW: return 7;
+      case LOG_LEVEL.LVL_NONE: return 0;
+      default: return 0;
+    }
+  }
+}
+
+extension LOG_LEVELFromX on int {
+  LOG_LEVEL toLOG_LEVEL() {
+    switch (this) {
+      case -1: return LOG_LEVEL.LVL_ALL;
+      case 31: return LOG_LEVEL.LVL_DETAIL;
+      case 15: return LOG_LEVEL.LVL_NORMAL;
+      case 7: return LOG_LEVEL.LVL_LOW;
+      case 0: return LOG_LEVEL.LVL_NONE;
+      default: return LOG_LEVEL.values[this + -1];
+    }
+  }
 }

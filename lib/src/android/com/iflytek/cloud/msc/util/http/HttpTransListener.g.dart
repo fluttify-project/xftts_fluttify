@@ -5,15 +5,18 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
+class _com_iflytek_cloud_msc_util_http_HttpTransListener_SUB extends java_lang_Object with com_iflytek_cloud_msc_util_http_HttpTransListener {}
+
 mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   
+
+  static com_iflytek_cloud_msc_util_http_HttpTransListener subInstance() => _com_iflytek_cloud_msc_util_http_HttpTransListener_SUB();
 
   
 
@@ -23,11 +26,11 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<int> onStart(int var1, String var3, String var4, String var5, String var6, String var7) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onStart([\'var1\':$var1, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6, \'var7\':$var7])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onStart([\'var1\':$var1, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6, \'var7\':$var7])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onStart', {"var1": var1, "var3": var3, "var4": var4, "var5": var5, "var6": var6, "var7": var7, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onStart', {"var1": var1, "var3": var3, "var4": var4, "var5": var5, "var6": var6, "var7": var7, "__this__": this});
   
   
     // handle native call
@@ -38,7 +41,6 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -47,11 +49,11 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<int> onBuffer(Uint8List var1, int var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onBuffer([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onBuffer([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onBuffer', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onBuffer', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -62,7 +64,6 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -71,11 +72,11 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onFinish() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onFinish([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onFinish([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onFinish', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onFinish', {"__this__": this});
   
   
     // handle native call
@@ -86,7 +87,6 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -95,11 +95,11 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onError(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onError([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onError([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onError', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onError', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -110,7 +110,6 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -119,11 +118,11 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
   Future<void> onCancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onCancel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpTransListener@$refId::onCancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onCancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onCancel', {"__this__": this});
   
   
     // handle native call
@@ -134,9 +133,108 @@ mixin com_iflytek_cloud_msc_util_http_HttpTransListener on java_lang_Object {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
   
+}
+
+extension com_iflytek_cloud_msc_util_http_HttpTransListener_Batch on List<com_iflytek_cloud_msc_util_http_HttpTransListener> {
+  //region methods
+  
+  Future<List<int>> onStart_batch(List<int> var1, List<String> var3, List<String> var4, List<String> var5, List<String> var6, List<String> var7) async {
+    if (var1.length != var3.length || var3.length != var4.length || var4.length != var5.length || var5.length != var6.length || var6.length != var7.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onStart_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__], "var7": var7[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<int>> onBuffer_batch(List<Uint8List> var1, List<int> var2) async {
+    if (var1.length != var2.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onBuffer_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onFinish_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onFinish_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onError_batch(List<int> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onError_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onCancel_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpTransListener::onCancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  //endregion
 }

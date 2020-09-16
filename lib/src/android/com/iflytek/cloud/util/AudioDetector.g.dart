@@ -5,14 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
+/* abstract */ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
   //region constants
   static const String name__ = 'com.iflytek.cloud.util.AudioDetector';
 
@@ -46,14 +45,60 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
 
   //region methods
   
-  Future<bool> destroy() async {
+  static Future<com_iflytek_cloud_util_AudioDetector> createDetector(android_content_Context var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector::createDetector([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::createDetector', {"var0": var0, "var1": var1});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_iflytek_cloud_util_AudioDetector()..refId = __result__..tag__ = 'xftts_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  static Future<com_iflytek_cloud_util_AudioDetector> getDetector() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector::getDetector([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::getDetector', );
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_iflytek_cloud_util_AudioDetector()..refId = __result__..tag__ = 'xftts_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  Future<bool> destroy() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::destroy([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::destroy', {"__this__": this});
   
   
     // handle native call
@@ -64,7 +109,6 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -73,11 +117,11 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
   Future<void> reset() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::reset([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::reset([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::reset', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::reset', {"__this__": this});
   
   
     // handle native call
@@ -88,7 +132,6 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -97,11 +140,11 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
   Future<com_iflytek_cloud_util_AudioDetector_DetectorResult> detect(Uint8List var1, int var2, int var3, bool var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::detect([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::detect([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::detect', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::detect', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "__this__": this});
   
   
     // handle native call
@@ -112,7 +155,6 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -121,11 +163,11 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
   Future<void> setParameter(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.AudioDetector@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::setParameter', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::setParameter', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -136,7 +178,6 @@ class com_iflytek_cloud_util_AudioDetector extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -155,13 +196,51 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
 
   //region methods
   
+  static Future<List<com_iflytek_cloud_util_AudioDetector>> createDetector_batch(List<android_content_Context> var0, List<String> var1) async {
+    if (var0.length != var1.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::createDetector_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_util_AudioDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
+  static Future<List<com_iflytek_cloud_util_AudioDetector>> getDetector_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::getDetector_batch', );
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_util_AudioDetector()..refId = __result__..tag__ = 'xftts_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
   Future<List<bool>> destroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -169,7 +248,6 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -181,7 +259,7 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::reset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::reset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -189,7 +267,6 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -201,15 +278,14 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::detect_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::detect_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -221,7 +297,7 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.AudioDetector::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.AudioDetector::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -229,7 +305,6 @@ extension com_iflytek_cloud_util_AudioDetector_Batch on List<com_iflytek_cloud_u
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyDebugLog extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyDebugLog> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyDebugLog');
+  static Future<IFlyDebugLog> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyDebugLog', {'init': init});
     final object = IFlyDebugLog()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyDebugLog>> create_batch__(int length) async {
+  static Future<List<IFlyDebugLog>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyDebugLog', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyDebugLog', {'length': length, 'init': init});
   
     final List<IFlyDebugLog> typedResult = resultBatch.map((result) => IFlyDebugLog()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class IFlyDebugLog extends NSObject  {
   static Future<void> showLog(String format) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyDebugLog::showLog([\'format\':$format])');
+      debugPrint('fluttify-dart: IFlyDebugLog::showLog([\'format\':$format])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::showLog', {"format": format});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::showLog', {"format": format});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class IFlyDebugLog extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class IFlyDebugLog extends NSObject  {
   static Future<void> writeLog() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyDebugLog::writeLog([])');
+      debugPrint('fluttify-dart: IFlyDebugLog::writeLog([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::writeLog', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::writeLog', );
   
   
     // handle native call
@@ -93,7 +88,6 @@ class IFlyDebugLog extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class IFlyDebugLog extends NSObject  {
   static Future<void> setShowLog(bool showLog) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyDebugLog::setShowLog([\'showLog\':$showLog])');
+      debugPrint('fluttify-dart: IFlyDebugLog::setShowLog([\'showLog\':$showLog])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::setShowLog', {"showLog": showLog});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::setShowLog', {"showLog": showLog});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class IFlyDebugLog extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -142,7 +135,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::showLog_batch', [for (int __i__ = 0; __i__ < format.length; __i__++) {"format": format[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::showLog_batch', [for (int __i__ = 0; __i__ < format.length; __i__++) {"format": format[__i__]}]);
   
   
     // convert native result to dart side object
@@ -150,7 +143,6 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -162,7 +154,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::writeLog_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::writeLog_batch', );
   
   
     // convert native result to dart side object
@@ -170,7 +162,6 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -182,7 +173,7 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDebugLog::setShowLog_batch', [for (int __i__ = 0; __i__ < showLog.length; __i__++) {"showLog": showLog[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDebugLog::setShowLog_batch', [for (int __i__ = 0; __i__ < showLog.length; __i__++) {"showLog": showLog[__i__]}]);
   
   
     // convert native result to dart side object
@@ -190,7 +181,6 @@ extension IFlyDebugLog_Batch on List<IFlyDebugLog> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

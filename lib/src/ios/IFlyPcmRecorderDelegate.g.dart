@@ -6,11 +6,12 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin IFlyPcmRecorderDelegate on NSObject {
   
@@ -19,13 +20,13 @@ mixin IFlyPcmRecorderDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
-  Future<void> onIFlyRecorderVolumeChanged(int power) {
+  Future<void> onIFlyRecorderError_theError(IFlyPcmRecorder recoder, int error) {}
   
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onIFlyRecorderVolumeChanged::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  @mustCallSuper
+  Future<void> onIFlyRecorderVolumeChanged(int power) {}
   
 }
+

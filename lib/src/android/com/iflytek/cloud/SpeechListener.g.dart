@@ -5,12 +5,13 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+
+
 
 mixin com_iflytek_cloud_SpeechListener on java_lang_Object {
   
@@ -20,75 +21,15 @@ mixin com_iflytek_cloud_SpeechListener on java_lang_Object {
   
 
   
-  Future<void> onEvent(int var1, android_os_Bundle var2) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechListener@$refId::onEvent([\'var1\':$var1])');
-    }
+
+  @mustCallSuper
+  Future<void> onEvent(int var1, android_os_Bundle var2) {}
   
-    // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechListener::onEvent', {"var1": var1, "var2": var2.refId, "refId": refId});
+  @mustCallSuper
+  Future<void> onBufferReceived(Uint8List var1) {}
   
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> onBufferReceived(Uint8List var1) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechListener@$refId::onBufferReceived([\'var1\':$var1])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechListener::onBufferReceived', {"var1": var1, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
-  Future<void> onCompleted(com_iflytek_cloud_SpeechError var1) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.SpeechListener@$refId::onCompleted([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.SpeechListener::onCompleted', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
+  @mustCallSuper
+  Future<void> onCompleted(com_iflytek_cloud_SpeechError var1) {}
   
 }
+

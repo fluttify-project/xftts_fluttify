@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyUserWords extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyUserWords> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyUserWords');
+  static Future<IFlyUserWords> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyUserWords', {'init': init});
     final object = IFlyUserWords()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyUserWords>> create_batch__(int length) async {
+  static Future<List<IFlyUserWords>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyUserWords', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyUserWords', {'length': length, 'init': init});
   
     final List<IFlyUserWords> typedResult = resultBatch.map((result) => IFlyUserWords()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class IFlyUserWords extends NSObject  {
   Future<dynamic> initWithJson(String json) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyUserWords@$refId::initWithJson([\'json\':$json])');
+      debugPrint('fluttify-dart: IFlyUserWords@$refId::initWithJson([\'json\':$json])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::initWithJson', {"json": json, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::initWithJson', {"json": json, "__this__": this});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class IFlyUserWords extends NSObject  {
       return null;
     } else {
       final __return__ = Ref()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class IFlyUserWords extends NSObject  {
   Future<List<NSObject>> getWords(String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyUserWords@$refId::getWords([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyUserWords@$refId::getWords([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::getWords', {"key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::getWords', {"key": key, "__this__": this});
   
   
     // handle native call
@@ -92,8 +87,7 @@ class IFlyUserWords extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => IFlySpeechRecognizer()..refId = __it__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'xftts_fluttify').toList();
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class IFlyUserWords extends NSObject  {
   Future<bool> putWord_value(String key, String value) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyUserWords@$refId::putWord([\'key\':$key, \'value\':$value])');
+      debugPrint('fluttify-dart: IFlyUserWords@$refId::putWord([\'key\':$key, \'value\':$value])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWord_value', {"key": key, "value": value, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::putWord_value', {"key": key, "value": value, "__this__": this});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class IFlyUserWords extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class IFlyUserWords extends NSObject  {
   Future<bool> putwords_words(String key, List<NSObject> words) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyUserWords@$refId::putwords([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyUserWords@$refId::putwords([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwords_words', {"key": key, "words": words.map((__it__) => __it__.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::putwords_words', {"key": key, "words": words, "__this__": this});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class IFlyUserWords extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class IFlyUserWords extends NSObject  {
   Future<bool> containsKey(String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyUserWords@$refId::containsKey([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyUserWords@$refId::containsKey([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::containsKey', {"key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::containsKey', {"key": key, "__this__": this});
   
   
     // handle native call
@@ -165,7 +157,6 @@ class IFlyUserWords extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -190,15 +181,14 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::initWithJson_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"json": json[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::initWithJson_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"json": json[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -210,15 +200,14 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::getWords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::getWords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => IFlySpeechRecognizer()..refId = __it__..tag__ = 'xftts_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'xftts_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -230,7 +219,7 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putWord_value_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "value": value[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::putWord_value_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "value": value[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -238,7 +227,6 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -250,7 +238,7 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::putwords_words_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "words": words[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::putwords_words_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "words": words[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -258,7 +246,6 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -270,7 +257,7 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyUserWords::containsKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyUserWords::containsKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -278,7 +265,6 @@ extension IFlyUserWords_Batch on List<IFlyUserWords> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

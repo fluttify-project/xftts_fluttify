@@ -6,14 +6,17 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
+class _IFlySpeechRecognizerDelegate_SUB extends NSObject with IFlySpeechRecognizerDelegate {}
+
 mixin IFlySpeechRecognizerDelegate on NSObject {
   
+
+  static IFlySpeechRecognizerDelegate subInstance() => _IFlySpeechRecognizerDelegate_SUB();
 
   
 
@@ -23,11 +26,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onCompleted(IFlySpeechError errorCode) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onCompleted([])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onCompleted([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onCompleted', {"errorCode": errorCode.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onCompleted', {"errorCode": errorCode, "__this__": this});
   
   
     // handle native call
@@ -38,7 +41,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -47,11 +49,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onResults_isLast(List<NSObject> results, bool isLast) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onResults([\'isLast\':$isLast])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onResults([\'isLast\':$isLast])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onResults_isLast', {"results": results.map((__it__) => __it__.refId).toList(), "isLast": isLast, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onResults_isLast', {"results": results, "isLast": isLast, "__this__": this});
   
   
     // handle native call
@@ -62,7 +64,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -71,11 +72,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onVolumeChanged(int volume) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onVolumeChanged([\'volume\':$volume])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onVolumeChanged([\'volume\':$volume])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onVolumeChanged', {"volume": volume, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onVolumeChanged', {"volume": volume, "__this__": this});
   
   
     // handle native call
@@ -86,7 +87,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -95,11 +95,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onBeginOfSpeech() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onBeginOfSpeech([])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onBeginOfSpeech([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onBeginOfSpeech', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onBeginOfSpeech', {"__this__": this});
   
   
     // handle native call
@@ -110,7 +110,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -119,11 +118,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onEndOfSpeech() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onEndOfSpeech([])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onEndOfSpeech([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onEndOfSpeech', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onEndOfSpeech', {"__this__": this});
   
   
     // handle native call
@@ -134,7 +133,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -143,11 +141,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onCancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onCancel([])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onCancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onCancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onCancel', {"__this__": this});
   
   
     // handle native call
@@ -158,7 +156,6 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -167,11 +164,11 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
   Future<void> onEvent_arg0_arg1_data(int eventType, int arg0, int arg1, NSData eventData) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onEvent([\'eventType\':$eventType, \'arg0\':$arg0, \'arg1\':$arg1])');
+      debugPrint('fluttify-dart: IFlySpeechRecognizerDelegate@$refId::onEvent([\'eventType\':$eventType, \'arg0\':$arg0, \'arg1\':$arg1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechRecognizerDelegate::onEvent_arg0_arg1_data', {"eventType": eventType, "arg0": arg0, "arg1": arg1, "eventData": eventData.refId, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onEvent_arg0_arg1_data', {"eventType": eventType, "arg0": arg0, "arg1": arg1, "eventData": eventData, "__this__": this});
   
   
     // handle native call
@@ -182,9 +179,146 @@ mixin IFlySpeechRecognizerDelegate on NSObject {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
   
+}
+
+extension IFlySpeechRecognizerDelegate_Batch on List<IFlySpeechRecognizerDelegate> {
+  //region methods
+  
+  Future<List<void>> onCompleted_batch(List<IFlySpeechError> errorCode) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onCompleted_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"errorCode": errorCode[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onResults_isLast_batch(List<List<NSObject>> results, List<bool> isLast) async {
+    if (results.length != isLast.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onResults_isLast_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"results": results[__i__], "isLast": isLast[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onVolumeChanged_batch(List<int> volume) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onVolumeChanged_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"volume": volume[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onBeginOfSpeech_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onBeginOfSpeech_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onEndOfSpeech_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onEndOfSpeech_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onCancel_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onCancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> onEvent_arg0_arg1_data_batch(List<int> eventType, List<int> arg0, List<int> arg1, List<NSData> eventData) async {
+    if (eventType.length != arg0.length || arg0.length != arg1.length || arg1.length != eventData.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechRecognizerDelegate::onEvent_arg0_arg1_data_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"eventType": eventType[__i__], "arg0": arg0[__i__], "arg1": arg1[__i__], "eventData": eventData[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  //endregion
 }

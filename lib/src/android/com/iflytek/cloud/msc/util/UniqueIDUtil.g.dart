@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_UniqueIDUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__', );
     final object = com_iflytek_cloud_msc_util_UniqueIDUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,16 +29,19 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_UniqueIDUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_UniqueIDUtil__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_UniqueIDUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_UniqueIDUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   //endregion
 
   //region getters
+  static Future<bool> get_static_sUseWifiMac() async {
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac", );
+    return __result__ == null ? null : (__result__);
+  }
   
   //endregion
 
@@ -54,11 +54,11 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
   static Future<String> getUniqueID(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +69,6 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +77,11 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
   static Future<void> cleanRecord(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord', {"var0": var0});
   
   
     // handle native call
@@ -93,7 +92,6 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -103,6 +101,12 @@ class com_iflytek_cloud_msc_util_UniqueIDUtil extends java_lang_Object  {
 
 extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_cloud_msc_util_UniqueIDUtil> {
   //region getters
+  Future<List<bool>> get_static_sUseWifiMac_batch() async {
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return typedResult;
+  }
   
   //endregion
 
@@ -118,7 +122,7 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::getUniqueID_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -126,7 +130,6 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -138,7 +141,7 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.UniqueIDUtil::cleanRecord_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -146,7 +149,6 @@ extension com_iflytek_cloud_msc_util_UniqueIDUtil_Batch on List<com_iflytek_clou
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

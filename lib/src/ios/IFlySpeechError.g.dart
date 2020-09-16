@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlySpeechError extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlySpeechError> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlySpeechError');
+  static Future<IFlySpeechError> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlySpeechError', {'init': init});
     final object = IFlySpeechError()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlySpeechError>> create_batch__(int length) async {
+  static Future<List<IFlySpeechError>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlySpeechError', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlySpeechError', {'length': length, 'init': init});
   
     final List<IFlySpeechError> typedResult = resultBatch.map((result) => IFlySpeechError()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,40 +39,37 @@ class IFlySpeechError extends NSObject  {
 
   //region getters
   Future<int> get_errorCode() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorCode", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorCode", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_errorType() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorType", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorType", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_errorDesc() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorDesc", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorDesc", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_errorCode(int errorCode) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorCode', {'refId': refId, "errorCode": errorCode});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::set_errorCode', <String, dynamic>{'__this__': this, "errorCode": errorCode});
   
   
   }
   
   Future<void> set_errorType(int errorType) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorType', {'refId': refId, "errorType": errorType});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::set_errorType', <String, dynamic>{'__this__': this, "errorType": errorType});
   
   
   }
   
   Future<void> set_errorDesc(String errorDesc) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorDesc', {'refId': refId, "errorDesc": errorDesc});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::set_errorDesc', <String, dynamic>{'__this__': this, "errorDesc": errorDesc});
   
   
   }
@@ -88,11 +81,11 @@ class IFlySpeechError extends NSObject  {
   static Future<IFlySpeechError> initWithError(int errorCode) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechError::initWithError([\'errorCode\':$errorCode])');
+      debugPrint('fluttify-dart: IFlySpeechError::initWithError([\'errorCode\':$errorCode])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::initWithError', {"errorCode": errorCode});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::initWithError', {"errorCode": errorCode});
   
   
     // handle native call
@@ -103,7 +96,6 @@ class IFlySpeechError extends NSObject  {
       return null;
     } else {
       final __return__ = IFlySpeechError()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -112,11 +104,11 @@ class IFlySpeechError extends NSObject  {
   Future<int> errorCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechError@$refId::errorCode([])');
+      debugPrint('fluttify-dart: IFlySpeechError@$refId::errorCode([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorCode', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::errorCode', {"__this__": this});
   
   
     // handle native call
@@ -127,7 +119,6 @@ class IFlySpeechError extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -136,11 +127,11 @@ class IFlySpeechError extends NSObject  {
   Future<String> errorDesc() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySpeechError@$refId::errorDesc([])');
+      debugPrint('fluttify-dart: IFlySpeechError@$refId::errorDesc([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorDesc', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::errorDesc', {"__this__": this});
   
   
     // handle native call
@@ -151,7 +142,6 @@ class IFlySpeechError extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -162,23 +152,23 @@ class IFlySpeechError extends NSObject  {
 extension IFlySpeechError_Batch on List<IFlySpeechError> {
   //region getters
   Future<List<int>> get_errorCode_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorCode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorCode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_errorType_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_errorDesc_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlySpeechError::get_errorDesc_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlySpeechError::get_errorDesc_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -186,19 +176,19 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
 
   //region setters
   Future<void> set_errorCode_batch(List<int> errorCode) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorCode": errorCode[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('IFlySpeechError::set_errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "errorCode": errorCode[__i__]}]);
   
   
   }
   
   Future<void> set_errorType_batch(List<int> errorType) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorType": errorType[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('IFlySpeechError::set_errorType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "errorType": errorType[__i__]}]);
   
   
   }
   
   Future<void> set_errorDesc_batch(List<String> errorDesc) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::set_errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "errorDesc": errorDesc[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('IFlySpeechError::set_errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "errorDesc": errorDesc[__i__]}]);
   
   
   }
@@ -213,15 +203,14 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::initWithError_batch', [for (int __i__ = 0; __i__ < errorCode.length; __i__++) {"errorCode": errorCode[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::initWithError_batch', [for (int __i__ = 0; __i__ < errorCode.length; __i__++) {"errorCode": errorCode[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => IFlySpeechError()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => IFlySpeechError()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -233,7 +222,7 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::errorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -241,7 +230,6 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -253,7 +241,7 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySpeechError::errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySpeechError::errorDesc_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -261,7 +249,6 @@ extension IFlySpeechError_Batch on List<IFlySpeechError> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

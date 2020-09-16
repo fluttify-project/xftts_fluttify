@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_cloud_util_VerifierUtil> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_VerifierUtil__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_util_VerifierUtil__', );
     final object = com_iflytek_cloud_util_VerifierUtil()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_VerifierUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_util_VerifierUtil__', {'length': length});
   
     final List<com_iflytek_cloud_util_VerifierUtil> typedResult = resultBatch.map((result) => com_iflytek_cloud_util_VerifierUtil()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
   static Future<String> generateNumberPassword(int var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::generateNumberPassword([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::generateNumberPassword([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
   static Future<android_graphics_Bitmap> ARGB2Gray(android_graphics_Bitmap var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::ARGB2Gray([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::ARGB2Gray([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray', {"var0": var0});
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = android_graphics_Bitmap()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
   static Future<int> getBitmapsize(android_graphics_Bitmap var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::getBitmapsize([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.util.VerifierUtil::getBitmapsize([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize', {"var0": var0});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_cloud_util_VerifierUtil extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -142,7 +135,7 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::generateNumberPassword_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -150,7 +143,6 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -162,15 +154,14 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::ARGB2Gray_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => android_graphics_Bitmap()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_graphics_Bitmap()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -182,7 +173,7 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.util.VerifierUtil::getBitmapsize_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -190,7 +181,6 @@ extension com_iflytek_cloud_util_VerifierUtil_Batch on List<com_iflytek_cloud_ut
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -4,9 +4,31 @@
 //////////////////////////////////////////////////////////
 
 enum com_iflytek_cloud_Setting_LOG_LEVEL {
-  all,
-  detail,
-  normal,
-  low,
-  none
+  all /* null */,
+  detail /* null */,
+  normal /* null */,
+  low /* null */,
+  none /* null */
+}
+
+extension com_iflytek_cloud_Setting_LOG_LEVELToX on com_iflytek_cloud_Setting_LOG_LEVEL {
+  int toValue() {
+    switch (this) {
+      case com_iflytek_cloud_Setting_LOG_LEVEL.all: return com_iflytek_cloud_Setting_LOG_LEVEL.all.index + 0;
+      case com_iflytek_cloud_Setting_LOG_LEVEL.detail: return com_iflytek_cloud_Setting_LOG_LEVEL.detail.index + 0;
+      case com_iflytek_cloud_Setting_LOG_LEVEL.normal: return com_iflytek_cloud_Setting_LOG_LEVEL.normal.index + 0;
+      case com_iflytek_cloud_Setting_LOG_LEVEL.low: return com_iflytek_cloud_Setting_LOG_LEVEL.low.index + 0;
+      case com_iflytek_cloud_Setting_LOG_LEVEL.none: return com_iflytek_cloud_Setting_LOG_LEVEL.none.index + 0;
+      default: return 0;
+    }
+  }
+}
+
+extension com_iflytek_cloud_Setting_LOG_LEVELFromX on int {
+  com_iflytek_cloud_Setting_LOG_LEVEL tocom_iflytek_cloud_Setting_LOG_LEVEL() {
+    switch (this) {
+      
+      default: return com_iflytek_cloud_Setting_LOG_LEVEL.values[this + 0];
+    }
+  }
 }

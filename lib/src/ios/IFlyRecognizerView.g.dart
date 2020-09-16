@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyRecognizerView extends UIView  {
   //endregion
 
   //region creators
-  static Future<IFlyRecognizerView> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyRecognizerView');
+  static Future<IFlyRecognizerView> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyRecognizerView', {'init': init});
     final object = IFlyRecognizerView()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyRecognizerView>> create_batch__(int length) async {
+  static Future<List<IFlyRecognizerView>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyRecognizerView', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyRecognizerView', {'length': length, 'init': init});
   
     final List<IFlyRecognizerView> typedResult = resultBatch.map((result) => IFlyRecognizerView()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -47,35 +43,37 @@ class IFlyRecognizerView extends UIView  {
 
   //region setters
   Future<void> set_delegate(IFlyRecognizerViewDelegate delegate, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('IFlyRecognizerViewDelegate::Callback@$refId')
+    MethodChannel('IFlyRecognizerViewDelegate::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        // final refId = args['callerRefId'] as int;
-        // if (refId != this.refId) return;
-  
-        switch (methodCall.method) {
-          case 'Callback::IFlyRecognizerViewDelegate::onResult_isLast':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onResult_isLast([\'isLast\':${args['isLast']}])');
-            }
-        
-            // handle the native call
-            delegate?.onResult_isLast((args['resultArray'] as List).cast<int>().map((it) => NSObject()..refId = it..tag__ = 'xftts_fluttify').toList(), args['isLast']);
-            break;
-          case 'Callback::IFlyRecognizerViewDelegate::onCompleted':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onCompleted([])');
-            }
-        
-            // handle the native call
-            delegate?.onCompleted((IFlySpeechError()..refId = (args['error'])..tag__ = 'xftts_fluttify'));
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::IFlyRecognizerViewDelegate::onResult_isLast':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onResult_isLast([\'resultArray\':${args['resultArray']}, \'isLast\':${args['isLast']}])');
+              }
+          
+              // handle the native call
+              delegate?.onResult_isLast((args['resultArray'] as List).cast<String>().map((__it__) => TypeOpXfttsFluttifyIOS(__it__).as__<NSObject>()).toList(), args['isLast']);
+              break;
+            case 'Callback::IFlyRecognizerViewDelegate::onCompleted':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onCompleted([\'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.onCompleted(TypeOpXfttsFluttifyIOS((args['error'] as Object))?.as__<IFlySpeechError>());
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
@@ -87,11 +85,11 @@ class IFlyRecognizerView extends UIView  {
   Future<dynamic> initWithOrigin(CGPoint origin, {bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::initWithOrigin([])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::initWithOrigin([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::initWithOrigin', {"origin": origin.refId, "refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::initWithOrigin', {"origin": origin, "__this__": this});
   
   
     // handle native call
@@ -102,7 +100,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = Ref()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -111,11 +108,11 @@ class IFlyRecognizerView extends UIView  {
   Future<dynamic> initWithCenter(CGPoint center, {bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::initWithCenter([])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::initWithCenter([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::initWithCenter', {"center": center.refId, "refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::initWithCenter', {"center": center, "__this__": this});
   
   
     // handle native call
@@ -126,7 +123,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = Ref()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -135,11 +131,11 @@ class IFlyRecognizerView extends UIView  {
   Future<void> setAutoRotate(bool autoRotate, {bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::setAutoRotate([\'autoRotate\':$autoRotate])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::setAutoRotate([\'autoRotate\':$autoRotate])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::setAutoRotate', {"autoRotate": autoRotate, "refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::setAutoRotate', {"autoRotate": autoRotate, "__this__": this});
   
   
     // handle native call
@@ -150,7 +146,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -159,11 +154,11 @@ class IFlyRecognizerView extends UIView  {
   Future<bool> setParameter_forKey(String value, String key, {bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::setParameter([\'value\':$value, \'key\':$key])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::setParameter([\'value\':$value, \'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::setParameter_forKey', {"value": value, "key": key, "refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::setParameter_forKey', {"value": value, "key": key, "__this__": this});
   
   
     // handle native call
@@ -174,7 +169,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -183,11 +177,11 @@ class IFlyRecognizerView extends UIView  {
   Future<String> parameterForKey(String key, {bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::parameterForKey([\'key\':$key])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::parameterForKey([\'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::parameterForKey', {"key": key, "refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::parameterForKey', {"key": key, "__this__": this});
   
   
     // handle native call
@@ -198,7 +192,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -207,11 +200,11 @@ class IFlyRecognizerView extends UIView  {
   Future<bool> start({bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::start([])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::start([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::start', {"refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::start', {"__this__": this});
   
   
     // handle native call
@@ -222,7 +215,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -231,11 +223,11 @@ class IFlyRecognizerView extends UIView  {
   Future<void> cancel({bool viewChannel = true}) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyRecognizerView@$refId::cancel([])');
+      debugPrint('fluttify-dart: IFlyRecognizerView@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::cancel', {"refId": refId});
+    final __result__ = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::cancel', {"__this__": this});
   
   
     // handle native call
@@ -246,7 +238,6 @@ class IFlyRecognizerView extends UIView  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -271,15 +262,14 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::initWithOrigin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"origin": origin[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::initWithOrigin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"origin": origin[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -291,15 +281,14 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::initWithCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::initWithCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => Ref()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -311,7 +300,7 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::setAutoRotate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"autoRotate": autoRotate[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::setAutoRotate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"autoRotate": autoRotate[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -319,7 +308,6 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -331,7 +319,7 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"value": value[__i__], "key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -339,7 +327,6 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -351,7 +338,7 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::parameterForKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::parameterForKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -359,7 +346,6 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -371,7 +357,7 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -379,7 +365,6 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -391,7 +376,7 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify').invokeMethod('IFlyRecognizerView::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'com.fluttify/xftts_fluttify/IFlyRecognizerView' : 'com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyRecognizerView::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -399,7 +384,6 @@ extension IFlyRecognizerView_Batch on List<IFlyRecognizerView> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

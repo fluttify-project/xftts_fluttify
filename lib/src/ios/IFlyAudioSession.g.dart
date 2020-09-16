@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyAudioSession extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyAudioSession> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyAudioSession');
+  static Future<IFlyAudioSession> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyAudioSession', {'init': init});
     final object = IFlyAudioSession()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyAudioSession>> create_batch__(int length) async {
+  static Future<List<IFlyAudioSession>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyAudioSession', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyAudioSession', {'length': length, 'init': init});
   
     final List<IFlyAudioSession> typedResult = resultBatch.map((result) => IFlyAudioSession()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class IFlyAudioSession extends NSObject  {
   static Future<void> initPlayingAudioSession(bool isMPCenter) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyAudioSession::initPlayingAudioSession([\'isMPCenter\':$isMPCenter])');
+      debugPrint('fluttify-dart: IFlyAudioSession::initPlayingAudioSession([\'isMPCenter\':$isMPCenter])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initPlayingAudioSession', {"isMPCenter": isMPCenter});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyAudioSession::initPlayingAudioSession', {"isMPCenter": isMPCenter});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class IFlyAudioSession extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class IFlyAudioSession extends NSObject  {
   static Future<bool> initRecordingAudioSession() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyAudioSession::initRecordingAudioSession([])');
+      debugPrint('fluttify-dart: IFlyAudioSession::initRecordingAudioSession([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initRecordingAudioSession', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyAudioSession::initRecordingAudioSession', );
   
   
     // handle native call
@@ -93,7 +88,6 @@ class IFlyAudioSession extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -118,7 +112,7 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initPlayingAudioSession_batch', [for (int __i__ = 0; __i__ < isMPCenter.length; __i__++) {"isMPCenter": isMPCenter[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyAudioSession::initPlayingAudioSession_batch', [for (int __i__ = 0; __i__ < isMPCenter.length; __i__++) {"isMPCenter": isMPCenter[__i__]}]);
   
   
     // convert native result to dart side object
@@ -126,7 +120,6 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -138,7 +131,7 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyAudioSession::initRecordingAudioSession_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyAudioSession::initRecordingAudioSession_batch', );
   
   
     // convert native result to dart side object
@@ -146,7 +139,6 @@ extension IFlyAudioSession_Batch on List<IFlyAudioSession> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

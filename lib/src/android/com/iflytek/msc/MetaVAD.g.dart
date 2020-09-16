@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,10 +20,8 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
 
   //region creators
   static Future<com_iflytek_msc_MetaVAD> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_msc_MetaVAD__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_msc_MetaVAD__', );
     final object = com_iflytek_msc_MetaVAD()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +29,9 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MetaVAD__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_msc_MetaVAD__', {'length': length});
   
     final List<com_iflytek_msc_MetaVAD> typedResult = resultBatch.map((result) => com_iflytek_msc_MetaVAD()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADInitialize(Uint8List var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADInitialize([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADInitialize([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +65,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADUninitialize() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADUninitialize([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADUninitialize([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize', );
   
   
     // handle native call
@@ -93,7 +88,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADLoadResource(int var0, Uint8List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADLoadResource([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADLoadResource([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADDelResource(int var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADDelResource([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADDelResource([\'var0\':$var0])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource', {"var0": var0});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource', {"var0": var0});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADCreateSession(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADCreateSession([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADCreateSession([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession', {"var0": var0});
   
   
     // handle native call
@@ -165,7 +157,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -174,11 +165,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADDestroySession(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADDestroySession([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADDestroySession([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession', {"var0": var0});
   
   
     // handle native call
@@ -189,7 +180,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -198,11 +188,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADResetSession(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADResetSession([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADResetSession([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession', {"var0": var0});
   
   
     // handle native call
@@ -213,7 +203,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -222,11 +211,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADAppendPCM(com_iflytek_msc_MetaVAD_Instance var0, Uint8List var1, int var2, int var3, int var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADAppendPCM([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADAppendPCM([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM', {"var0": var0.refId, "var1": var1, "var2": var2, "var3": var3, "var4": var4});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM', {"var0": var0, "var1": var1, "var2": var2, "var3": var3, "var4": var4});
   
   
     // handle native call
@@ -237,7 +226,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -246,11 +234,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADGetSeg(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADGetSeg([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADGetSeg([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg', {"var0": var0});
   
   
     // handle native call
@@ -261,7 +249,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -270,11 +257,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADSetParam(com_iflytek_msc_MetaVAD_Instance var0, Uint8List var1, Uint8List var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADSetParam([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADSetParam([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam', {"var0": var0.refId, "var1": var1, "var2": var2});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam', {"var0": var0, "var1": var1, "var2": var2});
   
   
     // handle native call
@@ -285,7 +272,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -294,11 +280,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<double> VADGetSentConfidence(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADGetSentConfidence([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADGetSentConfidence([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence', {"var0": var0});
   
   
     // handle native call
@@ -309,7 +295,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,11 +303,11 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
   static Future<int> VADResetSentence(com_iflytek_msc_MetaVAD_Instance var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.msc.MetaVAD::VADResetSentence([])');
+      debugPrint('fluttify-dart: com.iflytek.msc.MetaVAD::VADResetSentence([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence', {"var0": var0});
   
   
     // handle native call
@@ -333,7 +318,6 @@ class com_iflytek_msc_MetaVAD extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -358,7 +342,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADInitialize_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -366,7 +350,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -378,7 +361,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADUninitialize_batch', );
   
   
     // convert native result to dart side object
@@ -386,7 +369,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -398,7 +380,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADLoadResource_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -406,7 +388,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -418,7 +399,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADDelResource_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -426,7 +407,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -438,7 +418,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADCreateSession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -446,7 +426,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -458,7 +437,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADDestroySession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -466,7 +445,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -478,7 +456,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADResetSession_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -486,7 +464,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -498,7 +475,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADAppendPCM_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
   
     // convert native result to dart side object
@@ -506,7 +483,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -518,7 +494,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADGetSeg_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -526,7 +502,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -538,7 +513,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADSetParam_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -546,7 +521,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -558,7 +532,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -566,7 +540,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -578,7 +551,7 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.msc.MetaVAD::VADResetSentence_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -586,7 +559,6 @@ extension com_iflytek_msc_MetaVAD_Batch on List<com_iflytek_msc_MetaVAD> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlyDataUploader extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlyDataUploader> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlyDataUploader');
+  static Future<IFlyDataUploader> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlyDataUploader', {'init': init});
     final object = IFlyDataUploader()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlyDataUploader>> create_batch__(int length) async {
+  static Future<List<IFlyDataUploader>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlyDataUploader', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlyDataUploader', {'length': length, 'init': init});
   
     final List<IFlyDataUploader> typedResult = resultBatch.map((result) => IFlyDataUploader()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,28 +39,26 @@ class IFlyDataUploader extends NSObject  {
 
   //region getters
   Future<String> get_dataName() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_dataName", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyDataUploader::get_dataName", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_data() async {
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_data", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyDataUploader::get_data", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_dataName(String dataName) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_dataName', {'refId': refId, "dataName": dataName});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDataUploader::set_dataName', <String, dynamic>{'__this__': this, "dataName": dataName});
   
   
   }
   
   Future<void> set_data(String data) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_data', {'refId': refId, "data": data});
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDataUploader::set_data', <String, dynamic>{'__this__': this, "data": data});
   
   
   }
@@ -76,32 +70,34 @@ class IFlyDataUploader extends NSObject  {
   Future<void> uploadDataWithCompletionHandler_name_data(void completionHandler(String result, IFlySpeechError error), String name, String data) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyDataUploader@$refId::uploadDataWithCompletionHandler([\'name\':$name, \'data\':$data])');
+      debugPrint('fluttify-dart: IFlyDataUploader@$refId::uploadDataWithCompletionHandler([\'name\':$name, \'data\':$data])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::uploadDataWithCompletionHandler_name_data', {"name": name, "data": data, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDataUploader::uploadDataWithCompletionHandler_name_data', {"name": name, "data": data, "__this__": this});
   
   
     // handle native call
-    MethodChannel('IFlyDataUploader::uploadDataWithCompletionHandler_name_data::Callback')
+    MethodChannel('IFlyUploadDataCompletionHandler::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::IFlyUploadDataCompletionHandler::IFlyUploadDataCompletionHandler':
-              // print log
-              if (fluttifyLogEnabled) {
-        
-              }
-        
-              // handle the native call
-              completionHandler(args['result'], (IFlySpeechError()..refId = (args['error'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::IFlyUploadDataCompletionHandler::IFlyUploadDataCompletionHandler':
+                // print log
+                if (fluttifyLogEnabled) {
+          
+                }
+          
+                // handle the native call
+                if (completionHandler != null) completionHandler(args['result'], TypeOpXfttsFluttifyIOS((args['error'] as Object))?.as__<IFlySpeechError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -110,7 +106,6 @@ class IFlyDataUploader extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -119,11 +114,11 @@ class IFlyDataUploader extends NSObject  {
   Future<void> setParameter_forKey(String parameter, String key) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlyDataUploader@$refId::setParameter([\'parameter\':$parameter, \'key\':$key])');
+      debugPrint('fluttify-dart: IFlyDataUploader@$refId::setParameter([\'parameter\':$parameter, \'key\':$key])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameter_forKey', {"parameter": parameter, "key": key, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDataUploader::setParameter_forKey', {"parameter": parameter, "key": key, "__this__": this});
   
   
     // handle native call
@@ -134,7 +129,6 @@ class IFlyDataUploader extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -145,16 +139,16 @@ class IFlyDataUploader extends NSObject  {
 extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
   //region getters
   Future<List<String>> get_dataName_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_dataName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyDataUploader::get_dataName_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_data_batch() async {
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod("IFlyDataUploader::get_data_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod("IFlyDataUploader::get_data_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -162,13 +156,13 @@ extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
 
   //region setters
   Future<void> set_dataName_batch(List<String> dataName) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_dataName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "dataName": dataName[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('IFlyDataUploader::set_dataName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "dataName": dataName[__i__]}]);
   
   
   }
   
   Future<void> set_data_batch(List<String> data) async {
-    await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::set_data_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "data": data[__i__]}]);
+    await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('IFlyDataUploader::set_data_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "data": data[__i__]}]);
   
   
   }
@@ -183,7 +177,7 @@ extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlyDataUploader::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"parameter": parameter[__i__], "key": key[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlyDataUploader::setParameter_forKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"parameter": parameter[__i__], "key": key[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -191,7 +185,6 @@ extension IFlyDataUploader_Batch on List<IFlyDataUploader> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

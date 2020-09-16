@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -36,32 +35,34 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   static Future<com_iflytek_cloud_IdentityVerifier> createVerifier(android_content_Context var0, com_iflytek_cloud_InitListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier::createVerifier([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier::createVerifier([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::createVerifier', {"var0": var0.refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::createVerifier', {"var0": var0});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.IdentityVerifier::createVerifier::Callback')
+    MethodChannel('com.iflytek.cloud.IdentityVerifier::createVerifier::Callback', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.InitListener::onInit':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onInit(args['var1']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.InitListener::onInit':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onInit([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onInit(args['var1']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -70,7 +71,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_IdentityVerifier()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -79,11 +79,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   static Future<com_iflytek_cloud_IdentityVerifier> getVerifier() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier::getVerifier([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier::getVerifier([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::getVerifier', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::getVerifier', );
   
   
     // handle native call
@@ -94,7 +94,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_iflytek_cloud_IdentityVerifier()..refId = __result__..tag__ = 'xftts_fluttify';
-      kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -103,50 +102,52 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<int> startWorking(com_iflytek_cloud_IdentityListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::startWorking([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::startWorking([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::startWorking', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::startWorking', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.IdentityVerifier::startWorking::Callback')
+    MethodChannel('com.iflytek.cloud.IdentityVerifier::startWorking::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.IdentityListener::onResult':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onResult([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onResult((com_iflytek_cloud_IdentityResult()..refId = (args['var1'])..tag__ = 'xftts_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.iflytek.cloud.IdentityListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([])');
-              }
-        
-              // handle the native call
-              var1?.onError((com_iflytek_cloud_SpeechError()..refId = (args['var1'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.IdentityListener::onEvent':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-              }
-        
-              // handle the native call
-              var1?.onEvent(args['var1'], args['var2'], args['var3'], (android_os_Bundle()..refId = (args['var4'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.IdentityListener::onResult':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onResult([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onResult(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_IdentityResult>(), args['var2']);
+                break;
+              case 'Callback::com.iflytek.cloud.IdentityListener::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onError(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              case 'Callback::com.iflytek.cloud.IdentityListener::onEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                }
+          
+                // handle the native call
+                var1?.onEvent(args['var1'], args['var2'], args['var3'], TypeOpXfttsFluttifyAndroid((args['var4'] as Object))?.as__<android_os_Bundle>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -155,7 +156,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -164,11 +164,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<int> writeData(String var1, String var2, Uint8List var3, int var4, int var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::writeData([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::writeData([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::writeData', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::writeData', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "__this__": this});
   
   
     // handle native call
@@ -179,7 +179,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -188,11 +187,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<void> stopWrite(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::stopWrite([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::stopWrite([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::stopWrite', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::stopWrite', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -203,7 +202,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -212,50 +210,52 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<int> execute(String var1, String var2, String var3, com_iflytek_cloud_IdentityListener var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::execute([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::execute([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::execute', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::execute', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.IdentityVerifier::execute::Callback')
+    MethodChannel('com.iflytek.cloud.IdentityVerifier::execute::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.IdentityListener::onResult':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onResult([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var4?.onResult((com_iflytek_cloud_IdentityResult()..refId = (args['var1'])..tag__ = 'xftts_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.iflytek.cloud.IdentityListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([])');
-              }
-        
-              // handle the native call
-              var4?.onError((com_iflytek_cloud_SpeechError()..refId = (args['var1'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.IdentityListener::onEvent':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-              }
-        
-              // handle the native call
-              var4?.onEvent(args['var1'], args['var2'], args['var3'], (android_os_Bundle()..refId = (args['var4'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.IdentityListener::onResult':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onResult([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var4?.onResult(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_IdentityResult>(), args['var2']);
+                break;
+              case 'Callback::com.iflytek.cloud.IdentityListener::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var4?.onError(TypeOpXfttsFluttifyAndroid((args['var1'] as Object))?.as__<com_iflytek_cloud_SpeechError>());
+                break;
+              case 'Callback::com.iflytek.cloud.IdentityListener::onEvent':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onEvent([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                }
+          
+                // handle the native call
+                var4?.onEvent(args['var1'], args['var2'], args['var3'], TypeOpXfttsFluttifyAndroid((args['var4'] as Object))?.as__<android_os_Bundle>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -264,7 +264,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -273,11 +272,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<bool> isWorking() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::isWorking([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::isWorking([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::isWorking', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::isWorking', {"__this__": this});
   
   
     // handle native call
@@ -288,7 +287,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -297,11 +295,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<void> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::cancel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::cancel', {"__this__": this});
   
   
     // handle native call
@@ -312,7 +310,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -321,11 +318,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<bool> setParameter(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::setParameter([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::setParameter', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::setParameter', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -336,7 +333,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -345,11 +341,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<String> getParameter(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::getParameter([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::getParameter([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::getParameter', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::getParameter', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -360,7 +356,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -369,11 +364,11 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
   Future<bool> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::destroy([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.IdentityVerifier@$refId::destroy([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::destroy', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::destroy', {"__this__": this});
   
   
     // handle native call
@@ -384,7 +379,6 @@ class com_iflytek_cloud_IdentityVerifier extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -409,15 +403,14 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::getVerifier_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::getVerifier_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_iflytek_cloud_IdentityVerifier()..refId = __result__..tag__ = 'xftts_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_iflytek_cloud_IdentityVerifier()..refId = __result__..tag__ = 'xftts_fluttify').toList();
       return typedResult;
     }
   }
@@ -429,7 +422,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::writeData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::writeData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -437,7 +430,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -449,7 +441,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::stopWrite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::stopWrite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -457,7 +449,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -469,7 +460,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::isWorking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::isWorking_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -477,7 +468,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -489,7 +479,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -497,7 +487,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -509,7 +498,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::setParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -517,7 +506,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -529,7 +517,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::getParameter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -537,7 +525,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -549,7 +536,7 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.IdentityVerifier::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.IdentityVerifier::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -557,7 +544,6 @@ extension com_iflytek_cloud_IdentityVerifier_Batch on List<com_iflytek_cloud_Ide
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

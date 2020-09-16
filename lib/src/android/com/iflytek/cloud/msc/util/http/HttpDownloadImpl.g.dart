@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -21,26 +20,20 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
 
   //region creators
   static Future<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__');
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__', );
     final object = com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> create__int__android_content_Context(int var1, android_content_Context var2) async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context', {"var1": var1, "var2": var2.refId});
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context', {"var1": var1, "var2": var2});
     final object = com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> create__long__int__android_content_Context(int var1, int var3, android_content_Context var4) async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context', {"var1": var1, "var3": var3, "var4": var4.refId});
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context', {"var1": var1, "var3": var3, "var4": var4});
     final object = com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -48,10 +41,9 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__', {'length': length});
   
     final List<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -59,10 +51,9 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__].refId}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
     final List<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -70,10 +61,9 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
     if (var1.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var4": var4[__i__].refId}]);
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
     final List<com_iflytek_cloud_msc_util_http_HttpDownloadImpl> typedResult = resultBatch.map((result) => com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -92,59 +82,61 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
   Future<void> setHttpDownloadListener(com_iflytek_cloud_msc_util_http_HttpDownloadListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::setHttpDownloadListener([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::setHttpDownloadListener([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::setHttpDownloadListener', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::setHttpDownloadListener', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::setHttpDownloadListener::Callback')
+    MethodChannel('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::setHttpDownloadListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onStart':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onStart([\'var1\':${args['var1']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}, \'var5\':${args['var5']}])');
-              }
-        
-              // handle the native call
-              var1?.onStart(args['var1'], args['var3'], args['var4'], args['var5'], (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (args['var6'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onProgress':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onProgress([\'var1\':${args['var1']}, \'var3\':${args['var3']}])');
-              }
-        
-              // handle the native call
-              var1?.onProgress(args['var1'], args['var3'], (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (args['var4'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onFinish':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onFinish([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onFinish(args['var1'], (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (args['var2'])..tag__ = 'xftts_fluttify'));
-              break;
-            case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onError':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onError([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onError(args['var1'], (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (args['var2'])..tag__ = 'xftts_fluttify'));
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onStart':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onStart([\'var1\':${args['var1']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}, \'var5\':${args['var5']}, \'var6\':${args['var6']}])');
+                }
+          
+                // handle the native call
+                var1?.onStart(args['var1'], args['var3'], args['var4'], args['var5'], TypeOpXfttsFluttifyAndroid((args['var6'] as Object))?.as__<com_iflytek_cloud_msc_util_http_HttpDownloadImpl>());
+                break;
+              case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onProgress':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onProgress([\'var1\':${args['var1']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+                }
+          
+                // handle the native call
+                var1?.onProgress(args['var1'], args['var3'], TypeOpXfttsFluttifyAndroid((args['var4'] as Object))?.as__<com_iflytek_cloud_msc_util_http_HttpDownloadImpl>());
+                break;
+              case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onFinish':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onFinish([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onFinish(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<com_iflytek_cloud_msc_util_http_HttpDownloadImpl>());
+                break;
+              case 'Callback::com.iflytek.cloud.msc.util.http.HttpDownloadListener::onError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onError([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.onError(args['var1'], TypeOpXfttsFluttifyAndroid((args['var2'] as Object))?.as__<com_iflytek_cloud_msc_util_http_HttpDownloadImpl>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -153,7 +145,6 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -162,11 +153,11 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
   Future<void> start(String var1, String var2, String var3, bool var4, String var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::start([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::start([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::start', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::start', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5, "__this__": this});
   
   
     // handle native call
@@ -177,7 +168,6 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -186,11 +176,11 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
   Future<void> cancel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::cancel([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::cancel([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::cancel', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::cancel', {"__this__": this});
   
   
     // handle native call
@@ -201,7 +191,6 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -210,11 +199,11 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
   Future<int> getId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::getId([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::getId([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getId', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getId', {"__this__": this});
   
   
     // handle native call
@@ -225,7 +214,6 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -234,11 +222,11 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
   Future<int> getType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::getType([])');
+      debugPrint('fluttify-dart: com.iflytek.cloud.msc.util.http.HttpDownloadImpl@$refId::getType([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getType', {"refId": refId});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getType', {"__this__": this});
   
   
     // handle native call
@@ -249,7 +237,6 @@ class com_iflytek_cloud_msc_util_http_HttpDownloadImpl extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -274,7 +261,7 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::start_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -282,7 +269,6 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -294,7 +280,7 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::cancel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -302,7 +288,6 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -314,7 +299,7 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -322,7 +307,6 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -334,7 +318,7 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('com.iflytek.cloud.msc.util.http.HttpDownloadImpl::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -342,7 +326,6 @@ extension com_iflytek_cloud_msc_util_http_HttpDownloadImpl_Batch on List<com_ifl
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

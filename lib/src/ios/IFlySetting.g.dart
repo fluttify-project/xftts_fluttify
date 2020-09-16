@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
-import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,22 +19,19 @@ class IFlySetting extends NSObject  {
   //endregion
 
   //region creators
-  static Future<IFlySetting> create__() async {
-    final int refId = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::createIFlySetting');
+  static Future<IFlySetting> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::createIFlySetting', {'init': init});
     final object = IFlySetting()..refId = refId..tag__ = 'xftts_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<IFlySetting>> create_batch__(int length) async {
+  static Future<List<IFlySetting>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('ObjectFactory::create_batchIFlySetting', {'length': length});
+    final List resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('ObjectFactory::create_batchIFlySetting', {'length': length, 'init': init});
   
     final List<IFlySetting> typedResult = resultBatch.map((result) => IFlySetting()..refId = result..tag__ = 'xftts_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -54,11 +50,11 @@ class IFlySetting extends NSObject  {
   static Future<String> getVersion() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySetting::getVersion([])');
+      debugPrint('fluttify-dart: IFlySetting::getVersion([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::getVersion', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::getVersion', );
   
   
     // handle native call
@@ -69,7 +65,6 @@ class IFlySetting extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -78,11 +73,11 @@ class IFlySetting extends NSObject  {
   static Future<LOG_LEVEL> logLvl() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySetting::logLvl([])');
+      debugPrint('fluttify-dart: IFlySetting::logLvl([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::logLvl', );
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::logLvl', );
   
   
     // handle native call
@@ -92,8 +87,7 @@ class IFlySetting extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = LOG_LEVEL.values[__result__];
-    
+      final __return__ = (__result__ as int).toLOG_LEVEL();
       return __return__;
     }
   }
@@ -102,11 +96,11 @@ class IFlySetting extends NSObject  {
   static Future<void> showLogcat(bool showLog) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySetting::showLogcat([\'showLog\':$showLog])');
+      debugPrint('fluttify-dart: IFlySetting::showLogcat([\'showLog\':$showLog])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::showLogcat', {"showLog": showLog});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::showLogcat', {"showLog": showLog});
   
   
     // handle native call
@@ -117,7 +111,6 @@ class IFlySetting extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -126,11 +119,11 @@ class IFlySetting extends NSObject  {
   static Future<void> setLogFile(LOG_LEVEL level) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySetting::setLogFile([])');
+      debugPrint('fluttify-dart: IFlySetting::setLogFile([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFile', {"level": level.index});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::setLogFile', {"level": level.toValue()});
   
   
     // handle native call
@@ -141,7 +134,6 @@ class IFlySetting extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -150,11 +142,11 @@ class IFlySetting extends NSObject  {
   static Future<void> setLogFilePath(String path) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: IFlySetting::setLogFilePath([\'path\':$path])');
+      debugPrint('fluttify-dart: IFlySetting::setLogFilePath([\'path\':$path])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFilePath', {"path": path});
+    final __result__ = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::setLogFilePath', {"path": path});
   
   
     // handle native call
@@ -165,7 +157,6 @@ class IFlySetting extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -190,7 +181,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::getVersion_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::getVersion_batch', );
   
   
     // convert native result to dart side object
@@ -198,7 +189,6 @@ extension IFlySetting_Batch on List<IFlySetting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -210,15 +200,14 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::logLvl_batch', );
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::logLvl_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => LOG_LEVEL.values[__result__]).toList();
-    
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toLOG_LEVEL()).toList();
       return typedResult;
     }
   }
@@ -230,7 +219,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::showLogcat_batch', [for (int __i__ = 0; __i__ < showLog.length; __i__++) {"showLog": showLog[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::showLogcat_batch', [for (int __i__ = 0; __i__ < showLog.length; __i__++) {"showLog": showLog[__i__]}]);
   
   
     // convert native result to dart side object
@@ -238,7 +227,6 @@ extension IFlySetting_Batch on List<IFlySetting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -250,7 +238,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFile_batch', [for (int __i__ = 0; __i__ < level.length; __i__++) {"level": level[__i__].index}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::setLogFile_batch', [for (int __i__ = 0; __i__ < level.length; __i__++) {"level": level[__i__].toValue()}]);
   
   
     // convert native result to dart side object
@@ -258,7 +246,6 @@ extension IFlySetting_Batch on List<IFlySetting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -270,7 +257,7 @@ extension IFlySetting_Batch on List<IFlySetting> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify').invokeMethod('IFlySetting::setLogFilePath_batch', [for (int __i__ = 0; __i__ < path.length; __i__++) {"path": path[__i__]}]);
+    final resultBatch = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec('xftts_fluttify'))).invokeMethod('IFlySetting::setLogFilePath_batch', [for (int __i__ = 0; __i__ < path.length; __i__++) {"path": path[__i__]}]);
   
   
     // convert native result to dart side object
@@ -278,7 +265,6 @@ extension IFlySetting_Batch on List<IFlySetting> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
