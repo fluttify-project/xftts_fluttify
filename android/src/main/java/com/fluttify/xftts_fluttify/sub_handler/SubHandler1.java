@@ -33,15 +33,6 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // setter
-            put("com.iflytek.msc.VAD.VadData::set_startRemainFrameNum", (__args__, __methodResult__) -> {
-                // ref arg
-                Number startRemainFrameNum = (Number) ((Map<String, Object>) __args__).get("startRemainFrameNum");
-                com.iflytek.msc.VAD.VadData __this__ = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.startRemainFrameNum = startRemainFrameNum.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
             put("com.iflytek.msc.VAD.VadData::set_wavData", (__args__, __methodResult__) -> {
                 // ref arg
                 byte[] wavData = (byte[]) ((Map<String, Object>) __args__).get("wavData");
@@ -87,102 +78,276 @@ public class SubHandler1 {
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_errorcode", (__args__, __methodResult__) -> {
                 // ref arg
-                String pwdt = (String) ((Map<String, Object>) __args__).get("pwdt");
-                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                Number errorcode = (Number) ((Map<String, Object>) __args__).get("errorcode");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.pwdt = pwdt;
+                __this__.errorcode = errorcode.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_epstatues", (__args__, __methodResult__) -> {
                 // ref arg
-                String pwid = (String) ((Map<String, Object>) __args__).get("pwid");
-                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                Number epstatues = (Number) ((Map<String, Object>) __args__).get("epstatues");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.pwid = pwid;
+                __this__.epstatues = epstatues.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_rsltstatus", (__args__, __methodResult__) -> {
                 // ref arg
-                String pwtext = (String) ((Map<String, Object>) __args__).get("pwtext");
-                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                Number rsltstatus = (Number) ((Map<String, Object>) __args__).get("rsltstatus");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.pwtext = pwtext;
+                __this__.rsltstatus = rsltstatus.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_sst", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_sesstatus", (__args__, __methodResult__) -> {
                 // ref arg
-                String sst = (String) ((Map<String, Object>) __args__).get("sst");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number sesstatus = (Number) ((Map<String, Object>) __args__).get("sesstatus");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.sst = sst;
+                __this__.sesstatus = sesstatus.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_ret", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_buffer", (__args__, __methodResult__) -> {
                 // ref arg
-                boolean ret = (boolean) ((Map<String, Object>) __args__).get("ret");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                byte[] buffer = (byte[]) ((Map<String, Object>) __args__).get("buffer");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.ret = ret;
+                __this__.buffer = buffer;
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_dcs", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_buflen", (__args__, __methodResult__) -> {
                 // ref arg
-                String dcs = (String) ((Map<String, Object>) __args__).get("dcs");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number buflen = (Number) ((Map<String, Object>) __args__).get("buflen");
+                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.dcs = dcs;
+                __this__.buflen = buflen.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_vid", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_handle", (__args__, __methodResult__) -> {
                 // ref arg
-                String vid = (String) ((Map<String, Object>) __args__).get("vid");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number handle = (Number) ((Map<String, Object>) __args__).get("handle");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.vid = vid;
+                __this__.handle = handle.longValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_suc", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_rate", (__args__, __methodResult__) -> {
                 // ref arg
-                Number suc = (Number) ((Map<String, Object>) __args__).get("suc");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number rate = (Number) ((Map<String, Object>) __args__).get("rate");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.suc = suc.intValue();
+                __this__.rate = rate.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_rgn", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_begin", (__args__, __methodResult__) -> {
                 // ref arg
-                Number rgn = (Number) ((Map<String, Object>) __args__).get("rgn");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number begin = (Number) ((Map<String, Object>) __args__).get("begin");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.rgn = rgn.intValue();
+                __this__.begin = begin.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_trs", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_end", (__args__, __methodResult__) -> {
                 // ref arg
-                String trs = (String) ((Map<String, Object>) __args__).get("trs");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number end = (Number) ((Map<String, Object>) __args__).get("end");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.trs = trs;
+                __this__.end = end.intValue();
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.speech.VerifierResult::set_source", (__args__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_seg", (__args__, __methodResult__) -> {
                 // ref arg
-                String source = (String) ((Map<String, Object>) __args__).get("source");
-                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                Number seg = (Number) ((Map<String, Object>) __args__).get("seg");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                __this__.source = source;
+                __this__.seg = seg.intValue();
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.msc.MetaVAD.Instance::set_volume", (__args__, __methodResult__) -> {
+                // ref arg
+                Number volume = (Number) ((Map<String, Object>) __args__).get("volume");
+                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.volume = volume.intValue();
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String pwdt = (String) ((Map<String, Object>) __args__).get("pwdt");
+            
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.pwdt = pwdt;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String pwid = (String) ((Map<String, Object>) __args__).get("pwid");
+            
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.pwid = pwid;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String pwtext = (String) ((Map<String, Object>) __args__).get("pwtext");
+            
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.pwtext = pwtext;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_sst_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String sst = (String) ((Map<String, Object>) __args__).get("sst");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.sst = sst;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_ret_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    boolean ret = (boolean) ((Map<String, Object>) __args__).get("ret");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.ret = ret;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_dcs_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String dcs = (String) ((Map<String, Object>) __args__).get("dcs");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.dcs = dcs;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_vid_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String vid = (String) ((Map<String, Object>) __args__).get("vid");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.vid = vid;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_suc_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    Number suc = (Number) ((Map<String, Object>) __args__).get("suc");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.suc = suc.intValue();
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_rgn_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    Number rgn = (Number) ((Map<String, Object>) __args__).get("rgn");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.rgn = rgn.intValue();
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_trs_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String trs = (String) ((Map<String, Object>) __args__).get("trs");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.trs = trs;
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.speech.VerifierResult::set_source_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    String source = (String) ((Map<String, Object>) __args__).get("source");
+            
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.source = source;
+                }
+            
                 __methodResult__.success("success");
             });
             // setter batch
@@ -531,186 +696,6 @@ public class SubHandler1 {
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_handle_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number handle = (Number) ((Map<String, Object>) __args__).get("handle");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.handle = handle.longValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_rate_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number rate = (Number) ((Map<String, Object>) __args__).get("rate");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.rate = rate.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_begin_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number begin = (Number) ((Map<String, Object>) __args__).get("begin");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.begin = begin.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_end_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number end = (Number) ((Map<String, Object>) __args__).get("end");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.end = end.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_seg_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number seg = (Number) ((Map<String, Object>) __args__).get("seg");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.seg = seg.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MetaVAD.Instance::set_volume_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number volume = (Number) ((Map<String, Object>) __args__).get("volume");
-            
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.volume = volume.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_errorcode_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number errorcode = (Number) ((Map<String, Object>) __args__).get("errorcode");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.errorcode = errorcode.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_epstatues_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number epstatues = (Number) ((Map<String, Object>) __args__).get("epstatues");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.epstatues = epstatues.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_rsltstatus_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number rsltstatus = (Number) ((Map<String, Object>) __args__).get("rsltstatus");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.rsltstatus = rsltstatus.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_sesstatus_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number sesstatus = (Number) ((Map<String, Object>) __args__).get("sesstatus");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.sesstatus = sesstatus.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_buffer_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    byte[] buffer = (byte[]) ((Map<String, Object>) __args__).get("buffer");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.buffer = buffer;
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
-            put("com.iflytek.msc.MSCSessionInfo::set_buflen_batch", (__argsBatch__, __methodResult__) -> {
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref arg
-                    Number buflen = (Number) ((Map<String, Object>) __args__).get("buflen");
-            
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    __this__.buflen = buflen.intValue();
-                }
-            
-                __methodResult__.success("success");
-            });
-            // setter batch
             put("com.iflytek.msc.VAD.VadData::set_startByte_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -906,1448 +891,203 @@ public class SubHandler1 {
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_errorcode_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String pwdt = (String) ((Map<String, Object>) __args__).get("pwdt");
+                    Number errorcode = (Number) ((Map<String, Object>) __args__).get("errorcode");
             
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.pwdt = pwdt;
+                    __this__.errorcode = errorcode.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_epstatues_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String pwid = (String) ((Map<String, Object>) __args__).get("pwid");
+                    Number epstatues = (Number) ((Map<String, Object>) __args__).get("epstatues");
             
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.pwid = pwid;
+                    __this__.epstatues = epstatues.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_rsltstatus_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String pwtext = (String) ((Map<String, Object>) __args__).get("pwtext");
+                    Number rsltstatus = (Number) ((Map<String, Object>) __args__).get("rsltstatus");
             
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.pwtext = pwtext;
+                    __this__.rsltstatus = rsltstatus.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_sst_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_sesstatus_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String sst = (String) ((Map<String, Object>) __args__).get("sst");
+                    Number sesstatus = (Number) ((Map<String, Object>) __args__).get("sesstatus");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.sst = sst;
+                    __this__.sesstatus = sesstatus.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_ret_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_buffer_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    boolean ret = (boolean) ((Map<String, Object>) __args__).get("ret");
+                    byte[] buffer = (byte[]) ((Map<String, Object>) __args__).get("buffer");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.ret = ret;
+                    __this__.buffer = buffer;
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_dcs_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::set_buflen_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String dcs = (String) ((Map<String, Object>) __args__).get("dcs");
+                    Number buflen = (Number) ((Map<String, Object>) __args__).get("buflen");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.dcs = dcs;
+                    __this__.buflen = buflen.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_vid_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_handle_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String vid = (String) ((Map<String, Object>) __args__).get("vid");
+                    Number handle = (Number) ((Map<String, Object>) __args__).get("handle");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.vid = vid;
+                    __this__.handle = handle.longValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_suc_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_rate_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    Number suc = (Number) ((Map<String, Object>) __args__).get("suc");
+                    Number rate = (Number) ((Map<String, Object>) __args__).get("rate");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.suc = suc.intValue();
+                    __this__.rate = rate.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_rgn_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_begin_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    Number rgn = (Number) ((Map<String, Object>) __args__).get("rgn");
+                    Number begin = (Number) ((Map<String, Object>) __args__).get("begin");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.rgn = rgn.intValue();
+                    __this__.begin = begin.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_trs_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_end_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String trs = (String) ((Map<String, Object>) __args__).get("trs");
+                    Number end = (Number) ((Map<String, Object>) __args__).get("end");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.trs = trs;
+                    __this__.end = end.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // setter batch
-            put("com.iflytek.speech.VerifierResult::set_source_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::set_seg_batch", (__argsBatch__, __methodResult__) -> {
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref arg
-                    String source = (String) ((Map<String, Object>) __args__).get("source");
+                    Number seg = (Number) ((Map<String, Object>) __args__).get("seg");
             
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
             
-                    __this__.source = source;
+                    __this__.seg = seg.intValue();
+                }
+            
+                __methodResult__.success("success");
+            });
+            // setter batch
+            put("com.iflytek.msc.MetaVAD.Instance::set_volume_batch", (__argsBatch__, __methodResult__) -> {
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref arg
+                    Number volume = (Number) ((Map<String, Object>) __args__).get("volume");
+            
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
+            
+                    __this__.volume = volume.intValue();
                 }
             
                 __methodResult__.success("success");
             });
             // method
-            put("com.iflytek.cloud.DataDownloader::downloadData", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierListener::onVolumeChanged", (__args__, __methodResult__) -> {
                 // args
-            
-            
-                // ref
-                com.iflytek.cloud.DataDownloader __this__ = (com.iflytek.cloud.DataDownloader) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.DataDownloader@" + __this__ + "::downloadData(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.downloadData(new com.iflytek.cloud.SpeechListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.DataDownloader::downloadData::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onEvent(int var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onBufferReceived(byte[] var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBufferReceived(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onBufferReceived",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onCompleted(com.iflytek.cloud.SpeechError var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onCompleted(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onCompleted",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.DataUploader::uploadData", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
-            
-                // ref
-                com.iflytek.cloud.DataUploader __this__ = (com.iflytek.cloud.DataUploader) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.DataUploader@" + __this__ + "::uploadData(" + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.uploadData(new com.iflytek.cloud.SpeechListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.DataUploader::uploadData::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onEvent(int var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onBufferReceived(byte[] var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBufferReceived(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onBufferReceived",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onCompleted(com.iflytek.cloud.SpeechError var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onCompleted(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.SpeechListener::onCompleted",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                }, var2, var3);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.EvaluatorResult::getResultString", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.EvaluatorResult __this__ = (com.iflytek.cloud.EvaluatorResult) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.EvaluatorResult@" + __this__ + "::getResultString(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getResultString();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::createDetector", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector::createDetector(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.FaceDetector __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.FaceDetector.createDetector(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::getDetector", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector::getDetector(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.FaceDetector __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.FaceDetector.getDetector();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::detectARGB", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.graphics.Bitmap var1 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.FaceDetector __this__ = (com.iflytek.cloud.FaceDetector) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector@" + __this__ + "::detectARGB(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.detectARGB(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::detectGray", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.graphics.Bitmap var1 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.FaceDetector __this__ = (com.iflytek.cloud.FaceDetector) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector@" + __this__ + "::detectGray(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.detectGray(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::trackNV21", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
-                // ref arg
-                Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
-            
-                // ref
-                com.iflytek.cloud.FaceDetector __this__ = (com.iflytek.cloud.FaceDetector) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector@" + __this__ + "::trackNV21(" + var1 + var2 + var3 + var4 + var5 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.trackNV21(var1, var2.intValue(), var3.intValue(), var4.intValue(), var5.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceDetector::destroy", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.FaceDetector __this__ = (com.iflytek.cloud.FaceDetector) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceDetector@" + __this__ + "::destroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.destroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceRequest::sendRequest", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.FaceRequest __this__ = (com.iflytek.cloud.FaceRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceRequest@" + __this__ + "::sendRequest(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.sendRequest(var1, new com.iflytek.cloud.RequestListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.FaceRequest::sendRequest::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onEvent(int var1, android.os.Bundle var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.RequestListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onBufferReceived(byte[] var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBufferReceived(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.RequestListener::onBufferReceived",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onCompleted(com.iflytek.cloud.SpeechError var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onCompleted(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.RequestListener::onCompleted",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceRequest::cancel", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.FaceRequest __this__ = (com.iflytek.cloud.FaceRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceRequest@" + __this__ + "::cancel(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.cancel();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceRequest::setParameter", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.FaceRequest __this__ = (com.iflytek.cloud.FaceRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceRequest@" + __this__ + "::setParameter(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.setParameter(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceRequest::getParameter", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.FaceRequest __this__ = (com.iflytek.cloud.FaceRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceRequest@" + __this__ + "::getParameter(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getParameter(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.FaceRequest::destroy", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.FaceRequest __this__ = (com.iflytek.cloud.FaceRequest) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.FaceRequest@" + __this__ + "::destroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.destroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityResult::getResultString", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.IdentityResult __this__ = (com.iflytek.cloud.IdentityResult) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityResult@" + __this__ + "::getResultString(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getResultString();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::createVerifier", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier::createVerifier(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.IdentityVerifier __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.IdentityVerifier.createVerifier(var0, new com.iflytek.cloud.InitListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.IdentityVerifier::createVerifier::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onInit(int var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onInit(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.InitListener::onInit",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::getVerifier", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier::getVerifier(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.IdentityVerifier __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.IdentityVerifier.getVerifier();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::startWorking", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::startWorking(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.startWorking(new com.iflytek.cloud.IdentityListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.IdentityVerifier::startWorking::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onResult(com.iflytek.cloud.IdentityResult var1, boolean var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onResult",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onError(com.iflytek.cloud.SpeechError var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onError",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onEvent(int var1, int var2, int var3, android.os.Bundle var4) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                            put("var4", var4);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::writeData", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
-                // ref arg
-                Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::writeData(" + var1 + var2 + var3 + var4 + var5 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.writeData(var1, var2, var3, var4.intValue(), var5.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::stopWrite", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::stopWrite(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.stopWrite(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::execute", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::execute(" + var1 + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.execute(var1, var2, var3, new com.iflytek.cloud.IdentityListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.IdentityVerifier::execute::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onResult(com.iflytek.cloud.IdentityResult var1, boolean var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onResult",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onError(com.iflytek.cloud.SpeechError var1) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onError",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onEvent(int var1, int var2, int var3, android.os.Bundle var4) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.IdentityListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                            put("var4", var4);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::isWorking", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::isWorking(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.isWorking();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::cancel", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::cancel(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.cancel();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::setParameter", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::setParameter(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.setParameter(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::getParameter", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::getParameter(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getParameter(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.IdentityVerifier::destroy", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.IdentityVerifier __this__ = (com.iflytek.cloud.IdentityVerifier) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.IdentityVerifier@" + __this__ + "::destroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.destroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createBufferAccessor(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.ist.AudioAccessor.createBufferAccessor();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createReadOnlyAccessor(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.ist.AudioAccessor.createReadOnlyAccessor(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
                 // ref arg
                 Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-            
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor::createWriteReadAccessor(" + var0 + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onVolumeChanged(" + var1 + ")");
                 }
             
                 // invoke native method
-                com.iflytek.cloud.msc.ist.AudioAccessor __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.ist.AudioAccessor.createWriteReadAccessor(var0, var1.intValue());
+                    __this__.onVolumeChanged(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2360,22 +1100,22 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getFilePath", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierListener::onBeginOfSpeech", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getFilePath(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onBeginOfSpeech(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getFilePath();
+                    __this__.onBeginOfSpeech();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2388,22 +1128,22 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getDataLength", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierListener::onEndOfSpeech", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getDataLength(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onEndOfSpeech(" + "" + ")");
                 }
             
                 // invoke native method
-                Long __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getDataLength();
+                    __this__.onEndOfSpeech();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2416,108 +1156,23 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getAudioInfo", (__args__, __methodResult__) -> {
-                // args
-                // enum arg
-                com.iflytek.cloud.msc.ist.AudioAccessor.AudioKeys var1 = com.iflytek.cloud.msc.ist.AudioAccessor.AudioKeys.values()[(int) ((Map<String, Object>) __args__).get("var1")];
-            
-                // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getAudioInfo(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getAudioInfo(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getBufferLength", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getBufferLength(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getBufferLength();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getCacheLeft", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getCacheLeft(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getCacheLeft();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::getAudio", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierListener::onRegister", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                com.iflytek.speech.VerifierResult var1 = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::getAudio(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onRegister(" + var1 + ")");
                 }
             
                 // invoke native method
-                Integer __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getAudio(var1);
+                    __this__.onRegister(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2530,25 +1185,196 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::putAudio", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierListener::onEnd", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                com.iflytek.speech.VerifierResult var1 = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
                 Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::putAudio(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onEnd(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEnd(var1, var2.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VerifierListener::onCancel", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onCancel(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onCancel();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VerifierListener::onError", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierListener@" + __this__ + "::onError(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onError(var1.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::getPackageName", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechComponent __this__ = (com.iflytek.speech.SpeechComponent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechComponent@" + __this__ + "::getPackageName(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getPackageName();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::getEngines", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechComponent __this__ = (com.iflytek.speech.SpeechComponent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechComponent@" + __this__ + "::getEngines(" + "" + ")");
+                }
+            
+                // invoke native method
+                java.util.ArrayList<String> __result__ = null;
+                try {
+                    __result__ = __this__.getEngines();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::addEngine", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechComponent __this__ = (com.iflytek.speech.SpeechComponent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechComponent@" + __this__ + "::addEngine(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.addEngine(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechComponent::isEngineAvaible", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechComponent __this__ = (com.iflytek.speech.SpeechComponent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechComponent@" + __this__ + "::isEngineAvaible(" + var1 + ")");
                 }
             
                 // invoke native method
                 Boolean __result__ = null;
                 try {
-                    __result__ = __this__.putAudio(var1, var2.intValue());
+                    __result__ = __this__.isEngineAvaible(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2561,236 +1387,7 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::flush", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::flush(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.flush();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.AudioAccessor::close", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.AudioAccessor __this__ = (com.iflytek.cloud.msc.ist.AudioAccessor) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.AudioAccessor@" + __this__ + "::close(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.close();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::sessionEnd", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::sessionEnd(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.sessionEnd(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::pushAudioData", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::pushAudioData(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.pushAudioData(var1, var2.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::pushEndFlag", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::pushEndFlag(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.pushEndFlag();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getEpStatus", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getEpStatus(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getEpStatus();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getAudioVolume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getAudioVolume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getAudioVolume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntValue__String", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getIntValue(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getIntValue(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntValue__String__int", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.GrammarListener::onBuildFinish", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
@@ -2798,17 +1395,17 @@ public class SubHandler1 {
                 Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.GrammarListener __this__ = (com.iflytek.speech.GrammarListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getIntValue(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.GrammarListener@" + __this__ + "::onBuildFinish(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                Integer __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getIntValue(var1, var2.intValue());
+                    __this__.onBuildFinish(var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2821,25 +1418,27 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.IstSession::setParam", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::register", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.VerifierListener var3 = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::setParam(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::register(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                Boolean __result__ = null;
+                Integer __result__ = null;
                 try {
-                    __result__ = __this__.setParam(var1, var2);
+                    __result__ = __this__.register(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2852,52 +1451,27 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getStringValue", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::verify", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getStringValue(" + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getStringValue(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getIntByTag", (__args__, __methodResult__) -> {
-                // args
                 // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.VerifierListener var3 = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-            
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession::getIntByTag(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::verify(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
                 Integer __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.ist.IstSession.getIntByTag(var0);
+                    __result__ = __this__.verify(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2910,107 +1484,27 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getStringByTag", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::identify", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.VerifierListener var3 = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-            
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession::getStringByTag(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.ist.IstSession.getStringByTag(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::hasResult", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::hasResult(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.hasResult();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.IstSession::getResultData", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.IstSession __this__ = (com.iflytek.cloud.msc.ist.IstSession) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.IstSession@" + __this__ + "::getResultData(" + "" + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = __this__.getResultData();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getAudioSource", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getAudioSource(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::identify(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
                 Integer __result__ = null;
                 try {
-                    __result__ = __this__.getAudioSource();
+                    __result__ = __this__.identify(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3023,63 +1517,35 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::callbackVolume", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::getPasswordList", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::callbackVolume(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::getPasswordList(" + var1 + var3 + ")");
                 }
             
                 // invoke native method
-                Void __result__ = null;
+                Integer __result__ = null;
                 try {
-                    __this__.callbackVolume(var1, var2.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::startTranscripting", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::startTranscripting(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.startTranscripting(new com.iflytek.cloud.TranscripterListener() {
+                    __result__ = __this__.getPasswordList(var1, new com.iflytek.speech.SpeakerVerifierAidl.DownloadListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.cloud.msc.ist.MscTranscripter::startTranscripting::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.iflytek.speech.SpeakerVerifierAidl::getPasswordList::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
                         @Override
-                        public void onVolumeChanged(int var1, byte[] var2) {
+                        public void onData(java.util.ArrayList<com.iflytek.speech.SpeakerVerifierAidl.PassWord> var1) {
                             // print log
                             if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onVolumeChanged(" + var1 + var2 + ")");
+                                Log.d("java-callback", "fluttify-java-callback: onData(" + var1 + ")");
                             }
             
                             // call dart method
@@ -3087,10 +1553,9 @@ public class SubHandler1 {
                                 @Override
                                 public void run() {
                                     callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onVolumeChanged",
+                                        "Callback::com.iflytek.speech.SpeakerVerifierAidl.DownloadListener::onData",
                                         new HashMap<String, Object>() {{
                                             put("var1", var1);
-                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3101,80 +1566,7 @@ public class SubHandler1 {
                         }
             
                         @Override
-                        public void onBeginOfSpeech() {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBeginOfSpeech(" + "" + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onBeginOfSpeech",
-                                        new HashMap<String, Object>() {{
-                    
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onEndOfSpeech() {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEndOfSpeech(" + "" + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onEndOfSpeech",
-                                        new HashMap<String, Object>() {{
-                    
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onResult(com.iflytek.cloud.TranscripterResult var1, boolean var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onResult(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onResult",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onError(com.iflytek.cloud.SpeechError var1) {
+                        public void onError(int var1) {
                             // print log
                             if (getEnableLog()) {
                                 Log.d("java-callback", "fluttify-java-callback: onError(" + var1 + ")");
@@ -3185,7 +1577,7 @@ public class SubHandler1 {
                                 @Override
                                 public void run() {
                                     callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onError",
+                                        "Callback::com.iflytek.speech.SpeakerVerifierAidl.DownloadListener::onError",
                                         new HashMap<String, Object>() {{
                                             put("var1", var1);
                                         }}
@@ -3197,34 +1589,7 @@ public class SubHandler1 {
             
                         }
             
-                        @Override
-                        public void onEvent(int var1, int var2, int var3, android.os.Bundle var4) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onEvent(" + var1 + var2 + var3 + var4 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.iflytek.cloud.TranscripterListener::onEvent",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                            put("var3", var3);
-                                            put("var4", var4);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                }, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3237,23 +1602,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::stopTranscripting", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::setParameter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::stopTranscripting(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                Boolean __result__ = null;
+                Integer __result__ = null;
                 try {
-                    __result__ = __this__.stopTranscripting(var1);
+                    __result__ = __this__.setParameter(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3266,17 +1633,162 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::cancel", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::getParameter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::cancel(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::endSpeak", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::endSpeak(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.endSpeak();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeakerVerifierAidl::stopSpeak", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeakerVerifierAidl@" + __this__ + "::stopSpeak(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopSpeak();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::startListening", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.RecognizerListener var2 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::startListening(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.startListening(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::stopListening", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::stopListening(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopListening(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::cancel(" + var1 + ")");
                 }
             
                 // invoke native method
@@ -3295,998 +1807,22 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::proc_Msg_Netperf", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::isListening", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::proc_Msg_Netperf(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.proc_Msg_Netperf();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getTranscriptResult", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getTranscriptResult(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.TranscripterResult __result__ = null;
-                try {
-                    __result__ = __this__.getTranscriptResult();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getSessionID", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getSessionID(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getSessionID();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getClientID", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getClientID(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getClientID();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getUploadBytes", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getUploadBytes(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getUploadBytes();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getSyncID", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getSyncID(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getSyncID();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::getAudioPath", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.ist.MscTranscripter@" + __this__ + "::getAudioPath(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getAudioPath();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::generateKeyString", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::generateKeyString(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.generateKeyString();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__Uint8List__Uint8List", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__String__Uint8List", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::encrypt__String__String", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::encrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.encrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__Uint8List__Uint8List", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__String__String", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::decrypt__String__Uint8List", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::decrypt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.decrypt(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::byte2hex", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::byte2hex(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.byte2hex(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AESUtil::hex2byte", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AESUtil::hex2byte(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AESUtil.hex2byte(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::getCarrier(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.getCarrier(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::getMac", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::getMac(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.getMac(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::getBrowserUserAgent(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.getBrowserUserAgent(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::getDeviceType(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.getDeviceType(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::checkAndReplaceIllegalSymbols(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.checkAndReplaceIllegalSymbols(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.AppInfoUtil::getActivityMsg(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.AppInfoUtil.getActivityMsg(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Base64::encode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Base64::encode(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Base64.encode(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Base64::decode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Base64::decode(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Base64.decode(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::getConfig", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config::getConfig(" + var0 + ")");
-                }
-            
-                // invoke native method
-                com.iflytek.cloud.msc.util.Config __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Config.getConfig(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putBoolean", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putBoolean(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putBoolean(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putLong", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putLong(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putLong(var1, var2.longValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putString", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putString(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putString(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putInt", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putInt(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putInt(var1, var2.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putBean", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                java.lang.Object var2 = (java.lang.Object) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putBean(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putBean(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::putLocation", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.location.Location var1 = (android.location.Location) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::putLocation(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.putLocation(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::removeBean", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::removeBean(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.removeBean(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::getBean", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getBean(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                java.lang.Object __result__ = null;
-                try {
-                    __result__ = __this__.getBean(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::getBoolean", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getBoolean(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::isListening(" + "" + ")");
                 }
             
                 // invoke native method
                 Boolean __result__ = null;
                 try {
-                    __result__ = __this__.getBoolean(var1, var2);
+                    __result__ = __this__.isListening();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4299,25 +1835,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.Config::getLong", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::buildGrammar", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                com.iflytek.speech.GrammarListener var2 = (com.iflytek.speech.GrammarListener) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getLong(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::buildGrammar(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                Long __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getLong(var1, var2.longValue());
+                    __this__.buildGrammar(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4330,25 +1866,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.Config::getString", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::updateLexicon", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                com.iflytek.speech.LexiconListener var2 = (com.iflytek.speech.LexiconListener) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getString(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::updateLexicon(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                String __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getString(var1, var2);
+                    __this__.updateLexicon(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4361,114 +1897,29 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.Config::getInt", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ISpeechRecognizer::writeAudio", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getInt(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getInt(var1, var2.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::getLocation", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config@" + __this__ + "::getLocation(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Float __result__ = null;
-                try {
-                    __result__ = __this__.getLocation(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Config::hasGPSPermission", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Config::hasGPSPermission(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Config.hasGPSPermission(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataLogger::addData", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
                 byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                 // ref
-                com.iflytek.cloud.msc.util.DataLogger __this__ = (com.iflytek.cloud.msc.util.DataLogger) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.aidl.ISpeechRecognizer __this__ = (com.iflytek.speech.aidl.ISpeechRecognizer) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataLogger@" + __this__ + "::addData(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechRecognizer@" + __this__ + "::writeAudio(" + var1 + var2 + var3 + var4 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.addData(var1, var2);
+                    __this__.writeAudio(var1, var2, var3.intValue(), var4.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4481,22 +1932,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataLogger::saveToFile", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.IWakeuper::startListening", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.WakeuperListener var2 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                com.iflytek.cloud.msc.util.DataLogger __this__ = (com.iflytek.cloud.msc.util.DataLogger) ((Map<String, Object>) __args__).get("__this__");
+                com.iflytek.speech.aidl.IWakeuper __this__ = (com.iflytek.speech.aidl.IWakeuper) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataLogger@" + __this__ + "::saveToFile(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.IWakeuper@" + __this__ + "::startListening(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.saveToFile();
+                    __this__.startListening(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4509,23 +1963,465 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getComplexDateTime", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.IWakeuper::stopListening", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-            
+                com.iflytek.speech.aidl.IWakeuper __this__ = (com.iflytek.speech.aidl.IWakeuper) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getComplexDateTime(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.IWakeuper@" + __this__ + "::stopListening(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopListening(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.IWakeuper::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.IWakeuper __this__ = (com.iflytek.speech.aidl.IWakeuper) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.IWakeuper@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.IWakeuper::isListening", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.IWakeuper __this__ = (com.iflytek.speech.aidl.IWakeuper) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.IWakeuper@" + __this__ + "::isListening(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isListening();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.IWakeuper::destroy", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.IWakeuper __this__ = (com.iflytek.speech.aidl.IWakeuper) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.IWakeuper@" + __this__ + "::destroy(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.destroy();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechUnderstander::startUnderstanding", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.SpeechUnderstanderListener var2 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechUnderstander __this__ = (com.iflytek.speech.aidl.ISpeechUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechUnderstander@" + __this__ + "::startUnderstanding(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.startUnderstanding(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechUnderstander::stopUnderstanding", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechUnderstander __this__ = (com.iflytek.speech.aidl.ISpeechUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechUnderstander@" + __this__ + "::stopUnderstanding(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopUnderstanding(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechUnderstander::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechUnderstander __this__ = (com.iflytek.speech.aidl.ISpeechUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechUnderstander@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechUnderstander::isUnderstanding", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechUnderstander __this__ = (com.iflytek.speech.aidl.ISpeechUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechUnderstander@" + __this__ + "::isUnderstanding(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isUnderstanding();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechUnderstander::writeAudio", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechUnderstander __this__ = (com.iflytek.speech.aidl.ISpeechUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechUnderstander@" + __this__ + "::writeAudio(" + var1 + var2 + var3 + var4 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.writeAudio(var1, var2, var3.intValue(), var4.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::synthesizeToUrl", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::synthesizeToUrl(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.synthesizeToUrl(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::startSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::startSpeaking(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.startSpeaking(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::pauseSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::pauseSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.pauseSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::resumeSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::resumeSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.resumeSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::stopSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::stopSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.stopSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::isSpeaking", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::isSpeaking(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isSpeaking();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeechSynthesizer::getLocalSpeakerList", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeechSynthesizer __this__ = (com.iflytek.speech.aidl.ISpeechSynthesizer) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeechSynthesizer@" + __this__ + "::getLocalSpeakerList(" + "" + ")");
                 }
             
                 // invoke native method
                 String __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getComplexDateTime(var0.longValue());
+                    __result__ = __this__.getLocalSpeakerList();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4538,23 +2434,176 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getSimpleDateTime", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::verify", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.VerifierListener var3 = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-            
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getSimpleDateTime(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::verify(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.verify(var1, var2, var3);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::register", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.VerifierListener var3 = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("var3");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::register(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.register(var1, var2, var3);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::endSpeak", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::endSpeak(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.endSpeak();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::stopSpeak", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::stopSpeak(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.stopSpeak();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ISpeakerVerifier::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ISpeakerVerifier __this__ = (com.iflytek.speech.aidl.ISpeakerVerifier) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ISpeakerVerifier@" + __this__ + "::getParameter(" + var1 + ")");
                 }
             
                 // invoke native method
                 String __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getSimpleDateTime(var0.longValue());
+                    __result__ = __this__.getParameter(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4567,25 +2616,195 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::readInt", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.aidl.ITextUnderstander::understandText", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                android.content.Intent var1 = (android.content.Intent) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.TextUnderstanderListener var2 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.aidl.ITextUnderstander __this__ = (com.iflytek.speech.aidl.ITextUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ITextUnderstander@" + __this__ + "::understandText(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.understandText(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ITextUnderstander::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.TextUnderstanderListener var1 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.aidl.ITextUnderstander __this__ = (com.iflytek.speech.aidl.ITextUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ITextUnderstander@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.aidl.ITextUnderstander::isUnderstanding", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.aidl.ITextUnderstander __this__ = (com.iflytek.speech.aidl.ITextUnderstander) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.aidl.ITextUnderstander@" + __this__ + "::isUnderstanding(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isUnderstanding();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SynthesizerListener::onSpeakBegin", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onSpeakBegin(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onSpeakBegin();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SynthesizerListener::onSpeakPaused", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onSpeakPaused(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onSpeakPaused();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SynthesizerListener::onSpeakResumed", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onSpeakResumed(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onSpeakResumed();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SynthesizerListener::onCompleted", (__args__, __methodResult__) -> {
+                // args
                 // ref arg
                 Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-            
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::readInt(" + var0 + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onCompleted(" + var1 + ")");
                 }
             
                 // invoke native method
-                Integer __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.readInt(var0, var1.intValue());
+                    __this__.onCompleted(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4598,223 +2817,8 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::byteToLong", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SynthesizerListener::onSpeakProgress", (__args__, __methodResult__) -> {
                 // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::byteToLong(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Long __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.byteToLong(var0, var1.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::longToByte", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::longToByte(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.longToByte(var0.longValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::RandomInt", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::RandomInt(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.RandomInt(var0.intValue(), var1.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::hexstring2Int", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::hexstring2Int(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.hexstring2Int(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::dip2px", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::dip2px(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.dip2px(var0, var1.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::sp2px", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::sp2px(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.sp2px(var0, var1.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::spModify", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::spModify(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.spModify(var0, var1.floatValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::splitBuffer", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
                 // ref arg
                 Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
@@ -4823,17 +2827,17 @@ public class SubHandler1 {
                 Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-            
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::splitBuffer(" + var0 + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onSpeakProgress(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
-                java.util.ArrayList<byte[]> __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.splitBuffer(var0, var1.intValue(), var2.intValue(), var3.intValue());
+                    __this__.onSpeakProgress(var1.intValue(), var2.intValue(), var3.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4846,23 +2850,29 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__Uint8List", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SynthesizerListener::onBufferProgress", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                String var4 = (String) ((Map<String, Object>) __args__).get("var4");
             
                 // ref
-            
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onBufferProgress(" + var1 + var2 + var3 + var4 + ")");
                 }
             
                 // invoke native method
-                byte[] __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getUTF8Bom(var0);
+                    __this__.onBufferProgress(var1.intValue(), var2.intValue(), var3.intValue(), var4);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4875,23 +2885,29 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom__String", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SynthesizerListener::onEvent", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
             
                 // ref
-            
+                com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getUTF8Bom(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizerListener@" + __this__ + "::onEvent(" + var1 + var2 + var3 + var4 + ")");
                 }
             
                 // invoke native method
-                byte[] __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getUTF8Bom(var0);
+                    __this__.onEvent(var1.intValue(), var2.intValue(), var3.intValue(), var4);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4904,25 +2920,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String__String", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.LexiconListener::onLexiconUpdated", (__args__, __methodResult__) -> {
                 // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-            
+                com.iflytek.speech.LexiconListener __this__ = (com.iflytek.speech.LexiconListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray(" + var0 + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.LexiconListener@" + __this__ + "::onLexiconUpdated(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                byte[] __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getNativeByteArray(var0, var1);
+                    __this__.onLexiconUpdated(var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4935,54 +2951,25 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray__String", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SynthesizeToUrlListener::onSynthesizeCompleted", (__args__, __methodResult__) -> {
                 // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getNativeByteArray(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getNativeByteArray(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List__String", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-            
+                com.iflytek.speech.SynthesizeToUrlListener __this__ = (com.iflytek.speech.SynthesizeToUrlListener) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray(" + var0 + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SynthesizeToUrlListener@" + __this__ + "::onSynthesizeCompleted(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
-                String __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getStringFromNativeByteArray(var0, var1);
+                    __this__.onSynthesizeCompleted(var1, var2.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4995,284 +2982,23 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray__Uint8List", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeechUnderstanderAidl::startUnderstanding", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-            
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.DataUtil::getStringFromNativeByteArray(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.DataUtil.getStringFromNativeByteArray(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::lightcode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::lightcode(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.lightcode(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::zip5xEncode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::zip5xEncode(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.zip5xEncode(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::zip5xDecode", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::zip5xDecode(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.zip5xDecode(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::MD5", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::MD5(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.MD5(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::cut16MD5", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var0 = (String) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::cut16MD5(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.cut16MD5(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::getFileMd5", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.io.File var0 = (java.io.File) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::getFileMd5(" + var0 + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.getFileMd5(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::encrypt", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::encrypt(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.encrypt(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::intToByteArray", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::intToByteArray(" + var0 + ")");
-                }
-            
-                // invoke native method
-                byte[] __result__ = null;
-                try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.intToByteArray(var0.intValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.iflytek.cloud.msc.util.Encrypter::byteArrayToInt", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.Encrypter::byteArrayToInt(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::startUnderstanding(" + var1 + ")");
                 }
             
                 // invoke native method
                 Integer __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.Encrypter.byteArrayToInt(var0);
+                    __result__ = __this__.startUnderstanding(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5285,7 +3011,1146 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager", (__args__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeechUnderstanderAidl::stopUnderstanding", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::stopUnderstanding(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.stopUnderstanding(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::isUnderstanding", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::isUnderstanding(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isUnderstanding();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderAidl::writeAudio", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderAidl@" + __this__ + "::writeAudio(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onVolumeChanged", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onVolumeChanged(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onVolumeChanged(var1.intValue(), var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onBeginOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onBeginOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onBeginOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onEndOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onEndOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEndOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onResult", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.UnderstanderResult var1 = (com.iflytek.speech.UnderstanderResult) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onResult(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onResult(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onError", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onError(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onError(var1.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechUnderstanderListener::onEvent", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
+            
+                // ref
+                com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechUnderstanderListener@" + __this__ + "::onEvent(" + var1 + var2 + var3 + var4 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEvent(var1.intValue(), var2.intValue(), var3.intValue(), var4);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::startListening", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::startListening(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.startListening(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::stopListening", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::stopListening(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.stopListening(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::destory", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::destory(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.destory();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::isListening", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::isListening(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isListening();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::buildGrammar", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.GrammarListener var3 = (com.iflytek.speech.GrammarListener) ((Map<String, Object>) __args__).get("var3");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::buildGrammar(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.buildGrammar(var1, var2, var3);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::updateLexicon", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                com.iflytek.speech.LexiconListener var3 = (com.iflytek.speech.LexiconListener) ((Map<String, Object>) __args__).get("var3");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::updateLexicon(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.updateLexicon(var1, var2, var3);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechRecognizerAidl::writeAudio", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                // ref
+                com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechRecognizerAidl@" + __this__ + "::writeAudio(" + var1 + var2 + var3 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::synthesizeToUrl", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::synthesizeToUrl(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.synthesizeToUrl(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::startSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::startSpeaking(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.startSpeaking(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::pauseSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::pauseSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.pauseSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::resumeSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::resumeSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.resumeSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::stopSpeaking", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::stopSpeaking(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.stopSpeaking(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::isSpeaking", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::isSpeaking(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isSpeaking();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.SpeechSynthesizerAidl::destory", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.SpeechSynthesizerAidl@" + __this__ + "::destory(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.destory();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onVolumeChanged", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onVolumeChanged(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onVolumeChanged(var1.intValue(), var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onBeginOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onBeginOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onBeginOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onEndOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onEndOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEndOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onResult", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.RecognizerResult var1 = (com.iflytek.speech.RecognizerResult) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onResult(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onResult(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onError", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onError(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onError(var1.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerListener::onEvent", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
+            
+                // ref
+                com.iflytek.speech.RecognizerListener __this__ = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerListener@" + __this__ + "::onEvent(" + var1 + var2 + var3 + var4 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEvent(var1.intValue(), var2.intValue(), var3.intValue(), var4);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.UtilityConfig::getCallerInfo", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.UtilityConfig::getCallerInfo(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = com.iflytek.speech.UtilityConfig.getCallerInfo(var0, var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.UtilityConfig::getComponentUrlParam", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
@@ -5295,13 +4160,646 @@ public class SubHandler1 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.iflytek.cloud.msc.util.FileDownloader::getDownLoadManager(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.UtilityConfig::getComponentUrlParam(" + var0 + ")");
                 }
             
                 // invoke native method
-                com.iflytek.cloud.msc.util.FileDownloader __result__ = null;
+                String __result__ = null;
                 try {
-                    __result__ = com.iflytek.cloud.msc.util.FileDownloader.getDownLoadManager(var0);
+                    __result__ = com.iflytek.speech.UtilityConfig.getComponentUrlParam(var0);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperListener::onVolumeChanged", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperListener@" + __this__ + "::onVolumeChanged(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onVolumeChanged(var1.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperListener::onBeginOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperListener@" + __this__ + "::onBeginOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onBeginOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperListener::onEndOfSpeech", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperListener@" + __this__ + "::onEndOfSpeech(" + "" + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onEndOfSpeech();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperListener::onResult", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.WakeuperResult var1 = (com.iflytek.speech.WakeuperResult) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperListener@" + __this__ + "::onResult(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onResult(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperListener::onError", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperListener@" + __this__ + "::onError(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onError(var1.intValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.WakeuperResult::getResultString", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.WakeuperResult __this__ = (com.iflytek.speech.WakeuperResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.WakeuperResult@" + __this__ + "::getResultString(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getResultString();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VerifierResult::getResultString", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VerifierResult@" + __this__ + "::getResultString(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getResultString();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.RecognizerResult::getResultString", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.RecognizerResult __this__ = (com.iflytek.speech.RecognizerResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.RecognizerResult@" + __this__ + "::getResultString(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getResultString();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.Version::getVersionName", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.Version::getVersionName(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = com.iflytek.speech.Version.getVersionName();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.Version::getVersionCode", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.Version::getVersionCode(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = com.iflytek.speech.Version.getVersionCode();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::isUnderstanding", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.TextUnderstanderAidl@" + __this__ + "::isUnderstanding(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isUnderstanding();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.TextUnderstanderListener var1 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.TextUnderstanderAidl@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::understandText", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.iflytek.speech.TextUnderstanderListener var2 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.TextUnderstanderAidl@" + __this__ + "::understandText(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.understandText(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.TextUnderstanderAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.TextUnderstanderAidl::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.TextUnderstanderAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.UnderstanderResult::getResultString", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.UnderstanderResult __this__ = (com.iflytek.speech.UnderstanderResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.UnderstanderResult@" + __this__ + "::getResultString(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getResultString();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::startListening", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::startListening(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.startListening(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::cancel", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::cancel(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.cancel(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::destroy", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::destroy(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.destroy();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::isListening", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::isListening(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.isListening();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::setParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::setParameter(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.setParameter(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.iflytek.speech.VoiceWakeuperAidl::getParameter", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.iflytek.speech.VoiceWakeuperAidl@" + __this__ + "::getParameter(" + var1 + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getParameter(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

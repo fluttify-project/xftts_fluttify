@@ -19,340 +19,40 @@ extension TypeOpXfttsFluttifyAndroid on Object {
     if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
       return this is T;
     }
-    else if (T == com_iflytek_cloud_DataDownloader) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_DataDownloader', {'__this__': this});
+    else if (T == com_iflytek_speech_VerifierListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VerifierListener', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_DataUploader) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_DataUploader', {'__this__': this});
+    else if (T == com_iflytek_speech_SpeechComponent) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechComponent', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_ErrorCode) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_ErrorCode', {'__this__': this});
+    else if (T == com_iflytek_speech_GrammarListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_GrammarListener', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_EvaluatorResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_EvaluatorResult', {'__this__': this});
+    else if (T == com_iflytek_speech_SpeakerVerifierAidl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_FaceDetector) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_FaceDetector', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_IWakeuper_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_FaceRequest) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_FaceRequest', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_ISpeechRecognizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechRecognizer', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_cloud_IdentityResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_IdentityResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_IdentityVerifier) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_IdentityVerifier', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_AudioAccessor) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_AudioAccessor', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_IstSession) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_IstSession', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_MscTranscripter) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_MscTranscripter', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_AESUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_AESUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_AppInfoUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_AppInfoUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Base64) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Base64', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Config) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Config', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_DataLogger) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_DataLogger', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_DataUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_DataUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Encrypter) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Encrypter', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FileDownloader) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FileDownloader', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FuncAdapter) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapter', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FuncAdapterSdk10) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapterSdk10', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_http_HttpDownloadImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpDownloadImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_http_HttpTransListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpTransListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_HttpRequest) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_HttpRequest', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_log_DebugLog) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_log_DebugLog', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_log_PerfLogger) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_log_PerfLogger', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_NetworkUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_NetworkUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_RSAUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_RSAUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_SDCardHelper) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_SDCardHelper', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_msc_util_UniqueIDUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_UniqueIDUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_RecognizerResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_RecognizerResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_record_PcmRecorder_PcmRecordListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder_PcmRecordListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_record_PcmRecorder) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_resource_Resource) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_resource_Resource', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_Setting) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_Setting', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeakerVerifier) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeakerVerifier', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_FaceDetectorImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceDetectorImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_FaceRequestImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceRequestImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_IdentityVerifierImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_IdentityVerifierImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeakerVerifierImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechRecognizerImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechTranscripterImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_TextUnderstanderImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_TextUnderstanderImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_VoiceWakeuperImpl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechConstant) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechConstant', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechError) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechError', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechEvaluator) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechEvaluator', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechEvent) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechRecognizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechRecognizer', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechSynthesizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechSynthesizer', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechTranscripter) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechTranscripter', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechUnderstander) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechUnderstander', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_SpeechUtility) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechUtility', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_TextUnderstander) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_TextUnderstander', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_TranscripterResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_TranscripterResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_ui_RecognizerDialog) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_ui_RecognizerDialog', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_UnderstanderResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_UnderstanderResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_Accelerometer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_Accelerometer', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_AudioDetector_DetectorResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector_DetectorResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_AudioDetector) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_ContactManager) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_ContactManager', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_ResourceUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_ResourceUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_UserWords) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_UserWords', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_VerifierUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_VerifierUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_util_VolumeUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_VolumeUtil', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_VerifierResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_VerifierResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_Version) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_Version', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_VoiceWakeuper) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_VoiceWakeuper', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_cloud_WakeuperResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_WakeuperResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_idata_extension_IFlyCollectorExt) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_idata_extension_IFlyCollectorExt', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_AIMIC) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_AIMIC', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_MetaVAD_Instance) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MetaVAD_Instance', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_MetaVAD) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MetaVAD', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_MSC) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MSC', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_MSCSessionInfo) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MSCSessionInfo', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_VAD_VadData) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_VAD_VadData', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_msc_VAD) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_VAD', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_IWakeuper) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_aidl_ISpeechRecognizer_Stub) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechRecognizer_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechRecognizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechRecognizer', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_aidl_ISpeechSynthesizer_Stub) {
@@ -363,12 +63,12 @@ extension TypeOpXfttsFluttifyAndroid on Object {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechSynthesizer', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander_Stub', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier_Stub', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_aidl_ITextUnderstander_Stub) {
@@ -379,52 +79,44 @@ extension TypeOpXfttsFluttifyAndroid on Object {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ITextUnderstander', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_aidl_IWakeuper_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper_Stub', {'__this__': this});
+    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_aidl_IWakeuper) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper', {'__this__': this});
+    else if (T == com_iflytek_speech_SynthesizeToUrlListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_GrammarListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_GrammarListener_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_GrammarListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_GrammarListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_LexiconListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_LexiconListener_Stub', {'__this__': this});
+    else if (T == com_iflytek_speech_SynthesizerListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizerListener', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_LexiconListener) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_LexiconListener', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_RecognizerListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerListener_Stub', {'__this__': this});
+    else if (T == com_iflytek_speech_SynthesizeToUrlListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_RecognizerListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerListener', {'__this__': this});
+    else if (T == com_iflytek_speech_SynthesizerListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizerListener_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_RecognizerResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerResult', {'__this__': this});
+    else if (T == com_iflytek_speech_LexiconListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_LexiconListener_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_SpeakerVerifierAidl_PassWord) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl_PassWord', {'__this__': this});
+    else if (T == com_iflytek_speech_SpeechUnderstanderAidl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderAidl', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_SpeakerVerifierAidl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl', {'__this__': this});
+    else if (T == com_iflytek_speech_TextUnderstanderListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_SpeechComponent) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechComponent', {'__this__': this});
+    else if (T == com_iflytek_speech_SpeechUnderstanderListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_SpeechRecognizerAidl) {
@@ -435,84 +127,392 @@ extension TypeOpXfttsFluttifyAndroid on Object {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechSynthesizerAidl', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_SpeechUnderstanderAidl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderAidl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SpeechUnderstanderListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SpeechUnderstanderListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SynthesizerListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizerListener_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SynthesizerListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizerListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SynthesizeToUrlListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_SynthesizeToUrlListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderAidl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderAidl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener_Stub', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_UnderstanderResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_UnderstanderResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_UtilityConfig) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_UtilityConfig', {'__this__': this});
+    else if (T == com_iflytek_speech_RecognizerListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerListener', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_VerifierListener_Stub) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VerifierListener_Stub', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_VerifierListener) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VerifierListener', {'__this__': this});
+    else if (T == com_iflytek_speech_UtilityConfig) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_UtilityConfig', {'__this__': this});
       return result;
     }
-    else if (T == com_iflytek_speech_VerifierResult) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VerifierResult', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_Version) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_Version', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_VoiceWakeuperAidl) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VoiceWakeuperAidl', {'__this__': this});
-      return result;
-    }
-    else if (T == com_iflytek_speech_WakeuperListener_Stub) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_WakeuperListener_Stub', {'__this__': this});
+    else if (T == com_iflytek_speech_GrammarListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_GrammarListener_Stub', {'__this__': this});
       return result;
     }
     else if (T == com_iflytek_speech_WakeuperListener) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_WakeuperListener', {'__this__': this});
       return result;
     }
+    else if (T == com_iflytek_speech_SpeechUnderstanderListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener_Stub', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_SpeakerVerifierAidl_PassWord) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl_PassWord', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_WakeuperListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_WakeuperListener_Stub', {'__this__': this});
+      return result;
+    }
     else if (T == com_iflytek_speech_WakeuperResult) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_WakeuperResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_VerifierResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VerifierResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_RecognizerResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_Version) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_Version', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_TextUnderstanderAidl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderAidl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_UnderstanderResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_UnderstanderResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_VoiceWakeuperAidl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_VoiceWakeuperAidl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_TextUnderstanderListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_speech_RecognizerListener_Stub) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_speech_RecognizerListener_Stub', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_idata_extension_IFlyCollectorExt) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_idata_extension_IFlyCollectorExt', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeakerVerifier) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeakerVerifier', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_ErrorCode) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_ErrorCode', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_ui_RecognizerDialog) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_ui_RecognizerDialog', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechTranscripter) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechTranscripter', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_record_PcmRecorder) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_record_PcmRecorder_PcmRecordListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder_PcmRecordListener', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_IdentityVerifier) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_IdentityVerifier', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_AudioDetector) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_UserWords) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_UserWords', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_VerifierUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_VerifierUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_ResourceUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_ResourceUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_AudioDetector_DetectorResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector_DetectorResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_Accelerometer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_Accelerometer', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_ContactManager) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_ContactManager', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_util_VolumeUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_util_VolumeUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_FaceRequest) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_FaceRequest', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechUtility) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechUtility', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechSynthesizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechSynthesizer', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_IdentityResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_IdentityResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_TextUnderstander) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_TextUnderstander', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_VoiceWakeuperImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechTranscripterImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_TextUnderstanderImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_TextUnderstanderImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_IdentityVerifierImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_IdentityVerifierImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_FaceDetectorImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceDetectorImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechRecognizerImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_FaceRequestImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceRequestImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeakerVerifierImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FuncAdapterSdk10) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapterSdk10', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_NetworkUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_NetworkUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Base64) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Base64', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_DataUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_DataUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_RSAUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_RSAUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Encrypter) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Encrypter', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_AppInfoUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_AppInfoUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_DataLogger) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_DataLogger', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_SDCardHelper) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_SDCardHelper', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_http_HttpDownloadImpl) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpDownloadImpl', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_http_HttpTransListener) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpTransListener', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FuncAdapter) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapter', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Config) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_Config', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_log_PerfLogger) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_log_PerfLogger', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_log_DebugLog) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_log_DebugLog', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_UniqueIDUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_UniqueIDUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FileDownloader) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_FileDownloader', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_AESUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_AESUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_util_HttpRequest) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_util_HttpRequest', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_AudioAccessor) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_AudioAccessor', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_MscTranscripter) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_MscTranscripter', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_IstSession) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_msc_ist_IstSession', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechRecognizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechRecognizer', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechError) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechError', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_Setting) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_Setting', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_DataDownloader) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_DataDownloader', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechEvaluator) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechEvaluator', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_VoiceWakeuper) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_VoiceWakeuper', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_EvaluatorResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_EvaluatorResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechUnderstander) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechUnderstander', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechEvent) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechEvent', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_resource_Resource) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_resource_Resource', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_FaceDetector) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_FaceDetector', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_WakeuperResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_WakeuperResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_VerifierResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_VerifierResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_SpeechConstant) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_SpeechConstant', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_DataUploader) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_DataUploader', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_RecognizerResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_RecognizerResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_TranscripterResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_TranscripterResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_Version) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_Version', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_cloud_UnderstanderResult) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_cloud_UnderstanderResult', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_VAD_VadData) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_VAD_VadData', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_MSCSessionInfo) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MSCSessionInfo', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_MetaVAD) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MetaVAD', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_VAD) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_VAD', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_AIMIC) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_AIMIC', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_MSC) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MSC', {'__this__': this});
+      return result;
+    }
+    else if (T == com_iflytek_msc_MetaVAD_Instance) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcom_iflytek_msc_MetaVAD_Instance', {'__this__': this});
       return result;
     }
     else if (T == android_content_Context) {
@@ -629,257 +629,32 @@ extension TypeOpXfttsFluttifyAndroid on Object {
       return this as T;
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == com_iflytek_cloud_DataDownloader) {
-      return (com_iflytek_cloud_DataDownloader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_VerifierListener) {
+      return (com_iflytek_speech_VerifierListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_DataUploader) {
-      return (com_iflytek_cloud_DataUploader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SpeechComponent) {
+      return (com_iflytek_speech_SpeechComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_ErrorCode) {
-      return (com_iflytek_cloud_ErrorCode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_GrammarListener) {
+      return (com_iflytek_speech_GrammarListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_EvaluatorResult) {
-      return (com_iflytek_cloud_EvaluatorResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SpeakerVerifierAidl) {
+      return (com_iflytek_speech_SpeakerVerifierAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_FaceDetector) {
-      return (com_iflytek_cloud_FaceDetector()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_IWakeuper_Stub) {
+      return (com_iflytek_speech_aidl_IWakeuper_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_FaceRequest) {
-      return (com_iflytek_cloud_FaceRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_ISpeechRecognizer) {
+      return (com_iflytek_speech_aidl_ISpeechRecognizer.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_cloud_IdentityResult) {
-      return (com_iflytek_cloud_IdentityResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_IdentityVerifier) {
-      return (com_iflytek_cloud_IdentityVerifier()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_AudioAccessor) {
-      return (com_iflytek_cloud_msc_ist_AudioAccessor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_IstSession) {
-      return (com_iflytek_cloud_msc_ist_IstSession()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_ist_MscTranscripter) {
-      return (com_iflytek_cloud_msc_ist_MscTranscripter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_AESUtil) {
-      return (com_iflytek_cloud_msc_util_AESUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_AppInfoUtil) {
-      return (com_iflytek_cloud_msc_util_AppInfoUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Base64) {
-      return (com_iflytek_cloud_msc_util_Base64()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Config) {
-      return (com_iflytek_cloud_msc_util_Config()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_DataLogger) {
-      return (com_iflytek_cloud_msc_util_DataLogger()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_DataUtil) {
-      return (com_iflytek_cloud_msc_util_DataUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_Encrypter) {
-      return (com_iflytek_cloud_msc_util_Encrypter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FileDownloader) {
-      return (com_iflytek_cloud_msc_util_FileDownloader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FuncAdapter) {
-      return (com_iflytek_cloud_msc_util_FuncAdapter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_FuncAdapterSdk10) {
-      return (com_iflytek_cloud_msc_util_FuncAdapterSdk10()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_http_HttpDownloadImpl) {
-      return (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_http_HttpTransListener) {
-      return (com_iflytek_cloud_msc_util_http_HttpTransListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_HttpRequest) {
-      return (com_iflytek_cloud_msc_util_HttpRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_log_DebugLog) {
-      return (com_iflytek_cloud_msc_util_log_DebugLog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_log_PerfLogger) {
-      return (com_iflytek_cloud_msc_util_log_PerfLogger()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_NetworkUtil) {
-      return (com_iflytek_cloud_msc_util_NetworkUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_RSAUtil) {
-      return (com_iflytek_cloud_msc_util_RSAUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_SDCardHelper) {
-      return (com_iflytek_cloud_msc_util_SDCardHelper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_msc_util_UniqueIDUtil) {
-      return (com_iflytek_cloud_msc_util_UniqueIDUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_RecognizerResult) {
-      return (com_iflytek_cloud_RecognizerResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_record_PcmRecorder_PcmRecordListener) {
-      return (com_iflytek_cloud_record_PcmRecorder_PcmRecordListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_record_PcmRecorder) {
-      return (com_iflytek_cloud_record_PcmRecorder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_resource_Resource) {
-      return (com_iflytek_cloud_resource_Resource()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_Setting) {
-      return (com_iflytek_cloud_Setting()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeakerVerifier) {
-      return (com_iflytek_cloud_SpeakerVerifier()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_FaceDetectorImpl) {
-      return (com_iflytek_cloud_speech_impl_FaceDetectorImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_FaceRequestImpl) {
-      return (com_iflytek_cloud_speech_impl_FaceRequestImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_IdentityVerifierImpl) {
-      return (com_iflytek_cloud_speech_impl_IdentityVerifierImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeakerVerifierImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeakerVerifierImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechRecognizerImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeechRecognizerImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechTranscripterImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeechTranscripterImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl) {
-      return (com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_TextUnderstanderImpl) {
-      return (com_iflytek_cloud_speech_impl_TextUnderstanderImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_speech_impl_VoiceWakeuperImpl) {
-      return (com_iflytek_cloud_speech_impl_VoiceWakeuperImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechConstant) {
-      return (com_iflytek_cloud_SpeechConstant()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechError) {
-      return (com_iflytek_cloud_SpeechError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechEvaluator) {
-      return (com_iflytek_cloud_SpeechEvaluator()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechEvent) {
-      return (com_iflytek_cloud_SpeechEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechRecognizer) {
-      return (com_iflytek_cloud_SpeechRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechSynthesizer) {
-      return (com_iflytek_cloud_SpeechSynthesizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechTranscripter) {
-      return (com_iflytek_cloud_SpeechTranscripter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechUnderstander) {
-      return (com_iflytek_cloud_SpeechUnderstander()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_SpeechUtility) {
-      return (com_iflytek_cloud_SpeechUtility()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_TextUnderstander) {
-      return (com_iflytek_cloud_TextUnderstander()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_TranscripterResult) {
-      return (com_iflytek_cloud_TranscripterResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_ui_RecognizerDialog) {
-      return (com_iflytek_cloud_ui_RecognizerDialog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_UnderstanderResult) {
-      return (com_iflytek_cloud_UnderstanderResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_Accelerometer) {
-      return (com_iflytek_cloud_util_Accelerometer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_AudioDetector_DetectorResult) {
-      return (com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_AudioDetector) {
-      return (com_iflytek_cloud_util_AudioDetector()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_ContactManager) {
-      return (com_iflytek_cloud_util_ContactManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_ResourceUtil) {
-      return (com_iflytek_cloud_util_ResourceUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_UserWords) {
-      return (com_iflytek_cloud_util_UserWords()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_VerifierUtil) {
-      return (com_iflytek_cloud_util_VerifierUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_util_VolumeUtil) {
-      return (com_iflytek_cloud_util_VolumeUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_VerifierResult) {
-      return (com_iflytek_cloud_VerifierResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_Version) {
-      return (com_iflytek_cloud_Version()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_VoiceWakeuper) {
-      return (com_iflytek_cloud_VoiceWakeuper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_cloud_WakeuperResult) {
-      return (com_iflytek_cloud_WakeuperResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_idata_extension_IFlyCollectorExt) {
-      return (com_iflytek_idata_extension_IFlyCollectorExt()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_AIMIC) {
-      return (com_iflytek_msc_AIMIC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_MetaVAD_Instance) {
-      return (com_iflytek_msc_MetaVAD_Instance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_MetaVAD) {
-      return (com_iflytek_msc_MetaVAD()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_MSC) {
-      return (com_iflytek_msc_MSC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_MSCSessionInfo) {
-      return (com_iflytek_msc_MSCSessionInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_VAD_VadData) {
-      return (com_iflytek_msc_VAD_VadData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_msc_VAD) {
-      return (com_iflytek_msc_VAD()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier_Stub) {
-      return (com_iflytek_speech_aidl_ISpeakerVerifier_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier) {
-      return (com_iflytek_speech_aidl_ISpeakerVerifier.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_IWakeuper) {
+      return (com_iflytek_speech_aidl_IWakeuper.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_aidl_ISpeechRecognizer_Stub) {
       return (com_iflytek_speech_aidl_ISpeechRecognizer_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechRecognizer) {
-      return (com_iflytek_speech_aidl_ISpeechRecognizer.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander) {
+      return (com_iflytek_speech_aidl_ISpeechUnderstander.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_aidl_ISpeechSynthesizer_Stub) {
       return (com_iflytek_speech_aidl_ISpeechSynthesizer_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
@@ -887,11 +662,11 @@ extension TypeOpXfttsFluttifyAndroid on Object {
     else if (T == com_iflytek_speech_aidl_ISpeechSynthesizer) {
       return (com_iflytek_speech_aidl_ISpeechSynthesizer.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander_Stub) {
-      return (com_iflytek_speech_aidl_ISpeechUnderstander_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier) {
+      return (com_iflytek_speech_aidl_ISpeakerVerifier.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander) {
-      return (com_iflytek_speech_aidl_ISpeechUnderstander.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_ISpeakerVerifier_Stub) {
+      return (com_iflytek_speech_aidl_ISpeakerVerifier_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_aidl_ITextUnderstander_Stub) {
       return (com_iflytek_speech_aidl_ITextUnderstander_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
@@ -899,41 +674,35 @@ extension TypeOpXfttsFluttifyAndroid on Object {
     else if (T == com_iflytek_speech_aidl_ITextUnderstander) {
       return (com_iflytek_speech_aidl_ITextUnderstander.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_aidl_IWakeuper_Stub) {
-      return (com_iflytek_speech_aidl_IWakeuper_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_aidl_ISpeechUnderstander_Stub) {
+      return (com_iflytek_speech_aidl_ISpeechUnderstander_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_aidl_IWakeuper) {
-      return (com_iflytek_speech_aidl_IWakeuper.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SynthesizeToUrlListener_Stub) {
+      return (com_iflytek_speech_SynthesizeToUrlListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_GrammarListener_Stub) {
-      return (com_iflytek_speech_GrammarListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_GrammarListener) {
-      return (com_iflytek_speech_GrammarListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_LexiconListener_Stub) {
-      return (com_iflytek_speech_LexiconListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SynthesizerListener) {
+      return (com_iflytek_speech_SynthesizerListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_LexiconListener) {
       return (com_iflytek_speech_LexiconListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_RecognizerListener_Stub) {
-      return (com_iflytek_speech_RecognizerListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SynthesizeToUrlListener) {
+      return (com_iflytek_speech_SynthesizeToUrlListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_RecognizerListener) {
-      return (com_iflytek_speech_RecognizerListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SynthesizerListener_Stub) {
+      return (com_iflytek_speech_SynthesizerListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_RecognizerResult) {
-      return (com_iflytek_speech_RecognizerResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_LexiconListener_Stub) {
+      return (com_iflytek_speech_LexiconListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_SpeakerVerifierAidl_PassWord) {
-      return (com_iflytek_speech_SpeakerVerifierAidl_PassWord()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SpeechUnderstanderAidl) {
+      return (com_iflytek_speech_SpeechUnderstanderAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_SpeakerVerifierAidl) {
-      return (com_iflytek_speech_SpeakerVerifierAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_TextUnderstanderListener_Stub) {
+      return (com_iflytek_speech_TextUnderstanderListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_SpeechComponent) {
-      return (com_iflytek_speech_SpeechComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_SpeechUnderstanderListener) {
+      return (com_iflytek_speech_SpeechUnderstanderListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_SpeechRecognizerAidl) {
       return (com_iflytek_speech_SpeechRecognizerAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
@@ -941,65 +710,296 @@ extension TypeOpXfttsFluttifyAndroid on Object {
     else if (T == com_iflytek_speech_SpeechSynthesizerAidl) {
       return (com_iflytek_speech_SpeechSynthesizerAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_SpeechUnderstanderAidl) {
-      return (com_iflytek_speech_SpeechUnderstanderAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SpeechUnderstanderListener_Stub) {
-      return (com_iflytek_speech_SpeechUnderstanderListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SpeechUnderstanderListener) {
-      return (com_iflytek_speech_SpeechUnderstanderListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SynthesizerListener_Stub) {
-      return (com_iflytek_speech_SynthesizerListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SynthesizerListener) {
-      return (com_iflytek_speech_SynthesizerListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SynthesizeToUrlListener_Stub) {
-      return (com_iflytek_speech_SynthesizeToUrlListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_SynthesizeToUrlListener) {
-      return (com_iflytek_speech_SynthesizeToUrlListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderAidl) {
-      return (com_iflytek_speech_TextUnderstanderAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderListener_Stub) {
-      return (com_iflytek_speech_TextUnderstanderListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_TextUnderstanderListener) {
-      return (com_iflytek_speech_TextUnderstanderListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_UnderstanderResult) {
-      return (com_iflytek_speech_UnderstanderResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_UtilityConfig) {
-      return (com_iflytek_speech_UtilityConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_RecognizerListener) {
+      return (com_iflytek_speech_RecognizerListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_VerifierListener_Stub) {
       return (com_iflytek_speech_VerifierListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_VerifierListener) {
-      return (com_iflytek_speech_VerifierListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_UtilityConfig) {
+      return (com_iflytek_speech_UtilityConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == com_iflytek_speech_VerifierResult) {
-      return (com_iflytek_speech_VerifierResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_Version) {
-      return (com_iflytek_speech_Version()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_VoiceWakeuperAidl) {
-      return (com_iflytek_speech_VoiceWakeuperAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == com_iflytek_speech_WakeuperListener_Stub) {
-      return (com_iflytek_speech_WakeuperListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == com_iflytek_speech_GrammarListener_Stub) {
+      return (com_iflytek_speech_GrammarListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == com_iflytek_speech_WakeuperListener) {
       return (com_iflytek_speech_WakeuperListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
+    else if (T == com_iflytek_speech_SpeechUnderstanderListener_Stub) {
+      return (com_iflytek_speech_SpeechUnderstanderListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_SpeakerVerifierAidl_PassWord) {
+      return (com_iflytek_speech_SpeakerVerifierAidl_PassWord()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_WakeuperListener_Stub) {
+      return (com_iflytek_speech_WakeuperListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
     else if (T == com_iflytek_speech_WakeuperResult) {
       return (com_iflytek_speech_WakeuperResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_VerifierResult) {
+      return (com_iflytek_speech_VerifierResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_RecognizerResult) {
+      return (com_iflytek_speech_RecognizerResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_Version) {
+      return (com_iflytek_speech_Version()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_TextUnderstanderAidl) {
+      return (com_iflytek_speech_TextUnderstanderAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_UnderstanderResult) {
+      return (com_iflytek_speech_UnderstanderResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_VoiceWakeuperAidl) {
+      return (com_iflytek_speech_VoiceWakeuperAidl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_TextUnderstanderListener) {
+      return (com_iflytek_speech_TextUnderstanderListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_speech_RecognizerListener_Stub) {
+      return (com_iflytek_speech_RecognizerListener_Stub()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_idata_extension_IFlyCollectorExt) {
+      return (com_iflytek_idata_extension_IFlyCollectorExt()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeakerVerifier) {
+      return (com_iflytek_cloud_SpeakerVerifier()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_ErrorCode) {
+      return (com_iflytek_cloud_ErrorCode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_ui_RecognizerDialog) {
+      return (com_iflytek_cloud_ui_RecognizerDialog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechTranscripter) {
+      return (com_iflytek_cloud_SpeechTranscripter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_record_PcmRecorder) {
+      return (com_iflytek_cloud_record_PcmRecorder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_record_PcmRecorder_PcmRecordListener) {
+      return (com_iflytek_cloud_record_PcmRecorder_PcmRecordListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_IdentityVerifier) {
+      return (com_iflytek_cloud_IdentityVerifier()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_AudioDetector) {
+      return (com_iflytek_cloud_util_AudioDetector()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_UserWords) {
+      return (com_iflytek_cloud_util_UserWords()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_VerifierUtil) {
+      return (com_iflytek_cloud_util_VerifierUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_ResourceUtil) {
+      return (com_iflytek_cloud_util_ResourceUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_AudioDetector_DetectorResult) {
+      return (com_iflytek_cloud_util_AudioDetector_DetectorResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_Accelerometer) {
+      return (com_iflytek_cloud_util_Accelerometer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_ContactManager) {
+      return (com_iflytek_cloud_util_ContactManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_util_VolumeUtil) {
+      return (com_iflytek_cloud_util_VolumeUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_FaceRequest) {
+      return (com_iflytek_cloud_FaceRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechUtility) {
+      return (com_iflytek_cloud_SpeechUtility()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechSynthesizer) {
+      return (com_iflytek_cloud_SpeechSynthesizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_IdentityResult) {
+      return (com_iflytek_cloud_IdentityResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_TextUnderstander) {
+      return (com_iflytek_cloud_TextUnderstander()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_VoiceWakeuperImpl) {
+      return (com_iflytek_cloud_speech_impl_VoiceWakeuperImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechTranscripterImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeechTranscripterImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_TextUnderstanderImpl) {
+      return (com_iflytek_cloud_speech_impl_TextUnderstanderImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_IdentityVerifierImpl) {
+      return (com_iflytek_cloud_speech_impl_IdentityVerifierImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_FaceDetectorImpl) {
+      return (com_iflytek_cloud_speech_impl_FaceDetectorImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechRecognizerImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeechRecognizerImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_FaceRequestImpl) {
+      return (com_iflytek_cloud_speech_impl_FaceRequestImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeakerVerifierImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeakerVerifierImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl) {
+      return (com_iflytek_cloud_speech_impl_SpeechEvaluatorImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FuncAdapterSdk10) {
+      return (com_iflytek_cloud_msc_util_FuncAdapterSdk10()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_NetworkUtil) {
+      return (com_iflytek_cloud_msc_util_NetworkUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Base64) {
+      return (com_iflytek_cloud_msc_util_Base64()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_DataUtil) {
+      return (com_iflytek_cloud_msc_util_DataUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_RSAUtil) {
+      return (com_iflytek_cloud_msc_util_RSAUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Encrypter) {
+      return (com_iflytek_cloud_msc_util_Encrypter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_AppInfoUtil) {
+      return (com_iflytek_cloud_msc_util_AppInfoUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_DataLogger) {
+      return (com_iflytek_cloud_msc_util_DataLogger()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_SDCardHelper) {
+      return (com_iflytek_cloud_msc_util_SDCardHelper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_http_HttpDownloadImpl) {
+      return (com_iflytek_cloud_msc_util_http_HttpDownloadImpl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_http_HttpTransListener) {
+      return (com_iflytek_cloud_msc_util_http_HttpTransListener.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FuncAdapter) {
+      return (com_iflytek_cloud_msc_util_FuncAdapter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_Config) {
+      return (com_iflytek_cloud_msc_util_Config()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_log_PerfLogger) {
+      return (com_iflytek_cloud_msc_util_log_PerfLogger()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_log_DebugLog) {
+      return (com_iflytek_cloud_msc_util_log_DebugLog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_UniqueIDUtil) {
+      return (com_iflytek_cloud_msc_util_UniqueIDUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_FileDownloader) {
+      return (com_iflytek_cloud_msc_util_FileDownloader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_AESUtil) {
+      return (com_iflytek_cloud_msc_util_AESUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_util_HttpRequest) {
+      return (com_iflytek_cloud_msc_util_HttpRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_AudioAccessor) {
+      return (com_iflytek_cloud_msc_ist_AudioAccessor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_MscTranscripter) {
+      return (com_iflytek_cloud_msc_ist_MscTranscripter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_msc_ist_IstSession) {
+      return (com_iflytek_cloud_msc_ist_IstSession()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechRecognizer) {
+      return (com_iflytek_cloud_SpeechRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechError) {
+      return (com_iflytek_cloud_SpeechError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_Setting) {
+      return (com_iflytek_cloud_Setting()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_DataDownloader) {
+      return (com_iflytek_cloud_DataDownloader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechEvaluator) {
+      return (com_iflytek_cloud_SpeechEvaluator()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_VoiceWakeuper) {
+      return (com_iflytek_cloud_VoiceWakeuper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_EvaluatorResult) {
+      return (com_iflytek_cloud_EvaluatorResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechUnderstander) {
+      return (com_iflytek_cloud_SpeechUnderstander()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechEvent) {
+      return (com_iflytek_cloud_SpeechEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_resource_Resource) {
+      return (com_iflytek_cloud_resource_Resource()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_FaceDetector) {
+      return (com_iflytek_cloud_FaceDetector()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_WakeuperResult) {
+      return (com_iflytek_cloud_WakeuperResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_VerifierResult) {
+      return (com_iflytek_cloud_VerifierResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_SpeechConstant) {
+      return (com_iflytek_cloud_SpeechConstant()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_DataUploader) {
+      return (com_iflytek_cloud_DataUploader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_RecognizerResult) {
+      return (com_iflytek_cloud_RecognizerResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_TranscripterResult) {
+      return (com_iflytek_cloud_TranscripterResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_Version) {
+      return (com_iflytek_cloud_Version()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_cloud_UnderstanderResult) {
+      return (com_iflytek_cloud_UnderstanderResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_VAD_VadData) {
+      return (com_iflytek_msc_VAD_VadData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_MSCSessionInfo) {
+      return (com_iflytek_msc_MSCSessionInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_MetaVAD) {
+      return (com_iflytek_msc_MetaVAD()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_VAD) {
+      return (com_iflytek_msc_VAD()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_AIMIC) {
+      return (com_iflytek_msc_AIMIC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_MSC) {
+      return (com_iflytek_msc_MSC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == com_iflytek_msc_MetaVAD_Instance) {
+      return (com_iflytek_msc_MetaVAD_Instance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == android_content_Context) {
       return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;

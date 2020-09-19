@@ -19,80 +19,80 @@ extension TypeOpXfttsFluttifyIOS on Object {
     if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
       return this is T;
     }
-    else if (T == IFlyAudioSession) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyAudioSession', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyDataUploader) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyDataUploader', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyDebugLog) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyDebugLog', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyISVRecognizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyISVRecognizer', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyPcmRecorder) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyPcmRecorder', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyRecognizerView) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyRecognizerView', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlyResourceUtil) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyResourceUtil', {'__this__': this});
+    else if (T == IFlySpeechRecognizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechRecognizer', {'__this__': this});
       return result;
     }
     else if (T == IFlySetting) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySetting', {'__this__': this});
       return result;
     }
-    else if (T == IFlySpeechConstant) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechConstant', {'__this__': this});
+    else if (T == IFlyRecognizerView) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyRecognizerView', {'__this__': this});
       return result;
     }
-    else if (T == IFlySpeechError) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechError', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlySpeechEvaluator) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechEvaluator', {'__this__': this});
+    else if (T == IFlyPcmRecorder) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyPcmRecorder', {'__this__': this});
       return result;
     }
     else if (T == IFlySpeechEvaluatorDelegate) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechEvaluatorDelegate', {'__this__': this});
       return result;
     }
-    else if (T == IFlySpeechRecognizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechRecognizer', {'__this__': this});
+    else if (T == IFlyVoiceWakeuper) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyVoiceWakeuper', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlySpeechConstant) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechConstant', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlyDebugLog) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyDebugLog', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlyDataUploader) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyDataUploader', {'__this__': this});
       return result;
     }
     else if (T == IFlySpeechRecognizerDelegate) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechRecognizerDelegate', {'__this__': this});
       return result;
     }
-    else if (T == IFlySpeechSynthesizer) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechSynthesizer', {'__this__': this});
-      return result;
-    }
-    else if (T == IFlySpeechUtility) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechUtility', {'__this__': this});
+    else if (T == IFlyAudioSession) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyAudioSession', {'__this__': this});
       return result;
     }
     else if (T == IFlyUserWords) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyUserWords', {'__this__': this});
       return result;
     }
+    else if (T == IFlySpeechError) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechError', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlyResourceUtil) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyResourceUtil', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlySpeechUtility) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechUtility', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlySpeechEvaluator) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechEvaluator', {'__this__': this});
+      return result;
+    }
     else if (T == IFlyVerifierUtil) {
       final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyVerifierUtil', {'__this__': this});
       return result;
     }
-    else if (T == IFlyVoiceWakeuper) {
-      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyVoiceWakeuper', {'__this__': this});
+    else if (T == IFlyISVRecognizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlyISVRecognizer', {'__this__': this});
+      return result;
+    }
+    else if (T == IFlySpeechSynthesizer) {
+      final result = await MethodChannel('com.fluttify/xftts_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfIFlySpeechSynthesizer', {'__this__': this});
       return result;
     }
     else if (T == CGRect) {
@@ -153,62 +153,62 @@ extension TypeOpXfttsFluttifyIOS on Object {
       return this as T;
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == IFlyAudioSession) {
-      return (IFlyAudioSession()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyDataUploader) {
-      return (IFlyDataUploader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyDebugLog) {
-      return (IFlyDebugLog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyISVRecognizer) {
-      return (IFlyISVRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyPcmRecorder) {
-      return (IFlyPcmRecorder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyRecognizerView) {
-      return (IFlyRecognizerView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlyResourceUtil) {
-      return (IFlyResourceUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlySpeechRecognizer) {
+      return (IFlySpeechRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == IFlySetting) {
       return (IFlySetting()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == IFlySpeechConstant) {
-      return (IFlySpeechConstant()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlyRecognizerView) {
+      return (IFlyRecognizerView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == IFlySpeechError) {
-      return (IFlySpeechError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlySpeechEvaluator) {
-      return (IFlySpeechEvaluator()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlyPcmRecorder) {
+      return (IFlyPcmRecorder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == IFlySpeechEvaluatorDelegate) {
       return (IFlySpeechEvaluatorDelegate.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == IFlySpeechRecognizer) {
-      return (IFlySpeechRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlyVoiceWakeuper) {
+      return (IFlyVoiceWakeuper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlySpeechConstant) {
+      return (IFlySpeechConstant()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlyDebugLog) {
+      return (IFlyDebugLog()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlyDataUploader) {
+      return (IFlyDataUploader()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == IFlySpeechRecognizerDelegate) {
       return (IFlySpeechRecognizerDelegate.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == IFlySpeechSynthesizer) {
-      return (IFlySpeechSynthesizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
-    }
-    else if (T == IFlySpeechUtility) {
-      return (IFlySpeechUtility()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlyAudioSession) {
+      return (IFlyAudioSession()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == IFlyUserWords) {
       return (IFlyUserWords()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
+    else if (T == IFlySpeechError) {
+      return (IFlySpeechError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlyResourceUtil) {
+      return (IFlyResourceUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlySpeechUtility) {
+      return (IFlySpeechUtility()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlySpeechEvaluator) {
+      return (IFlySpeechEvaluator()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
     else if (T == IFlyVerifierUtil) {
       return (IFlyVerifierUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
-    else if (T == IFlyVoiceWakeuper) {
-      return (IFlyVoiceWakeuper()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    else if (T == IFlyISVRecognizer) {
+      return (IFlyISVRecognizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
+    }
+    else if (T == IFlySpeechSynthesizer) {
+      return (IFlySpeechSynthesizer()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;
     }
     else if (T == CGRect) {
       return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'xftts_fluttify') as T;

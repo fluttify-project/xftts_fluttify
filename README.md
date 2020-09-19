@@ -1,34 +1,30 @@
 ![Logo](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/Logo-Landscape.png?raw=true)
 
-# 讯飞 `TTS`语音合成组件
+# 讯飞 `TTS`语音合成 Flutter插件
 
 [![pub package](https://img.shields.io/pub/v/xftts_fluttify.svg)](https://pub.flutter-io.cn/packages/xftts_fluttify)
-![CI](https://github.com/fluttify-project/amap_map_fluttify/workflows/CI/badge.svg)
 
-Dart接口基于[Fluttify](https://github.com/yohom/fluttify-core-example)编译器生成. dartdoc[接口文档](https://pub.flutter-io.cn/documentation/xftts_fluttify/latest/). [CHANGELOG](https://github.com/fluttify-project/xftts_fluttify/blob/master/CHANGELOG.md).
+# Fluttify系列插件
+|  名称  | 描述 | 仓库 |
+|:-----:|:-----:|:-----:|
+| [高德地图](https://github.com/fluttify-project/amap_map_fluttify)  |  高德地图地图组件, 提供地图控件 | [![pub package](https://img.shields.io/pub/v/amap_map_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_map_fluttify) |
+| [高德定位](https://github.com/fluttify-project/amap_location_fluttify)  |  高德地图定位组件, 提供独立的定位功能 | [![pub package](https://img.shields.io/pub/v/amap_location_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_location_fluttify) |
+| [高德搜索](https://github.com/fluttify-project/amap_search_fluttify)  |  高德地图搜索组件, 提供poi搜索等功能 | [![pub package](https://img.shields.io/pub/v/amap_search_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_search_fluttify) |
+| [高德猎鹰](https://github.com/fluttify-project/amap_track_fluttify)  |  高德地图猎鹰组件, 提供实时定位采集功能 | [![pub package](https://img.shields.io/pub/v/amap_track_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_track_fluttify) |
+| [百度地图](https://github.com/fluttify-project/bmap_map_fluttify)  |  百度地图, 包含了地图控件, 定位以及搜索poi等功能 | [![pub package](https://img.shields.io/pub/v/bmap_map_fluttify.svg)](https://pub.Flutter-io.cn/packages/bmap_map_fluttify) |
+| [百度人脸识别](https://github.com/fluttify-project/baidu_face_flutter)  |  百度人脸识别, 提供活体检测等功能 | [![pub package](https://img.shields.io/pub/v/baidu_face_flutter.svg)](https://pub.Flutter-io.cn/packages/baidu_face_flutter) |
+| [网易直播](https://github.com/fluttify-project/netease_live_fluttify)  |  网易直播推流组件 | [![pub package](https://img.shields.io/pub/v/netease_live_fluttify.svg)](https://pub.Flutter-io.cn/packages/netease_live_fluttify) |
+| [网易云信](https://github.com/fluttify-project/nim_fluttify)  |  网易云信 IM组件 | [![pub package](https://img.shields.io/pub/v/nim_fluttify.svg)](https://pub.Flutter-io.cn/packages/nim_fluttify) |
+| [腾讯直播](https://github.com/fluttify-project/tencent_live_fluttify)  |  腾讯直播, 包含推流组件和播放组件 | [![pub package](https://img.shields.io/pub/v/tencent_live_fluttify.svg)](https://pub.Flutter-io.cn/packages/tencent_live_fluttify) |
+| [腾讯IM](https://github.com/fluttify-project/tim_fluttify)  |  腾讯IM组件 | [![pub package](https://img.shields.io/pub/v/tim_fluttify.svg)](https://pub.Flutter-io.cn/packages/tim_fluttify) |
+| [腾讯地图](https://github.com/fluttify-project/tmap_map_fluttify)  |  腾讯地图组件 | [![pub package](https://img.shields.io/pub/v/tmap_map_fluttify.svg)](https://pub.Flutter-io.cn/packages/tmap_map_fluttify) |
+| [讯飞语音合成](https://github.com/fluttify-project/xftts_fluttify)  |  腾讯语言合成组件, 提供文字转语言功能 | [![pub package](https://img.shields.io/pub/v/xftts_fluttify.svg)](https://pub.flutter-io.cn/packages/xftts_fluttify) |
+| [极光统计](https://github.com/fluttify-project/janalytics_fluttify)  |  极光统计组件, 提供异常上报等功能 | [![pub package](https://img.shields.io/pub/v/janalytics_fluttify.svg)](https://pub.flutter-io.cn/packages/janalytics_fluttify) |
+| [阿里云RTC](https://github.com/fluttify-project/ali_rtc_fluttify)  |  阿里云实时音视频 | [![pub package](https://img.shields.io/pub/v/ali_rtc_fluttify.svg)](https://pub.flutter-io.cn/packages/ali_rtc_fluttify) |
+| [环信](https://github.com/fluttify-project/easemob_im_fluttify)  |  环信IM | [![pub package](https://img.shields.io/pub/v/easemob_im_fluttify.svg)](https://pub.flutter-io.cn/packages/easemob_im_fluttify) |
+| [未完待续...](https://github.com/fluttify-project)  |  如有其它需求, 请联系qq 382146139 | ![fluttify](https://img.shields.io/badge/fluttify-welcom-green) |
 
-## 技术支持
-- 请参考 [technical-support-plan](https://github.com/fluttify-project/technical-support-plan) 进行操作, 技术支持工单将以最高优先级处理.
-
-## Fluttify网站
-- Fluttify编译器自助服务[fluttify.com](http://fluttify.com/#/)网站已上线, 欢迎各位来试用, 目前网站仍然处于早期阶段, 如果有什么建议可以在[技术支持](https://github.com/fluttify-project/technical-support-plan/issues/new?assignees=yohom&labels=&template=------.md&title=)中提issue.
-- 如何使用网站?
-  1. 使用github账号登录网站, 我需要知道是谁在使用我的网站;
-  2. 填写原生SDK相关的信息, 填写maven坐标和cocoapods名称的时候会进行联网自动补全;
-  3. 提交请求, 目前默认获取目标SDK的最新版本来生成插件;
-  4. 请求完成后会往github账号关联的邮箱地址发一份邮件, 产物插件便在邮件的附件中; 
-- 网站前端使用flutter for web编写(目前产物可能会比较大, 随着flutter官方的优化这些问题会逐步改善), 部署在github pages上, 所以首次访问可能会异常的慢, 请耐心等待或者多试几次. 
-
-## 接外包
-**本人承接外包项目(地图类app优先), 有意者请联系qq 382146139.**
-
-## DEMO 与 社区
-
-| Demo | QQ群 |
-| :----------: | :----------: |
-| 扫描二维码 <br> 或者 <br> [点击下载](https://github.com/fluttify-project/xftts_fluttify/blob/master/example/build/app/outputs/apk/release/app-release.apk?raw=true) </br> <img src="assets/amap_map_fluttify_apk.png" height="300"> | 加入QQ群讨论 <br/> <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/QQ%E7%BE%A4.png?raw=true" height="300"> |
-
-安装: 
+## 依赖: 
 ```yaml
 dependencies:
   flutter:
@@ -36,54 +32,32 @@ dependencies:
   xftts_fluttify: ^x.x.x
 ```
 
-导入:
+## 配置
+### iOS 
+`Info.plist`配置:
+```xml
+<key>NSMicrophoneUsageDescription</key>
+<string>需要麦克风权限</string>
+<key>NSLocationUsageDescription</key>
+<string>需要定位权限</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>需要定位权限</string>
+<key>NSContactsUsageDescription</key>
+<string>需要联系人权限</string>
+```
+
+## 导入:
 ```dart
 import 'package:xftts_fluttify/xftts_fluttify.dart';
 ```
 
-使用:
-```dart
-/// 初始化 
-await XfTTS.init('你的appid');
-/// 如果你觉得引擎的日志太多, 可以关闭Fluttify引擎的日志
-await enableFluttifyLog(false); // 关闭log
+## 使用:
+参考[wiki](https://github.com/fluttify-project/xftts_fluttify/wiki).
 
-/// 创建合成器对象
-Synthesizer synthesizer = await XfTTS.createSynthesizer();
-/// 开始语音
-await synthesizer.startSpeaking('你要说的话');
-/// 暂停语音
-await synthesizer.pauseSpeaking();
-/// 恢复语音
-await synthesizer.resumeSpeaking();
-/// 停止语音
-await synthesizer.stopSpeaking();
-/// 释放资源
-await synthesizer.destroy();
-```
-
-iOS `Info.plist`配置:
-```xml
-<key>NSMicrophoneUsageDescription</key>
-<string></string>
-<key>NSLocationUsageDescription</key>
-<string></string>
-<key>NSLocationAlwaysUsageDescription</key>
-<string></string>
-<key>NSContactsUsageDescription</key>
-<string></string>
-```
-
-## 版本规划
-### 版本的语义化
-    - +版本号迭代表示引擎更新，完善引擎能力以及修复引擎bug;
-    - 小版本号迭代表示无破坏性更新, 包括功能增加和bug修复;
-    - 次版本号迭代表示有破坏性更新, 包括但不限于接口改动, 类名改动等;
-    - 主版本号迭代表示底层高德SDK更换;
-
-| 微信支持 | 支付宝支持 |
-| :----------: | :----------: |
-| <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true" height="300"> | <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true" height="300"> |
+## 社区
+| QQ群 |
+| :----------: |
+| <img src="https://github.com/fluttify-project/fluttify-project/blob/master/resources/1593774713224_temp_qrcode_share_9993.png?raw=true" height="300"> | 
 
 ## LICENSE
 > Copyright 2020 yohom
