@@ -4,10 +4,15 @@ import 'package:xftts_fluttify/src/android/android.export.g.dart';
 import 'package:xftts_fluttify/src/ios/ios.export.g.dart';
 
 class XfTTS {
+  static XfTTS instance = XfTTS._();
+
   XfTTS._();
 
+  final _androidDelegate = _AndroidDelegate();
+  final _iosDelegate = _IOSDelegate();
+
   /// 初始化
-  static Future<void> init(String appId) async {
+  Future<void> init(String appId) async {
     await platform(
       android: (pool) async {
         final application = await android_app_Application.get();
@@ -23,20 +28,20 @@ class XfTTS {
   }
 
   /// 创建单例对象 使用此函数创建一个本类单例对象
-  static Future<Synthesizer> createSynthesizer() async {
+  Future<Synthesizer> createSynthesizer() async {
     return platform(
       android: (pool) async {
         final application = await android_app_Application.get();
         final synthesizer =
             await com_iflytek_cloud_SpeechSynthesizer.createSynthesizer(
           application,
-          _AndroidDelegate(),
+          _androidDelegate,
         );
         return Synthesizer._android(synthesizer);
       },
       ios: (pool) async {
         final synthesizer = await IFlySpeechSynthesizer.sharedInstance();
-        synthesizer.set_delegate(_IOSDelegate());
+        await synthesizer.set_delegate(_iosDelegate);
         return Synthesizer._ios(synthesizer);
       },
     );
@@ -44,8 +49,6 @@ class XfTTS {
 }
 
 class Synthesizer {
-  Synthesizer._();
-
   Synthesizer._android(this._androidModel);
 
   Synthesizer._ios(this._iosModel);

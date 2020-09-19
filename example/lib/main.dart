@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    XfTTS.createSynthesizer().then((it) => _synthesizer = it);
+    XfTTS.instance.createSynthesizer().then((it) => _synthesizer = it);
   }
 
   @override
