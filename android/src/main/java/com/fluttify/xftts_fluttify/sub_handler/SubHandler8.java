@@ -33,120 +33,17 @@ public class SubHandler8 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_RSAUtil__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_RSAUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_SDCardHelper__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_UniqueIDUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_RecognizerResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_RecognizerResult__String");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context");
                 }
             
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.RecognizerResult __obj__ = new com.iflytek.cloud.RecognizerResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int");
-                }
-            
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                // create target object
-                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue());
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int__int");
-                }
-            
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-            
-                // create target object
-                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue(), var3.intValue());
+                com.iflytek.cloud.speech.impl.IdentityVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.IdentityVerifierImpl(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -178,9 +75,9 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context");
                 }
             
                 // args
@@ -188,7 +85,47 @@ public class SubHandler8 {
                 android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.speech.impl.IdentityVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.IdentityVerifierImpl(var1);
+                com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechRecognizerImpl(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -238,17 +175,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapterSdk10__");
                 }
             
                 // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechRecognizerImpl(var1);
+                com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -258,17 +194,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_NetworkUtil__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_NetworkUtil__");
                 }
             
                 // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl(var1);
+                com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -278,17 +213,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataUtil__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataUtil__");
                 }
             
                 // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechTranscripterImpl(var1);
+                com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -298,17 +232,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_RSAUtil__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_RSAUtil__");
                 }
             
                 // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl(var1);
+                com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -318,17 +251,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_Encrypter__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_Encrypter__");
                 }
             
                 // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.cloud.speech.impl.TextUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.TextUnderstanderImpl(var1);
+                com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -338,17 +270,276 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AppInfoUtil__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AppInfoUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.AppInfoUtil __obj__ = new com.iflytek.cloud.msc.util.AppInfoUtil();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataLogger__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataLogger__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.DataLogger __obj__ = new com.iflytek.cloud.msc.util.DataLogger();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_SDCardHelper__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_SDCardHelper__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context");
                 }
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                android.content.Context var2 = (android.content.Context) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __obj__ = new com.iflytek.cloud.speech.impl.VoiceWakeuperImpl(var1);
+                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1.intValue(), var2);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                android.content.Context var4 = (android.content.Context) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1.longValue(), var3.intValue(), var4);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapter__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_PerfLogger__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_DebugLog__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_DebugLog__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_UniqueIDUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_UniqueIDUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AESUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_ist_IstSession__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -400,6 +591,46 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
+            put("ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataDownloader__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_EvaluatorResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_EvaluatorResult__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
             put("ObjectFactory::createcom_iflytek_cloud_SpeechEvent__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_SpeechEvent__");
@@ -410,220 +641,6 @@ public class SubHandler8 {
             
                 // create target object
                 com.iflytek.cloud.SpeechEvent __obj__ = new com.iflytek.cloud.SpeechEvent();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_TranscripterResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_TranscripterResult__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.TranscripterResult __obj__ = new com.iflytek.cloud.TranscripterResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_UnderstanderResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_UnderstanderResult__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.UnderstanderResult __obj__ = new com.iflytek.cloud.UnderstanderResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_Accelerometer__android_content_Context", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_Accelerometer__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_AudioDetector_DetectorResult__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_ResourceUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_ResourceUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_VerifierUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VerifierUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_util_VolumeUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VolumeUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_VerifierResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_VerifierResult__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.cloud.VerifierResult __obj__ = new com.iflytek.cloud.VerifierResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_Version__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_Version__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.Version __obj__ = new com.iflytek.cloud.Version();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -675,16 +692,17 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_msc_AIMIC__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_VerifierResult__String", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_AIMIC__");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_VerifierResult__String");
                 }
             
                 // args
-            
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.msc.AIMIC __obj__ = new com.iflytek.msc.AIMIC();
+                com.iflytek.cloud.VerifierResult __obj__ = new com.iflytek.cloud.VerifierResult(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -694,16 +712,17 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_DataUploader__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD_Instance__");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataUploader__android_content_Context");
                 }
             
                 // args
-            
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.msc.MetaVAD.Instance __obj__ = new com.iflytek.msc.MetaVAD.Instance();
+                com.iflytek.cloud.DataUploader __obj__ = new com.iflytek.cloud.DataUploader(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -713,16 +732,17 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_msc_MetaVAD__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_RecognizerResult__String", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD__");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_RecognizerResult__String");
                 }
             
                 // args
-            
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.msc.MetaVAD __obj__ = new com.iflytek.msc.MetaVAD();
+                com.iflytek.cloud.RecognizerResult __obj__ = new com.iflytek.cloud.RecognizerResult(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -732,16 +752,17 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_msc_MSC__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_TranscripterResult__String", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSC__");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_TranscripterResult__String");
                 }
             
                 // args
-            
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.msc.MSC __obj__ = new com.iflytek.msc.MSC();
+                com.iflytek.cloud.TranscripterResult __obj__ = new com.iflytek.cloud.TranscripterResult(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -751,16 +772,36 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_Version__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSCSessionInfo__");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_Version__");
                 }
             
                 // args
             
             
                 // create target object
-                com.iflytek.msc.MSCSessionInfo __obj__ = new com.iflytek.msc.MSCSessionInfo();
+                com.iflytek.cloud.Version __obj__ = new com.iflytek.cloud.Version();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_UnderstanderResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_UnderstanderResult__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.UnderstanderResult __obj__ = new com.iflytek.cloud.UnderstanderResult(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -789,6 +830,44 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
+            put("ObjectFactory::createcom_iflytek_msc_MSCSessionInfo__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSCSessionInfo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.msc.MSCSessionInfo __obj__ = new com.iflytek.msc.MSCSessionInfo();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_msc_MetaVAD__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.msc.MetaVAD __obj__ = new com.iflytek.msc.MetaVAD();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
             put("ObjectFactory::createcom_iflytek_msc_VAD__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "创建对象: com_iflytek_msc_VAD__");
@@ -808,17 +887,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_speech_RecognizerResult__String", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_msc_AIMIC__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_RecognizerResult__String");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_AIMIC__");
                 }
             
                 // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
+                com.iflytek.msc.AIMIC __obj__ = new com.iflytek.msc.AIMIC();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -828,17 +906,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_speech_SpeechComponent__String", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_msc_MSC__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_SpeechComponent__String");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MSC__");
                 }
             
                 // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
+                com.iflytek.msc.MSC __obj__ = new com.iflytek.msc.MSC();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -848,17 +925,16 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_speech_UnderstanderResult__String", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_msc_MetaVAD_Instance__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UnderstanderResult__String");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_msc_MetaVAD_Instance__");
                 }
             
                 // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // create target object
-                com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
+                com.iflytek.msc.MetaVAD.Instance __obj__ = new com.iflytek.msc.MetaVAD.Instance();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -868,86 +944,8 @@ public class SubHandler8 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_speech_UtilityConfig__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UtilityConfig__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_VerifierResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_VerifierResult__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_Version__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_Version__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_speech_WakeuperResult__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_WakeuperResult__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_DataDownloader__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.DataDownloader> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_speech_SpeechComponent__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.SpeechComponent> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -969,10 +967,10 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
+                    com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -985,8 +983,46 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_DataUploader__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.DataUploader> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_speech_UtilityConfig__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.UtilityConfig> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_speech_WakeuperResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.WakeuperResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1008,10 +1044,165 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.cloud.DataUploader __obj__ = new com.iflytek.cloud.DataUploader(var1);
+                    com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_speech_VerifierResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.VerifierResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_speech_RecognizerResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.RecognizerResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_speech_Version__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.Version> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_speech_UnderstanderResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.speech.UnderstanderResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1062,8 +1253,130 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_EvaluatorResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.EvaluatorResult> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.record.PcmRecorder> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue());
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int__int", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.record.PcmRecorder> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                    // create target object
+                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue(), var3.intValue());
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.UserWords> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.UserWords> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1088,7 +1401,198 @@ public class SubHandler8 {
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
+                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VerifierUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.VerifierUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_ResourceUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.ResourceUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.AudioDetector.DetectorResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_Accelerometer__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.Accelerometer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VolumeUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.util.VolumeUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1179,8 +1683,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_ist_IstSession__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.ist.IstSession> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.VoiceWakeuperImpl> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1201,10 +1705,11 @@ public class SubHandler8 {
                     }
             
                     // args
-            
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
+                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __obj__ = new com.iflytek.cloud.speech.impl.VoiceWakeuperImpl(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1217,8 +1722,361 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AESUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.AESUtil> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechTranscripterImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechTranscripterImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.TextUnderstanderImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.TextUnderstanderImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.IdentityVerifierImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.IdentityVerifierImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_FaceDetectorImpl__android_content_Context__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.FaceDetectorImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __obj__ = new com.iflytek.cloud.speech.impl.FaceDetectorImpl(var1, var2);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechRecognizerImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechRecognizerImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeakerVerifierImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeakerVerifierImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.FuncAdapterSdk10> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1242,7 +2100,159 @@ public class SubHandler8 {
             
             
                     // create target object
-                    com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
+                    com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_NetworkUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.NetworkUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_DataUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.DataUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_RSAUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.RSAUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_Encrypter__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.Encrypter> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1331,8 +2341,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_DataUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.DataUtil> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_SDCardHelper__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.SDCardHelper> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1356,121 +2366,7 @@ public class SubHandler8 {
             
             
                     // create target object
-                    com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_Encrypter__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.Encrypter> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapter__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.FuncAdapter> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.FuncAdapterSdk10> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
+                    com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1605,6 +2501,196 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_FuncAdapter__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.FuncAdapter> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_PerfLogger__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.log.PerfLogger> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_DebugLog__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.log.DebugLog> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_UniqueIDUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.UniqueIDUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_AESUtil__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.AESUtil> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
             put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_HttpRequest__", (__argsBatch__, __methodResult__) -> {
                 List<com.iflytek.cloud.msc.util.HttpRequest> __resultList__ = new ArrayList<>();
             
@@ -1686,8 +2772,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_DebugLog__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.log.DebugLog> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_ist_IstSession__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.ist.IstSession> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1711,712 +2797,7 @@ public class SubHandler8 {
             
             
                     // create target object
-                    com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_log_PerfLogger__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.log.PerfLogger> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_NetworkUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.NetworkUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_RSAUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.RSAUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.RSAUtil __obj__ = new com.iflytek.cloud.msc.util.RSAUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_SDCardHelper__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.SDCardHelper> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.SDCardHelper __obj__ = new com.iflytek.cloud.msc.util.SDCardHelper();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_msc_util_UniqueIDUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.UniqueIDUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.msc.util.UniqueIDUtil __obj__ = new com.iflytek.cloud.msc.util.UniqueIDUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_RecognizerResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.RecognizerResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.RecognizerResult __obj__ = new com.iflytek.cloud.RecognizerResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.record.PcmRecorder> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // create target object
-                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue());
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_record_PcmRecorder__int__int__int", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.record.PcmRecorder> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-            
-                    // create target object
-                    com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue(), var3.intValue());
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_FaceDetectorImpl__android_content_Context__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.FaceDetectorImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.FaceDetectorImpl __obj__ = new com.iflytek.cloud.speech.impl.FaceDetectorImpl(var1, var2);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_IdentityVerifierImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.IdentityVerifierImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.IdentityVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.IdentityVerifierImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeakerVerifierImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeakerVerifierImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeakerVerifierImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeechRecognizerImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeechRecognizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechRecognizerImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeechTranscripterImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechTranscripterImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.TextUnderstanderImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.TextUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.TextUnderstanderImpl(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.speech.impl.VoiceWakeuperImpl> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __obj__ = new com.iflytek.cloud.speech.impl.VoiceWakeuperImpl(var1);
+                    com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -2509,6 +2890,84 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_DataDownloader__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.DataDownloader> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_EvaluatorResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.EvaluatorResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
             put("ObjectFactory::create_batchcom_iflytek_cloud_SpeechEvent__", (__argsBatch__, __methodResult__) -> {
                 List<com.iflytek.cloud.SpeechEvent> __resultList__ = new ArrayList<>();
             
@@ -2535,429 +2994,6 @@ public class SubHandler8 {
             
                     // create target object
                     com.iflytek.cloud.SpeechEvent __obj__ = new com.iflytek.cloud.SpeechEvent();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_TranscripterResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.TranscripterResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.TranscripterResult __obj__ = new com.iflytek.cloud.TranscripterResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_UnderstanderResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.UnderstanderResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.UnderstanderResult __obj__ = new com.iflytek.cloud.UnderstanderResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_Accelerometer__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.Accelerometer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.AudioDetector.DetectorResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_ResourceUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.ResourceUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.UserWords> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_UserWords__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.UserWords> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VerifierUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.VerifierUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_util_VolumeUtil__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.util.VolumeUtil> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_VerifierResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.VerifierResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.cloud.VerifierResult __obj__ = new com.iflytek.cloud.VerifierResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_cloud_Version__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.Version> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.cloud.Version __obj__ = new com.iflytek.cloud.Version();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3050,8 +3086,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_msc_AIMIC__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.msc.AIMIC> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_VerifierResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.VerifierResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3072,10 +3108,11 @@ public class SubHandler8 {
                     }
             
                     // args
-            
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.msc.AIMIC __obj__ = new com.iflytek.msc.AIMIC();
+                    com.iflytek.cloud.VerifierResult __obj__ = new com.iflytek.cloud.VerifierResult(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3088,8 +3125,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_msc_MetaVAD_Instance__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.msc.MetaVAD.Instance> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_DataUploader__android_content_Context", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.DataUploader> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3110,10 +3147,11 @@ public class SubHandler8 {
                     }
             
                     // args
-            
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.msc.MetaVAD.Instance __obj__ = new com.iflytek.msc.MetaVAD.Instance();
+                    com.iflytek.cloud.DataUploader __obj__ = new com.iflytek.cloud.DataUploader(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3126,8 +3164,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_msc_MetaVAD__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.msc.MetaVAD> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_RecognizerResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.RecognizerResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3148,10 +3186,11 @@ public class SubHandler8 {
                     }
             
                     // args
-            
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.msc.MetaVAD __obj__ = new com.iflytek.msc.MetaVAD();
+                    com.iflytek.cloud.RecognizerResult __obj__ = new com.iflytek.cloud.RecognizerResult(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3164,8 +3203,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_msc_MSC__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.msc.MSC> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_TranscripterResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.TranscripterResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3186,10 +3225,11 @@ public class SubHandler8 {
                     }
             
                     // args
-            
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.iflytek.msc.MSC __obj__ = new com.iflytek.msc.MSC();
+                    com.iflytek.cloud.TranscripterResult __obj__ = new com.iflytek.cloud.TranscripterResult(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3202,8 +3242,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_msc_MSCSessionInfo__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.msc.MSCSessionInfo> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_cloud_Version__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.Version> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3227,7 +3267,46 @@ public class SubHandler8 {
             
             
                     // create target object
-                    com.iflytek.msc.MSCSessionInfo __obj__ = new com.iflytek.msc.MSCSessionInfo();
+                    com.iflytek.cloud.Version __obj__ = new com.iflytek.cloud.Version();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_cloud_UnderstanderResult__String", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.UnderstanderResult> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    com.iflytek.cloud.UnderstanderResult __obj__ = new com.iflytek.cloud.UnderstanderResult(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3278,6 +3357,82 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
+            put("ObjectFactory::create_batchcom_iflytek_msc_MSCSessionInfo__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.msc.MSCSessionInfo> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.msc.MSCSessionInfo __obj__ = new com.iflytek.msc.MSCSessionInfo();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_iflytek_msc_MetaVAD__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.msc.MetaVAD> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.iflytek.msc.MetaVAD __obj__ = new com.iflytek.msc.MetaVAD();
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
             put("ObjectFactory::create_batchcom_iflytek_msc_VAD__", (__argsBatch__, __methodResult__) -> {
                 List<com.iflytek.msc.VAD> __resultList__ = new ArrayList<>();
             
@@ -3316,8 +3471,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_RecognizerResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.RecognizerResult> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_msc_AIMIC__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.msc.AIMIC> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3338,11 +3493,10 @@ public class SubHandler8 {
                     }
             
                     // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // create target object
-                    com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
+                    com.iflytek.msc.AIMIC __obj__ = new com.iflytek.msc.AIMIC();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3355,8 +3509,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_SpeechComponent__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.SpeechComponent> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_msc_MSC__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.msc.MSC> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3377,11 +3531,10 @@ public class SubHandler8 {
                     }
             
                     // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // create target object
-                    com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
+                    com.iflytek.msc.MSC __obj__ = new com.iflytek.msc.MSC();
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3394,47 +3547,8 @@ public class SubHandler8 {
                 __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_UnderstanderResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.UnderstanderResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_UtilityConfig__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.UtilityConfig> __resultList__ = new ArrayList<>();
+            put("ObjectFactory::create_batchcom_iflytek_msc_MetaVAD_Instance__", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.msc.MetaVAD.Instance> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3458,123 +3572,7 @@ public class SubHandler8 {
             
             
                     // create target object
-                    com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_VerifierResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.VerifierResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_Version__", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.Version> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_iflytek_speech_WakeuperResult__String", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.speech.WakeuperResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
+                    com.iflytek.msc.MetaVAD.Instance __obj__ = new com.iflytek.msc.MetaVAD.Instance();
             
                     // print current HEAP
                     if (getEnableLog()) {

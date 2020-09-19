@@ -14,7 +14,7 @@
 
 @end
 
-@interface IFlyRecognizerViewPlatformView : NSObject <IFlyIdentityVerifierDelegate, IFlyISVDelegate, IFlyPcmRecorderDelegate, IFlyRecognizerViewDelegate, IFlySpeechSynthesizerDelegate, IFlySpeechplusDelegate, IFlyVoiceWakeuperDelegate, FlutterPlatformView>
+@interface IFlyRecognizerViewPlatformView : NSObject <IFlySpeechSynthesizerDelegate, IFlyRecognizerViewDelegate, IFlyPcmRecorderDelegate, IFlyIdentityVerifierDelegate, IFlySpeechplusDelegate, IFlyISVDelegate, IFlyVoiceWakeuperDelegate, FlutterPlatformView>
 
 - (instancetype)initWithViewId:(int64_t)viewId frame:(CGRect)frame registrar:(NSObject <FlutterPluginRegistrar> *)registrar arguments:(id _Nullable)args;
 

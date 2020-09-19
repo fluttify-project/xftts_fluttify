@@ -33,101 +33,178 @@ public class SubHandler0 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // getter
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mUpflow", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_USER_NAME", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-               Integer __result__ = __this__.mUpflow;
+               String __result__ = __this__.USER_NAME;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mDownflow", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_SENTENCE_CNT", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-               Integer __result__ = __this__.mDownflow;
+               String __result__ = __this__.IVP_SENTENCE_CNT;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.Config::get_mUserConfig", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_VID", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-               com.iflytek.cloud.msc.util.Config __result__ = __this__.mUserConfig;
+               String __result__ = __this__.VID;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.Encrypter::get_GZIP_KEY", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_CONSISTTHRESHOLD", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.Encrypter __this__ = (com.iflytek.cloud.msc.util.Encrypter) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-               Byte __result__ = __this__.GZIP_KEY;
+               String __result__ = __this__.IVP_PARAM_CONSISTTHRESHOLD;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_DTW_CHECK_THRESHOLD", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-               Integer __result__ = __this__.SDK_GINGERBREAD;
+               String __result__ = __this__.IVP_PARAM_DTW_CHECK_THRESHOLD;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
             
-               Integer __result__ = __this__.SDK_ICECREM;
+               String __result__ = __this__.pwdt;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.log.DebugLog::get_DEFAULT_IS_SHOW_LOG", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.log.DebugLog __this__ = (com.iflytek.cloud.msc.util.log.DebugLog) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
             
-               Boolean __result__ = __this__.DEFAULT_IS_SHOW_LOG;
+               String __result__ = __this__.pwid;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.msc.util.UniqueIDUtil __this__ = (com.iflytek.cloud.msc.util.UniqueIDUtil) __args__.get("__this__");
+               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
             
-               Boolean __result__ = __this__.sUseWifiMac;
+               String __result__ = __this__.pwtext;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.Setting::get_a", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.speech.VerifierResult::get_sst", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.cloud.Setting __this__ = (com.iflytek.cloud.Setting) __args__.get("__this__");
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
             
-               String __result__ = __this__.a;
+               String __result__ = __this__.sst;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_ret", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               Boolean __result__ = __this__.ret;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_dcs", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               String __result__ = __this__.dcs;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_vid", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               String __result__ = __this__.vid;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_suc", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               Integer __result__ = __this__.suc;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_rgn", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               Integer __result__ = __this__.rgn;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_trs", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               String __result__ = __this__.trs;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_source", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+               String __result__ = __this__.source;
             
                 __methodResult__.success(__result__);
             });
@@ -264,6 +341,105 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // getter
+            put("com.iflytek.cloud.msc.util.Encrypter::get_GZIP_KEY", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.Encrypter __this__ = (com.iflytek.cloud.msc.util.Encrypter) __args__.get("__this__");
+            
+               Byte __result__ = __this__.GZIP_KEY;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+            
+               Integer __result__ = __this__.SDK_GINGERBREAD;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+            
+               Integer __result__ = __this__.SDK_ICECREM;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.Config::get_mUserConfig", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) __args__.get("__this__");
+            
+               com.iflytek.cloud.msc.util.Config __result__ = __this__.mUserConfig;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.log.DebugLog::get_DEFAULT_IS_SHOW_LOG", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.log.DebugLog __this__ = (com.iflytek.cloud.msc.util.log.DebugLog) __args__.get("__this__");
+            
+               Boolean __result__ = __this__.DEFAULT_IS_SHOW_LOG;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.util.UniqueIDUtil __this__ = (com.iflytek.cloud.msc.util.UniqueIDUtil) __args__.get("__this__");
+            
+               Boolean __result__ = __this__.sUseWifiMac;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mUpflow", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+            
+               Integer __result__ = __this__.mUpflow;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mDownflow", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+            
+               Integer __result__ = __this__.mDownflow;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
+            put("com.iflytek.cloud.Setting::get_a", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
+            
+               // ref object
+               com.iflytek.cloud.Setting __this__ = (com.iflytek.cloud.Setting) __args__.get("__this__");
+            
+               String __result__ = __this__.a;
+            
+                __methodResult__.success(__result__);
+            });
+            // getter
             put("com.iflytek.cloud.VerifierResult::get_sst", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
@@ -381,204 +557,6 @@ public class SubHandler0 {
                com.iflytek.cloud.VerifierResult __this__ = (com.iflytek.cloud.VerifierResult) __args__.get("__this__");
             
                String __result__ = __this__.source;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.AIMIC::get_INVALID_HANDLER", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.AIMIC __this__ = (com.iflytek.msc.AIMIC) __args__.get("__this__");
-            
-               Long __result__ = __this__.INVALID_HANDLER;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_handle", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Long __result__ = __this__.handle;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_rate", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Integer __result__ = __this__.rate;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_begin", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Integer __result__ = __this__.begin;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_end", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Integer __result__ = __this__.end;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_seg", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Integer __result__ = __this__.seg;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_volume", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Integer __result__ = __this__.volume;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Long __result__ = __this__.INVALID_HANDLE;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Byte __result__ = __this__.SEG_NONE;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Byte __result__ = __this__.SEG_FIRST;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Byte __result__ = __this__.SEG;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-               Byte __result__ = __this__.SEG_LAST;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_errorcode", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               Integer __result__ = __this__.errorcode;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_epstatues", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               Integer __result__ = __this__.epstatues;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_rsltstatus", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               Integer __result__ = __this__.rsltstatus;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_sesstatus", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               Integer __result__ = __this__.sesstatus;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_buffer", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               byte[] __result__ = __this__.buffer;
-            
-                __methodResult__.success(__result__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_buflen", (__rawArgs__, __methodResult__) -> {
-               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
-            
-               // ref object
-               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-               Integer __result__ = __this__.buflen;
             
                 __methodResult__.success(__result__);
             });
@@ -726,328 +704,469 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_errorcode", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.pwdt;
+               Integer __result__ = __this__.errorcode;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_epstatues", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.pwid;
+               Integer __result__ = __this__.epstatues;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_rsltstatus", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.pwtext;
+               Integer __result__ = __this__.rsltstatus;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_USER_NAME", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_sesstatus", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.USER_NAME;
+               Integer __result__ = __this__.sesstatus;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_SENTENCE_CNT", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_buffer", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.IVP_SENTENCE_CNT;
+               byte[] __result__ = __this__.buffer;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_VID", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_buflen", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+               com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-               String __result__ = __this__.VID;
+               Integer __result__ = __this__.buflen;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_CONSISTTHRESHOLD", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.AIMIC::get_INVALID_HANDLER", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+               com.iflytek.msc.AIMIC __this__ = (com.iflytek.msc.AIMIC) __args__.get("__this__");
             
-               String __result__ = __this__.IVP_PARAM_CONSISTTHRESHOLD;
+               Long __result__ = __this__.INVALID_HANDLER;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_DTW_CHECK_THRESHOLD", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_handle", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.IVP_PARAM_DTW_CHECK_THRESHOLD;
+               Long __result__ = __this__.handle;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_sst", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_rate", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.sst;
+               Integer __result__ = __this__.rate;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_ret", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_begin", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               Boolean __result__ = __this__.ret;
+               Integer __result__ = __this__.begin;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_dcs", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_end", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.dcs;
+               Integer __result__ = __this__.end;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_vid", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_seg", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.vid;
+               Integer __result__ = __this__.seg;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_suc", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_volume", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               Integer __result__ = __this__.suc;
+               Integer __result__ = __this__.volume;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_rgn", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               Integer __result__ = __this__.rgn;
+               Long __result__ = __this__.INVALID_HANDLE;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_trs", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.trs;
+               Byte __result__ = __this__.SEG_NONE;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_source", (__rawArgs__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST", (__rawArgs__, __methodResult__) -> {
                Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
                // ref object
-               com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-               String __result__ = __this__.source;
+               Byte __result__ = __this__.SEG_FIRST;
             
                 __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mUpflow_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+               // ref object
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-                    // ref object
-                    com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+               Byte __result__ = __this__.SEG;
             
-                    Integer __result__ = __this__.mUpflow;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mDownflow_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+               // ref object
+               com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
             
-                    // ref object
-                    com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+               Byte __result__ = __this__.SEG_LAST;
             
-                    Integer __result__ = __this__.mDownflow;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__result__);
             });
             // getter
-            put("com.iflytek.cloud.msc.util.Config::get_mUserConfig_batch", (__argsBatch__, __methodResult__) -> {
-                List<com.iflytek.cloud.msc.util.Config> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) __args__.get("__this__");
-            
-                    com.iflytek.cloud.msc.util.Config __result__ = __this__.mUserConfig;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.msc.util.Encrypter::get_GZIP_KEY_batch", (__argsBatch__, __methodResult__) -> {
-                List<Byte> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.Encrypter __this__ = (com.iflytek.cloud.msc.util.Encrypter) __args__.get("__this__");
-            
-                    Byte __result__ = __this__.GZIP_KEY;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.SDK_GINGERBREAD;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.SDK_ICECREM;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.msc.util.log.DebugLog::get_DEFAULT_IS_SHOW_LOG_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.log.DebugLog __this__ = (com.iflytek.cloud.msc.util.log.DebugLog) __args__.get("__this__");
-            
-                    Boolean __result__ = __this__.DEFAULT_IS_SHOW_LOG;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.cloud.msc.util.UniqueIDUtil __this__ = (com.iflytek.cloud.msc.util.UniqueIDUtil) __args__.get("__this__");
-            
-                    Boolean __result__ = __this__.sUseWifiMac;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.cloud.Setting::get_a_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_USER_NAME_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref object
-                    com.iflytek.cloud.Setting __this__ = (com.iflytek.cloud.Setting) __args__.get("__this__");
+                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
             
-                    String __result__ = __this__.a;
+                    String __result__ = __this__.USER_NAME;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_SENTENCE_CNT_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+            
+                    String __result__ = __this__.IVP_SENTENCE_CNT;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_VID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+            
+                    String __result__ = __this__.VID;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_CONSISTTHRESHOLD_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+            
+                    String __result__ = __this__.IVP_PARAM_CONSISTTHRESHOLD;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_DTW_CHECK_THRESHOLD_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
+            
+                    String __result__ = __this__.IVP_PARAM_DTW_CHECK_THRESHOLD;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+            
+                    String __result__ = __this__.pwdt;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+            
+                    String __result__ = __this__.pwid;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
+            
+                    String __result__ = __this__.pwtext;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_sst_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    String __result__ = __this__.sst;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_ret_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    Boolean __result__ = __this__.ret;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_dcs_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    String __result__ = __this__.dcs;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_vid_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    String __result__ = __this__.vid;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_suc_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.suc;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_rgn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.rgn;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_trs_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    String __result__ = __this__.trs;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.speech.VerifierResult::get_source_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+            
+                    String __result__ = __this__.source;
             
                     __resultList__.add(__result__);
                 }
@@ -1259,6 +1378,159 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // getter
+            put("com.iflytek.cloud.msc.util.Encrypter::get_GZIP_KEY_batch", (__argsBatch__, __methodResult__) -> {
+                List<Byte> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.Encrypter __this__ = (com.iflytek.cloud.msc.util.Encrypter) __args__.get("__this__");
+            
+                    Byte __result__ = __this__.GZIP_KEY;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_GINGERBREAD_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.SDK_GINGERBREAD;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.FuncAdapter::get_SDK_ICECREM_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.FuncAdapter __this__ = (com.iflytek.cloud.msc.util.FuncAdapter) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.SDK_ICECREM;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.Config::get_mUserConfig_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.iflytek.cloud.msc.util.Config> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.Config __this__ = (com.iflytek.cloud.msc.util.Config) __args__.get("__this__");
+            
+                    com.iflytek.cloud.msc.util.Config __result__ = __this__.mUserConfig;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.log.DebugLog::get_DEFAULT_IS_SHOW_LOG_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.log.DebugLog __this__ = (com.iflytek.cloud.msc.util.log.DebugLog) __args__.get("__this__");
+            
+                    Boolean __result__ = __this__.DEFAULT_IS_SHOW_LOG;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.util.UniqueIDUtil::get_sUseWifiMac_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.util.UniqueIDUtil __this__ = (com.iflytek.cloud.msc.util.UniqueIDUtil) __args__.get("__this__");
+            
+                    Boolean __result__ = __this__.sUseWifiMac;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mUpflow_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.mUpflow;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.msc.ist.MscTranscripter::get_mDownflow_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.msc.ist.MscTranscripter __this__ = (com.iflytek.cloud.msc.ist.MscTranscripter) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.mDownflow;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.cloud.Setting::get_a_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.cloud.Setting __this__ = (com.iflytek.cloud.Setting) __args__.get("__this__");
+            
+                    String __result__ = __this__.a;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
             put("com.iflytek.cloud.VerifierResult::get_sst_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
@@ -1439,312 +1711,6 @@ public class SubHandler0 {
                     com.iflytek.cloud.VerifierResult __this__ = (com.iflytek.cloud.VerifierResult) __args__.get("__this__");
             
                     String __result__ = __this__.source;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.AIMIC::get_INVALID_HANDLER_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.AIMIC __this__ = (com.iflytek.msc.AIMIC) __args__.get("__this__");
-            
-                    Long __result__ = __this__.INVALID_HANDLER;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_handle_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Long __result__ = __this__.handle;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_rate_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.rate;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_begin_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.begin;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_end_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.end;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_seg_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.seg;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_volume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.volume;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE_batch", (__argsBatch__, __methodResult__) -> {
-                List<Long> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Long __result__ = __this__.INVALID_HANDLE;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE_batch", (__argsBatch__, __methodResult__) -> {
-                List<Byte> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Byte __result__ = __this__.SEG_NONE;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST_batch", (__argsBatch__, __methodResult__) -> {
-                List<Byte> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Byte __result__ = __this__.SEG_FIRST;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_batch", (__argsBatch__, __methodResult__) -> {
-                List<Byte> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Byte __result__ = __this__.SEG;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST_batch", (__argsBatch__, __methodResult__) -> {
-                List<Byte> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
-            
-                    Byte __result__ = __this__.SEG_LAST;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_errorcode_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.errorcode;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_epstatues_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.epstatues;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_rsltstatus_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.rsltstatus;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_sesstatus_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.sesstatus;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_buffer_batch", (__argsBatch__, __methodResult__) -> {
-                List<byte[]> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    byte[] __result__ = __this__.buffer;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.msc.MSCSessionInfo::get_buflen_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
-            
-                    Integer __result__ = __this__.buflen;
             
                     __resultList__.add(__result__);
                 }
@@ -1973,220 +1939,16 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwdt_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
-            
-                    String __result__ = __this__.pwdt;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwid_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
-            
-                    String __result__ = __this__.pwid;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::get_pwtext_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) __args__.get("__this__");
-            
-                    String __result__ = __this__.pwtext;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_USER_NAME_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
-            
-                    String __result__ = __this__.USER_NAME;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_SENTENCE_CNT_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
-            
-                    String __result__ = __this__.IVP_SENTENCE_CNT;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_VID_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
-            
-                    String __result__ = __this__.VID;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_CONSISTTHRESHOLD_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
-            
-                    String __result__ = __this__.IVP_PARAM_CONSISTTHRESHOLD;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.SpeakerVerifierAidl::get_IVP_PARAM_DTW_CHECK_THRESHOLD_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.SpeakerVerifierAidl __this__ = (com.iflytek.speech.SpeakerVerifierAidl) __args__.get("__this__");
-            
-                    String __result__ = __this__.IVP_PARAM_DTW_CHECK_THRESHOLD;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_sst_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
-            
-                    String __result__ = __this__.sst;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_ret_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
-            
-                    Boolean __result__ = __this__.ret;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_dcs_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
-            
-                    String __result__ = __this__.dcs;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_vid_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
-            
-                    String __result__ = __this__.vid;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_suc_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_errorcode_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-                    Integer __result__ = __this__.suc;
+                    Integer __result__ = __this__.errorcode;
             
                     __resultList__.add(__result__);
                 }
@@ -2194,33 +1956,16 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_rgn_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSCSessionInfo::get_epstatues_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-                    Integer __result__ = __this__.rgn;
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // getter
-            put("com.iflytek.speech.VerifierResult::get_trs_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
-            
-                    String __result__ = __this__.trs;
+                    Integer __result__ = __this__.epstatues;
             
                     __resultList__.add(__result__);
                 }
@@ -2228,21 +1973,375 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // getter
-            put("com.iflytek.speech.VerifierResult::get_source_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MSCSessionInfo::get_rsltstatus_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // ref object
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) __args__.get("__this__");
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
             
-                    String __result__ = __this__.source;
+                    Integer __result__ = __this__.rsltstatus;
             
                     __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MSCSessionInfo::get_sesstatus_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.sesstatus;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MSCSessionInfo::get_buffer_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
+            
+                    byte[] __result__ = __this__.buffer;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MSCSessionInfo::get_buflen_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.buflen;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.AIMIC::get_INVALID_HANDLER_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.AIMIC __this__ = (com.iflytek.msc.AIMIC) __args__.get("__this__");
+            
+                    Long __result__ = __this__.INVALID_HANDLER;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_handle_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Long __result__ = __this__.handle;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_rate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.rate;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_begin_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.begin;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_end_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.end;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_seg_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.seg;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_volume_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Integer __result__ = __this__.volume;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_INVALID_HANDLE_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Long __result__ = __this__.INVALID_HANDLE;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_NONE_batch", (__argsBatch__, __methodResult__) -> {
+                List<Byte> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Byte __result__ = __this__.SEG_NONE;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_FIRST_batch", (__argsBatch__, __methodResult__) -> {
+                List<Byte> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Byte __result__ = __this__.SEG_FIRST;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_batch", (__argsBatch__, __methodResult__) -> {
+                List<Byte> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Byte __result__ = __this__.SEG;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // getter
+            put("com.iflytek.msc.MetaVAD.Instance::get_SEG_LAST_batch", (__argsBatch__, __methodResult__) -> {
+                List<Byte> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // ref object
+                    com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) __args__.get("__this__");
+            
+                    Byte __result__ = __this__.SEG_LAST;
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // setter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwdt", (__args__, __methodResult__) -> {
+                // ref arg
+                String pwdt = (String) ((Map<String, Object>) __args__).get("pwdt");
+                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.pwdt = pwdt;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwid", (__args__, __methodResult__) -> {
+                // ref arg
+                String pwid = (String) ((Map<String, Object>) __args__).get("pwid");
+                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.pwid = pwid;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.SpeakerVerifierAidl.PassWord::set_pwtext", (__args__, __methodResult__) -> {
+                // ref arg
+                String pwtext = (String) ((Map<String, Object>) __args__).get("pwtext");
+                com.iflytek.speech.SpeakerVerifierAidl.PassWord __this__ = (com.iflytek.speech.SpeakerVerifierAidl.PassWord) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.pwtext = pwtext;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_sst", (__args__, __methodResult__) -> {
+                // ref arg
+                String sst = (String) ((Map<String, Object>) __args__).get("sst");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.sst = sst;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_ret", (__args__, __methodResult__) -> {
+                // ref arg
+                boolean ret = (boolean) ((Map<String, Object>) __args__).get("ret");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.ret = ret;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_dcs", (__args__, __methodResult__) -> {
+                // ref arg
+                String dcs = (String) ((Map<String, Object>) __args__).get("dcs");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.dcs = dcs;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_vid", (__args__, __methodResult__) -> {
+                // ref arg
+                String vid = (String) ((Map<String, Object>) __args__).get("vid");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.vid = vid;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_suc", (__args__, __methodResult__) -> {
+                // ref arg
+                Number suc = (Number) ((Map<String, Object>) __args__).get("suc");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.suc = suc.intValue();
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_rgn", (__args__, __methodResult__) -> {
+                // ref arg
+                Number rgn = (Number) ((Map<String, Object>) __args__).get("rgn");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.rgn = rgn.intValue();
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_trs", (__args__, __methodResult__) -> {
+                // ref arg
+                String trs = (String) ((Map<String, Object>) __args__).get("trs");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.trs = trs;
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.speech.VerifierResult::set_source", (__args__, __methodResult__) -> {
+                // ref arg
+                String source = (String) ((Map<String, Object>) __args__).get("source");
+                com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.source = source;
+                __methodResult__.success("success");
             });
             // setter
             put("com.iflytek.cloud.util.AudioDetector.DetectorResult::set_buffer", (__args__, __methodResult__) -> {
@@ -2452,114 +2551,6 @@ public class SubHandler0 {
                 __methodResult__.success("success");
             });
             // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_handle", (__args__, __methodResult__) -> {
-                // ref arg
-                Number handle = (Number) ((Map<String, Object>) __args__).get("handle");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.handle = handle.longValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_rate", (__args__, __methodResult__) -> {
-                // ref arg
-                Number rate = (Number) ((Map<String, Object>) __args__).get("rate");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.rate = rate.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_begin", (__args__, __methodResult__) -> {
-                // ref arg
-                Number begin = (Number) ((Map<String, Object>) __args__).get("begin");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.begin = begin.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_end", (__args__, __methodResult__) -> {
-                // ref arg
-                Number end = (Number) ((Map<String, Object>) __args__).get("end");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.end = end.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_seg", (__args__, __methodResult__) -> {
-                // ref arg
-                Number seg = (Number) ((Map<String, Object>) __args__).get("seg");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.seg = seg.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MetaVAD.Instance::set_volume", (__args__, __methodResult__) -> {
-                // ref arg
-                Number volume = (Number) ((Map<String, Object>) __args__).get("volume");
-                com.iflytek.msc.MetaVAD.Instance __this__ = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.volume = volume.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_errorcode", (__args__, __methodResult__) -> {
-                // ref arg
-                Number errorcode = (Number) ((Map<String, Object>) __args__).get("errorcode");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.errorcode = errorcode.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_epstatues", (__args__, __methodResult__) -> {
-                // ref arg
-                Number epstatues = (Number) ((Map<String, Object>) __args__).get("epstatues");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.epstatues = epstatues.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_rsltstatus", (__args__, __methodResult__) -> {
-                // ref arg
-                Number rsltstatus = (Number) ((Map<String, Object>) __args__).get("rsltstatus");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.rsltstatus = rsltstatus.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_sesstatus", (__args__, __methodResult__) -> {
-                // ref arg
-                Number sesstatus = (Number) ((Map<String, Object>) __args__).get("sesstatus");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.sesstatus = sesstatus.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_buffer", (__args__, __methodResult__) -> {
-                // ref arg
-                byte[] buffer = (byte[]) ((Map<String, Object>) __args__).get("buffer");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.buffer = buffer;
-                __methodResult__.success("success");
-            });
-            // setter
-            put("com.iflytek.msc.MSCSessionInfo::set_buflen", (__args__, __methodResult__) -> {
-                // ref arg
-                Number buflen = (Number) ((Map<String, Object>) __args__).get("buflen");
-                com.iflytek.msc.MSCSessionInfo __this__ = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("__this__");
-            
-                __this__.buflen = buflen.intValue();
-                __methodResult__.success("success");
-            });
-            // setter
             put("com.iflytek.msc.VAD.VadData::set_startByte", (__args__, __methodResult__) -> {
                 // ref arg
                 Number startByte = (Number) ((Map<String, Object>) __args__).get("startByte");
@@ -2620,6 +2611,15 @@ public class SubHandler0 {
                 com.iflytek.msc.VAD.VadData __this__ = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("__this__");
             
                 __this__.waitStart = waitStart.intValue();
+                __methodResult__.success("success");
+            });
+            // setter
+            put("com.iflytek.msc.VAD.VadData::set_startRemainFrameNum", (__args__, __methodResult__) -> {
+                // ref arg
+                Number startRemainFrameNum = (Number) ((Map<String, Object>) __args__).get("startRemainFrameNum");
+                com.iflytek.msc.VAD.VadData __this__ = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("__this__");
+            
+                __this__.startRemainFrameNum = startRemainFrameNum.intValue();
                 __methodResult__.success("success");
             });
         }};

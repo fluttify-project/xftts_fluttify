@@ -33,23 +33,22 @@ public class SubHandler7 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.cloud.Version::getVersion_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     String __result__ = null;
                     try {
-                        __result__ = __this__.getParameter(var1);
+                        __result__ = com.iflytek.cloud.Version.getVersion();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -65,7 +64,38 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::startListening_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.cloud.UnderstanderResult::getResultString_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.iflytek.cloud.UnderstanderResult __this__ = (com.iflytek.cloud.UnderstanderResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getResultString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MetaVAD::VADInitialize_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -73,15 +103,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.startListening(var1);
+                        __result__ = com.iflytek.msc.MetaVAD.VADInitialize(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -97,23 +127,22 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::stopListening_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADUninitialize_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.stopListening(var1);
+                        __result__ = com.iflytek.msc.MetaVAD.VADUninitialize();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -129,7 +158,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::cancel_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADLoadResource_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -137,15 +166,17 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    com.iflytek.speech.RecognizerListener var1 = (com.iflytek.speech.RecognizerListener) ((Map<String, Object>) __args__).get("var1");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.cancel(var1);
+                        __result__ = com.iflytek.msc.MetaVAD.VADLoadResource(var0.intValue(), var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -161,69 +192,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::destory_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.destory();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::isListening_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.isListening();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::buildGrammar_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADDelResource_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -231,19 +200,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    com.iflytek.speech.GrammarListener var3 = (com.iflytek.speech.GrammarListener) ((Map<String, Object>) __args__).get("var3");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.buildGrammar(var1, var2, var3);
+                        __result__ = com.iflytek.msc.MetaVAD.VADDelResource(var0.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -259,7 +224,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::updateLexicon_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADCreateSession_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -267,19 +232,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    com.iflytek.speech.LexiconListener var3 = (com.iflytek.speech.LexiconListener) ((Map<String, Object>) __args__).get("var3");
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.updateLexicon(var1, var2, var3);
+                        __result__ = com.iflytek.msc.MetaVAD.VADCreateSession(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -295,27 +256,95 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechRecognizerAidl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADDestroySession_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
+                    // ref arg
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MetaVAD.VADDestroySession(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MetaVAD::VADResetSession_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MetaVAD.VADResetSession(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MetaVAD::VADAppendPCM_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                     // ref
-                    com.iflytek.speech.SpeechRecognizerAidl __this__ = (com.iflytek.speech.SpeechRecognizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
+                        __result__ = com.iflytek.msc.MetaVAD.VADAppendPCM(var0, var1, var2.intValue(), var3.intValue(), var4.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -331,7 +360,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::synthesizeToUrl_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADGetSeg_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -339,17 +368,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.synthesizeToUrl(var1, var2);
+                        __result__ = com.iflytek.msc.MetaVAD.VADGetSeg(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -365,7 +392,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::startSpeaking_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MetaVAD::VADSetParam_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -373,504 +400,19 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    com.iflytek.speech.SynthesizerListener var2 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.startSpeaking(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::pauseSpeaking_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.pauseSpeaking(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::resumeSpeaking_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.resumeSpeaking(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::stopSpeaking_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SynthesizerListener var1 = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.stopSpeaking(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::isSpeaking_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.isSpeaking();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::setParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.setParameter(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getParameter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechSynthesizerAidl::destory_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SpeechSynthesizerAidl __this__ = (com.iflytek.speech.SpeechSynthesizerAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.destory();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::startUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.startUnderstanding(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::stopUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.stopUnderstanding(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::isUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.isUnderstanding();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::cancel_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.SpeechUnderstanderListener var1 = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.cancel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::setParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.setParameter(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getParameter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderAidl::writeAudio_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-            
-                    // ref
-                    com.iflytek.speech.SpeechUnderstanderAidl __this__ = (com.iflytek.speech.SpeechUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.writeAudio(var1, var2.intValue(), var3.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onVolumeChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onVolumeChanged(var1.intValue(), var2);
+                        __result__ = com.iflytek.msc.MetaVAD.VADSetParam(var0, var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -886,22 +428,23 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onBeginOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MetaVAD::VADGetSentConfidence_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-            
+                    // ref arg
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Float __result__ = null;
                     try {
-                        __this__.onBeginOfSpeech();
+                        __result__ = com.iflytek.msc.MetaVAD.VADGetSentConfidence(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -917,22 +460,23 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onEndOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MetaVAD::VADResetSentence_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-            
+                    // ref arg
+                    com.iflytek.msc.MetaVAD.Instance var0 = (com.iflytek.msc.MetaVAD.Instance) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onEndOfSpeech();
+                        __result__ = com.iflytek.msc.MetaVAD.VADResetSentence(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -948,7 +492,39 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onResult_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.VAD::Initialize_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.VAD.Initialize(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.VAD::Uninitialize_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -956,15 +532,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    com.iflytek.speech.UnderstanderResult var1 = (com.iflytek.speech.UnderstanderResult) ((Map<String, Object>) __args__).get("var1");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.onResult(var1);
+                        com.iflytek.msc.VAD.Uninitialize(var0.longValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -980,7 +556,7 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onError_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.VAD::Reset_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -988,15 +564,15 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.onError(var1.intValue());
+                        com.iflytek.msc.VAD.Reset(var0.longValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1012,29 +588,27 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SpeechUnderstanderListener::onEvent_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.VAD::AppendData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
             
                     // ref
-                    com.iflytek.speech.SpeechUnderstanderListener __this__ = (com.iflytek.speech.SpeechUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onEvent(var1.intValue(), var2.intValue(), var3.intValue(), var4);
+                        __result__ = com.iflytek.msc.VAD.AppendData(var0.longValue(), var2, var3.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1050,152 +624,27 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SynthesizerListener::onSpeakBegin_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onSpeakBegin();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SynthesizerListener::onSpeakPaused_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onSpeakPaused();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SynthesizerListener::onSpeakResumed_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onSpeakResumed();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SynthesizerListener::onCompleted_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.VAD::SetParam_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onCompleted(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.SynthesizerListener::onSpeakProgress_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onSpeakProgress(var1.intValue(), var2.intValue(), var3.intValue());
+                        __result__ = com.iflytek.msc.VAD.SetParam(var0.longValue(), var2.intValue(), var3.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1211,7 +660,145 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SynthesizerListener::onBufferProgress_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.VAD::EndAudioData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.VAD.EndAudioData(var0.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.VAD::CalcVolumLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    com.iflytek.msc.VAD.VadData var4 = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("var4");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.VAD.CalcVolumLevel(var0.longValue(), var2, var3.intValue(), var4);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.VAD::FetchData_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.iflytek.msc.VAD.VadData var2 = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.VAD.FetchData(var0.longValue(), var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.VAD::GetLastSpeechPos_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.iflytek.msc.VAD.VadData var2 = (com.iflytek.msc.VAD.VadData) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.VAD.GetLastSpeechPos(var0.longValue(), var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::loadLibrary_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -1219,21 +806,705 @@ public class SubHandler7 {
             
                     // args
                     // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.msc.AIMIC.loadLibrary(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::isLoaded_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.isLoaded();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::isValid_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.isValid();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::getHandler_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.getHandler();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICAudioWrite_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICAudioWrite(var0.longValue(), var2, var3.intValue(), var4.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICResetEng_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICResetEng(var0.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICDestroy_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICDestroy(var0.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICSetParam_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICSetParam(var0.longValue(), var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICGetParam_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICGetParam(var0.longValue(), var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICGetVersion_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICGetVersion();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICDebugLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
                     Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.msc.AIMIC.AIMICDebugLog(var0, var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.AIMIC::AIMICGetChannel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.AIMIC.AIMICGetChannel();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::isIflyVersion_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.isIflyVersion();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::loadLibrary_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.loadLibrary(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::load_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.load(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::isLoaded_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.isLoaded();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::DebugLog_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.DebugLog(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::SetLogLevel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.SetLogLevel(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QTTSInit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QTTSInit(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QTTSFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QTTSFini();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRInit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISRInit(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRBuildGrammar_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
                     String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    java.lang.Object var5 = (java.lang.Object) ((Map<String, Object>) __args__).get("var5");
             
                     // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onBufferProgress(var1.intValue(), var2.intValue(), var3.intValue(), var4);
+                        __result__ = com.iflytek.msc.MSC.QISRBuildGrammar(var0, var1, var2.intValue(), var3, var4, var5);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1249,13 +1520,806 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SynthesizerListener::onEvent_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSC::QISRUpdateLexicon_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    java.lang.Object var5 = (java.lang.Object) ((Map<String, Object>) __args__).get("var5");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISRUpdateLexicon(var0, var1, var2.intValue(), var3, var4, var5);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISRFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISRFini();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QHCRInit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QHCRInit(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QHCRFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QHCRFini();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISVInit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISVInit(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISVFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISVFini();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPLogin_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPLogin(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::UMSPLogin_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    java.lang.Object var3 = (java.lang.Object) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.UMSPLogin(var0, var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPSetParam_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPSetParam(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPGetParam_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPGetParam(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPUploadData_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var4 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var4");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPUploadData(var0, var1, var2.intValue(), var3, var4);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPDownloadData_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPDownloadData(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPDownload_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    java.lang.Object var2 = (java.lang.Object) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPDownload(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPSearch_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPSearch(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPLogOut_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPLogOut();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPRegisterNotify_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var0 = (String) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPRegisterNotify(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QMSPGetVersion_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var1 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QMSPGetVersion(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISEInit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISEInit(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QISEFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QISEFini();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIVWResMerge_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    byte[] var2 = (byte[]) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QIVWResMerge(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIVWGetResInfo_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    byte[] var1 = (byte[]) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    com.iflytek.msc.MSCSessionInfo var2 = (com.iflytek.msc.MSCSessionInfo) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QIVWGetResInfo(var0, var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDInit_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    java.lang.Object var1 = (java.lang.Object) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        com.iflytek.msc.MSC.QIFDInit(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDFacedetect_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.graphics.Bitmap var0 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    java.lang.Object var2 = (java.lang.Object) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    byte[] __result__ = null;
+                    try {
+                        __result__ = com.iflytek.msc.MSC.QIFDFacedetect(var0, var1.intValue(), var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.iflytek.msc.MSC::QIFDMultitracker_batch", (__argsBatch__, __methodResult__) -> {
+                List<byte[]> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    byte[] var0 = (byte[]) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
                     Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
@@ -1263,15 +2327,19 @@ public class SubHandler7 {
                     // ref arg
                     Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    android.os.Bundle var4 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var4");
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                    // ref arg
+                    Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
+                    // ref arg
+                    java.lang.Object var6 = (java.lang.Object) ((Map<String, Object>) __args__).get("var6");
             
                     // ref
-                    com.iflytek.speech.SynthesizerListener __this__ = (com.iflytek.speech.SynthesizerListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    byte[] __result__ = null;
                     try {
-                        __this__.onEvent(var1.intValue(), var2.intValue(), var3.intValue(), var4);
+                        __result__ = com.iflytek.msc.MSC.QIFDMultitracker(var0, var1.intValue(), var2.intValue(), var3.intValue(), var4.intValue(), var5.intValue(), var6);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1287,25 +2355,22 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.SynthesizeToUrlListener::onSynthesizeCompleted_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("com.iflytek.msc.MSC::QIFDFini_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
             
                     // ref
-                    com.iflytek.speech.SynthesizeToUrlListener __this__ = (com.iflytek.speech.SynthesizeToUrlListener) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onSynthesizeCompleted(var1, var2.intValue());
+                        __result__ = com.iflytek.msc.MSC.QIFDFini();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1321,22 +2386,25 @@ public class SubHandler7 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.iflytek.speech.TextUnderstanderAidl::isUnderstanding_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.iflytek.msc.MSC::doARGB2Gray_batch", (__argsBatch__, __methodResult__) -> {
                 List<Boolean> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-            
+                    // ref arg
+                    android.graphics.Bitmap var0 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    android.graphics.Bitmap var1 = (android.graphics.Bitmap) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
+            
             
                     // invoke native method
                     Boolean __result__ = null;
                     try {
-                        __result__ = __this__.isUnderstanding();
+                        __result__ = com.iflytek.msc.MSC.doARGB2Gray(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1351,1469 +2419,23 @@ public class SubHandler7 {
             
                 __methodResult__.success(__resultList__);
             });
-            // method
-            put("com.iflytek.speech.TextUnderstanderAidl::cancel_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.TextUnderstanderListener var1 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.cancel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.TextUnderstanderAidl::understandText_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    com.iflytek.speech.TextUnderstanderListener var2 = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.understandText(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.TextUnderstanderAidl::setParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.setParameter(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.TextUnderstanderAidl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderAidl __this__ = (com.iflytek.speech.TextUnderstanderAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getParameter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.TextUnderstanderListener::onResult_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.UnderstanderResult var1 = (com.iflytek.speech.UnderstanderResult) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderListener __this__ = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onResult(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.TextUnderstanderListener::onError_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.TextUnderstanderListener __this__ = (com.iflytek.speech.TextUnderstanderListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onError(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.UnderstanderResult::getResultString_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.UnderstanderResult __this__ = (com.iflytek.speech.UnderstanderResult) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.UtilityConfig::getCallerInfo_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = com.iflytek.speech.UtilityConfig.getCallerInfo(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.UtilityConfig::getComponentUrlParam_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = com.iflytek.speech.UtilityConfig.getComponentUrlParam(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onVolumeChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onVolumeChanged(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onBeginOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onBeginOfSpeech();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onEndOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onEndOfSpeech();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onRegister_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.VerifierResult var1 = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onRegister(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onEnd_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.VerifierResult var1 = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onEnd(var1, var2.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onCancel_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onCancel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierListener::onError_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VerifierListener __this__ = (com.iflytek.speech.VerifierListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onError(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VerifierResult::getResultString_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VerifierResult __this__ = (com.iflytek.speech.VerifierResult) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.Version::getVersionName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = com.iflytek.speech.Version.getVersionName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.Version::getVersionCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = com.iflytek.speech.Version.getVersionCode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::startListening_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.startListening(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::cancel_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.WakeuperListener var1 = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.cancel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::destroy_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.destroy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::isListening_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.isListening();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::setParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Integer __result__ = null;
-                    try {
-                        __result__ = __this__.setParameter(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.VoiceWakeuperAidl::getParameter_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.VoiceWakeuperAidl __this__ = (com.iflytek.speech.VoiceWakeuperAidl) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getParameter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperListener::onVolumeChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onVolumeChanged(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperListener::onBeginOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onBeginOfSpeech();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperListener::onEndOfSpeech_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onEndOfSpeech();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperListener::onResult_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.iflytek.speech.WakeuperResult var1 = (com.iflytek.speech.WakeuperResult) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onResult(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperListener::onError_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.iflytek.speech.WakeuperListener __this__ = (com.iflytek.speech.WakeuperListener) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onError(var1.intValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.iflytek.speech.WakeuperResult::getResultString_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.iflytek.speech.WakeuperResult __this__ = (com.iflytek.speech.WakeuperResult) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getResultString();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_DataDownloader", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.DataDownloader);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_DataUploader", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.DataUploader);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_ErrorCode", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.ErrorCode);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_EvaluatorResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.EvaluatorResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_FaceDetector", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.FaceDetector);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_FaceRequest", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.FaceRequest);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_IdentityResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.IdentityResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_IdentityVerifier", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.IdentityVerifier);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_AudioAccessor", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.AudioAccessor);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_IstSession", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.IstSession);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_MscTranscripter", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.MscTranscripter);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_AESUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.AESUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_AppInfoUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.AppInfoUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Base64", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Base64);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Config", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Config);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_DataLogger", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.DataLogger);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_DataUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.DataUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Encrypter", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Encrypter);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FileDownloader", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FileDownloader);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapter", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FuncAdapter);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapterSdk10", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FuncAdapterSdk10);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpDownloadImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.http.HttpDownloadImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_HttpRequest", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.HttpRequest);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_log_DebugLog", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.log.DebugLog);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_log_PerfLogger", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.log.PerfLogger);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_NetworkUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.NetworkUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_RSAUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.RSAUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_SDCardHelper", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.SDCardHelper);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_UniqueIDUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.UniqueIDUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_RecognizerResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.RecognizerResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.record.PcmRecorder);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_resource_Resource", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.resource.Resource);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_Setting", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.Setting);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeakerVerifier", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeakerVerifier);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceDetectorImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.FaceDetectorImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceRequestImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.FaceRequestImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_IdentityVerifierImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.IdentityVerifierImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeakerVerifierImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechRecognizerImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechTranscripterImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_TextUnderstanderImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.TextUnderstanderImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.VoiceWakeuperImpl);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechConstant", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechConstant);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechError", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechError);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechEvaluator", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechEvaluator);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechEvent", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechEvent);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechRecognizer", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechRecognizer);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechSynthesizer", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechSynthesizer);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechTranscripter", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechTranscripter);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechUnderstander", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechUnderstander);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_SpeechUtility", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechUtility);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_TextUnderstander", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.TextUnderstander);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_TranscripterResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.TranscripterResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_ui_RecognizerDialog", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.ui.RecognizerDialog);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_UnderstanderResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.UnderstanderResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_Accelerometer", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.Accelerometer);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector_DetectorResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.AudioDetector.DetectorResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.AudioDetector);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_ContactManager", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.ContactManager);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_ResourceUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.ResourceUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_UserWords", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.UserWords);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_VerifierUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.VerifierUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_util_VolumeUtil", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.VolumeUtil);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_VerifierResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.VerifierResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_Version", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.Version);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_VoiceWakeuper", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.VoiceWakeuper);
-            });
-            put("RefClass::isKindOfcom_iflytek_cloud_WakeuperResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.cloud.WakeuperResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_idata_extension_IFlyCollectorExt", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.idata.extension.IFlyCollectorExt);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_AIMIC", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.AIMIC);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_MetaVAD_Instance", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.MetaVAD.Instance);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_MetaVAD", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.MetaVAD);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_MSC", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.MSC);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_MSCSessionInfo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.MSCSessionInfo);
-            });
-            put("RefClass::isKindOfcom_iflytek_msc_VAD_VadData", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SpeechComponent", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.VAD.VadData);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechComponent);
             });
-            put("RefClass::isKindOfcom_iflytek_msc_VAD", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.msc.VAD);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeakerVerifierAidl);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ISpeakerVerifier.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.IWakeuper.Stub);
             });
             put("RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechRecognizer_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2827,11 +2449,11 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ISpeechSynthesizer.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_aidl_ISpeakerVerifier_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ISpeechUnderstander.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ISpeakerVerifier.Stub);
             });
             put("RefClass::isKindOfcom_iflytek_speech_aidl_ITextUnderstander_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2839,17 +2461,23 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ITextUnderstander.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_aidl_IWakeuper_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_aidl_ISpeechUnderstander_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.IWakeuper.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.aidl.ISpeechUnderstander.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_GrammarListener_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.GrammarListener.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SynthesizeToUrlListener.Stub);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_SynthesizerListener_Stub", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SynthesizerListener.Stub);
             });
             put("RefClass::isKindOfcom_iflytek_speech_LexiconListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2857,35 +2485,17 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.LexiconListener.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_RecognizerListener_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderAidl", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.RecognizerListener.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechUnderstanderAidl);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_RecognizerResult", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.RecognizerResult);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl_PassWord", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeakerVerifierAidl.PassWord);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeakerVerifierAidl);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SpeechComponent", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechComponent);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.TextUnderstanderListener.Stub);
             });
             put("RefClass::isKindOfcom_iflytek_speech_SpeechRecognizerAidl", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2899,47 +2509,11 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechSynthesizerAidl);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderAidl", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_VerifierListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechUnderstanderAidl);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener_Stub", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechUnderstanderListener.Stub);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SynthesizerListener_Stub", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SynthesizerListener.Stub);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_SynthesizeToUrlListener_Stub", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.SynthesizeToUrlListener.Stub);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_TextUnderstanderAidl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.TextUnderstanderAidl);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_TextUnderstanderListener_Stub", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.TextUnderstanderListener.Stub);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_UnderstanderResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.UnderstanderResult);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.VerifierListener.Stub);
             });
             put("RefClass::isKindOfcom_iflytek_speech_UtilityConfig", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2947,29 +2521,23 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.UtilityConfig);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_VerifierListener_Stub", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_GrammarListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.VerifierListener.Stub);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.GrammarListener.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_VerifierResult", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SpeechUnderstanderListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.VerifierResult);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeechUnderstanderListener.Stub);
             });
-            put("RefClass::isKindOfcom_iflytek_speech_Version", (__args__, __methodResult__) -> {
+            put("RefClass::isKindOfcom_iflytek_speech_SpeakerVerifierAidl_PassWord", (__args__, __methodResult__) -> {
                 // 引用对象
                 Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.Version);
-            });
-            put("RefClass::isKindOfcom_iflytek_speech_VoiceWakeuperAidl", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
-            
-                __methodResult__.success(__this__ instanceof com.iflytek.speech.VoiceWakeuperAidl);
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.SpeakerVerifierAidl.PassWord);
             });
             put("RefClass::isKindOfcom_iflytek_speech_WakeuperListener_Stub", (__args__, __methodResult__) -> {
                 // 引用对象
@@ -2983,18 +2551,528 @@ public class SubHandler7 {
             
                 __methodResult__.success(__this__ instanceof com.iflytek.speech.WakeuperResult);
             });
+            put("RefClass::isKindOfcom_iflytek_speech_VerifierResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.VerifierResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_RecognizerResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.RecognizerResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_Version", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.Version);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_TextUnderstanderAidl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.TextUnderstanderAidl);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_UnderstanderResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.UnderstanderResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_VoiceWakeuperAidl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.VoiceWakeuperAidl);
+            });
+            put("RefClass::isKindOfcom_iflytek_speech_RecognizerListener_Stub", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.speech.RecognizerListener.Stub);
+            });
+            put("RefClass::isKindOfcom_iflytek_idata_extension_IFlyCollectorExt", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.idata.extension.IFlyCollectorExt);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeakerVerifier", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeakerVerifier);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_ErrorCode", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.ErrorCode);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_ui_RecognizerDialog", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.ui.RecognizerDialog);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechTranscripter", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechTranscripter);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_record_PcmRecorder", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.record.PcmRecorder);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_IdentityVerifier", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.IdentityVerifier);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.AudioDetector);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_UserWords", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.UserWords);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_VerifierUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.VerifierUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_ResourceUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.ResourceUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_AudioDetector_DetectorResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.AudioDetector.DetectorResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_Accelerometer", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.Accelerometer);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_ContactManager", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.ContactManager);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_util_VolumeUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.util.VolumeUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_FaceRequest", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.FaceRequest);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechUtility", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechUtility);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechSynthesizer", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechSynthesizer);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_IdentityResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.IdentityResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_TextUnderstander", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.TextUnderstander);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.VoiceWakeuperImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechTranscripterImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_TextUnderstanderImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.TextUnderstanderImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_IdentityVerifierImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.IdentityVerifierImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceDetectorImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.FaceDetectorImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechSynthesizerImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechSynthesizerImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechRecognizerImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechRecognizerImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechUnderstanderImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechUnderstanderImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_FaceRequestImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.FaceRequestImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeakerVerifierImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeakerVerifierImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_speech_impl_SpeechEvaluatorImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.speech.impl.SpeechEvaluatorImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapterSdk10", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FuncAdapterSdk10);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_NetworkUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.NetworkUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Base64", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Base64);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_DataUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.DataUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_RSAUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.RSAUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Encrypter", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Encrypter);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_AppInfoUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.AppInfoUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_DataLogger", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.DataLogger);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_SDCardHelper", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.SDCardHelper);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_http_HttpDownloadImpl", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.http.HttpDownloadImpl);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FuncAdapter", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FuncAdapter);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_Config", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.Config);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_log_PerfLogger", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.log.PerfLogger);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_log_DebugLog", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.log.DebugLog);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_UniqueIDUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.UniqueIDUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_FileDownloader", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.FileDownloader);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_AESUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.AESUtil);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_util_HttpRequest", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.util.HttpRequest);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_AudioAccessor", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.AudioAccessor);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_MscTranscripter", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.MscTranscripter);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_msc_ist_IstSession", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.msc.ist.IstSession);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechRecognizer", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechRecognizer);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechError", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechError);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_Setting", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.Setting);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_DataDownloader", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.DataDownloader);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechEvaluator", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechEvaluator);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_VoiceWakeuper", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.VoiceWakeuper);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_EvaluatorResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.EvaluatorResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechUnderstander", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechUnderstander);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechEvent);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_resource_Resource", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.resource.Resource);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_FaceDetector", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.FaceDetector);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_WakeuperResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.WakeuperResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_VerifierResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.VerifierResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_SpeechConstant", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.SpeechConstant);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_DataUploader", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.DataUploader);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_RecognizerResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.RecognizerResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_TranscripterResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.TranscripterResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_Version", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.Version);
+            });
+            put("RefClass::isKindOfcom_iflytek_cloud_UnderstanderResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.cloud.UnderstanderResult);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_VAD_VadData", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.VAD.VadData);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_MSCSessionInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.MSCSessionInfo);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_MetaVAD", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.MetaVAD);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_VAD", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.VAD);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_AIMIC", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.AIMIC);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_MSC", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.MSC);
+            });
+            put("RefClass::isKindOfcom_iflytek_msc_MetaVAD_Instance", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.iflytek.msc.MetaVAD.Instance);
+            });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_DataDownloader__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_speech_SpeechComponent__String", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataDownloader__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_SpeechComponent__String");
                 }
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.DataDownloader __obj__ = new com.iflytek.cloud.DataDownloader(var1);
+                com.iflytek.speech.SpeechComponent __obj__ = new com.iflytek.speech.SpeechComponent(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3004,17 +3082,115 @@ public class SubHandler7 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_DataUploader__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_speech_UtilityConfig__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_DataUploader__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UtilityConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.speech.UtilityConfig __obj__ = new com.iflytek.speech.UtilityConfig();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_speech_WakeuperResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_WakeuperResult__String");
                 }
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.DataUploader __obj__ = new com.iflytek.cloud.DataUploader(var1);
+                com.iflytek.speech.WakeuperResult __obj__ = new com.iflytek.speech.WakeuperResult(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_speech_VerifierResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_VerifierResult__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.speech.VerifierResult __obj__ = new com.iflytek.speech.VerifierResult(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_speech_RecognizerResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_RecognizerResult__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.speech.RecognizerResult __obj__ = new com.iflytek.speech.RecognizerResult(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_speech_Version__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_Version__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.speech.Version __obj__ = new com.iflytek.speech.Version();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_speech_UnderstanderResult__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_speech_UnderstanderResult__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.speech.UnderstanderResult __obj__ = new com.iflytek.speech.UnderstanderResult(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3043,9 +3219,74 @@ public class SubHandler7 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_EvaluatorResult__String", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_EvaluatorResult__String");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int");
+                }
+            
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue());
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_record_PcmRecorder__int__int__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_record_PcmRecorder__int__int__int");
+                }
+            
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.iflytek.cloud.record.PcmRecorder __obj__ = new com.iflytek.cloud.record.PcmRecorder(var1.intValue(), var2.intValue(), var3.intValue());
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_UserWords__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_UserWords__String");
                 }
             
                 // args
@@ -3053,7 +3294,103 @@ public class SubHandler7 {
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.EvaluatorResult __obj__ = new com.iflytek.cloud.EvaluatorResult(var1);
+                com.iflytek.cloud.util.UserWords __obj__ = new com.iflytek.cloud.util.UserWords(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_VerifierUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VerifierUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.util.VerifierUtil __obj__ = new com.iflytek.cloud.util.VerifierUtil();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_ResourceUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_ResourceUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.util.ResourceUtil __obj__ = new com.iflytek.cloud.util.ResourceUtil();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_AudioDetector_DetectorResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_AudioDetector_DetectorResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.util.AudioDetector.DetectorResult __obj__ = new com.iflytek.cloud.util.AudioDetector.DetectorResult();
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_Accelerometer__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_Accelerometer__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.iflytek.cloud.util.Accelerometer __obj__ = new com.iflytek.cloud.util.Accelerometer(var1);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_iflytek_cloud_util_VolumeUtil__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_util_VolumeUtil__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.iflytek.cloud.util.VolumeUtil __obj__ = new com.iflytek.cloud.util.VolumeUtil();
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3103,190 +3440,17 @@ public class SubHandler7 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_ist_IstSession__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_ist_IstSession__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.ist.IstSession __obj__ = new com.iflytek.cloud.msc.ist.IstSession();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AESUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AESUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.AESUtil __obj__ = new com.iflytek.cloud.msc.util.AESUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_AppInfoUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_AppInfoUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.AppInfoUtil __obj__ = new com.iflytek.cloud.msc.util.AppInfoUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataLogger__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataLogger__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.DataLogger __obj__ = new com.iflytek.cloud.msc.util.DataLogger();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_DataUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_DataUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.DataUtil __obj__ = new com.iflytek.cloud.msc.util.DataUtil();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_Encrypter__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_Encrypter__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.Encrypter __obj__ = new com.iflytek.cloud.msc.util.Encrypter();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapter__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapter__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.FuncAdapter __obj__ = new com.iflytek.cloud.msc.util.FuncAdapter();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_FuncAdapterSdk10__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_FuncAdapterSdk10__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.FuncAdapterSdk10 __obj__ = new com.iflytek.cloud.msc.util.FuncAdapterSdk10();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__int__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_VoiceWakeuperImpl__android_content_Context");
                 }
             
                 // args
                 // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                android.content.Context var2 = (android.content.Context) ((Map<String, Object>) __args__).get("var2");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1.intValue(), var2);
+                com.iflytek.cloud.speech.impl.VoiceWakeuperImpl __obj__ = new com.iflytek.cloud.speech.impl.VoiceWakeuperImpl(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3296,21 +3460,17 @@ public class SubHandler7 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_http_HttpDownloadImpl__long__int__android_content_Context");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_SpeechTranscripterImpl__android_content_Context");
                 }
             
                 // args
                 // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                android.content.Context var4 = (android.content.Context) ((Map<String, Object>) __args__).get("var4");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.msc.util.http.HttpDownloadImpl __obj__ = new com.iflytek.cloud.msc.util.http.HttpDownloadImpl(var1.longValue(), var3.intValue(), var4);
+                com.iflytek.cloud.speech.impl.SpeechTranscripterImpl __obj__ = new com.iflytek.cloud.speech.impl.SpeechTranscripterImpl(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3320,97 +3480,17 @@ public class SubHandler7 {
                 __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__", (__args__, __methodResult__) -> {
+            put("ObjectFactory::createcom_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_HttpRequest__String__String__byteArray");
+                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_speech_impl_TextUnderstanderImpl__android_content_Context");
                 }
             
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                byte[] var3 = (byte[]) ((Map<String, Object>) __args__).get("var3");
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.iflytek.cloud.msc.util.HttpRequest __obj__ = new com.iflytek.cloud.msc.util.HttpRequest(var1, var2, var3);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_DebugLog__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_DebugLog__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.log.DebugLog __obj__ = new com.iflytek.cloud.msc.util.log.DebugLog();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_log_PerfLogger__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_log_PerfLogger__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.log.PerfLogger __obj__ = new com.iflytek.cloud.msc.util.log.PerfLogger();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_iflytek_cloud_msc_util_NetworkUtil__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_iflytek_cloud_msc_util_NetworkUtil__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.iflytek.cloud.msc.util.NetworkUtil __obj__ = new com.iflytek.cloud.msc.util.NetworkUtil();
+                com.iflytek.cloud.speech.impl.TextUnderstanderImpl __obj__ = new com.iflytek.cloud.speech.impl.TextUnderstanderImpl(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {

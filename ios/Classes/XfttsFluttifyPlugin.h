@@ -8,7 +8,7 @@
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 
-@interface XfttsFluttifyPlugin : NSObject<IFlyIdentityVerifierDelegate, IFlyISVDelegate, IFlyPcmRecorderDelegate, IFlyRecognizerViewDelegate, IFlySpeechSynthesizerDelegate, IFlySpeechplusDelegate, IFlyVoiceWakeuperDelegate, FlutterPlugin>
+@interface XfttsFluttifyPlugin : NSObject<IFlySpeechSynthesizerDelegate, IFlyRecognizerViewDelegate, IFlyPcmRecorderDelegate, IFlyIdentityVerifierDelegate, IFlySpeechplusDelegate, IFlyISVDelegate, IFlyVoiceWakeuperDelegate, FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
 

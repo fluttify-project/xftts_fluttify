@@ -276,12 +276,12 @@ extern BOOL enableLog;
 - (void)onCompleted : (IFlySpeechError*)error
 {
   FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyIdentityVerifierDelegate::Callback@%@", @(_view.hash)]
+        methodChannelWithName:[NSString stringWithFormat:@"IFlySpeechSynthesizerDelegate::Callback@%@", @(_view.hash)]
               binaryMessenger:[_registrar messenger]
                         codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onCompleted");
+    NSLog(@"IFlySpeechSynthesizerDelegate::onCompleted");
   }
 
   // convert to jsonable arg
@@ -290,165 +290,7 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onCompleted" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
-  });
-  
-}
-
-- (void)onEvent : (int)eventType arg1: (int)arg1 arg2: (int)arg2 extra: (id)obj
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyIdentityVerifierDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
-  }
-
-  // convert to jsonable arg
-  // primitive callback arg
-  NSNumber* argeventType = @(eventType);
-  // primitive callback arg
-  NSNumber* argarg1 = @(arg1);
-  // primitive callback arg
-  NSNumber* argarg2 = @(arg2);
-  // ref callback arg
-  NSObject* argobj = ((NSObject*) obj);
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType == nil ? [NSNull null] : argeventType, @"arg1": argarg1 == nil ? [NSNull null] : argarg1, @"arg2": argarg2 == nil ? [NSNull null] : argarg2, @"obj": argobj == nil ? [NSNull null] : argobj}];
-  });
-  
-}
-
-- (void)onResult : (NSDictionary*)dic
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyISVDelegate::onResult");
-  }
-
-  // convert to jsonable arg
-  // jsonable callback arg
-  NSDictionary* argdic = dic;
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyISVDelegate::onResult" arguments:@{@"dic": argdic == nil ? [NSNull null] : argdic}];
-  });
-  
-}
-
-- (void)onRecognition 
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyISVDelegate::onRecognition");
-  }
-
-  // convert to jsonable arg
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyISVDelegate::onRecognition" arguments:@{}];
-  });
-  
-}
-
-- (void)onVolumeChanged : (int)volume
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyISVDelegate::onVolumeChanged");
-  }
-
-  // convert to jsonable arg
-  // primitive callback arg
-  NSNumber* argvolume = @(volume);
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyISVDelegate::onVolumeChanged" arguments:@{@"volume": argvolume == nil ? [NSNull null] : argvolume}];
-  });
-  
-}
-
-- (void)onIFlyRecorderError : (IFlyPcmRecorder*)recoder theError: (int)error
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderError_theError");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argrecoder = recoder;
-  
-  // primitive callback arg
-  NSNumber* argerror = @(error);
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderError_theError" arguments:@{@"recoder": argrecoder == nil ? [NSNull null] : argrecoder, @"error": argerror == nil ? [NSNull null] : argerror}];
-  });
-  
-}
-
-- (void)onIFlyRecorderVolumeChanged : (int)power
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged");
-  }
-
-  // convert to jsonable arg
-  // primitive callback arg
-  NSNumber* argpower = @(power);
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged" arguments:@{@"power": argpower == nil ? [NSNull null] : argpower}];
-  });
-  
-}
-
-- (void)onResult : (NSArray*)resultArray isLast: (BOOL)isLast
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:[NSString stringWithFormat:@"IFlyRecognizerViewDelegate::Callback@%@", @(_view.hash)]
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"IFlyRecognizerViewDelegate::onResult_isLast");
-  }
-
-  // convert to jsonable arg
-  // list callback arg
-  NSArray<NSObject*>* argresultArray = resultArray;
-  // primitive callback arg
-  NSNumber* argisLast = @(isLast);
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResult_isLast" arguments:@{@"resultArray": argresultArray == nil ? [NSNull null] : argresultArray, @"isLast": argisLast == nil ? [NSNull null] : argisLast}];
+    [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onCompleted" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
 }
@@ -605,6 +447,164 @@ extern BOOL enableLog;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::IFlySpeechSynthesizerDelegate::onEvent_arg0_arg1_data" arguments:@{@"eventType": argeventType == nil ? [NSNull null] : argeventType, @"arg0": argarg0 == nil ? [NSNull null] : argarg0, @"arg1": argarg1 == nil ? [NSNull null] : argarg1, @"eventData": argeventData == nil ? [NSNull null] : argeventData}];
+  });
+  
+}
+
+- (void)onResult : (NSArray*)resultArray isLast: (BOOL)isLast
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyRecognizerViewDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyRecognizerViewDelegate::onResult_isLast");
+  }
+
+  // convert to jsonable arg
+  // list callback arg
+  NSArray<NSObject*>* argresultArray = resultArray;
+  // primitive callback arg
+  NSNumber* argisLast = @(isLast);
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyRecognizerViewDelegate::onResult_isLast" arguments:@{@"resultArray": argresultArray == nil ? [NSNull null] : argresultArray, @"isLast": argisLast == nil ? [NSNull null] : argisLast}];
+  });
+  
+}
+
+- (void)onIFlyRecorderError : (IFlyPcmRecorder*)recoder theError: (int)error
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderError_theError");
+  }
+
+  // convert to jsonable arg
+  // ref callback arg
+  NSObject* argrecoder = recoder;
+  
+  // primitive callback arg
+  NSNumber* argerror = @(error);
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderError_theError" arguments:@{@"recoder": argrecoder == nil ? [NSNull null] : argrecoder, @"error": argerror == nil ? [NSNull null] : argerror}];
+  });
+  
+}
+
+- (void)onIFlyRecorderVolumeChanged : (int)power
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyPcmRecorderDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged");
+  }
+
+  // convert to jsonable arg
+  // primitive callback arg
+  NSNumber* argpower = @(power);
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyPcmRecorderDelegate::onIFlyRecorderVolumeChanged" arguments:@{@"power": argpower == nil ? [NSNull null] : argpower}];
+  });
+  
+}
+
+- (void)onEvent : (int)eventType arg1: (int)arg1 arg2: (int)arg2 extra: (id)obj
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyIdentityVerifierDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra");
+  }
+
+  // convert to jsonable arg
+  // primitive callback arg
+  NSNumber* argeventType = @(eventType);
+  // primitive callback arg
+  NSNumber* argarg1 = @(arg1);
+  // primitive callback arg
+  NSNumber* argarg2 = @(arg2);
+  // ref callback arg
+  NSObject* argobj = ((NSObject*) obj);
+  
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyIdentityVerifierDelegate::onEvent_arg1_arg2_extra" arguments:@{@"eventType": argeventType == nil ? [NSNull null] : argeventType, @"arg1": argarg1 == nil ? [NSNull null] : argarg1, @"arg2": argarg2 == nil ? [NSNull null] : argarg2, @"obj": argobj == nil ? [NSNull null] : argobj}];
+  });
+  
+}
+
+- (void)onResult : (NSDictionary*)dic
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyISVDelegate::onResult");
+  }
+
+  // convert to jsonable arg
+  // jsonable callback arg
+  NSDictionary* argdic = dic;
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyISVDelegate::onResult" arguments:@{@"dic": argdic == nil ? [NSNull null] : argdic}];
+  });
+  
+}
+
+- (void)onRecognition 
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyISVDelegate::onRecognition");
+  }
+
+  // convert to jsonable arg
+  
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyISVDelegate::onRecognition" arguments:@{}];
+  });
+  
+}
+
+- (void)onVolumeChanged : (int)volume
+{
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:[NSString stringWithFormat:@"IFlyISVDelegate::Callback@%@", @(_view.hash)]
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+  // print log
+  if (enableLog) {
+    NSLog(@"IFlyISVDelegate::onVolumeChanged");
+  }
+
+  // convert to jsonable arg
+  // primitive callback arg
+  NSNumber* argvolume = @(volume);
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [channel invokeMethod:@"Callback::IFlyISVDelegate::onVolumeChanged" arguments:@{@"volume": argvolume == nil ? [NSNull null] : argvolume}];
   });
   
 }
